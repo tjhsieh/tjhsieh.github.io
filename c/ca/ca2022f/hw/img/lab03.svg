@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   id="svg24"
+   version="1.1"
+   viewBox="0 0 512 256"
+   height="256"
+   width="512">
+  <metadata
+     id="metadata28">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <rect
+     id="rect2"
+     style="fill:url(#enji);"
+     height="256"
+     width="512" />
+  <rect
+     id="rect4"
+     style="fill:none; stroke-width:1px; stroke:rgb(0,0,0)"
+     height="256"
+     width="512" />
+  <defs
+     id="defs7">
+    <path
+       fill="none"
+       stroke="rgb(217, 140, 144)"
+       d="M7.4,15.3c17,20.4,48.8,38,91.6,27.8c79.5-18.9,107.4,48.2,69.4,48.2c-33.9,0-15.2-58.1,65.4-41.7c26.2,5.3,63.2-19.1,79.1-34.3"
+       id="path1" />
+  </defs>
+  <text
+     id="text9"
+     style="font-size:36px; writing-mode:tb; fill:none; stroke:#f9eced;"
+     y="-45"
+     x="0">
+				♪ ♪作業三♪
+			  <animateMotion
+   rotate="auto"
+   repeatCount="indefinite"
+   dur="10s">
+  <mpath
+     xlink:href="#path1" />
+</animateMotion>
+</text>
+  <rect
+     id="rect11"
+     fill="rgb(159, 53, 58)"
+     y="-5"
+     x="-5"
+     height="10"
+     width="20">
+    <animateMotion
+       rotate="auto"
+       repeatCount="indefinite"
+       dur="10s">
+      <mpath
+         xlink:href="#path1" />
+    </animateMotion>
+  </rect>
+  <use
+     id="use13"
+     y="0"
+     x="0"
+     xlink:href="#path1" />
+  <defs
+     id="defs22">
+    <linearGradient
+       spreadMethod="pad"
+       y2="100%"
+       x2="0%"
+       y1="0%"
+       x1="0%"
+       id="enji">
+      <stop
+         id="stop15"
+         stop-opacity="1"
+         stop-color="#9f353a"
+         offset="0%" />
+      <stop
+         id="stop17"
+         stop-opacity="1"
+         stop-color="#d98c90"
+         offset="70%" />
+      <stop
+         id="stop19"
+         stop-opacity="1"
+         stop-color="#fff"
+         offset="100%" />
+    </linearGradient>
+  </defs>
+</svg>

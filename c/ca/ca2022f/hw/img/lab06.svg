@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   id="svg17"
+   version="1.1"
+   viewBox="0 0 512 256"
+   height="256"
+   width="512">
+  <metadata
+     id="metadata23">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs21" />
+  <rect
+     id="rect2"
+     style="fill:rgb(159, 53, 58); stroke-width:1px; stroke:rgb(159, 53, 58)"
+     width="512"
+     height="256" />
+  <rect
+     id="rect4"
+     style="fill:none; stroke-width:1px; stroke:rgb(159, 53, 58)"
+     height="256"
+     width="512" />
+  <!-- Draw the outline of the motion path in grey, along
+			       with 2 small circles at key points -->
+  <path
+     id="theMotionPath"
+     fill="#f9eced"
+     stroke-width="1"
+     stroke="#9f353a"
+     d="M10,110 A120,120 -45 0,1 110 10 A120,120 -45 0,1 10,110"
+     transform="translate(128, 10) scale(1.0)" />
+  <circle
+     id="circle7"
+     fill="lightgrey"
+     r="3"
+     cy="110"
+     cx="10"
+     transform="translate(128, 10) scale(1.0)" />
+  <circle
+     id="circle9"
+     fill="lightgrey"
+     r="3"
+     cy="10"
+     cx="110"
+     transform="translate(128, 10) scale(1.0)" />
+  <!-- Red circle which will be moved along the motion path. -->
+  <circle
+     id="circle11"
+     fill="#f9eced"
+     r="6"
+     cy=""
+     cx=""
+     transform="translate(128, 10)">
+    <!-- Define the motion path animation -->
+    <animateMotion
+       repeatCount="indefinite"
+       dur="6s">
+      <mpath
+         xlink:href="#theMotionPath" />
+    </animateMotion>
+  </circle>
+  <!-- Red circle which will be moved along the motion path. -->
+  <circle
+     id="circle13"
+     fill="#9f353a"
+     r="5"
+     cy=""
+     cx=""
+     transform="translate(128, 10)">
+    <!-- Define the motion path animation -->
+    <animateMotion
+       repeatCount="indefinite"
+       dur="6s">
+      <mpath
+         xlink:href="#theMotionPath" />
+    </animateMotion>
+  </circle>
+  <text
+     id="text15"
+     style="font-size:36px; writing-mode:tb; fill:none; stroke:#f9eced;"
+     y="20"
+     x="128">
+				♪作業六♪
+			  <animateMotion
+   repeatCount="indefinite"
+   dur="6s">
+  <mpath
+     xlink:href="#theMotionPath" />
+</animateMotion>
+</text>
+</svg>
