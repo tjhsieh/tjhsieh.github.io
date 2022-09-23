@@ -1,0 +1,327 @@
+
+
+<!DOCTYPE html>
+
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="./favicon.ico"/>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&display=swap');
+
+body {
+    background-color: rgba(255, 128, 255, 0.1);
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px black solid;
+    font: 16px sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8px;
+}
+
+td,
+th {
+    border: 1px black solid;
+    padding: 5px;
+    background-color: rgba(255, 255, 0, 0.1);
+}
+
+td img {
+    transition: width, height;
+    transition-duration: 0.5s;
+    /* width: 50px; */
+    height: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+div {
+    margin: 16px auto;
+}
+
+</style>
+</head>
+<body>
+
+<table>
+<tr>
+    <td colspan="12">
+        《<a href="https://zh.m.wikisource.org/zh-hant/%E8%88%8A%E5%94%90%E6%9B%B8/%E5%8D%B745"> 舊唐書</a> 》 卷45 志 第二十五 輿服 。 <a href="https://www.ebaomonthly.com/window/discovery/history/china/year/yrs_6.htm" target="_blank">唐朝年號表</a> <hr>
+        <!--
+        武德初，天子宴服，亦名常服，唯以黃袍及衫，後漸用赤黃。貞觀四年又制，三品已上服紫，五品已下服緋，六品、七品服綠，八品、九品服以青。
+        -->
+        (唐高祖 李淵 618年) 武德初，因隋舊制，天子宴服，亦名常服，唯以黃袍及衫，後漸用赤黃，遂禁士庶不得以赤黃為衣服雜飾。
+        <hr>
+        (唐高祖 李淵 621年) 武德四年八月敕：「三品已上，其色紫。五品已上，其色朱。六品已上，其色黃。流外及庶人，其色通用黃。」
+        <hr>
+        (唐太宗 李世民 630年) 貞觀四年又制，三品已上服紫，五品已下服緋，六品、七品服綠，八品、九品服以青。
+        <hr>
+        (唐高宗 李治 662年) 龍朔二年，司禮少常伯孫茂道奏稱：「舊令六品、七品著綠，八品、九品著青，深青亂紫，非卑品所服。望請改八品、九品著碧。朝參之處，聽兼服黃。」從之。
+        <hr>
+        (唐高宗 李治 674年) 上元元年八月又制：「文武三品已上服紫。四品服深緋，五品服淺緋。六品服深綠，七品服淺綠。八品服深青，九品服淺青。」
+        <hr>
+        (唐睿宗 李旦 684年) 文明元年七月甲寅詔：「八品已下舊服者，並改以碧。」
+    </td>
+</tr>
+
+<tr>
+    <td> .<a href=""><img src="./svg10/00.svg"></a></td>
+    <td> 0<a href=""><img src="./svg10/01.svg"></a></td>    
+    <td> 1<a href=""><img src="./svg10/11.svg"></a></td>
+    <td> 2<a href=""><img src="./svg10/12.svg"></a></td>
+    <td> 3<a href=""><img src="./svg10/21.svg"></a></td>
+    <td> 4<a href=""><img src="./svg10/22.svg"></a></td>
+    <td> 5<a href=""><img src="./svg10/31.svg"></a></td>
+    <td> 6<a href=""><img src="./svg10/32.svg"></a></td>
+    <td> 7<a href=""><img src="./svg10/41.svg"></a></td>
+    <td> 8<a href=""><img src="./svg10/42.svg"></a></td>
+    <td> 9<a href=""><img src="./svg10/51.svg"></a></td>
+    <td>10<a href=""><img src="./svg10/52.svg"></a></td>
+</tr>
+</table>
+
+
+<div id="apple-container" style="width: 90vw"></div>
+
+
+
+<!-- 引用 scoregenerator.min.js -->
+<script src="https://cdn.jsdelivr.net/gh/t109598105/ScoreGenerator@latest/dist/scoregenerator.min.js"></script>
+
+<!-- 引用 d3.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.7.1/d3.min.js"></script>
+<script>
+//指定一個公開的 google sheet fileID
+    var GoogleSheetID = '1ZNgDPRsykPcC8Tmqoomce77N4SYDb-nTSBLkOjlnJpo';
+
+    var cg2021f = new ScoreGenerator.CSVGenerator(GoogleSheetID);
+
+    //指定一個 CORS 代理伺服器 (這邊暫時使用這個網址)
+    cg2021f.corsProxy = 'https://ntut-cors.herokuapp.com/';
+    
+    cg2021f.addHwCustomCount({
+		prefix: 'HW',
+		count: 4,
+		postfix: '分數',
+		startAt: 1
+	});
+
+    cg2021f.addHwCustomCount({
+        prefix: 'HWP',
+        count: 12,
+        postfix: '分數',
+        startAt: 1
+    });
+
+    //是哪一個學期，可以設定 fall 或 spring
+    cg2021f.semester = 'spring';
+
+    //學期開始的年份
+    cg2021f.startYear = 2022;
+	
+	
+
+
+    //當依賴函式庫安裝好之後要執行的 function
+    var onLibInstalled = function(){
+
+        //下載 google sheet
+        cg2021f.downloadSheet(
+
+            //下載 google sheet 完成後執行的 function
+            function(){
+
+                //將二進位資料讀取為 workbook
+                cg2021f.mkSheet();
+
+                //將 workbook 中所需的資料提取出來
+                cg2021f.parseXLSX();
+
+                //獲取成績表
+                var score = cg2021f.exportScore();
+
+                //獲取簽到單
+                var attendanceSheet = cg2021f.exportAttendanceSheet();
+                
+
+                //以下為 d3.js 部分
+                d3.csv(score.dataURI(), function(data){
+                    //document.getElementById('score-d3').innerHTML = JSON.stringify(data, null, 4);
+	
+                    var title = {};
+					console.log(data);
+
+                    for(var i = 0; i<data.columns.length; i++){
+                        title[data.columns[i]] = data.columns[i];
+                    }
+
+                    data.unshift(title);
+
+                    var div = d3.select('#apple-container')
+                                .append("table")
+
+                                .selectAll('tr')
+                                .data(data)
+                                .enter()
+                                .filter(function(d){ return d['學號'] != 'undefined'; })
+                                .append('tr')
+
+                                .selectAll('td')
+                                .data(function(d){ 
+                                    //alert(Object.keys(d));
+                                    // alert(Object.keys(d).map(function(key){ return d[key]; }));
+                                    // 學號,姓名,github,HW01,HW02,HW03,HW04,HW05,HW06,HW07,HW08,HW09,HW10,HW11,HW12
+									var github = null;
+                                    return Object.keys(d).map(function(key){
+										/**
+										  * The string literal declaration will make the string a primitive type.
+										  * We know that in JavaScript, primitive types cannot bind any properties.
+										  * If we want to bind attributes, we must use the Object declaration, 
+										  * but JavaScript triggers an implicit conversion when the following String equation computing.
+										  * Therefore, we must implement some methods to complete the calculation, but I think it's quite superfluous...
+										  * Use the "new" operator to make the string be an object that can be bound to some properties.
+										  * A wrapper object can be both like String and bound to some properties.
+										  * Perfect Solution!
+										*/
+										var value = new String(d[key]);
+										if(key == "github"){
+											//Let the "github" property be a primitive type.
+											github = value.toString();
+										}
+										else if(/HW/.test(key)){
+											value.hw = key.replace("HW", "");
+											value.github = github;
+										}
+										return value;
+									});
+                                })
+                                .enter()
+                                .append('td')
+                                .text(function(d){ return d; })
+                                .filter(function (d, i) { 
+                                    return (i > 2 && !isNaN(d) && d != ""); 
+                                })
+								.append('a')
+								.attr("rel", "noreferrer noopener nofollow")
+								.attr("target", "_blank")
+								.attr('href', function(d, i){
+                                    if (i < 4){
+                                        return "https://www.github.com/" + d.github + "/ct2022s/";
+                                    } else {
+                                        return "https://" + d.github + ".github.io/ct2022s/hw0" + (i - 3) + "/index.html"; 
+                                    }
+                                })
+								.append("img")
+                                .attr("src", function (d, i) {
+                                    if (d >= 10) 
+                                        return "./svg10/52.svg"; 
+                                    else if (d >= 9) 
+                                        return "./svg10/51.svg"; 
+                                    else if (d >= 8) 
+                                        return "./svg10/42.svg"; 
+                                    else if (d >= 7) 
+                                        return "./svg10/41.svg"; 
+                                    else if (d >= 6) 
+                                        return "./svg10/32.svg"; 
+                                    else if (d >= 5) 
+                                        return "./svg10/31.svg"; 
+                                    else if (d >= 4) 
+                                        return "./svg10/22.svg"; 
+                                    else if (d >= 3) 
+                                        return "./svg10/21.svg"; 
+                                    else if (d >= 2) 
+                                        return "./svg10/12.svg"; 
+                                    else if (d >= 1) 
+                                        return "./svg10/11.svg"; 
+                                    else if (d === '' || d === ' ') 
+                                        return "./svg10/00.svg"; 
+                                    else 
+                                        return "./svg10/01.svg"; 
+                                })
+                                .attr("width", 50)
+                                .attr("height", 50)
+									.append('a')
+									.data(function(d){ console.log(d); return d; })
+									
+                                ;
+                });
+
+                /*
+                d3.csv(attendanceSheet.dataURI(), function(data){ 
+                    document.getElementById('att-d3').innerHTML = JSON.stringify(data, null, 4); 
+
+                    var title = {};
+
+                    for(var i = 0; i<data.columns.length; i++){
+                        title[data.columns[i]] = data.columns[i];
+                    }
+
+                    data.unshift(title);
+
+
+                    var div = d3.select('#att-container')
+                                .selectAll('div')
+                                .data(data)
+                                .enter()
+                                .append('div')
+                                .style('display', 'flex')
+                                .style('justify-content', 'center')
+                                .style('align-items', 'center')
+                                .style('width', '100%')
+                                    .selectAll('span')
+                                    .data(function(d){ return Object.keys(d).map(function(key){ return d[key]; });})
+                                    .enter()
+                                    .append('span')
+                                    .style('width', (100/data.columns.length - 1) + '%')
+                                    .style('height', '25px')
+                                    .style('text-align', 'center')
+                                    .style('border-style', 'solid')
+                                    .style('border-width', '1px')
+                                    .style('background-color', function(d,i){ if(i % 2 == 0){ return '#ebe0c3'; } })
+                                    .text(function(d){ return d; });
+                });
+                */
+        
+            
+
+
+            document.getElementById('score-download').onclick = function(){ 
+                score.download('cg2021f_成績');
+            }
+
+            document.getElementById('att-download').onclick = function(){ 
+                attendanceSheet.download('cg2021f_簽到單'); 
+            }
+
+        }, 
+        //google sheet 下載失敗後執行的 function
+        function(){
+            console.log('Failed to download sheet');
+        });
+    };
+
+
+    //確認是否安裝依賴函式庫
+    if(!cg2021f.libInstalled){
+
+        //安裝依賴函式庫
+        cg2021f.installLibrary(function(){
+            onLibInstalled();
+        }, 
+        //安裝依賴函式庫失敗後執行的 function
+        function(){
+            console.error('Library is not installed');
+        });
+    }
+
+</script>
+</body>
+</html>
