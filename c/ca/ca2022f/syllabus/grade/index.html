@@ -109,20 +109,20 @@ div {
     
     cg2021f.addHwCustomCount({
 		prefix: 'HW',
-		count: 4,
+		count: 18,
 		postfix: '分數',
 		startAt: 1
 	});
 
-    cg2021f.addHwCustomCount({
-        prefix: 'HWP',
-        count: 12,
-        postfix: '分數',
-        startAt: 1
-    });
+    // cg2021f.addHwCustomCount({
+    //     prefix: 'HWP',
+    //     count: 12,
+    //     postfix: '分數',
+    //     startAt: 1
+    // });
 
     //是哪一個學期，可以設定 fall 或 spring
-    cg2021f.semester = 'spring';
+    cg2021f.semester = 'fall';
 
     //學期開始的年份
     cg2021f.startYear = 2022;
@@ -293,9 +293,9 @@ div {
             
 
 
-            document.getElementById('score-download').onclick = function(){ 
-                score.download('cg2021f_成績');
-            }
+            // document.getElementById('score-download').onclick = function(){ 
+            //     score.download('cg2021f_成績');
+            // }
 
             // document.getElementById('att-download').onclick = function(){ 
             //     attendanceSheet.download('cg2021f_簽到單'); 
