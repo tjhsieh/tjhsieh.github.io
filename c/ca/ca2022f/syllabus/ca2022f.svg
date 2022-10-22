@@ -41,7 +41,7 @@
     <animate id="3" attributeType="CSS" attributeName="opacity" from="0.1" to="0.9" dur="2s" fill="freeze" begin="2.end"/>
     <animate id="4" attributeType="CSS" attributeName="opacity" from="0.9" to="0.1" dur="2s" fill="freeze" begin="3.end"/>
   </text>
-  <text x="50"  y="5">貳零貳壹
+  <text x="50"  y="5">貳零貳貳
     <animate id="5" attributeType="CSS" attributeName="opacity" from="0.1" to="0.9" dur="2s" fill="freeze" begin="4.end"/>
     <animate id="6" attributeType="CSS" attributeName="opacity" from="0.9" to="0.1" dur="2s" fill="freeze" begin="5.end"/>
   </text>
