@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>SVG</title>
+  <style type="text/css">
+    svg {
+      border: solid rgba(128, 255, 255, 0.95) 0.1px;
+      margin: 5px;
+    }
+
+    div {
+      border: solid black 1px;
+      margin: 5px;
+      padding: 10px;
+      background-color: rgba(255, 255, 128, 0.1);
+    }
+
+    div:hover {
+      background-color: rgba(255, 128, 128, 0.1);
+    }
+
+    #BlueFolder {
+        width: 15%;
+        vertical-align: middle;
+    }
+
+    #drop_zone {
+      border: 2px dashed #bbb;
+      border-radius: 25px;
+      background-color: rgba(128, 255, 128, 0.1);
+    }
+  </style>
+
+  <script type="text/javascript">
+    var svgAI;
+
+    function saveText(text, filename) {
+      var a = document.createElement('a');
+      a.setAttribute('href', 'data:text/plain;charset=utf-u,' + encodeURIComponent(text));
+      a.setAttribute('download', filename);
+      a.click()
+    }
+
+    function readFiles(files){
+        var output = [];
+        var newImage;
+
+        for (var i = 0, f; f = files[i]; i++) {
+            output = [];
+            //alert(f.name)
+            //ext = f.name.substring(f.name.lastIndexOf(".") + 1);
+            //console.log('ext = ' + ext);
+
+            output.push('<li><strong>', 
+                        escape(f.name), 
+                        '</strong>', 
+                        f.type || 'n/a',
+                        f.size, 
+                        ' bytes, last modified: ',
+                        f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
+                        '</li>');
+            //alert(output)
+
+            let reader = new FileReader();
+
+            // https://www.html5rocks.com/en/tutorials/file/dndfiles//
+            // Only process image files.
+            // f.mimetype.match('text.*|image.*|application.*')
+            if (!f.type.match('image.svg')) {
+              //alert('Not an SVG!')  
+              //continue; // skip rest of the codes
+
+              // Closure to capture the file information.
+              reader.onload = (function(theFile) {
+                return function(e) {
+                  //console.log( e.target.result );
+                  newImage = e.target.result;
+                };
+              })(f);
+
+              // Read in the image file as a data URL.
+              reader.readAsDataURL(f);
+            } 
+            else {
+              // alert('It is an SVG!')
+              reader.readAsText(files[0], 'UTF-8');
+
+              // Closure to capture the file information.
+              reader.onload = (function(theFile) {
+                return function(e) {
+                  //console.log( e.target.result );
+                  //alert(e.target.result)
+                  svgAI = e.target.result;
+
+                  document.getElementById('content0').textContent = svgAI;
+                  document.getElementById('svgimage').innerHTML = svgAI;
+                };
+              })(f);
+            }
+        }
+
+        // do it when you are not an SVG
+        if (!files[0].type.match('image.svg')) {
+          var reader = new FileReader();
+          reader.readAsText(files[0], 'UTF-8');
+          reader.onload = function(evt) 
+          {
+              document.getElementById('content0').textContent = svgAI;
+              var str = document.getElementById('content0').value;
+              //alert(str);
+
+              var n1 = str.search("https");
+              //var n2 = str.search(/.png/i);
+              var n2 = str.search(".png");
+              console.log('n1 = ' + n1);
+              console.log('n2 = ' + n2);
+
+              var sub = str.substring(n1, n2 + 4);
+              //console.log('sub = ' + sub);
+
+              if (n1 > -1) {
+                str = str.replace(sub, newImage);
+              }
+              else {
+                str = svgAI;
+                //alert(str);
+              }
+
+              document.getElementById('content0').textContent = str;
+              document.getElementById('svgimage').innerHTML = str;
+          }
+        }
+    }
+
+    function handleFileSelect(evt) {
+        var files = evt.target.files; // FileList object
+        readFiles(files);
+    }
+
+    function handleFileSelect_drag(evt)
+    {
+        evt.stopPropagation();
+        evt.preventDefault();
+        var files = evt.dataTransfer.files; // FileList object.
+        readFiles(files);
+    }
+
+    function handleDragOver(evt)
+    {
+        evt.stopPropagation();
+        evt.preventDefault();
+        evt.dataTransfer.dropEffect = 'copy'; // Explicitly show this is a copy.
+        //console.log('...');    
+    }
+
+    function start(e)
+    {
+      //------------------------------------------------------------------------
+      // Setup the dnd listeners.
+      var dropZone = document.getElementById('drop_zone');
+      dropZone.addEventListener('dragover', handleDragOver, false);
+      dropZone.addEventListener('drop', handleFileSelect_drag, false);
+
+      setInterval(function(){ 
+        document.getElementById("drop_zone").style.borderColor = "red";
+      }, 500);
+
+      setInterval(function(){ 
+        document.getElementById("drop_zone").style.borderColor = "gray";
+      }, 1000);
+      //------------------------------------------------------------------------
+
+      // default
+      svgAI = document.getElementById('content0').value;
+      document.getElementById('svgimage').innerHTML = svgAI;
+      //document.getElementById('svgimage').innerHTML = document.getElementById('content0').value;
+
+      // listener
+      document.getElementById('content0').addEventListener("input", function(){
+          document.getElementById('svgimage').innerHTML = document.getElementById('content0').value;
+      });
+
+      //------------------------------------------------------------------------
+      // 選擇檔案 按鈕 Event Listener
+      document.getElementById('files').addEventListener('change', handleFileSelect, false);
+
+      //------------------------------------------------------------------------
+      // Save Event Listener
+      document.getElementById('save').addEventListener("click", function(){
+        var fn = document.getElementById('svgfilename').value;
+        saveText( document.getElementById('content0').value, fn);
+      });
+
+      //------------------------------------------------------------------------
+      // 輸入框框按下 'Enter' 鍵 Event Listener
+      // 在 input 輸入框框按下 'Enter' 鍵，也可以另存成 SVG
+      document.getElementById('svgfilename').addEventListener('keydown', function(event) {
+        if (preventKey(event, 'Enter', 13)) {
+          event.preventDefault();
+          var fn = document.getElementById('svgfilename').value;
+          saveText( document.getElementById('content0').value, fn);
+        }
+      });
+      //------------------------------------------------------------------------
+
+    }
+
+    window.addEventListener( "load", start, false );
+  </script>
+</head>
+
+
+<body>
+  <!-- ---------------- -->
+  <div>
+    <table border="1" width="100%">
+      <tbody>
+        <tr>
+          <td width="30%"> <span id="drop_zone" style="margin: 5px; padding: 10px; width: 85%; display: inline-block;"> Drop files here... </span> </td>
+          <td width="35%"> 開啟舊檔 (SVG): <input type="file" id="files" name="files[]" multiple accept=".svg" /> </td>
+          <td width="35%"> 另存新檔 (SVG): <input id="svgfilename" value="風吹仙袂飄颻舉.svg"></input> <button id="save">Save</button> </td>
+        </tr>
+        <tr><td> </td></tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- ---------------- -->
+
+
+
+  <div>
+    <span id="svgimage"></span>
+
+    <!-- -------------------------------------------------------------------------------- -->
+    <textarea id="content0" cols="90" rows="33">
+<svg
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   width="512"
+   height="512"
+   viewBox="0 0 512 512">
+
+  <style type="text/css">
+    /* @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900'); */
+    @import url('https://fonts.googleapis.com/earlyaccess/cwtexkai.css?');
+
+    text {
+      fill: #993333;
+      font-family: cwTeXKai; 
+      font-size: 24px; 
+      writing-mode: tb-rl;
+      letter-spacing: 6px;
+      line-height: 3.6;
+      text-shadow: 0.1em 0.1em 0.1em #AAA;
+      font-weight: 900;
+      opacity: 0.3;
+    }
+  </style>
+
+  <a href="https://youtu.be/rlMgcxkgyEs?t=466" target="_blank">
+    <rect width="512" height="512" x="0" y="0" style="stroke:#f9eced; stroke-width:2.0; stroke-opacity:1; opacity:0.90; fill:#993333; fill-opacity:0.05;" />
+  </a>
+
+  <!-- 'Noto Serif JP' -->
+  <text x="480" y="25">風吹仙袂飄颻舉，猶似霓裳羽衣舞。
+    <animate id="01" attributeType="CSS" attributeName="opacity" from="0.1" to="0.9" dur="3s" fill="freeze" begin="0;23.end"/>
+    <animate id="02" attributeType="CSS" attributeName="opacity" from="0.9" to="0.1" dur="3s" fill="freeze" begin="01.end"/>
+  </text>
+  <text x="440"  y="25">玉容寂寞淚闌干，梨花一枝春帶雨。
+    <animate id="03" attributeType="CSS" attributeName="opacity" from="0.1" to="0.9" dur="3s" fill="freeze" begin="02.end"/>
+    <animate id="04" attributeType="CSS" attributeName="opacity" from="0.9" to="0.1" dur="3s" fill="freeze" begin="03.end"/>
+  </text>
+  <text x="400"  y="25">含情凝睇謝君王，一別音容兩渺茫。
+    <animate id="05" attributeType="CSS" attributeName="opacity" from="0.1" to="0.9" dur="3s" fill="freeze" begin="04.end"/>
+    <animate id="06" attributeType="CSS" attributeName="opacity" from="0.9" to="0.1" dur="3s" fill="freeze" begin="05.end"/>
+  </text>
+  <text x="360"  y="25">昭陽殿裏恩愛絕，蓬萊宮中日月長。
+    <animate id="07" attributeType="CSS" attributeName="opacity" from="0.1" to="0.9" dur="3s" fill="freeze" begin="06.end"/>
+    <animate id="08" attributeType="CSS" attributeName="opacity" from="0.9" to="0.1" dur="3s" fill="freeze" begin="07.end"/>
+  </text>
+  <text x="320"  y="25">回頭下望人寰處，不見長安見塵霧。
+    <animate id="09" attributeType="CSS" attributeName="opacity" from="0.1" to="0.9" dur="3s" fill="freeze" begin="08.end"/>
+    <animate id="10" attributeType="CSS" attributeName="opacity" from="0.9" to="0.1" dur="3s" fill="freeze" begin="09.end"/>
+  </text>
+  <text x="280"  y="25">唯將舊物表深情，鈿合金釵寄將去。
+    <animate id="11" attributeType="CSS" attributeName="opacity" from="0.1" to="0.9" dur="3s" fill="freeze" begin="10.end"/>
+    <animate id="12" attributeType="CSS" attributeName="opacity" from="0.9" to="0.1" dur="3s" fill="freeze" begin="11.end"/>
+  </text>
+  <text x="240"  y="25">釵留一股合一扇，釵擘黃金合分鈿。
+    <animate id="13" attributeType="CSS" attributeName="opacity" from="0.1" to="0.9" dur="3s" fill="freeze" begin="12.end"/>
+    <animate id="14" attributeType="CSS" attributeName="opacity" from="0.9" to="0.1" dur="3s" fill="freeze" begin="13.end"/>
+  </text>
+  <text x="200"  y="25">但教心似金鈿堅，天上人間會相見。
+    <animate id="15" attributeType="CSS" attributeName="opacity" from="0.1" to="0.9" dur="3s" fill="freeze" begin="14.end"/>
+    <animate id="16" attributeType="CSS" attributeName="opacity" from="0.9" to="0.1" dur="3s" fill="freeze" begin="15.end"/>
+  </text>
+  <text x="160"  y="25">臨別殷勤重寄詞，詞中有誓兩心知。
+    <animate id="17" attributeType="CSS" attributeName="opacity" from="0.1" to="0.9" dur="3s" fill="freeze" begin="16.end"/>
+    <animate id="18" attributeType="CSS" attributeName="opacity" from="0.9" to="0.1" dur="3s" fill="freeze" begin="17.end"/>
+  </text>
+  <text x="120"  y="25">七月七日長生殿，夜半無人私語時。
+    <animate id="19" attributeType="CSS" attributeName="opacity" from="0.1" to="0.9" dur="3s" fill="freeze" begin="18.end"/>
+    <animate id="20" attributeType="CSS" attributeName="opacity" from="0.9" to="0.1" dur="3s" fill="freeze" begin="19.end"/>
+  </text>
+  <text x="80"  y="25">在天願作比翼鳥，在地願為連理枝。
+    <animate id="21" attributeType="CSS" attributeName="opacity" from="0.1" to="0.9" dur="3s" fill="freeze" begin="20.end"/>
+    <animate id="22" attributeType="CSS" attributeName="opacity" from="0.9" to="0.1" dur="3s" fill="freeze" begin="21.end"/>
+  </text>
+  <text x="40"  y="25">天長地久有時盡，此恨綿綿無絕期。
+    <animate id="23" attributeType="CSS" attributeName="opacity" from="0.1" to="0.9" dur="3s" fill="freeze" begin="22.end"/>
+    <animate id="24" attributeType="CSS" attributeName="opacity" from="0.9" to="0.1" dur="3s" fill="freeze" begin="23.end"/>
+  </text>
+</svg>
+    </textarea>
+    <!-- -------------------------------------------------------------------------------- -->
+
+
+  </div>
+
+
+</body>
+
+</html>
