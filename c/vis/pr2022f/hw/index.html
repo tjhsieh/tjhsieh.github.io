@@ -1,0 +1,1087 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<title>圖形識別 111-1 作業</title>
+<style type="text/css">
+  body {
+    background-color: rgb(159, 53, 58);
+    color: rgb(159, 53, 58);
+  }
+
+  .container-fluid {
+    width:  90%;
+  }
+
+  .hw12 {
+    border: 1px solid rgb(159, 53, 58);
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .twenty {
+    border: 1px solid #f9eced;
+    color: #f9eced;
+    padding: 8px;
+    font-size: 14pt;
+  }
+
+  .twentykikyo {
+    border: 1px solid #f9eced;
+    color: #f9eced;
+    padding: 8px;
+    font-size: 14pt;
+    background-color: #6a4c9c;
+  }
+
+  .twentykonparuiro {
+    border: 1px solid #f9eced;
+    color: #f9eced;
+    padding: 8px;
+    font-size: 14pt;
+    background-color: #5ac2d9;
+  }
+
+  .twenty a, .twentykikyo a, .twentykonparuiro a {
+    color:  yellow;
+    font-size:  14pt;
+  }
+
+  .twenty a:hover, .twentykikyo a:hover, .twentykonparuiro a:hover {
+    color: #f9eced;
+    font-size:  14pt;
+  }
+
+  .thirty {
+    border: 1px solid #f9eced;
+    color: #f9eced;
+  }
+
+  .ninety {
+    border: 1px solid rgb(159, 53, 58);
+    background-color: #f9eced;
+    padding: 8px;
+  }
+
+  svg {
+    border: 2px solid rgb(159, 53, 58);
+  }
+
+  path {
+    pointer-events: all;
+    fill: #f9eced;
+    stroke: rgb(159, 53, 58);
+    stroke-opacity: 0.95;
+    stroke-width: 1px;
+  }
+
+  .active circle {
+    stroke: #f9eced;
+    stroke-width: 2px;
+  }
+
+  svg g text {
+    fill: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 0, 0.1);
+    text-shadow: 0 0 16px #FF0000, 0 0 16px #000000;
+    font-size: 24pt;
+    text-anchor: middle;
+  }
+
+  .twenty:hover, .twentykikyo:hover, .twentykonparuiro:hover {
+    /*
+      background-color: rgba(255, 255, 0, 0.1);
+    */
+      box-shadow: 0 0 5px 3px #f9eced;
+      color: cyan; 
+      text-shadow: 0 0 6px #FFFFFF, 0 0 6px #000000;
+  }
+
+  img:hover {
+    
+      box-shadow: 0 0 1px 1px #f9eced;
+    
+      animation-name: happy;
+      animation-duration: 0.5s;
+      animation-iteration-count: infinite;
+  }
+
+  @keyframes happy {
+      0% {
+          transform: translateY(0px);
+      }
+
+      25% {
+          transform: translateY(-15px);
+      }
+
+      50% {
+          transform: translateY(0px);
+      }
+
+      75% {
+          transform: translateY(-5px);
+      }
+
+      100% {
+          transform: translateY(0px);
+      }
+  }
+
+</style>
+</head>
+<body>
+
+<div class="container-fluid">
+  
+
+  <!-- ------------------------------------------------>
+  <div class="row hw12">
+    <div class="col-md-12 twenty">
+      
+    </div>
+  </div>
+  <!-- ------------------------------------------------>
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <div class="col-md-2 twenty"><img src="./img_kitty/133533.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/hero-kitty.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/pic03.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/pic04.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/pic05.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/pic06.svg" width="100%"></div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <div class="col-md-2 twenty">Number<hr><img src="./svgcolor/ai-ai.svg" width="64px"></div>
+    <div class="col-md-2 twenty">Handout 講義<hr><img src="./svgcolor/html.svg" width="64px"></div>
+    <div class="col-md-2 twenty">HW Slide<hr><img src="./svgcolor/ppt.svg" width="64px"></div>
+    <div class="col-md-2 twenty">TA Video<!--Starter Code--><hr><img src="./svgcolor/mpg-video.svg" width="64px"></div>
+    <div class="col-md-2 twenty">Date<hr><img src="./svgcolor/dwg.svg" width="64px"></div>
+    <div class="col-md-2 twenty">TA<hr><img src="./svgcolor/eml.svg" width="64px"></div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <div class="col-md-2 twenty">HW 00<hr>作品集</div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/1D7sKT9FvNWhDIBxtQoVgQuYltTTLFpHv/edit?usp=sharing&ouid=115156210972726726940&rtpof=true&sd=true">
+        0-1 Cubism
+      </a>
+      、
+      <a target="_blank" href="https://docs.google.com/presentation/d/1YyhV7GJDR1LPzKvEhxqWFEjByZu5arU5/edit?usp=sharing&ouid=115156210972726726940&rtpof=true&sd=true">
+        0-1 Cubism SDK<!-- 0-1 Live2D Cubism SDK for Web -->
+      </a>
+      <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+    </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/1-Z596GDFvsjt8mv_yvqKC5rvXH1q1SGI/edit?usp=sharing&ouid=115156210972726726940&rtpof=true&sd=true" >
+        作業 00
+      </a>, 
+      <a target="_blank" href="../hw-portfolio/pr2022f.zip" >
+        下載範本
+      </a>
+
+    </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="https://www.youtube.com/watch?v=hzhaplwrx8k">
+        <img src="./svgcolor/mpg-video.svg" width="64px">
+      </a>
+    </div>
+    <div class="col-md-2 twenty">第8週<hr>2022.10.30 (日)</div>
+    <div class="col-md-2 twenty">梁佑駿<hr><span style="font-size: 11pt;">t111598023@ntut.org.tw</span></div>
+  </div>
+
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-2 twenty">HW 01<hr></div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/16AyvWhtHP41p-xJ1Z3ZJc2w5Trmg1aGI/edit?usp=sharing&ouid=115156210972726726940&rtpof=true&sd=true">
+        0-1 位移&換人<!-- 0-1 Live2D Cubism SDK for Web 位移、縮放、透明背景、換人物 -->
+      </a>
+      、
+      <a target="_blank" href="https://docs.google.com/presentation/d/1q2bCPzW6fhCaEJIx4AyblKVRNaKiyOLP/edit?usp=sharing&ouid=115156210972726726940&rtpof=true&sd=true">
+        0-1 編劇&故事<!-- 0-1 編劇、故事課、講故事套路、「靶心人公式」７步驟 -->
+      </a>
+      <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+    </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/16ywHWgpNG66w-Hmgr2vqK7rldqvRmUv2/edit?usp=sharing&ouid=115156210972726726940&rtpof=true&sd=true" >
+        作業 01
+      </a>
+   </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="https://www.youtube.com/watch?v=W6QiKmartQU">
+        <img src="./svgcolor/mpg-video.svg" width="64px">
+      </a>
+    </div>
+    <div class="col-md-2 twenty">第8週<hr>2022.10.30 (日)</div>
+    <div class="col-md-2 twenty">梁佑駿<hr><span style="font-size: 11pt;">t111598023@ntut.org.tw</span></div>
+  </div>
+
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-2 twenty">HW 02<hr></div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/1soxj6GNKqj3hIcnuuZ_uAzIroaxjRt83/edit#slide=id.p1">
+        0-2 Cubism Button 上下左右大小 換背景 去背景 Canvas尺寸設定
+      </a>
+      <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+    </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/14ciA-xvc263PNPgygvw6N7Ztej90WY-n/edit#slide=id.p5" >
+        作業 02
+      </a>
+      ,
+      <a target="_blank" href="https://drive.google.com/file/d/16qE8WPBipmlEyXJMgMuzdvKK7-RgP78p/view?usp=sharing" >
+        作業 02 需要的程式碼
+      </a>
+   </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="https://www.youtube.com/watch?v=HjCG66ktgZ0">
+        <img src="./svgcolor/mpg-video.svg" width="64px">
+      </a>
+    </div>
+    <div class="col-md-2 twenty">第8週<hr>2022.10.30 (日)</div>
+    <div class="col-md-2 twenty">張登凱<hr><span style="font-size: 11pt;">t110598028@ntut.org.tw</span></div>
+  </div>
+
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-2 twenty">HW 03<hr></div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/1aq6T1agqmwyg4_BFUn0GT_1IOSIljufV/edit#slide=id.g166dc7bc7ed_2_773">
+        0-3 Cubism Parameters 滑動搖桿 剖析器
+      </a>
+      <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+    </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/1vuPuddmGCeho1tZcrbofFnpTTTR9GRMc/edit#slide=id.p6" >
+        作業 03
+      </a>
+   </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="https://www.youtube.com/watch?v=TLIWlrGOv0Q">
+        <img src="./svgcolor/mpg-video.svg" width="64px">
+      </a>
+    </div>
+    <div class="col-md-2 twenty">第8週<hr>2022.10.30 (日)</div>
+    <div class="col-md-2 twenty">朱惠君<hr><span style="font-size: 11pt;">t110598016@ntut.org.tw</span></div>
+  </div>
+
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-2 twenty">HW 04<hr></div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/1WPwlRKgcLTNuXerabIug8btlGFT4vUBj/edit#slide=id.p1">
+        0-4 Tensorflow.js MediaPipe Face Landmarks
+      </a>
+      <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+    </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/1K6LwMr2YbirDztcyjWKZK9TvOnRQbTVM/edit#slide=id.p1">
+        作業 04
+      </a>
+   </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="https://www.youtube.com/watch?v=K9VzNpwqlf4">
+        <img src="./svgcolor/mpg-video.svg" width="64px">
+      </a>
+    </div>
+    <div class="col-md-2 twenty">第8週<hr>2022.10.30 (日)</div>
+    <div class="col-md-2 twenty">林立森<hr><span style="font-size: 11pt;">t111598040@ntut.org.tw</span></div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-2 twenty">HW 05<hr></div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/1pYSxaohtvSZ_jpmZCjpg9e8x7T96NokU/edit#slide=id.p1">
+        0-5 MediaPipe + Cusisem SDK for Web 神經對接
+      </a>
+      <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+    </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/1mUfo2NRHjw8iGRPY85msaLEbjpOqyW1w/edit#slide=id.p1" >
+        作業 05
+      </a>
+   </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="">
+        <img src="./svgcolor/mpg-video.svg" width="64px">
+      </a>
+    </div>
+    <div class="col-md-2 twenty">第8週<hr>2022.10.30 (日)</div>
+    <div class="col-md-2 twenty">林立森<hr><span style="font-size: 11pt;">t111598040@ntut.org.tw</span></div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-2 twenty">HW 06<hr></div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/1pSMUjygDrpf6S9HmsVuhOJI2kEoU_Pps/edit#slide=id.p6">
+        0-6 Face-Test + Joeman
+      </a>
+      <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+    </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/1Kal6WFRdJ9plxSZ1SLkCrjziw7jyZsJy/edit#slide=id.p1" >
+        作業 06
+      </a>
+   </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="">
+        <img src="./svgcolor/mpg-video.svg" width="64px">
+      </a>
+    </div>
+    <div class="col-md-2 twenty">第8週<hr>2022.10.30 (日)</div>
+    <div class="col-md-2 twenty">梁佑駿<hr><span style="font-size: 11pt;">t111598023@ntut.org.tw</span></div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <div class="col-md-2 twentykikyo">HW 07<hr></div>
+    <div class="col-md-2 twentykikyo">
+      <a target="_blank" href="https://www.jasondavies.com/animated-bezier/">Animated Bézier Curves</a>
+      <hr>
+      <a target="_blank" href="https://method.ac/">The Bézier Game</a>
+      <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+    </div>
+    <div class="col-md-2 twentykikyo">
+      <a target="_blank" href="../hw-portfolio/pr2022f/hw07/index.html" >
+        作業 07 說明
+      </a>
+    </div>
+    <div class="col-md-2 twentykikyo">
+      The Bezier Game - Walkthrough
+      <hr>
+      <a target="_blank" href="https://www.youtube.com/watch?v=iaqhrLOvwVU">
+        <img src="./svgcolor/mpg-video.svg" width="64px">
+      </a>
+      
+      <a target="_blank" href="https://www.youtube.com/watch?v=ji6X6_unFEE">
+        <img src="./svgcolor/mpg-video.svg" width="64px">
+      </a>
+    </div>
+    <div class="col-md-2 twentykikyo">第7週<hr>2022.10.23 (日)</div>
+    <div class="col-md-2 twentykikyo">林立森<br><span style="font-size: 11pt;">t111598040@ntut.org.tw</span></div>
+  </div>
+
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <div class="col-md-2 twentykikyo">HW 08<hr></div>
+    <div class="col-md-2 twentykikyo">
+      <a target="_blank" href="../syllabus/svg21/index.html">
+        講義 SVG 21
+      </a>
+      <hr>
+      <a target="_blank" href="../hw-portfolio/pr2022f/hw08/hellokitty.html">
+        作業 08 繪圖系統
+      </a>
+      <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+    </div>
+    <div class="col-md-2 twentykikyo">
+      <a target="_blank" href="../hw-portfolio/pr2022f/hw08/index.html" >
+        作業 08 說明
+      </a>
+      <hr>
+      <img src="../hw-portfolio/pr2022f/hw08/hello_kitty_Hello_Kitty_Head_ClipArt_in_PNG_File.png" width="80%">
+    </div>
+    <div class="col-md-2 twentykikyo">
+      <a target="_blank" href="https://myweb.ntut.edu.tw/~tjhsieh/c/vis/vis2021s/portfolios285729lab01.html">
+        範例 (vis2021s)
+      </a>
+      <hr>
+      範例作品: 顏士綸
+      <a target="_blank" href="https://cathy80110017.github.io/ip2019s/portfolio/">
+        <img src="./doraemon_ip2019s/vis2021s_105590006s.svg" width="160px">
+      </a>
+      <hr>
+      <a target="_blank" href="https://myweb.ntut.edu.tw/~tjhsieh/c/vis/vis2021s/portfolios285740lab01.html">
+        範例 (vis2021s)
+      </a>
+    </div>
+    <div class="col-md-2 twentykikyo">第7週<hr>2022.10.23 (日)</div>
+    <div class="col-md-2 twentykikyo">林立森<br><span style="font-size: 11pt;">t111598040@ntut.org.tw</span></div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <div class="col-md-2 twentykikyo">HW 09<hr>ドラえもん</div>
+    <div class="col-md-2 twentykikyo">
+      <a target="_blank" href="../hw-portfolio/pr2022f/hw09/doraemon.html">
+        作業 09 繪圖系統
+      </a>
+      <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+    </div>
+    <div class="col-md-2 twentykikyo">
+      <a target="_blank" href="../hw-portfolio/pr2022f/hw09/index.html">
+        作業 09 說明
+      </a>
+      <hr>
+      <img src="./doraemon/character_1.png" width="80%">
+    </div>
+    <div class="col-md-2 twentykikyo">
+      <a target="_blank" href="https://myweb.ntut.edu.tw/~tjhsieh/c/cs/ip2019s/mickey/index.html">
+        範例 (ip2019s)
+      </a>
+      <hr>
+      範例作品: 陳佳吟
+      <a target="_blank" href="https://cathy80110017.github.io/ip2019s/portfolio/">
+        <img src="./doraemon_ip2019s/3s.svg" width="160px">
+      </a>
+    </div>
+    <div class="col-md-2 twentykikyo">第7週<hr>2022.10.23 (日)</div>
+    <div class="col-md-2 twentykikyo">林立森<br><span style="font-size: 11pt;">t111598040@ntut.org.tw</span></div>
+  </div>
+
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <div class="col-md-2 twentykikyo">HW 10<hr>Radiating Circles</div>
+    <div class="col-md-2 twentykikyo">
+      <a target="_blank" href="https://www.youtube.com/watch?v=zULrMqzxZ1I">
+        Art Therapy- Radiating Circles - YouTube
+      </a>
+      <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+    </div>
+    <div class="col-md-2 twentykikyo">
+      <a target="_blank" href="../hw-portfolio/pr2022f/hw10/index.html">
+        作業 10 說明
+      </a>
+      <hr>
+      <a target="_blank" href="./doraemon_ip2019s/radiating_circles_47.svg">
+        <img src="./doraemon_ip2019s/radiating_circles_47.svg" width="80%">
+      </a>
+    </div>
+    <div class="col-md-2 twentykikyo">
+      <a target="_blank" href="./doraemon_ip2019s/radiating_circles.mp4">
+        <img src="./svgcolor/mpg-video.svg" width="64px">
+      </a>
+    </div>
+    <div class="col-md-2 twentykikyo">第7週<hr>2022.10.23 (日)</div>
+    <div class="col-md-2 twentykikyo">林立森<br><span style="font-size: 11pt;">t111598040@ntut.org.tw</span></div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <div class="col-md-2 twentykikyo">HW 11<hr>L-System 曲水獎狀框</div>
+    <div class="col-md-2 twentykikyo">
+      <a target="_blank" href="https://tjhsieh.github.io/107_winding_stream/">
+        作業 11 繪圖系統
+      </a>
+      <hr>
+      <a target="_blank" href="./winding/winding_example.zip">
+        範例 JSON
+      </a>
+      <hr>
+      <a target="_blank" href="./winding/winding_example_YingZaoFaShi.zip">
+        範例 JSON YingZaoFaShi
+      </a>
+      <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+    </div>
+    <div class="col-md-2 twentykikyo">
+      <a target="_blank" href="../hw-portfolio/pr2022f/hw11/index.html" >
+        作業 11 說明
+      </a>
+      <hr>
+      <a target="_blank" href="./doraemon_ip2019s/file.svg">
+        <img src="./doraemon_ip2019s/file.svg" width="128px">
+      </a>
+    </div>
+    <div class="col-md-2 twentykikyo">
+      範例: 
+      <a target="_blank" href="https://keepcrashing.github.io/L-System/?eyJJdGVyYXRpb25zIjoiMyIsIkFuZ2xlIjoiOTAiLCJBbHBoYWJldCI6IlgiLCJBeG9pbSI6IlgiLCJSdWxlMSI6Ilg9K0ZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkYrRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGLUZGRkZGRkZGRkYtRkZGK0YrRkZGRitGRi1GRkZGLUYtRkZGK0YrRkZGLUZGRi1GRkYtRi1GRitGK0ZGRitGRi1GRkYtRi1GRitGK0ZGRitGRkYrRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRlgiLCJSdWxlMiI6IiIsIlJ1bGUzIjoiIiwiUnVsZTQiOiIiLCJSdWxlNSI6IiIsIlJ1bGU2IjoiIiwiUG9seWdvbiI6W3siUGF0aEFuZ2xlIjoiMCw5MCwxODAsMjcwIiwiUG9seWdvbkFuZ2xlIjoiMzE1IiwiTGF5ZXIxIjp7IkNvbG9yIjoiIzFmMWIzZCIsIlRoaWNrbmVzcyI6IjcuNSJ9LCJMYXllcjIiOnsiQ29sb3IiOiIjMmMyZDg2IiwiVGhpY2tuZXNzIjoiNy41In0sIkxheWVyMyI6eyJDb2xvciI6IiM5N2FlY2YiLCJUaGlja25lc3MiOiI1In19XSwiT3JpZ2luIjoiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2tlZXBDcmFzaGluZy9XaW5kaW5nU3RyZWFtL21hc3Rlci9waWMvJUU1JTlCJTlCJUU2JTk2JTk3JUU1JUJBJTk1LnBuZyJ9">
+        <img src="./svgcolor/html.svg" width="64px">
+      </a>
+    </div>
+    <div class="col-md-2 twentykikyo">第7週<hr>2022.10.23 (日)</div>
+    <div class="col-md-2 twentykikyo">林立森<br><span style="font-size: 11pt;">t111598040@ntut.org.tw</span></div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <div class="col-md-2 twentykikyo">HW 12<hr></div>
+    <div class="col-md-2 twentykikyo">
+      <a target="_blank" href="https://tjhsieh.github.io/106_punica/">
+        作業 12 繪圖系統
+      </a>
+      <hr>
+      <a target="_blank" href="./punica/index.html">
+        海石榴華、牡丹華、蓮荷華
+      </a>
+      <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+    </div>
+    <div class="col-md-2 twentykikyo">
+      <a target="_blank" href="../hw-portfolio/pr2022f/hw12/index.html" >
+        作業 12 說明
+      </a>
+   </div>
+    <div class="col-md-2 twentykikyo">
+      Adobe Illustrator + Cintiq Pro 繪圖板 + 手繪一個月
+      <hr>
+      <a target="_blank" href="./punica/punica1_1920.svg">
+        <img src="./punica/punica1_1920.svg" width="95%">
+      </a>
+      <a target="_blank" href="./punica/punica2_1920.svg">
+        <img src="./punica/punica2_1920.svg" width="95%">
+      </a>
+      <a target="_blank" href="./punica/1-1-2-1_1920.svg">
+        <img src="./punica/1-1-2-1_1920.svg" width="95%">
+      </a>
+      <a target="_blank" href="./punica/1-1-3-1_1920.svg">
+        <img src="./punica/1-1-3-1_1920.svg" width="95%">
+      </a>
+    </div>
+    <div class="col-md-2 twentykikyo">第7週<hr>2022.10.23 (日)</div>
+    <div class="col-md-2 twentykikyo">林立森<br><span style="font-size: 11pt;">t111598040@ntut.org.tw</span></div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <div class="col-md-2 twentykonparuiro">HW 13<hr></div>
+    <div class="col-md-2 twentykonparuiro">
+      元宇宙擴增實境
+      <hr>
+      <a target="_blank" href="https://docs.google.com/presentation/d/19jO-chtmVBW5jM06UhXMiGRA1t6pPvVT/edit?usp=sharing&ouid=115156210972726726940&rtpof=true&sd=true">
+        AR 試衣間 <img src="./svgcolor/ppt.svg" width="64px">
+      </a>
+      <hr>
+      <a target="_blank" href="https://yemount.github.io/">
+        Shan Huang
+      </a>
+
+      <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+    </div>
+    <div class="col-md-2 twentykonparuiro">
+      <a target="_blank" href="../hw-portfolio/pr2022f/hw13/index.html" >
+        作業 13 說明
+      </a>
+    </div>
+    <div class="col-md-2 twentykonparuiro">
+      <a target="_blank" href="">
+        <img src="./svgcolor/mpg-video.svg" width="64px">
+      </a>
+    </div>
+    <div class="col-md-2 twentykonparuiro">第7週<hr>2022.10.23 (日)</div>
+    <div class="col-md-2 twentykonparuiro">梁佑駿<hr><span style="font-size: 11pt;">t111598023@ntut.org.tw</span></div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <div class="col-md-2 twentykonparuiro">HW 14<hr></div>
+    <div class="col-md-2 twentykonparuiro">
+
+       <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+    </div>
+    <div class="col-md-2 twentykonparuiro">
+      <a target="_blank" href="../hw-portfolio/pr2022f/hw14/index.html" >
+        作業 14 說明
+      </a>
+   </div>
+    <div class="col-md-2 twentykonparuiro">
+      <a target="_blank" href="https://docs.google.com/presentation/d/1uczscQm5KVQUYenwotPB1kfWCayvZu9I/edit#slide=id.p1">
+        <img src="./svgcolor/mpg-video.svg" width="64px">
+      </a>
+    </div>
+    <div class="col-md-2 twentykonparuiro">第7週<hr>2022.10.23 (日)</div>
+    <div class="col-md-2 twentykonparuiro">梁佑駿<hr><span style="font-size: 11pt;">t111598023@ntut.org.tw</span></div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <div class="col-md-2 twentykonparuiro">HW 15<hr></div>
+    <div class="col-md-2 twentykonparuiro">
+
+      </a>
+      <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+    </div>
+    <div class="col-md-2 twentykonparuiro">
+      <a target="_blank" href="../hw-portfolio/pr2022f/hw15/index.html" >
+        作業 15 說明
+      </a>
+    </div>
+    <div class="col-md-2 twentykonparuiro">
+      <a target="_blank" href="">
+        <img src="./svgcolor/mpg-video.svg" width="64px">
+      </a>
+    </div>
+    <div class="col-md-2 twentykonparuiro">第7週<hr>2022.10.23 (日)</div>
+    <div class="col-md-2 twentykonparuiro">梁佑駿<hr><span style="font-size: 11pt;">t111598023@ntut.org.tw</span></div>
+  </div>
+
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <div class="col-md-2 twentykonparuiro">HW 16<hr></div>
+    <div class="col-md-2 twentykonparuiro">
+
+      <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+    </div>
+    <div class="col-md-2 twentykonparuiro">
+      <a target="_blank" href="../hw-portfolio/pr2022f/hw16/index.html" >
+        作業 16 說明
+      </a>
+    </div>
+    <div class="col-md-2 twentykonparuiro">
+      <a target="_blank" href="">
+        <img src="./svgcolor/mpg-video.svg" width="64px">
+      </a>
+    </div>
+    <div class="col-md-2 twentykonparuiro">第7週<hr>2022.10.23 (日)</div>
+    <div class="col-md-2 twentykonparuiro">梁佑駿<hr><span style="font-size: 11pt;">t111598023@ntut.org.tw</span></div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <div class="col-md-2 twentykonparuiro">HW 17<hr></div>
+    <div class="col-md-2 twentykonparuiro">
+
+      <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+    </div>
+    <div class="col-md-2 twentykonparuiro">
+      <a target="_blank" href="../hw-portfolio/pr2022f/hw17/index.html" >
+        作業 17 說明
+      </a>
+    </div>
+    <div class="col-md-2 twentykonparuiro">
+      <a target="_blank" href="">
+        <img src="./svgcolor/mpg-video.svg" width="64px">
+      </a>
+    </div>
+    <div class="col-md-2 twentykonparuiro">第7週<hr>2022.10.23 (日)</div>
+    <div class="col-md-2 twentykonparuiro">梁佑駿<hr><span style="font-size: 11pt;">t111598023@ntut.org.tw</span></div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-2 twentykonparuiro">HW 18<hr></div>
+    <div class="col-md-2 twentykonparuiro"> 
+
+      <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+    </div>
+    <div class="col-md-2 twentykonparuiro">
+      <a target="_blank" href="../hw-portfolio/pr2022f/hw18/index.html" >
+        作業 18 說明
+      </a>
+   </div>
+    <div class="col-md-2 twentykonparuiro">
+      <a target="_blank" href="">
+        <img src="./svgcolor/mpg-video.svg" width="64px">
+      </a>
+    </div>
+    <div class="col-md-2 twentykonparuiro">第7週<hr>2022.10.23 (日)</div>
+    <div class="col-md-2 twentykonparuiro">梁佑駿<hr><span style="font-size: 11pt;">t111598023@ntut.org.tw</span></div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-2 twentykonparuiro">HW 19<hr></div>
+    <div class="col-md-2 twentykonparuiro"> 
+
+      <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+    </div>
+    <div class="col-md-2 twentykonparuiro">
+      <a target="_blank" href="../hw-portfolio/pr2022f/hw19/index.html" >
+        作業 19 說明
+      </a>
+   </div>
+    <div class="col-md-2 twentykonparuiro">
+      <a target="_blank" href="">
+        <img src="./svgcolor/mpg-video.svg" width="64px">
+      </a>
+    </div>
+    <div class="col-md-2 twentykonparuiro">第7週<hr>2022.10.23 (日)</div>
+    <div class="col-md-2 twentykonparuiro">梁佑駿<hr><span style="font-size: 11pt;">t111598023@ntut.org.tw</span></div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-2 twentykonparuiro">HW 20<hr></div>
+    <div class="col-md-2 twentykonparuiro"> 
+
+      <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+    </div>
+    <div class="col-md-2 twentykonparuiro">
+      <a target="_blank" href="../hw-portfolio/pr2022f/hw20/index.html" >
+        作業 20 說明
+      </a>
+   </div>
+    <div class="col-md-2 twentykonparuiro">
+      <a target="_blank" href="">
+        <img src="./svgcolor/mpg-video.svg" width="64px">
+      </a>
+    </div>
+    <div class="col-md-2 twentykonparuiro">第7週<hr>2022.10.23 (日)</div>
+    <div class="col-md-2 twentykonparuiro">梁佑駿<hr><span style="font-size: 11pt;">t111598023@ntut.org.tw</span></div>
+  </div>
+
+
+  <!-- ------------------------------------------------>
+  <div class="row hw12">
+    <div class="col-md-12 twenty">
+      <a href="./title_enji.svg"><img src="./title_enji.svg" width="100%"></a>
+    </div>
+  </div>
+  <!-- ------------------------------------------------>
+
+  <!-- ------------------------------------------------>
+  <div class="row hw12">
+    <div class="col-md-12 twenty">
+      <a href="./title_kikyo.svg"><img src="./title_kikyo.svg" width="100%"></a>
+    </div>
+  </div>
+  <!-- ------------------------------------------------>
+
+  <!-- ------------------------------------------------>
+  <div class="row hw12">
+    <div class="col-md-12 twenty">
+      <a href="./title_konparuiro.svg"><img src="./title_konparuiro.svg" width="100%"></a>
+    </div>
+  </div>
+  <!-- ------------------------------------------------>
+
+
+
+  <!-- ------------------------------------------------>
+  <div class="row hw12">
+    <div class="col-md-4 twenty">
+      「燕脂」 
+      <hr>
+      <a target="_blank" href="https://nipponcolors.com/#enji" target="_blank">日本の伝統色</a> 42% #9F353A rgb(159,53,58) &ensp; &emsp; &thinsp; 
+      <hr>
+      <a target="_blank" href="https://www.w3schools.com/colors/colors_picker.asp" target="_blank">HTML Color Picker</a> 95% #f9eced rgb(249,236,237) &ensp; &emsp; &thinsp; 
+    </div>
+    <div class="col-md-4 twentykikyo">
+      「桔梗」 
+      <hr>
+      <a target="_blank" href="https://nipponcolors.com/#enji" target="_blank">日本の伝統色</a> 45% #6A4C9C rgb(106,76,156) &ensp; &emsp; &thinsp; 
+      <hr>
+      <a target="_blank" href="https://www.w3schools.com/colors/colors_picker.asp" target="_blank">HTML Color Picker</a> 95% #f1eef7 rgb(241,238,247) &ensp; &emsp; &thinsp; 
+    </div>
+    <div class="col-md-4 twentykonparuiro">
+      「金春」 
+      <hr>
+      <a target="_blank" href="https://nipponcolors.com/#enji" target="_blank">日本の伝統色</a> 60% #5AC2D9 rgb(90,194,217) &ensp; &emsp; &thinsp; 
+      <hr>
+      <a target="_blank" href="https://www.w3schools.com/colors/colors_picker.asp" target="_blank">HTML Color Picker</a> 95% #eaf7fa rgb(234,247,250) &ensp; &emsp; &thinsp; 
+    </div>
+  </div>
+  <!-- ------------------------------------------------>
+
+
+
+  <!--
+
+  <div class="row hw12">
+    <div class="col-md-12 ninety">
+      <svg width="100%" height="256" id="voronoi"></svg>
+    </div>
+  </div>
+
+  <div class="row hw12" id="hw1">
+    <div class="col-md-3 thirty">
+      <a href="./img/lab01.svg"><img src="./img/lab01.svg" width="100%"></a>
+    </div>
+    <div class="col-md-9 ninety">
+      <ul>
+        <li><a href="https://docs.google.com/presentation/d/1SOoP3axMK9ttdZQ14FXDqfCLNzoEL9tN/edit" target="_blank">Computer Animation 1-1 VRoid 3D 角色製作</a></li>
+        <li><a href="" target="_blank"></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row hw12" id="hw2">
+    <div class="col-md-9 ninety">
+      <ul>
+        <li><a href="https://docs.google.com/presentation/d/1vVmwWQVS1gRVbORqZ38B47vNPneLebaT/edit" target="_blank">Computer Animation 1-2 Mixamo</a></li>
+        <li><a href="" target="_blank"></a></li>
+      </ul>
+    </div>
+    <div class="col-md-3 thirty">
+      <a href="./img/lab02.svg"><img src="./img/lab02.svg" width="100%"></a>
+    </div>
+  </div>
+
+  <div class="row hw12" id="hw3">
+    <div class="col-md-3 thirty">
+      <a href="./img/lab03.svg"><img src="./img/lab03.svg" width="100%"></a>
+    </div>
+    <div class="col-md-9 ninety">
+      <ul>
+        <li><a href="https://docs.google.com/presentation/d/1A3uuWGdmQfuavQnjDjjZJ6hmcFs-BMvt/edit#slide=id.p1" target="_blank">Computer Animation 2-1 Unity 場景(大地) + 運鏡</a></li>
+        <li><a href="" target="_blank"></a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="row hw12" id="hw4">
+    <div class="col-md-9 ninety">
+      <ul>
+        <li><a href="https://docs.google.com/presentation/d/1u0g5UGtjurToYz8eJL4YwqYEVj0xaQ55/edit#slide=id.p1" target="_blank">Computer Animation 2-2 MMD轉檔教學</a></li>
+        <li><a href="" target="_blank"></a></li>
+      </ul>
+    </div>
+    <div class="col-md-3 thirty">
+      <a href="./img/lab04.svg"><img src="./img/lab04.svg" width="100%"></a>
+    </div>
+  </div>
+
+
+  <div class="row hw12" id="hw5">
+    <div class="col-md-3 thirty">
+      <a href="./img/lab05.svg"><img src="./img/lab05.svg" width="100%"></a>
+    </div>
+    <div class="col-md-9 ninety">
+      <ul>
+        <li><a href="" target="_blank"></a></li>
+        <li><a href="" target="_blank"></a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="row hw12" id="hw6">
+    <div class="col-md-9 ninety">
+      <ul>
+        <li><a href="" target="_blank"></a></li>
+        <li><a href="" target="_blank"></a></li>
+      </ul>
+    </div>
+    <div class="col-md-3 thirty">
+      <a href="./img/lab06.svg"><img src="./img/lab06.svg" width="100%"></a>
+    </div>
+  </div>
+
+  <div class="row hw12" id="hw7">
+    <div class="col-md-3 thirty">
+      <a href="./img/lab07.svg"><img src="./img/lab07.svg" width="100%"></a>
+    </div>
+    <div class="col-md-9 ninety">
+      <ul>
+        <li><a href="" target="_blank"></a></li>
+        <li><a href="" target="_blank"></a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="row hw12" id="hw8">
+    <div class="col-md-9 ninety">
+      <ul>
+        <li><a href="" target="_blank"></a></li>
+        <li><a href="" target="_blank"></a></li>
+      </ul>
+    </div>
+    <div class="col-md-3 thirty">
+      <a href="./img/lab08.svg"><img src="./img/lab08.svg" width="100%"></a>
+    </div>
+  </div>
+
+  <div class="row hw12" id="hw9">
+    <div class="col-md-3 thirty">
+      <a href="./img/lab09.svg"><img src="./img/lab09.svg" width="100%"></a>
+    </div>
+    <div class="col-md-9 ninety">
+      <ul>
+        <li><a href="" target="_blank"></a></li>
+        <li><a href="" target="_blank"></a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="row hw12" id="hw10">
+    <div class="col-md-9 ninety">
+      <ul>
+        <li><a href="" target="_blank"></a></li>
+        <li><a href="" target="_blank"></a></li>
+      </ul>
+    </div>
+    <div class="col-md-3 thirty">
+      <a href="./img/lab10.svg"><img src="./img/lab10.svg" width="100%"></a>
+    </div>
+  </div>
+
+  <div class="row hw12" id="hw11">
+    <div class="col-md-3 thirty">
+      <a href="./img/lab11.svg"><img src="./img/lab11.svg" width="100%"></a>
+    </div>
+    <div class="col-md-9 ninety">
+      <ul>
+        <li><a href="" target="_blank"></a></li>
+        <li><a href="" target="_blank"></a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="row hw12" id="hw12">
+    <div class="col-md-9 ninety">
+      <ul>
+        <li><a href="" target="_blank"></a></li>
+        <li><a href="" target="_blank"></a></li>
+      </ul>
+    </div>
+    <div class="col-md-3 thirty">
+      <a href="./img/lab12.svg"><img src="./img/lab12.svg" width="100%"></a>
+    </div>
+  </div>
+  -->
+
+
+</div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+
+
+<!-- <script src="https://d3js.org/d3.v4.min.js"></script>
+
+<script>
+var svg = d3.select("#voronoi"),
+    //width = +svg.attr("width"),
+    width = d3.select('#voronoi').node().getBoundingClientRect().width,
+    height = +svg.attr("height"),
+    radius = 32;
+
+
+
+var lab = ['壹、子','貳、丑','參、寅','肆、卯','伍、辰','陸、巳','柒、午','捌、未','玖、申','拾、酉','拾壹、戌','拾貳、亥'];
+
+var circles = d3.range(12).map(function() {
+  return {
+    x: Math.round(Math.random() * (width - radius * 2) + radius),
+    y: Math.round(Math.random() * (height - radius * 2) + radius)
+  };
+});
+
+circles.sort(function(a, b) {
+  return a.x - b.x;
+});
+
+var color = d3.scaleOrdinal()
+    .range(d3.schemeCategory20);
+
+var voronoi = d3.voronoi()
+    .x(function(d) { return d.x; })
+    .y(function(d) { return d.y; })
+    .extent([[-1, -1], [width + 1, height + 1]]);
+
+var circle = svg.selectAll("g")
+  .data(circles)
+  .enter().append("g")
+    .call(d3.drag()
+        .on("start", dragstarted)
+        .on("drag", dragged)
+        .on("end", dragended));
+
+var cell = circle.append("path")
+  .data(voronoi.polygons(circles))
+    .attr("d", renderCell)
+    .attr("id", function(d, i) { return "cell-" + i; });
+
+circle.append("clipPath")
+    .attr("id", function(d, i) { return "clip-" + i; })
+  .append("use")
+    .attr("xlink:href", function(d, i) { return "#cell-" + i; });
+
+circle.append("a")
+    .attr("href", function(d, i){
+      return '#hw' + (i + 1);
+    })
+    .append("circle")
+    .attr("clip-path", function(d, i) { return "url(#clip-" + i + ")"; })
+    .attr("cx", function(d) { return d.x; })
+    .attr("cy", function(d) { return d.y; })
+    .attr("r", radius)
+    .style("stroke", 'rgb(159, 53, 58)')
+    .style("fill", function(d, i) { return color(i); });
+
+circle.append("a")
+    .attr("href", function(d, i){
+      return '#hw' + (i + 1);
+    })
+    .append("text")
+    .attr("clip-path", function(d, i) { return "url(#clip-" + i + ")"; })
+    .attr("x", function(d) { return d.x; })
+    .attr("y", function(d) { return d.y + 12; })
+    //.text(String.fromCharCode(getRandomInt(19968, 40959)));
+    .text(function(d, i){ return lab[i]});
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min); 
+  //The maximum is exclusive and the minimum is inclusive
+}
+
+function dragstarted(d) {
+  d3.select(this).raise().classed("active", true);
+}
+
+function dragged(d) {
+  d3.select(this).select("circle").attr("cx", d.x = d3.event.x).attr("cy", d.y = d3.event.y);
+  d3.select(this).select("text").attr("x", d.x = d3.event.x).attr("y", d.y = d3.event.y + 10);
+  cell = cell.data(voronoi.polygons(circles)).attr("d", renderCell);
+}
+
+function dragended(d, i) {
+  d3.select(this).classed("active", false);
+}
+
+function renderCell(d) {
+  return d == null ? null : "M" + d.join("L") + "Z";
+}
+</script> -->
+
+
+</body>
+</html>
