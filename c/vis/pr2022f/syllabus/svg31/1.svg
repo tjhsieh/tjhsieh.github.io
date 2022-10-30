@@ -1,0 +1,19 @@
+		<svg>
+<rect x="0" y="0" width="256" height="128" stroke="red" fill="rgba(255,255,255,0.3)" opacity="0.95" ></rect>
+
+
+<defs>
+  <path id="a1" d="M0 00 C150 100 100 -100 300 00" stroke="#000" fill="none"/>
+</defs>
+
+<text>
+   <textPath xlink:href="#a1">這是隨著路徑跑的文字，很酷吧</textPath>
+</text>
+
+
+
+<text x="50" y="20">
+  <tspan x="10" y="30" fill="#000" rotate="20" style="font-size:24px;">element</tspan>
+  <tspan x="10" y="60" fill="#f00" rotate="20,30,40,50,60,70,80" style="font-size:24px;">element</tspan>
+</text>
+		</svg>
