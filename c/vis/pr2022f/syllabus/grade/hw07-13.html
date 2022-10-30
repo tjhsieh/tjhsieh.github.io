@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant-TW">
+
+<head>
+<meta charset="utf-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&display=swap');
+
+  body {
+    background-color: rgba(255, 128, 255, 0.1);
+  }
+
+  table {
+    border-collapse: collapse;
+    border: 2px black solid;
+    font: 16px sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8px;
+  }
+
+  td,
+  th {
+    border: 1px black solid;
+    padding: 5px;
+    background-color: rgba(255, 255, 0, 0.1);
+  }
+
+  td img {
+    transition: width, height;
+    transition-duration: 0.5s;
+    /* width: 50px; */
+    height: 256px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  }
+
+  div {
+    margin: 16px auto;
+  }
+
+</style>
+</head>
+
+<body>
+
+<div></div>
+
+<script src="./d3.v3.min.js"></script>
+
+<script type="text/javascript" charset="utf-8">
+
+    d3.text("./csv/name.csv", function (data) {
+
+        //var parsedCSV = d3.csv.parseRows(data);
+        parsedCSV = d3.csv.parseRows(data);
+
+        //console.log(parsedCSV);
+
+        var container = d3.select("body")
+            .append("table")
+
+            .selectAll("tr")
+            .data(parsedCSV).enter()
+            .append("tr")
+
+            .selectAll("td")
+            .data(function (d) { 
+                return d; 
+            }).enter()
+            .append("td")
+            .html(function (d, i) {
+                if ( d > 20 ) {
+                     return d;
+                }
+                else if ( d == 'GitHub') {
+                    return d;
+                }
+                else if ( i == 2) {
+                    //return '<a href="https://' + d + '.github.io/pr2022f/">' + d + '</a>';
+                    return '<a href="https://' + d + '.github.io/pr2022f/">' + d + ' <img src="https://raw.githubusercontent.com/' + d + '/pr2022f/main/hw00/' + d + '.svg">' + '</a>';
+                }
+                else if ( i == 0 || i == 1) {
+                    return d;
+                }
+                else if ( i == 3) {
+                    return '<iframe src="https://' + d + '.github.io/pr2022f/hw08/hellokitty.svg" width="600px" height="600px"></iframe>';
+                    //return '<td><img src="https://raw.githubusercontent.com/' + d + '/pr2022f/main/hw08/hellokitty.svg"/></td>';
+                }
+                else if ( i == 4) {
+
+                    // if (d == '110c51528')
+                    //     return '<iframe src="https://' + d + '.github.io/pr2022f/hw09/dorapplemon.svg" width="600px" height="600px"></iframe>';
+                    // if (d == '9478cc')
+                    //     return '<iframe src="https://' + d + '.github.io/pr2022f/hw09/doraemon change.svg" width="600px" height="600px"></iframe>';
+                    // else
+                    
+                    return '<iframe src="https://' + d + '.github.io/pr2022f/hw09/doraemon.svg" width="600px" height="600px"></iframe>';
+
+                    //return '<td><img src="https://raw.githubusercontent.com/' + d + '/pr2022f/main/hw08/hellokitty.svg"/></td>';
+                }
+                else if ( i == 5) {
+                    // if (d == '110c51528')
+                    //     return '<iframe src="https://' + d + '.github.io/pr2022f/hw09/HW10.svg" width="600px" height="600px"></iframe>';
+                    // else if (d == '9478cc')
+                    //     return '<iframe src="https://' + d + '.github.io/pr2022f/hw10/triangle .svg" width="600px" height="600px"></iframe>';
+                    // else
+                    
+                    return '<iframe src="https://' + d + '.github.io/pr2022f/hw10/radiating_circles.svg" width="600px" height="600px"></iframe>';
+
+                    //return '<td><img src="https://raw.githubusercontent.com/' + d + '/pr2022f/main/hw08/hellokitty.svg"/></td>';
+                }
+                else if ( i == 6) {
+                    return '<iframe src="https://' + d + '.github.io/pr2022f/hw11/winding.svg" width="600px" height="600px"></iframe>';
+
+                    //return '<td><img src="https://raw.githubusercontent.com/' + d + '/pr2022f/main/hw08/hellokitty.svg"/></td>';
+                }
+                else if ( i == 7) {
+                    return '<iframe src="https://' + d + '.github.io/pr2022f/hw12/punica.svg" width="600px" height="600px"></iframe>';
+
+                    //return '<td><img src="https://raw.githubusercontent.com/' + d + '/pr2022f/main/hw08/hellokitty.svg"/></td>';
+                }
+                else if ( i == 8) {
+
+                    if (d == 'eigna0917')
+                        return '<iframe src="https://' + d + '.github.io/pr2022f/hw13/eigna0917.svg" width="600px" height="600px"></iframe>';
+                    else if (d == 'cch0915')
+                        return '<iframe src="https://' + d + '.github.io/pr2022f/hw13/initEditSAMPLE.svg" width="600px" height="600px"></iframe>';
+                    else if (d == 'ellomorce')
+                        return '<iframe src="https://' + d + '.github.io/pr2022f/hw13/ellomorce_skeleton.svg" width="600px" height="600px"></iframe>';
+                    else if (d == 'jimlin13')
+                        return '<iframe src="https://' + d + '.github.io/pr2022f/hw13/pumpkin-vampire.svg" width="600px" height="600px"></iframe>';
+                    else if (d == 'sylviayyan')
+                        return '<iframe src="https://' + d + '.github.io/pr2022f/hw13/halloween.svg" width="600px" height="600px"></iframe>';
+                    else if (d == '110c51528')
+                        return '<iframe src="https://' + d + '.github.io/pr2022f/hw13/拒絕連上四天課.svg" width="600px" height="600px"></iframe>';
+                    else if (d == 'vincent0417')
+                        return '<iframe src="https://' + d + '.github.io/pr2022f/hw13/initEdit.svg" width="600px" height="600px"></iframe>';
+                    else if (d == 'arti1168')
+                        return '<iframe src="https://' + d + '.github.io/pr2022f/hw13/initEdit_01.svg" width="600px" height="600px"></iframe>';
+                    else if (d == '9478cc')
+                        return '<iframe src="https://' + d + '.github.io/pr2022f/hw13/skeleton.svg" width="600px" height="600px"></iframe>';
+
+                    else if (d == 'wangston9')
+                        return '<iframe src="https://' + d + '.github.io/pr2022f/hw13/wangston_9_initEdit.svg" width="600px" height="600px"></iframe>';
+
+                    else if (d == '')
+                        return '<iframe src="https://' + d + '.github.io/pr2022f/hw13/.svg" width="600px" height="600px"></iframe>';
+
+                    else if (d == '')
+                        return '<iframe src="https://' + d + '.github.io/pr2022f/hw13/.svg" width="600px" height="600px"></iframe>';
+
+                    else if (d == '')
+                        return '<iframe src="https://' + d + '.github.io/pr2022f/hw13/.svg" width="600px" height="600px"></iframe>';
+
+                    else if (d == '')
+                        return '<iframe src="https://' + d + '.github.io/pr2022f/hw13/.svg" width="600px" height="600px"></iframe>';
+
+
+
+                    else if (d == '')
+                        return '<iframe src="https://' + d + '.github.io/pr2022f/hw13/stellakimono.svg" width="600px" height="600px"></iframe>';
+
+
+
+                    //return '<td><img src="https://raw.githubusercontent.com/' + d + '/pr2022f/main/hw08/hellokitty.svg"/></td>';
+                }
+            })
+            // .filter(function (d, i) { 
+            //     return (i == 3); 
+            // })
+            // .append("img")
+            // .attr("src", function (d, i) {
+            //     //alert('d = ' + d);
+            //     return 'https://raw.githubusercontent.com/' + d + '/pr2022f/main/hw08/hellokitty.svg';
+            // })
+            // .attr("width", 256)
+            // .attr("height", 256)
+
+            ;
+    });
+</script>
+</body>
+
+</html>
