@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<title>電腦動畫 111-1 期末計畫</title>
+<style type="text/css">
+  body {
+    background-color: rgb(159, 53, 58);
+    color: rgb(159, 53, 58);
+  }
+
+  .container-fluid {
+    width:  90%;
+  }
+
+  .hw12 {
+    border: 1px solid rgb(159, 53, 58);
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .twenty {
+    border: 1px solid #f9eced;
+    color: #f9eced;
+    padding: 8px;
+    font-size: 16pt;
+  }
+
+  .twentykikyo {
+    color: #f9eced;
+    font-size: 16pt;
+    background-color: #6a4c9c;
+  }
+
+  .twentykonparuiro {
+    color: #f9eced;
+    font-size: 16pt;
+    background-color: #5ac2d9;
+  }
+
+  .twenty a {
+    color:  yellow;
+    font-size:  12pt;
+  }
+
+  .twenty a:hover {
+    color: #f9eced;
+    font-size:  16pt;
+  }
+
+  .thirty {
+    border: 1px solid #f9eced;
+    color: #f9eced;
+  }
+
+  .ninety {
+    border: 1px solid rgb(159, 53, 58);
+    background-color: #f9eced;
+    padding: 8px;
+  }
+
+  svg {
+    border: 2px solid rgb(159, 53, 58);
+  }
+
+  path {
+    pointer-events: all;
+    fill: #f9eced;
+    stroke: rgb(159, 53, 58);
+    stroke-opacity: 0.95;
+    stroke-width: 1px;
+  }
+
+  .active circle {
+    stroke: #f9eced;
+    stroke-width: 2px;
+  }
+
+  svg g text {
+    fill: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 0, 0.1);
+    text-shadow: 0 0 16px #FF0000, 0 0 16px #000000;
+    font-size: 24pt;
+    text-anchor: middle;
+  }
+
+  .twenty:hover {
+    /*
+      background-color: rgba(255, 255, 0, 0.1);
+    */
+      box-shadow: 0 0 5px 3px #f9eced;
+      color: cyan; 
+      text-shadow: 0 0 6px #FFFFFF, 0 0 6px #000000;
+  }
+
+  img:hover {
+    
+      box-shadow: 0 0 1px 1px #f9eced;
+    
+      animation-name: happy;
+      animation-duration: 0.5s;
+      animation-iteration-count: infinite;
+  }
+
+  @keyframes happy {
+      0% {
+          transform: translateY(0px);
+      }
+
+      25% {
+          transform: translateY(-15px);
+      }
+
+      50% {
+          transform: translateY(0px);
+      }
+
+      75% {
+          transform: translateY(-5px);
+      }
+
+      100% {
+          transform: translateY(0px);
+      }
+  }
+
+</style>
+</head>
+<body>
+
+<div class="container-fluid">
+
+  <!-- ------------------------------------------------>
+  <div class="row hw12">
+    <div class="col-md-12 twenty">
+      <li><a target="_blank" href="https://www.youtube.com/watch?v=jr1NX4Jo8GE">【まなこ】金曜日のおはよう 踊ってみた</a></li>
+      <li><a target="_blank" href="https://www.youtube.com/watch?v=7IejPmXrbwg">派對咖孔明 パリピ孔明 OP 3D虛擬英子 チキチキバンバン Chitty Chitty Bang Bang</a></li>
+      <li><a target="_blank" href="https://www.youtube.com/watch?v=N0fTV2xSDmQ">【為舞蹈練習】#派對咖孔明 OP「チキチキバンバン」舞蹈翻跳【鏡面反轉/背面演示】</a></li>
+    </div>
+  </div>
+  <!-- ------------------------------------------------>
+
+  <!-- ------------------------------------------------>
+  <div class="row hw12">
+    <div class="col-md-12 twenty">
+      
+    </div>
+  </div>
+  <!-- ------------------------------------------------>
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <div class="col-md-2 twenty"><img src="./img_kitty/133533.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/hero-kitty.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/pic03.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/pic04.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/pic05.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/pic06.svg" width="100%"></div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <div class="col-md-2 twenty">導演<hr><img src="https://www.svgrepo.com/show/246690/chair-director.svg" width="64px"></div>
+    <div class="col-md-2 twenty">舞者<hr><img src="https://www.svgrepo.com/show/246687/award-reward.svg" width="64px"></div>
+    <div class="col-md-2 twenty">舞者<hr><img src="https://www.svgrepo.com/show/246694/award-reward.svg" width="64px"></div>
+    <div class="col-md-2 twenty">攝影<hr><img src="https://www.svgrepo.com/show/246681/video-camera-camera-lens.svg" width="64px"></div>
+    <div class="col-md-2 twenty">音效<hr><img src="https://www.svgrepo.com/show/246688/film-strip-film.svg" width="64px"></div>
+    <div class="col-md-2 twenty">模型<hr><img src="https://www.svgrepo.com/show/246689/clapboard.svg" width="64px"></div>
+  </div>
+
+
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykikyo">
+    <div class="col-md-2 twenty">
+        雷岱蓉<hr><span style="font-size: 11pt;">t111598069@ntut.org.tw</span>
+    </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="">
+      </a>
+      <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+    </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="" >
+
+      </a>
+    </div>
+    <div class="col-md-2 twenty">
+      <a href="">
+        <img src="./img/mpg.svg" width="64px">
+      </a>
+    </div>
+    <div class="col-md-2 twenty"></div>
+    <div class="col-md-2 twenty"></div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <div class="col-md-2 twenty">
+      林立森<hr><span style="font-size: 11pt;">t111598040@ntut.org.tw</span>
+    </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="">
+
+
+      </a>
+       <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+    </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="" >
+
+      </a>
+   </div>
+    <div class="col-md-2 twenty">
+      <a href="">
+        <img src="./img/mpg.svg" width="64px">
+      </a>
+    </div>
+    <div class="col-md-2 twenty"></div>
+    <div class="col-md-2 twenty"></div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykonparuiro">
+    <div class="col-md-2 twenty">
+      羅名彥<hr><span style="font-size: 11pt;">t111598006@ntut.org.tw</span>
+    </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="">
+
+      </a>
+      <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+    </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="" >
+
+      </a>
+    </div>
+    <div class="col-md-2 twenty">
+      <a href="">
+        <img src="./img/mpg.svg" width="64px">
+      </a>
+    </div>
+    <div class="col-md-2 twenty"></div>
+    <div class="col-md-2 twenty"></div>
+  </div>
+
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykikyo">
+    <div class="col-md-2 twenty">
+      王俞喬<hr><span style="font-size: 11pt;">t111598002@ntut.org.tw</span>
+    </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="">
+
+      </a>
+      <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+    </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="" >
+
+      </a>
+    </div>
+    <div class="col-md-2 twenty">
+      <a href="">
+        <img src="./img/mpg.svg" width="64px">
+      </a>
+    </div>
+    <div class="col-md-2 twenty"></div>
+    <div class="col-md-2 twenty"></div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <div class="col-md-2 twenty">
+      林文心<hr><span style="font-size: 11pt;">t111598001@ntut.org.tw</span>
+    </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="">
+
+      </a>
+      <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+    </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="" >
+
+      </a>
+    </div>
+    <div class="col-md-2 twenty">
+      <a href="">
+        <img src="./img/mpg.svg" width="64px">
+      </a>
+    </div>
+    <div class="col-md-2 twenty"></div>
+    <div class="col-md-2 twenty"></div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykonparuiro">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-2 twenty">
+      梁佑駿<hr><span style="font-size: 11pt;">t111598023@ntut.org.tw</span>
+    </div>
+    <div class="col-md-2 twenty"> 
+      <a target="_blank" href="">
+
+      </a>
+      <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+    </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="" >
+
+      </a>
+   </div>
+    <div class="col-md-2 twenty">
+      <a href="">
+        <img src="./img/mpg.svg" width="64px">
+      </a>
+    </div>
+    <div class="col-md-2 twenty"></div>
+    <div class="col-md-2 twenty"></div>
+  </div>
+
+
+
+  <!-- ------------------------------------------------>
+  <div class="row hw12">
+    <div class="col-md-12 twenty">
+      <a href="https://nipponcolors.com/#enji" target="_blank">日本の伝統色</a> 燕脂 42% #9F353A (159,53,58) &ensp; &emsp; &thinsp; 
+      <a href="https://www.w3schools.com/colors/colors_picker.asp" target="_blank">HTML Color Picker</a> 95% #f9eced (249,236,237) &ensp; &emsp; &thinsp; <a href="https://drive.google.com/drive/folders/16-y5hHwvjH73wALrahW6bZjrMgLIL2FX">林立森</a>
+    </div>
+  </div>
+  <!-- ------------------------------------------------>
+
+  <!-- ------------------------------------------------>
+  <div class="row hw12">
+    <div class="col-md-12 twenty">
+      <a href="./title_enji.svg"><img src="./title_enji.svg" width="100%"></a>
+    </div>
+  </div>
+  <!-- ------------------------------------------------>
+
+  <!-- ------------------------------------------------>
+  <div class="row hw12">
+    <div class="col-md-12 twenty">
+      <a href="./title_kikyo.svg"><img src="./title_kikyo.svg" width="100%"></a>
+    </div>
+  </div>
+  <!-- ------------------------------------------------>
+
+  <!-- ------------------------------------------------>
+  <div class="row hw12">
+    <div class="col-md-12 twenty">
+      <a href="./title_konparuiro.svg"><img src="./title_konparuiro.svg" width="100%"></a>
+    </div>
+  </div>
+  <!-- ------------------------------------------------>
+
+
+
+  <!--
+
+  <div class="row hw12">
+    <div class="col-md-12 ninety">
+      <svg width="100%" height="256" id="voronoi"></svg>
+    </div>
+  </div>
+
+  <div class="row hw12" id="hw1">
+    <div class="col-md-3 thirty">
+      <a href="./img/lab01.svg"><img src="./img/lab01.svg" width="100%"></a>
+    </div>
+    <div class="col-md-9 ninety">
+      <ul>
+        <li><a href="https://docs.google.com/presentation/d/1SOoP3axMK9ttdZQ14FXDqfCLNzoEL9tN/edit" target="_blank">Computer Animation 1-1 VRoid 3D 角色製作</a></li>
+        <li><a href="" target="_blank"></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row hw12" id="hw2">
+    <div class="col-md-9 ninety">
+      <ul>
+        <li><a href="https://docs.google.com/presentation/d/1vVmwWQVS1gRVbORqZ38B47vNPneLebaT/edit" target="_blank">Computer Animation 1-2 Mixamo</a></li>
+        <li><a href="" target="_blank"></a></li>
+      </ul>
+    </div>
+    <div class="col-md-3 thirty">
+      <a href="./img/lab02.svg"><img src="./img/lab02.svg" width="100%"></a>
+    </div>
+  </div>
+
+  <div class="row hw12" id="hw3">
+    <div class="col-md-3 thirty">
+      <a href="./img/lab03.svg"><img src="./img/lab03.svg" width="100%"></a>
+    </div>
+    <div class="col-md-9 ninety">
+      <ul>
+        <li><a href="https://docs.google.com/presentation/d/1A3uuWGdmQfuavQnjDjjZJ6hmcFs-BMvt/edit#slide=id.p1" target="_blank">Computer Animation 2-1 Unity 場景(大地) + 運鏡</a></li>
+        <li><a href="" target="_blank"></a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="row hw12" id="hw4">
+    <div class="col-md-9 ninety">
+      <ul>
+        <li><a href="https://docs.google.com/presentation/d/1u0g5UGtjurToYz8eJL4YwqYEVj0xaQ55/edit#slide=id.p1" target="_blank">Computer Animation 2-2 MMD轉檔教學</a></li>
+        <li><a href="" target="_blank"></a></li>
+      </ul>
+    </div>
+    <div class="col-md-3 thirty">
+      <a href="./img/lab04.svg"><img src="./img/lab04.svg" width="100%"></a>
+    </div>
+  </div>
+
+
+  <div class="row hw12" id="hw5">
+    <div class="col-md-3 thirty">
+      <a href="./img/lab05.svg"><img src="./img/lab05.svg" width="100%"></a>
+    </div>
+    <div class="col-md-9 ninety">
+      <ul>
+        <li><a href="" target="_blank"></a></li>
+        <li><a href="" target="_blank"></a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="row hw12" id="hw6">
+    <div class="col-md-9 ninety">
+      <ul>
+        <li><a href="" target="_blank"></a></li>
+        <li><a href="" target="_blank"></a></li>
+      </ul>
+    </div>
+    <div class="col-md-3 thirty">
+      <a href="./img/lab06.svg"><img src="./img/lab06.svg" width="100%"></a>
+    </div>
+  </div>
+
+  <div class="row hw12" id="hw7">
+    <div class="col-md-3 thirty">
+      <a href="./img/lab07.svg"><img src="./img/lab07.svg" width="100%"></a>
+    </div>
+    <div class="col-md-9 ninety">
+      <ul>
+        <li><a href="" target="_blank"></a></li>
+        <li><a href="" target="_blank"></a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="row hw12" id="hw8">
+    <div class="col-md-9 ninety">
+      <ul>
+        <li><a href="" target="_blank"></a></li>
+        <li><a href="" target="_blank"></a></li>
+      </ul>
+    </div>
+    <div class="col-md-3 thirty">
+      <a href="./img/lab08.svg"><img src="./img/lab08.svg" width="100%"></a>
+    </div>
+  </div>
+
+  <div class="row hw12" id="hw9">
+    <div class="col-md-3 thirty">
+      <a href="./img/lab09.svg"><img src="./img/lab09.svg" width="100%"></a>
+    </div>
+    <div class="col-md-9 ninety">
+      <ul>
+        <li><a href="" target="_blank"></a></li>
+        <li><a href="" target="_blank"></a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="row hw12" id="hw10">
+    <div class="col-md-9 ninety">
+      <ul>
+        <li><a href="" target="_blank"></a></li>
+        <li><a href="" target="_blank"></a></li>
+      </ul>
+    </div>
+    <div class="col-md-3 thirty">
+      <a href="./img/lab10.svg"><img src="./img/lab10.svg" width="100%"></a>
+    </div>
+  </div>
+
+  <div class="row hw12" id="hw11">
+    <div class="col-md-3 thirty">
+      <a href="./img/lab11.svg"><img src="./img/lab11.svg" width="100%"></a>
+    </div>
+    <div class="col-md-9 ninety">
+      <ul>
+        <li><a href="" target="_blank"></a></li>
+        <li><a href="" target="_blank"></a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="row hw12" id="hw12">
+    <div class="col-md-9 ninety">
+      <ul>
+        <li><a href="" target="_blank"></a></li>
+        <li><a href="" target="_blank"></a></li>
+      </ul>
+    </div>
+    <div class="col-md-3 thirty">
+      <a href="./img/lab12.svg"><img src="./img/lab12.svg" width="100%"></a>
+    </div>
+  </div>
+  -->
+
+
+</div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+
+
+<!-- <script src="https://d3js.org/d3.v4.min.js"></script>
+
+<script>
+var svg = d3.select("#voronoi"),
+    //width = +svg.attr("width"),
+    width = d3.select('#voronoi').node().getBoundingClientRect().width,
+    height = +svg.attr("height"),
+    radius = 32;
+
+
+
+var lab = ['壹、子','貳、丑','參、寅','肆、卯','伍、辰','陸、巳','柒、午','捌、未','玖、申','拾、酉','拾壹、戌','拾貳、亥'];
+
+var circles = d3.range(12).map(function() {
+  return {
+    x: Math.round(Math.random() * (width - radius * 2) + radius),
+    y: Math.round(Math.random() * (height - radius * 2) + radius)
+  };
+});
+
+circles.sort(function(a, b) {
+  return a.x - b.x;
+});
+
+var color = d3.scaleOrdinal()
+    .range(d3.schemeCategory20);
+
+var voronoi = d3.voronoi()
+    .x(function(d) { return d.x; })
+    .y(function(d) { return d.y; })
+    .extent([[-1, -1], [width + 1, height + 1]]);
+
+var circle = svg.selectAll("g")
+  .data(circles)
+  .enter().append("g")
+    .call(d3.drag()
+        .on("start", dragstarted)
+        .on("drag", dragged)
+        .on("end", dragended));
+
+var cell = circle.append("path")
+  .data(voronoi.polygons(circles))
+    .attr("d", renderCell)
+    .attr("id", function(d, i) { return "cell-" + i; });
+
+circle.append("clipPath")
+    .attr("id", function(d, i) { return "clip-" + i; })
+  .append("use")
+    .attr("xlink:href", function(d, i) { return "#cell-" + i; });
+
+circle.append("a")
+    .attr("href", function(d, i){
+      return '#hw' + (i + 1);
+    })
+    .append("circle")
+    .attr("clip-path", function(d, i) { return "url(#clip-" + i + ")"; })
+    .attr("cx", function(d) { return d.x; })
+    .attr("cy", function(d) { return d.y; })
+    .attr("r", radius)
+    .style("stroke", 'rgb(159, 53, 58)')
+    .style("fill", function(d, i) { return color(i); });
+
+circle.append("a")
+    .attr("href", function(d, i){
+      return '#hw' + (i + 1);
+    })
+    .append("text")
+    .attr("clip-path", function(d, i) { return "url(#clip-" + i + ")"; })
+    .attr("x", function(d) { return d.x; })
+    .attr("y", function(d) { return d.y + 12; })
+    //.text(String.fromCharCode(getRandomInt(19968, 40959)));
+    .text(function(d, i){ return lab[i]});
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min); 
+  //The maximum is exclusive and the minimum is inclusive
+}
+
+function dragstarted(d) {
+  d3.select(this).raise().classed("active", true);
+}
+
+function dragged(d) {
+  d3.select(this).select("circle").attr("cx", d.x = d3.event.x).attr("cy", d.y = d3.event.y);
+  d3.select(this).select("text").attr("x", d.x = d3.event.x).attr("y", d.y = d3.event.y + 10);
+  cell = cell.data(voronoi.polygons(circles)).attr("d", renderCell);
+}
+
+function dragended(d, i) {
+  d3.select(this).classed("active", false);
+}
+
+function renderCell(d) {
+  return d == null ? null : "M" + d.join("L") + "Z";
+}
+</script> -->
+
+
+</body>
+</html>
