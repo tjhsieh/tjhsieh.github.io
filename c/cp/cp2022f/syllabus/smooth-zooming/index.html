@@ -1,0 +1,177 @@
+<!--
+https://observablehq.com/@d3/smooth-zooming
+-->
+
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<title>D3.js</title>
+<script src="./d3.v4.min.js" charset="utf-8"></script>
+<style type="text/css">
+  
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&display=swap');
+
+@font-face {
+  font-family: "BpmfZihiKaiStd-Regular";
+  src: url("./BpmfZihiKaiStd-Regular.ttf");
+}
+
+svg text {
+  stroke: #f9eced;
+  fill: rgb(159, 53, 58);
+  stroke-width: 0.05px;
+  font-family: 'Noto Serif JP', 'BpmfZihiKaiStd-Regular', 'Noto Serif JP', serif;
+  font-size: 4pt;
+}
+
+</style>
+</head>
+<body>
+    <div id="line"></div>
+
+    <script type="text/javascript">
+        // Your beautiful D3 code will go here
+
+
+  // chapter05/index.html
+  // Handling Data-Loading Errors
+
+  var dataset; // Declare global variable, initially empty (undefined)
+  var data;
+
+  d3.csv("./data.csv", function(d) {
+    //dataset = d; // Once loaded, copy to dataset.
+    //console.log('hi 0');
+    //console.log(d);
+
+    return {
+      'id': d.學號,
+      'name': d.姓名
+      };
+  }, function(error, rows) {
+          if(error){
+            console.log('oh no');
+          }
+          else{
+            //console.log('hi 1');
+            //console.log(rows);
+            dataset = rows;
+            //console.log('hi 2');
+            //console.log(dataset);
+            render();
+            transition();
+          }
+  });
+
+  // asynchronous
+  //console.log('hi 3');
+  //console.log(dataset);
+
+  let width = 420;
+  let height = 300;
+  let currentTransform = [width / 2, height / 2, height];
+  let radius = 6;
+
+  function render() {
+
+    let step = radius * 2;
+    let theta = Math.PI * (3 - Math.sqrt(5));
+
+    data = Array.from({length: dataset.length}, (_, i) => {
+      const r = step * Math.sqrt(i += 0.5), a = theta * i;
+      return [
+        width / 2 + r * Math.cos(a),
+        height / 2 + r * Math.sin(a)
+      ];
+    })
+
+    //console.log(data);
+
+    const svg = d3.select("#line").append("svg");
+
+    svg.attr("width", width)
+       .attr("height", height)
+       .attr("viewBox", [0, 0, width, height])
+       .style('border', '1px solid red')
+       .style('background-color', 'rgb(159, 53, 58)')
+       .attr("id", "visualization")
+       .attr("xmlns", "http://www.w3.org/2000/svg");
+
+var defs = svg.append('defs');
+
+var gradient = defs.append('linearGradient')
+.attr('id', 'svgGradient')
+.attr('x1', '0%')
+.attr('x2', '100%')
+.attr('y1', '0%')
+.attr('y2', '100%');
+
+gradient.append('stop')
+.attr('class', 'start')
+.attr('offset', '0%')
+.attr('stop-color', 'red')
+.attr('stop-opacity', 1);
+
+gradient.append('stop')
+.attr('class', 'end')
+.attr('offset', '100%')
+.attr('stop-color', 'blue')
+.attr('stop-opacity', 1);
+
+    const g = svg.append("g");
+
+    g.selectAll("circle")
+      .data(data)
+      .enter()
+      .append("circle")
+        .attr("cx", ([x]) => x)
+        .attr("cy", ([, y]) => y)
+        .attr("r", radius)
+        .style('stroke', '#f9eced')
+        .style('stroke-width', '0.3px')
+        //.attr("fill", (d, i) => d3.interpolateRainbow(i / 360))
+        .attr("fill", 'url(#svgGradient)')
+
+    g.selectAll("text")
+      .data(data)
+      .enter()
+        .append('text')
+        .attr("x", ([x]) => x - 8)
+        .attr("y", ([, y]) => y + 1.5)
+        .text(function(d, i){
+          return dataset[i].name;
+        })
+
+    d3.select("#download").on("click", function(){
+      
+      console.log(d3.select("#line").html());
+
+      d3.select(this)
+        .attr("href", 'data:application/octet-stream;base64,' + btoa(encodeURIComponent(d3.select("#line").html())))
+        .attr("download", "viz.svg") 
+    })
+  }
+
+  function transition() {
+    const d = data[Math.floor(Math.random() * data.length)];
+    const i = d3.interpolateZoom(currentTransform, [...d, radius * 2 + 1]);
+
+    d3.select('g').transition()
+        .delay(250)
+        .duration(i.duration)
+        .attrTween("transform", () => t => transform(currentTransform = i(t)))
+        .on("end", transition);
+  }
+
+  function transform([x, y, r]) {
+    return `
+      translate(${width / 2}, ${height / 2})
+      scale(${height / r})
+      translate(${-x}, ${-y})
+    `;
+  }
+
+    </script>
+</body>
+</html>
