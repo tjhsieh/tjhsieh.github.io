@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<title>字體設計與文字編碼 111-2</title>
+<style type="text/css">
+  body {
+    background-color: rgb(106, 76, 156);
+    color: rgb(159, 53, 58);
+  }
+
+  .container-fluid {
+    width:  90%;
+  }
+
+  .hw12 {
+    border: 1px solid rgb(159, 53, 58);
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .twenty {
+    border: 1px solid #f9eced;
+    color: #f9eced;
+    padding: 8px;
+    font-size: 16pt;
+  }
+
+  .twenty a {
+    color:  yellow;
+    font-size:  16pt;
+  }
+
+  .twenty a:hover {
+    color: #f9eced;
+    font-size:  16pt;
+  }
+
+  .thirty {
+    border: 1px solid #f9eced;
+    color: #f9eced;
+  }
+
+  .ninety {
+    border: 1px solid rgb(159, 53, 58);
+    background-color: #f9eced;
+    padding: 8px;
+  }
+
+
+
+  svg {
+    border: 2px solid rgb(159, 53, 58);
+  }
+
+  path {
+    pointer-events: all;
+    fill: #f9eced;
+    stroke: rgb(159, 53, 58);
+    stroke-opacity: 0.95;
+    stroke-width: 1px;
+  }
+
+  .active circle {
+    stroke: #f9eced;
+    stroke-width: 2px;
+  }
+
+  svg g text {
+    fill: rgba(255, 255, 255, 1.0);
+    font-size: 24pt;
+    text-anchor: middle;
+  }
+
+    .twenty:hover {
+      /*
+        background-color: rgba(255, 255, 0, 0.1);
+      */
+        box-shadow: 0 0 5px 3px #f9eced;
+        color: cyan; 
+        text-shadow: 0 0 6px #FFFFFF, 0 0 6px #000000;
+    }
+
+    img:hover {
+      
+        box-shadow: 0 0 1px 1px #f9eced;
+      
+        animation-name: happy;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes happy {
+        0% {
+            transform: translateY(0px);
+        }
+
+        25% {
+            transform: translateY(-15px);
+        }
+
+        50% {
+            transform: translateY(0px);
+        }
+
+        75% {
+            transform: translateY(-5px);
+        }
+
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
+</style>
+</head>
+<body>
+
+<div class="container-fluid">
+
+  <div class="row hw12">
+    <div class="col-md-2 twenty"><img src="./img_kitty/133533.svg" width="90%">
+    </div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/hero-kitty.svg" width="90%">
+    </div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/pic03.svg" width="100%">
+    </div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/pic04.svg" width="90%">
+    </div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/pic05.svg" width="100%">
+    </div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/pic06.svg" width="100%">
+    </div>
+  </div>
+  
+  <div class="row hw12">
+    <div class="col-md-2 twenty">HW Number</div>
+    <div class="col-md-2 twenty">Topic</div>
+    <div class="col-md-2 twenty">Slide / TA Video</div>
+    <div class="col-md-2 twenty">Starter Code</div>
+    <div class="col-md-2 twenty">Due Date</div>
+    <div class="col-md-2 twenty">Teaching Assistant </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2 twenty">HW 01<hr>子 ㄗˇ
+    </div>
+    <div class="col-md-2 twenty">
+      SVG 名片
+      <hr>
+      <span style="font-size: 11pt;">
+        <a href="" target="_blank"></a>
+      </span>
+    </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="">
+        <img src="./img/ppt-svgrepo-com.svg" width="64px">
+      </a>
+      <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+      <a target="_blank" href="" >
+        <img src="./img/youtube-logotype-svgrepo-com.svg" width="64px">
+      </a>
+    </div>
+    <div class="col-md-2 twenty">
+      <a href="">
+        <img src="./img/webgl-svgrepo-com.svg" width="96px">
+      </a>
+    </div>
+    <div class="col-md-2 twenty">第3週<hr> 03.05 (五) 11:59 pm</div>
+    <div class="col-md-2 twenty">
+      陳筱媛
+      <hr>
+      <span style="font-size: 11pt;">t110598080@ntut.org.tw</span>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2 twenty">HW 02<hr>丑 ㄔㄡˇ
+    </div>
+    <div class="col-md-2 twenty">
+      CSS <a target="_blank" href="https://www.w3schools.com/cssref/pr_font_font-family.asp">font-family</a> Property
+      <hr>
+      JS UTF-8 Encoding
+      <hr>
+      <a href="https://blog.csdn.net/TH_NUM/article/details/53303511"> XeCJK 使用系统字体</a>
+    </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/1DnOC15aHIz6Iuq2z3LgOMBcF0eeKwoeS/edit#slide=id.p1">
+        <img src="./img/ppt-svgrepo-com.svg" width="64px">
+      </a>
+      <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+      <a target="_blank" href="https://drive.google.com/file/d/1AIiJGABHducZqycgKFJe7MNx9zUgwZEM/view?usp=sharing" >
+        <img src="./img/youtube-logotype-svgrepo-com.svg" width="64px">
+      </a>
+    </div>
+    <div class="col-md-2 twenty">
+      <a href="https://drive.google.com/file/d/1ELXvjVFcL47cS_z1BOKQl2qAVPS2v6Fu/view" target="_blank"><img src="./img/webgl-svgrepo-com.svg" width="96px"></a>
+    </div>
+    <div class="col-md-2 twenty">第4週<hr> 03.05 (五) 11:59 pm</div>
+    <div class="col-md-2 twenty">
+      陳筱媛
+      <hr>
+      <span style="font-size: 11pt;">t110598080@ntut.org.tw</span>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2 twenty">HW 03<hr>寅 ㄧㄣˊ
+    </div>
+    <div class="col-md-2 twenty">
+      pix2pix
+      <hr>
+      <span style="font-size: 11pt;">
+        <a href="https://arxiv.org/abs/1611.07004" target="_blank">paper</a>,
+        <a href="https://github.com/phillipi/pix2pix" target="_blank">Torch</a>,
+        <a href="https://github.com/yenchenlin/pix2pix-tensorflow" target="_blank">TensorFlow</a>,        
+      </span>
+    </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/1qumTDgPxUEJS1nHwL8TdA1LYJLkU1kjO/edit#slide=id.p1">
+        <img src="./img/ppt-svgrepo-com.svg" width="64px">
+      </a>
+      <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+      <a target="_blank" href="https://drive.google.com/file/d/1GO-El1OfNtfh4uLVycZe-baPjcwjUyJX/view?usp=sharing" >
+        <img src="./img/youtube-logotype-svgrepo-com.svg" width="64px">
+      </a>
+    </div>
+    <div class="col-md-2 twenty">
+      <a href="https://drive.google.com/file/d/1b4J_Z2U3eWAucOCiHpjaDekEcTOqEUF2/view?usp=sharing">
+        <img src="./img/webgl-svgrepo-com.svg" width="96px">
+      </a>
+    </div>
+    <div class="col-md-2 twenty">第5週<hr> 03.05 (五) 11:59 pm</div>
+    <div class="col-md-2 twenty">
+      胡伯源
+      <hr>
+      <span style="font-size: 11pt;">t110598009@ntut.org.tw</span>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2 twenty">HW 04<hr>卯 ㄇㄠˇ
+    </div>
+    <div class="col-md-2 twenty">
+      zi2zi
+      <hr>
+      <span style="font-size: 11pt;">
+        <a href="https://github.com/kaonashi-tyc/zi2zi" target="_blank">字到字 (character to character)</a>
+      </span>
+      <hr>
+      <span style="font-size: 11pt;">
+        <a href="" target="_blank"></a>
+      </span>
+    </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/1ZnOVOYgztQ0NgmbUTuvUpQP8l5KBnxCA/edit#slide=id.p10">
+        <img src="./img/ppt-svgrepo-com.svg" width="64px">
+      </a>
+      <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+      <a target="_blank" href="https://drive.google.com/file/d/1Tc3tu55H3tD9Ax2Geeunm8kNeOIcr7NC/view" >
+        <img src="./img/youtube-logotype-svgrepo-com.svg" width="64px">
+      </a>
+    </div>
+    <div class="col-md-2 twenty">
+      <a href="https://drive.google.com/file/d/1mSTtTqrP3Rc5W4h1Ry7Rt3nVdsH4gxHZ/view">
+        <img src="./img/webgl-svgrepo-com.svg" width="96px">
+      </a>
+    </div>
+    <div class="col-md-2 twenty">第6週<hr> 03.05 (五) 11:59 pm</div>
+    <div class="col-md-2 twenty">
+      張登凱
+      <hr>
+      <span style="font-size: 11pt;">t110598028@ntut.org.tw</span>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2 twenty">HW 05<hr>辰 ㄔㄣˊ
+    </div>
+    <div class="col-md-2 twenty">
+      機器學習 北京大學 手寫體
+      <hr>
+      <span style="font-size: 11pt;">
+        <a href="https://people.csail.mit.edu/tzumao/diffvg/" target="_blank">Tzu-Mao Li</a>
+      </span>
+    </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/1xrH9WgmBXBi1Kx2MD6V-xRdrRLc1vIBo/edit#slide=id.p1">
+        <img src="./img/ppt-svgrepo-com.svg" width="64px">
+      </a>
+      <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+      <a target="_blank" href="https://drive.google.com/file/d/1bGvJCz9QEmYgLNm9meW9mtLdRqV3i2GA/view?usp=sharing" >
+        <img src="./img/youtube-logotype-svgrepo-com.svg" width="64px">
+      </a>
+    </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="https://drive.google.com/file/d/1wqQU_dHRxSo5BEtogL319Bz5OPACpGsM/view?usp=sharing">
+      <img src="./img/webgl-svgrepo-com.svg" width="96px">
+      </a>
+    </div>
+    <div class="col-md-2 twenty">第7週<hr> 03.05 (五) 11:59 pm</div>
+    <div class="col-md-2 twenty">
+      朱惠君
+      <hr>
+      <span style="font-size: 11pt;">t110598004@ntut.org.tw</span>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2 twenty">HW 06<hr>巳 ㄙˋ
+    </div>
+    <div class="col-md-2 twenty">
+      Google Brain
+      <hr>
+      <span style="font-size: 11pt;">
+        <a href="https://magenta.tensorflow.org/svg-vae" target="_blank">SVG VAE</a>,
+        <a href="https://arxiv.org/abs/1904.02632" target="_blank">arXiv</a>,
+        <a href="https://github.com/magenta/magenta/tree/main/magenta/models/svg_vae" target="_blank">github</a>,
+        <a href="https://github.com/magenta/magenta-demos/blob/main/colab-notebooks/vae_svg_decoding.ipynb" target="_blank">colab notebook</a>,
+      </span>
+    </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/1dIOTqSjxVaELO24lW5b5zRALoomFNxfxRy6f87EEdWA/edit#slide=id.p1">
+        <img src="./img/ppt-svgrepo-com.svg" width="64px">
+      </a>
+       <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+      <a target="_blank" href="https://drive.google.com/file/d/14EUaV8Ru9CBf8B55dlvIYo2lQ9FEezyU/view" >
+        <img src="./img/youtube-logotype-svgrepo-com.svg" width="64px">
+      </a>
+   </div>
+    <div class="col-md-2 twenty">
+      <a href="https://drive.google.com/file/d/1argdRes_AM1vBGs97DN_xIsiDLIXqWIN/view">
+        <img src="./img/webgl-svgrepo-com.svg" width="96px"></a>
+    </div>
+    <div class="col-md-2 twenty">第8週<hr> 03.05 (五) 11:59 pm</div>
+    <div class="col-md-2 twenty">
+      王挺宇
+      <hr>
+      <span style="font-size: 11pt;">t110598022@ntut.org.tw</span>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2 twenty">HW 07<hr>午 ㄨˇ
+    </div>
+    <div class="col-md-2 twenty">
+      DeepSVG
+      <hr>
+      <span style="font-size: 11pt;">
+        <a href="" target="_blank"></a>
+      </span>
+    </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/1lSlUrZ04OhAEtm-kCRXwzYRHiGcllV1x/edit#slide=id.p6">
+        <img src="./img/ppt-svgrepo-com.svg" width="64px">
+      </a>
+      <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+      <a target="_blank" href="https://www.youtube.com/watch?v=nOpOq7NZIAU" >
+        <img src="./img/youtube-logotype-svgrepo-com.svg" width="64px">
+      </a>
+    </div>
+    <div class="col-md-2 twenty">
+      <a href="https://drive.google.com/file/d/1fZIl-4o2xmUn5E7oBd3ymCrJCXZD31jO/view?usp=sharing">
+      <img src="./img/webgl-svgrepo-com.svg" width="96px">
+      </a>
+    </div>
+    <div class="col-md-2 twenty">第9週<hr> 03.05 (五) 11:59 pm</div>
+    <div class="col-md-2 twenty">
+      林承翰
+      <hr>
+      <span style="font-size: 11pt;">t110598054@ntut.org.tw</span>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2 twenty">HW 08<hr>未 ㄨㄟˋ
+    </div>
+    <div class="col-md-2 twenty">
+      Differentiable Vector Graphics Rasterization for Editing and Learning
+      <hr>
+      <span style="font-size: 11pt;">
+        <a href="" target="_blank"></a>
+      </span>
+    </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/1521Gnvkx9XDrRhDncHxxXqJublnaagkQ/edit#slide=id.p1">
+        <img src="./img/ppt-svgrepo-com.svg" width="64px">
+      </a>
+      <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+      <a target="_blank" href="" >
+        <img src="./img/youtube-logotype-svgrepo-com.svg" width="64px">
+      </a>
+    </div>
+    <div class="col-md-2 twenty">
+      <a href="https://threejs.org/examples/#webgl_loader_nrrd">
+        <img src="./img/webgl-svgrepo-com.svg" width="96px"></a>
+    </div>
+    <div class="col-md-2 twenty">第10週<hr> 03.05 (五) 11:59 pm</div>
+    <div class="col-md-2 twenty">
+      許世楨
+      <hr>
+      <span style="font-size: 11pt;">t110598045@ntut.org.tw</span>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2 twenty">HW 09<hr>申 ㄕㄣ
+    </div>
+    <div class="col-md-2 twenty">
+      AGIS-Net
+      <hr>
+      <span style="font-size: 11pt;">
+        <a href="https://yuegao.me/AGIS-Net/" target="_blank">Few-Shot Learning</a>, 
+        <a href="https://github.com/hologerry/AGIS-Net/" target="_blank">PyTorch</a>
+      </span>
+    </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/1eiNob3-f6LSM3gcX4XbuRaA2eQDLx8ij/edit#slide=id.p1">
+        <img src="./img/ppt-svgrepo-com.svg" width="64px">
+      </a>
+      <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+      <a target="_blank" href="" >
+        <img src="./img/youtube-logotype-svgrepo-com.svg" width="64px">
+      </a>
+    </div>
+    <div class="col-md-2 twenty">
+      <a href="https://www.willusher.io/webgl-marching-cubes/">
+        <img src="./img/webgl-svgrepo-com.svg" width="96px"></a>
+    </div>
+    <div class="col-md-2 twenty">第11週<hr> 03.05 (五) 11:59 pm</div>
+    <div class="col-md-2 twenty">
+      許瑋哲
+      <hr>
+      <span style="font-size: 11pt;">t110598066@ntut.org.tw</span>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2 twenty">HW 10<hr>酉 ㄧㄡˇ
+    </div>
+    <div class="col-md-2 twenty">
+      AGIS-Net
+      <hr>
+      <span style="font-size: 11pt;">
+        <a href="https://yuegao.me/AGIS-Net/" target="_blank">Few-Shot Learning</a>, 
+        <a href="https://github.com/hologerry/AGIS-Net/" target="_blank">PyTorch</a>
+      </span>
+    </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/1Mv-zDrZCZ2udF4eloowHKGEJ3Jy3J_qo/edit#slide=id.p1">
+        <img src="./img/ppt-svgrepo-com.svg" width="64px">
+      </a>
+      <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+      <a target="_blank" href="" >
+        <img src="./img/youtube-logotype-svgrepo-com.svg" width="64px">
+      </a>
+    </div>
+    <div class="col-md-2 twenty">
+      <a href="https://www.willusher.io/webgl-marching-cubes/">
+        <img src="./img/webgl-svgrepo-com.svg" width="96px"></a>
+    </div>
+    <div class="col-md-2 twenty">第12週<hr> 03.05 (五) 11:59 pm</div>
+    <div class="col-md-2 twenty">
+      龍佩筠
+      <hr>
+      <span style="font-size: 11pt;">t110598068@ntut.org.tw</span>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2 twenty">HW 11<hr>戌 ㄒㄩ
+    </div>
+    <div class="col-md-2 twenty">
+      General Virtual Sketching Framework for Vector Line Art
+      <hr>
+      <span style="font-size: 11pt;">
+        <a href="https://markmohr.github.io/virtual_sketching/" target="_blank">Virtual Sketching</a>
+      </span>
+    </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/1o8gu0rL7XsvnDipzW-6Cvn7eioB1I6dWHSzxDXRo-WU/edit">
+        <img src="./img/ppt-svgrepo-com.svg" width="64px">
+      </a>
+       <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+      <a target="_blank" href="" >
+        <img src="./img/youtube-logotype-svgrepo-com.svg" width="64px">
+      </a>
+   </div>
+    <div class="col-md-2 twenty">
+      <a href="https://www.willusher.io/webgl-marching-cubes/">
+        <img src="./img/webgl-svgrepo-com.svg" width="96px"></a>
+    </div>
+    <div class="col-md-2 twenty">第13週<hr> 03.05 (五) 11:59 pm</div>
+    <div class="col-md-2 twenty">
+      張筱暄
+      <hr>
+      <span style="font-size: 11pt;">t110598078@ntut.org.tw</span>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2 twenty">HW 12<hr>亥 ㄏㄞˋ
+    </div>
+    <div class="col-md-2 twenty">
+      Im2Vec: Synthesizing Vector Graphics without Vector Supervision 
+      <hr>
+      <span style="font-size: 11pt;">
+        <a href="https://arxiv.org/pdf/2102.02798.pdf 
+http://geometry.cs.ucl.ac.uk/projects/2021/Im2Vec/" target="_blank">Im2Vec</a>
+      </span>
+    </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/1tjQi8uBYULg_f-7VxIAnF_CAUDVy82MykXLp17lD-30/edit#slide=id.gecf740975a_2_1">
+        <img src="./img/ppt-svgrepo-com.svg" width="64px">
+      </a>
+      <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+      <a target="_blank" href="" >
+        <img src="./img/youtube-logotype-svgrepo-com.svg" width="64px">
+      </a>
+    </div>
+    <div class="col-md-2 twenty">
+      <a href="https://www.youtube.com/watch?v=wS42qKc5k6M">
+        <img src="./img/webgl-svgrepo-com.svg" width="96px"></a>
+    </div>
+    <div class="col-md-2 twenty">第14週<hr> 03.05 (五) 11:59 pm</div>
+    <div class="col-md-2 twenty">
+      林佳萱
+      <hr>
+      <span style="font-size: 11pt;">t110598063@ntut.org.tw</span>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-2 twenty">HW 13<hr>
+    </div>
+    <div class="col-md-2 twenty">
+      機器學習
+      <hr>
+      <a href="">...</a>
+      <span style="font-size: 11pt;">
+        <a href="" target="_blank"></a>
+      </span>
+    </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/1ejAwnN1gJhRnfuyueLCy6JUCuWrts7d4/edit#slide=id.p1">
+        <img src="./img/ppt-svgrepo-com.svg" width="64px">
+      </a>
+      <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+      <a target="_blank" href="" >
+        <img src="./img/youtube-logotype-svgrepo-com.svg" width="64px">
+      </a>
+   </div>
+    <div class="col-md-2 twenty"><img src="./img/webgl-svgrepo-com.svg" width="96px">
+    </div>
+    <div class="col-md-2 twenty">第15週<hr> 03.05 (五) 11:59 pm</div>
+    <div class="col-md-2 twenty">
+      黃偲庭
+      <hr>
+      <span style="font-size: 11pt;">t109598100@ntut.org.tw</span>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-2 twenty">HW 14<hr>
+    </div>
+    <div class="col-md-2 twenty">
+      <hr>
+    </div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/1o8gu0rL7XsvnDipzW-6Cvn7eioB1I6dWHSzxDXRo-WU/edit">
+        <img src="./img/ppt-svgrepo-com.svg" width="64px">
+      </a>
+       <!-- &ensp; 半形空格 &emsp; 全形空格 &thinsp; 窄空格 -->
+      &ensp;
+      <a target="_blank" href="" >
+        <img src="./img/youtube-logotype-svgrepo-com.svg" width="64px">
+      </a>
+   </div>
+    <div class="col-md-2 twenty">
+      <a href="https://www.willusher.io/webgl-marching-cubes/">
+        <img src="./img/webgl-svgrepo-com.svg" width="96px"></a>
+    </div>
+    <div class="col-md-2 twenty">第16週<hr> 03.05 (五) 11:59 pm</div>
+    <div class="col-md-2 twenty">
+      余奐廷
+      <hr>
+      <span style="font-size: 11pt;">t109598104@ntut.org.tw</span>
+    </div>
+  </div>
+
+  <div class="row hw12">
+    <div class="col-md-12 twenty">
+      <a href="./title.svg"><img src="./title.svg" width="100%"></a>
+    </div>
+  </div>
+
+
+  <div class="row hw12">
+    <div class="col-md-12 twenty">
+      <!--  Ctrl / -->
+      <h1>字體設計與文字編碼</h1> 
+
+      <hr>
+
+      <a target="_blank" href="https://tjhsieh.github.io/c/ct/ct2023s//"> 課程網頁 111-2</a> 
+      &ensp; &emsp; &thinsp; 
+      <a target="_blank" href="https://myweb.ntut.edu.tw/~tjhsieh/c/ct/ct2022s/"> 課程網頁 110-2</a> 
+      &ensp; &emsp; &thinsp; 
+      <a target="_blank" href="https://myweb.ntut.edu.tw/~tjhsieh/c/ct/ct2016s/"> 課程網頁 104-2</a>
+      &ensp; &emsp; &thinsp; 
+
+      <hr>
+
+      日本の伝統色 - 桔梗 
+      <a href="https://nipponcolors.com/#enji">45% #6A4C9C (159, 53, 58)</a>  
+      &ensp; &emsp; &thinsp; <br>
+
+      HTML Color Picker 
+      <a href="https://www.w3schools.com/colors/colors_picker.asp">95% #F1EEF7 (241, 238, 247)</a> 
+      &ensp; &emsp; &thinsp; 
+
+      <hr>
+
+      ○●◯⭕💮
+      <a target="_blank" href="https://github.com/IShengFang/TypographyResearchCollection">Typography Research Collection</a>
+      &ensp; &emsp; &thinsp;
+    </div>
+  </div>
+
+
+</div>
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+
+<script>
+
+</script>
+
+</body>
+</html>
