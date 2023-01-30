@@ -1,0 +1,46 @@
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   viewBox="0 0 128 196"
+   width="128"
+   height="196">
+
+    <style type="text/css">
+      /*
+      https://fonts.google.com/noto/specimen/Noto+Serif+JP
+      */
+
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900');
+      
+      /*
+      @import url('https://fonts.googleapis.com/earlyaccess/cwtexkai.css?');
+      */
+
+      text {
+        /*
+        font-family: cwTeXKai;
+        */
+        font-family: 'Noto Serif JP';
+
+        font-size: 48pt; 
+        writing-mode: vertical-rl;
+        letter-spacing: 12px;
+        opacity: 1.0;
+        fill: #f1eef7;
+        stoke: #6A4C9C;
+      }
+    </style>
+
+    <rect x="0" y="0" fill="#6A4C9C" stroke="#f1eef7" stroke-width="3" width="128" height="196"/>
+
+
+    <a href="https://nipponcolors.com/#kikyo">
+      <text x="60" y="24">
+        桔梗 <!-- ㄐ丨ㄝˊㄍㄥ ˇ -->
+        <animate id="1" attributeType="CSS" attributeName="opacity" from="1.0" to="0.3" dur="5s" begin="0;2.end"/>
+        <animate id="2" attributeType="CSS" attributeName="opacity" from="0.3" to="1.0" dur="5s" begin="1.end"/>
+      </text>
+    </a>
+
+ </svg>

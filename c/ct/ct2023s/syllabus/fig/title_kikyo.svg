@@ -1,0 +1,119 @@
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   viewBox="0 0 128 196"
+   width="128"
+   height="196">
+
+    <style type="text/css">
+      /*
+      https://fonts.google.com/noto/specimen/Noto+Serif+JP
+      */
+
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900');
+      
+      /*
+      @import url('https://fonts.googleapis.com/earlyaccess/cwtexkai.css?');
+      */
+
+      text {
+        /*
+        font-family: cwTeXKai;
+        */
+        font-family: 'Noto Serif JP';
+
+        font-size: 48pt; 
+        writing-mode: vertical-rl;
+        letter-spacing: 12px;
+        opacity: 1.0;
+        fill: #f1eef7;
+        stoke: #6A4C9C;
+      }
+    </style>
+
+    <rect x="0" y="0" fill="#6A4C9C" stroke="#f1eef7" stroke-width="3" width="128" height="196"/>
+
+    <a href="https://nipponcolors.com/#kikyo">
+      <text x="8" y="8" textLength="120" lengthAdjust="spacing" style="writing-mode: horizontal-tb; font-size: 4pt;">
+        NIPPON COLORS
+      </text>
+    </a>
+
+    <a href="https://nipponcolors.com/#kikyo">
+      <text x="8" y="16" textLength="120" lengthAdjust="spacing" style="writing-mode: horizontal-tb; font-size: 4pt;">
+        日本の伝統色
+      </text>
+    </a>
+
+    <a href="https://nipponcolors.com/#kikyo">
+      <text x="8" y="170" textLength="120" lengthAdjust="spacing" style="writing-mode: horizontal-tb; font-size: 4pt;">
+        桔梗 KIKYO
+      </text>
+    </a>
+
+    <a href="https://www.w3schools.com/colors/colors_picker.asp">
+      <text x="8" y="180" textLength="120" lengthAdjust="spacing" style="writing-mode: horizontal-tb; font-size: 4pt;">
+        45% rgb(106,76,156) #6A4C9C
+      </text>
+    </a>
+
+    <a href="https://www.w3schools.com/colors/colors_picker.asp">
+      <text x="8" y="190" textLength="120" lengthAdjust="spacing" style="writing-mode: horizontal-tb; font-size: 4pt;">
+        95% rgb(241,238,247) #F1EEF7
+      </text>
+    </a>
+
+    <a href="https://nipponcolors.com/#kikyo">
+    <g>
+      <text x="40" y="24">
+        桔梗 <!-- ㄐ丨ㄝˊㄍㄥ ˇ -->
+        <animate id="1" attributeType="CSS" attributeName="opacity" from="1.0" to="0.3" dur="5s" begin="0;2.end"/>
+        <animate id="2" attributeType="CSS" attributeName="opacity" from="0.3" to="1.0" dur="5s" begin="1.end"/>
+      </text>
+
+      <text x="80" y="50" style="writing-mode: horizontal-tb; font-size: 18pt; fill: white;">
+        ㄐ
+        <animate id="1" attributeType="CSS" attributeName="opacity" from="1.0" to="0.3" dur="5s" begin="0;2.end"/>
+        <animate id="2" attributeType="CSS" attributeName="opacity" from="0.3" to="1.0" dur="5s" begin="1.end"/>
+      </text>
+
+      <text x="83" y="48" style="writing-mode: horizontal-tb; font-size: 18pt;" rotate="90" >
+        ㄧ
+        <animate id="1" attributeType="CSS" attributeName="opacity" from="1.0" to="0.3" dur="5s" begin="0;2.end"/>
+        <animate id="2" attributeType="CSS" attributeName="opacity" from="0.3" to="1.0" dur="5s" begin="1.end"/>
+      </text>
+
+      <text x="80" y="90" style="writing-mode: horizontal-tb; font-size: 18pt;">
+        ㄝ
+        <animate id="1" attributeType="CSS" attributeName="opacity" from="1.0" to="0.3" dur="5s" begin="0;2.end"/>
+        <animate id="2" attributeType="CSS" attributeName="opacity" from="0.3" to="1.0" dur="5s" begin="1.end"/>
+      </text>
+
+      <text x="105" y="75" style="writing-mode: horizontal-tb; font-size: 24pt;">
+        ˊ
+        <animate id="1" attributeType="CSS" attributeName="opacity" from="1.0" to="0.3" dur="5s" begin="0;2.end"/>
+        <animate id="2" attributeType="CSS" attributeName="opacity" from="0.3" to="1.0" dur="5s" begin="1.end"/>
+      </text>
+
+      <text x="80" y="130" style="writing-mode: horizontal-tb; font-size: 18pt; fill: white;">
+        ㄍ
+        <animate id="1" attributeType="CSS" attributeName="opacity" from="1.0" to="0.3" dur="5s" begin="0;2.end"/>
+        <animate id="2" attributeType="CSS" attributeName="opacity" from="0.3" to="1.0" dur="5s" begin="1.end"/>
+      </text>
+
+      <text x="80" y="160" style="writing-mode: horizontal-tb; font-size: 18pt;">
+        ㄥ
+        <animate id="1" attributeType="CSS" attributeName="opacity" from="1.0" to="0.3" dur="5s" begin="0;2.end"/>
+        <animate id="2" attributeType="CSS" attributeName="opacity" from="0.3" to="1.0" dur="5s" begin="1.end"/>
+      </text>
+
+      <text x="105" y="155" style="writing-mode: horizontal-tb; font-size: 24pt;">
+        ˇ
+        <animate id="1" attributeType="CSS" attributeName="opacity" from="1.0" to="0.3" dur="5s" begin="0;2.end"/>
+        <animate id="2" attributeType="CSS" attributeName="opacity" from="0.3" to="1.0" dur="5s" begin="1.end"/>
+      </text>
+    </g>
+    </a>
+
+ </svg>
