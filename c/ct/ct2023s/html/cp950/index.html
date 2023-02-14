@@ -1,0 +1,327 @@
+<!-- https://www.w3schools.com/js/js_json_files.asp -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cp950 to Unicode</title>
+
+<script src="cp950.js"></script>
+
+<style>
+
+/*@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200&family=Noto+Serif+TC:wght@200&display=swap');
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}*/
+
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+  margin: 80px auto;
+}
+
+#customers td, #customers th {
+  border: 1px solid #fdd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+
+</head>
+<body>
+
+<!-- 第 <input type="text" id="myText" value="100"> 頁 -->
+<button id="downloadBtn">Download Current Page</button>
+<button id="downloadBtn2">Download 1-127 Pages</button>
+
+<input type="range" min="1" max="172" value="1" class="slider" id="myRange">
+第 <span id="demo"></span> 頁  
+
+<a href="https://yopaper.github.io/FontDisplay2021/" target="_blank">Font Display 2021</a> 
+<a href="https://www.compart.com/en/unicode/U+6771" target="_blank">HTML Entity</a> 
+<a href="https://www.rapidtables.com/web/html/html-codes.html" target="_blank">HTML character codes</a> 
+<a href="https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WINDOWS/CP950.TXT" target="_blank">cp950 to Unicode table</a>
+
+<hr>
+
+<div id="id01"></div>
+
+<script>
+//document.write('ABC' + String.fromCharCode(0x7069) );
+
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.focus();
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+  myFunction();
+}
+
+// function readTextFile(file, callback) {
+//     var rawFile = new XMLHttpRequest();
+//     rawFile.overrideMimeType("application/json");
+//     rawFile.open("GET", file, true);
+//     rawFile.onreadystatechange = function() {
+//         if (rawFile.readyState === 4 && rawFile.status == "200") {
+//             callback(rawFile.responseText);
+//         }
+//     }
+//     rawFile.send(null);
+// }
+
+// //usage:
+// readTextFile("./myTutorials.json", function(text){
+//     var data = JSON.parse(text);
+//     console.log(data);
+// });
+
+
+let downloadBtn = document.querySelector("#downloadBtn");
+downloadBtn.addEventListener("click", downloadFile);
+
+function downloadFile() {
+  let fileName = page + ".svg";
+  const data = getRandomData();
+  let blob = new Blob([data], {
+    type: "application/octet-stream"
+  });
+  var href = URL.createObjectURL(blob);
+  // 從 Blob 取出資料
+  var link = document.createElement("a");
+  document.body.appendChild(link);
+  link.href = href;
+  link.download = fileName;
+  link.click();
+}
+
+function getRandomData() {
+  return out;
+}
+
+// all 127
+
+// https://www.delftstack.com/zh-tw/howto/javascript/javascript-wait-for-x-seconds/
+function syncDelay(milliseconds){
+  var start = new Date().getTime();
+  var end=0;
+  while( (end-start) < milliseconds){
+     end = new Date().getTime();
+  }
+}
+
+let downloadBtn2 = document.querySelector("#downloadBtn2");
+downloadBtn2.addEventListener("click", downloadAll);
+
+function downloadAll() {
+  var i;
+  for (i=1; i<=172; i++){
+    page = i;
+    console.log('page = ' + page);
+    document.getElementById("myRange").value = page;
+    document.getElementById("demo").innerHTML = page;
+    myFunction();
+    downloadFile();
+    page++;
+    syncDelay(1000);
+  }
+
+  // setInterval(function () {
+  //   document.getElementById("myRange").value = page;
+  //   document.getElementById("demo").innerHTML = page;
+  //   myFunction();
+  //   page++;
+  //   downloadFile();
+  // }, 5000);
+}
+
+function downloadFile() {
+  let fileName = page + ".svg";
+  const data = getRandomData();
+  let blob = new Blob([data], {
+    type: "application/octet-stream"
+  });
+  var href = URL.createObjectURL(blob);
+  // 從 Blob 取出資料
+  var link = document.createElement("a");
+  document.body.appendChild(link);
+  link.href = href;
+  link.download = fileName;
+  link.click();
+}
+
+
+
+
+
+// default when webpage loaded
+
+myFunction();
+
+function myFunction() {
+  out = '<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 297 210" height="210mm" width="297mm" style="font-size:10pt;">';
+
+  out += '<rect x="0" y="0" fill="none" stroke="#C30D23" stroke-width="2" width="297" height="210"/>';
+
+  out += '<path d="M 10 10 L 140 10" stroke="black" stroke-linecap="round" stroke-width="0.2" stroke-dasharray="1,1" fill="none"/><path d="M 10 27 L 140 27" stroke="black" stroke-linecap="round" stroke-width="0.2" stroke-dasharray="1,1" fill="none"/><path d="M 10 44 L 140 44" stroke="black" stroke-linecap="round" stroke-width="0.2" stroke-dasharray="1,1" fill="none"/><path d="M 10 61 L 140 61" stroke="black" stroke-linecap="round" stroke-width="0.2" stroke-dasharray="1,1" fill="none"/><path d="M 10 78 L 140 78" stroke="black" stroke-linecap="round" stroke-width="0.2" stroke-dasharray="1,1" fill="none"/><path d="M 10 95 L 140 95" stroke="black" stroke-linecap="round" stroke-width="0.2" stroke-dasharray="1,1" fill="none"/><path d="M 10 112 L 140 112" stroke="black" stroke-linecap="round" stroke-width="0.2" stroke-dasharray="1,1" fill="none"/><path d="M 10 129 L 140 129" stroke="black" stroke-linecap="round" stroke-width="0.2" stroke-dasharray="1,1" fill="none"/><path d="M 10 146 L 140 146" stroke="black" stroke-linecap="round" stroke-width="0.2" stroke-dasharray="1,1" fill="none"/><path d="M 10 163 L 140 163" stroke="black" stroke-linecap="round" stroke-width="0.2" stroke-dasharray="1,1" fill="none"/><path d="M 10 180 L 140 180" stroke="black" stroke-linecap="round" stroke-width="0.2" stroke-dasharray="1,1" fill="none"/><path d="M 10 197 L 140 197" stroke="black" stroke-linecap="round" stroke-width="0.2" stroke-dasharray="1,1" fill="none"/>';
+
+  out += '<path d="M 10 10 L 10 197" stroke="black" stroke-linecap="round" stroke-width="0.2" stroke-dasharray="1,1" fill="none"/><path d="M 26.25 10 L 26.25 180" stroke="black" stroke-linecap="round" stroke-width="0.2" stroke-dasharray="1,1" fill="none"/><path d="M 42.5 10 L 42.5 180" stroke="black" stroke-linecap="round" stroke-width="0.2" stroke-dasharray="1,1" fill="none"/><path d="M 58.75 10 L 58.75 180" stroke="black" stroke-linecap="round" stroke-width="0.2" stroke-dasharray="1,1" fill="none"/><path d="M 75 10 L 75 180" stroke="black" stroke-linecap="round" stroke-width="0.2" stroke-dasharray="1,1" fill="none"/><path d="M 91.25 10 L 91.25 180" stroke="black" stroke-linecap="round" stroke-width="0.2" stroke-dasharray="1,1" fill="none"/><path d="M 107.5 10 L 107.5 180" stroke="black" stroke-linecap="round" stroke-width="0.2" stroke-dasharray="1,1" fill="none"/><path d="M 123.75 10 L 123.75 180" stroke="black" stroke-linecap="round" stroke-width="0.2" stroke-dasharray="1,1" fill="none"/><path d="M 140 10 L 140 197" stroke="black" stroke-linecap="round" stroke-width="0.2" stroke-dasharray="1,1" fill="none"/>';
+
+
+
+
+  out += '<path stroke="black" stroke-width="0.7" stroke-opacity="1" stroke-linecap="butt" stroke-linejoin="round" stroke-dasharray="3,3" stroke-dashoffset="8" d="M5 -147 l200 0" transform="rotate(90)" />';
+
+  out += '<path d="M 154 10 L 284 10" stroke="black" stroke-linecap="round" stroke-width="0.5" fill="none"/><path d="M 154 27 L 284 27" stroke="black" stroke-linecap="round" stroke-width="0.5" fill="none"/><path d="M 154 44 L 284 44" stroke="black" stroke-linecap="round" stroke-width="0.5" fill="none"/><path d="M 154 61 L 284 61" stroke="black" stroke-linecap="round" stroke-width="0.5" fill="none"/><path d="M 154 78 L 284 78" stroke="black" stroke-linecap="round" stroke-width="0.5" fill="none"/><path d="M 154 95 L 284 95" stroke="black" stroke-linecap="round" stroke-width="0.5" fill="none"/><path d="M 154 112 L 284 112" stroke="black" stroke-linecap="round" stroke-width="0.5" fill="none"/><path d="M 154 129 L 284 129" stroke="black" stroke-linecap="round" stroke-width="0.5" fill="none"/><path d="M 154 146 L 284 146" stroke="black" stroke-linecap="round" stroke-width="0.5" fill="none"/><path d="M 154 163 L 284 163" stroke="black" stroke-linecap="round" stroke-width="0.5" fill="none"/><path d="M 154 180 L 284 180" stroke="black" stroke-linecap="round" stroke-width="0.5" fill="none"/><path d="M 154 197 L 284 197" stroke="black" stroke-linecap="round" stroke-width="0.5" fill="none"/>';
+
+  out += '<path d="M 154 10 L 154 197" stroke="black" stroke-linecap="round" stroke-width="0.5" fill="none"/>    <path d="M 170.25 10 L 170.25 180" stroke="black" stroke-linecap="round" stroke-width="0.5" fill="none"/>    <path d="M 186.5 10 L 186.5 180" stroke="black" stroke-linecap="round" stroke-width="0.5" fill="none"/>    <path d="M 202.75 10 L 202.75 180" stroke="black" stroke-linecap="round" stroke-width="0.5" fill="none"/>    <path d="M 219 10 L 219 180" stroke="black" stroke-linecap="round" stroke-width="0.5" fill="none"/>    <path d="M 235.25 10 L 235.25 180" stroke="black" stroke-linecap="round" stroke-width="0.5" fill="none"/>    <path d="M 251.5 10 L 251.5 180" stroke="black" stroke-linecap="round" stroke-width="0.5" fill="none"/>    <path d="M 267.75 10 L 267.75 180" stroke="black" stroke-linecap="round" stroke-width="0.5" fill="none"/>    <path d="M 284 10 L 284 197" stroke="black" stroke-linecap="round" stroke-width="0.5" fill="none"/>';
+
+  //var page = document.getElementById("myText").value;
+  page = document.getElementById("myRange").value;
+
+  // console.log(' ');
+  // console.log('page = ' + page);
+  // console.log(page & 128);
+  // console.log(page & 64);
+  // console.log(page & 32);
+  // console.log(page & 16);
+  // console.log(page & 8);
+  // console.log(page & 4);
+  // console.log(page & 2);
+  // console.log(page & 1);
+
+
+  out += '<text x="120" y="190" style="font-size:4px;">第 ' + page + ' 頁</text>';
+
+  out += '<text x="156.00" y="202" style="font-size:4px;">128</text>';
+  out += '<text x="172.25" y="202" style="font-size:4px;">64</text>';
+  out += '<text x="188.50" y="202" style="font-size:4px;">32</text>';
+  out += '<text x="204.75" y="202" style="font-size:4px;">16</text>';
+  out += '<text x="221.00" y="202" style="font-size:4px;">8</text>';
+  out += '<text x="237.25" y="202" style="font-size:4px;">4</text>';
+  out += '<text x="253.50" y="202" style="font-size:4px;">2</text>';
+  out += '<text x="269.75" y="202" style="font-size:4px;">1</text>';
+  out += '<text x="276.00" y="202" style="font-size:4px;fill:red;">第 ' + page + ' 頁</text>'; // 286.00
+
+  if ((page & 128) == 128) {
+    out += '<rect x="156" y="182.5" fill="black" stroke="black" stroke-width="0.8" width="12" height="12"/>';
+  } 
+  else {
+    out += '<rect x="156" y="182.5" fill="white" stroke="black" stroke-width="0.8" width="12" height="12"/>';
+  }
+
+  if ((page & 64) == 64) {
+    out += '<rect x="172.25" y="182.5" fill="black" stroke="black" stroke-width="0.8" width="12" height="12"/>';
+  }
+  else {
+    out += '<rect x="172.25" y="182.5" fill="white" stroke="black" stroke-width="0.8" width="12" height="12"/>';
+  }
+
+  if ((page & 32) == 32) {
+    out += '<rect x="188.5" y="182.5" fill="black" stroke="black" stroke-width="0.8" width="12" height="12"/>';
+  }
+  else {
+    out += '<rect x="188.5" y="182.5" fill="white" stroke="black" stroke-width="0.8" width="12" height="12"/>';
+  }
+
+  if ((page & 16) == 16) {
+    out += '<rect x="204.75" y="182.5" fill="black" stroke="black" stroke-width="0.8" width="12" height="12"/>';
+  }
+  else {
+     out += '<rect x="204.75" y="182.5" fill="white" stroke="black" stroke-width="0.8" width="12" height="12"/>';
+  }
+
+  if ((page & 8) == 8) {
+    out += '<rect x="221" y="182.5" fill="black" stroke="black" stroke-width="0.8" width="12" height="12"/>';
+  }
+  else {
+    out += '<rect x="221" y="182.5" fill="white" stroke="black" stroke-width="0.8" width="12" height="12"/>';
+  }
+
+  if ((page & 4) == 4) {
+    out += '<rect x="237.25" y="182.5" fill="black" stroke="black" stroke-width="0.8" width="12" height="12"/>';
+  }
+  else {
+    out += '<rect x="237.25" y="182.5" fill="white" stroke="black" stroke-width="0.8" width="12" height="12"/>';
+  }
+
+  if ((page & 2) == 2) {
+    out += '<rect x="253.5" y="182.5" fill="black" stroke="black" stroke-width="0.8" width="12" height="12"/>';
+  }
+  else {
+    out += '<rect x="253.5" y="182.5" fill="white" stroke="black" stroke-width="0.8" width="12" height="12"/>';
+  }
+
+  if ((page & 1) == 1) {
+    out += '<rect x="269.75" y="182.5" fill="black" stroke="black" stroke-width="0.8" width="12" height="12"/>';
+  }
+  else {
+    out += '<rect x="269.75" y="182.5" fill="white" stroke="black" stroke-width="0.8" width="12" height="12"/>';
+  }
+
+
+  // 文字
+  var i;
+  var x = 11;
+  var y = 24;
+  var c = 0; // 8 characters per row
+  var point = (page - 1) * 80; // 碼點
+
+  for(i=point; i<(point + 80) && (i <= 13758); i++) {
+    out += '<text x="' + (x-0.5) +'" y="'+ (y-11.5) + '" style="font-size:1.5pt;fill:blue;">' + arr[i].cp950 +'</text>';    
+    out += '<text x="' + (x+7) +'" y="'+ (y-11.5) + '" style="font-size:1.5pt;fill:red;">' + arr[i].unicode.replace('0x', 'U+') +'</text>';
+
+
+    if (arr[i].unicode == '0x0026' ) {
+      out += '<text x="' + x +'" y="'+ y + '">&#38;</text>'; // &#38; &
+    }
+    else if (arr[i].unicode == '0x003C' ) {
+      out += '<text x="' + x +'" y="'+ y + '">&#60;</text>'; // &#60; ＜
+    }
+    else if (arr[i].unicode == '0x003E' ) {
+      out += '<text x="' + x +'" y="'+ y + '">&#62;</text>'; // &#62; ＞
+    }
+    else if (arr[i].unicode != '' && arr[i].unicode != '0x0000' && arr[i].unicode != '0x0001' && arr[i].unicode != '0x0002' && arr[i].unicode != '0x0003' && arr[i].unicode != '0x0004' && arr[i].unicode != '0x0005' && arr[i].unicode != '0x0006' && arr[i].unicode != '0x0007' && arr[i].unicode != '0x0008' && arr[i].unicode != '0x0009' && arr[i].unicode != '0x000A' && arr[i].unicode != '0x000B' && arr[i].unicode != '0x000C' && arr[i].unicode != '0x000D' && arr[i].unicode != '0x000E' && arr[i].unicode != '0x000F' && arr[i].unicode != '0x0010' && arr[i].unicode != '0x0011' && arr[i].unicode != '0x0012' && arr[i].unicode != '0x0013' && arr[i].unicode != '0x0014' && arr[i].unicode != '0x0015' && arr[i].unicode != '0x0016' && arr[i].unicode != '0x0017' && arr[i].unicode != '0x0018' && arr[i].unicode != '0x0019' && arr[i].unicode != '0x001A' && arr[i].unicode != '0x001B' && arr[i].unicode != '0x001C' && arr[i].unicode != '0x001D' && arr[i].unicode != '0x001E' && arr[i].unicode != '0x001F' && arr[i].unicode != '0x0020') {
+
+      out += '<text x="' + x +'" y="'+ y + '">' + String.fromCharCode(arr[i].unicode) +'</text>';  
+    }
+    else {
+      out += '<text x="' + x +'" y="'+ y + '"></text>';        
+    }
+
+    //console.log(i);
+    c++;
+    x += 16.3;
+    if (c == 8){
+      c = 0;
+      x = 11;
+      y += 17;
+    }
+  }
+
+  out += "</svg>";
+  document.getElementById("id01").innerHTML = out;
+  //console.log(csv);
+}
+</script>
+
+
+</body>
+</html>

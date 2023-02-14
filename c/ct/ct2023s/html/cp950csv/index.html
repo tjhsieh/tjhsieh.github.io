@@ -1,0 +1,114 @@
+<!-- https://www.w3schools.com/js/js_json_files.asp -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<script src="csv.min.js"></script>
+<style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+  margin: 80px auto;
+}
+
+#customers td, #customers th {
+  border: 1px solid #fdd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+
+</head>
+<body>
+
+<input type="button" value="Demo" onclick="saveCSV()">
+<div id="id01"></div>
+
+<script>
+//document.write('ABC' + String.fromCharCode(0x7069) );
+
+function saveCSV () {
+  // (A) ARRAY OF DATA
+ 
+  // (B) CREATE BLOB OBJECT
+  var blob = new Blob([CSV.serialize(array2d)], {type: "text/csv"});
+ 
+  // (C) CREATE DOWNLOAD LINK
+  var url = window.URL.createObjectURL(blob);
+  var anchor = document.createElement("a");
+  anchor.href = url;
+  anchor.download = "demo.csv";
+ 
+  // (D) "FORCE DOWNLOAD"
+  // NOTE: MAY NOT ALWAYS WORK DUE TO BROWSER SECURITY
+  // BETTER TO LET USERS CLICK ON THEIR OWN
+  anchor.click();
+  window.URL.revokeObjectURL(url);
+  anchor.remove();
+}
+
+function myFunction(arr) {
+  var out = "<table id='customers'>";
+  out += "<tr><td>number</td><td>decimal</td><td>cp950</td><td>unicde</td><td>glyph</td><td>name</td>";
+
+  //var ids = new Array(65536 + 1).join('0').split('').map(parseFloat)
+  var array = new Array(65536); 
+  for (let i=0; i<65536; ++i) 
+  	array[i] = 0;
+  //console.log(a);
+
+  var i, j;
+  for(i = 0; i<arr.length; i++) {
+    //array[parseInt(Number(arr[i].cp950), 10)] = 1;
+    array[Number(arr[i].cp950)] = 1;
+
+    out += '<tr><td>' + i + '</td>';
+    out += '<td>' + Number(arr[i].cp950) + '</td>';
+    out += '<td>' + arr[i].cp950 + '</td>';    
+    out += '<td>' + arr[i].unicode + '</td>';
+    out += '<td>' + String.fromCharCode(arr[i].unicode) + '</td>';
+    out += '<td>' + arr[i].name + '</td><tr>'; 
+  }
+
+  out += "</td></tr></table>";
+  document.getElementById("id01").innerHTML = out;
+
+  array2d = new Array(256); 
+
+  for (i=0; i<array2d.length; i++) {
+    array2d[i] = new Array(256);
+  }
+
+  for(i=0; i<256; i++)
+     for(j=0; j<256; j++)
+       array2d[i][j] = array[(i*256) + j].toString(); 
+
+
+
+  var csv = array2d.join(",");
+  console.log(csv);
+  //console.log(array2d);
+
+}
+</script>
+
+<script src="myTutorials.js"></script>
+
+
+</body>
+</html>
