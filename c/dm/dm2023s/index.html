@@ -10,6 +10,8 @@ http://validator.w3.org/
 	<title>離散數學 Discrete Mathematics</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> <!-- iso-8859-1 -->
 	<link href="./styles.css" rel="stylesheet" type="text/css">
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>	
 </head>
 
 <body>
@@ -42,7 +44,7 @@ http://validator.w3.org/
 					allowtransparency="true">
 				</iframe>
 			</td>
-			<td width="3"><img src="spacer_red.gif" alt="" height="6588" width="1"></td>
+			<td width="3"><img src="spacer_red.gif" alt="" height="7088" width="1"></td>
 			<td width="3"><img src="spacer.gif" alt="" height="500" width="10"></td>
 
 			<!-- right  _________________________________________________________________________________________________________________ -->
@@ -135,15 +137,62 @@ http://validator.w3.org/
 							<tr><td> <br> </td></tr>
 							<tr><td> Donald Ervin Knuth 唐納德·爾文·克努斯</td></tr>
 							<tr><td> 中文名「高德納」，1977年由儲楓（姚期智夫人）命名。 </td></tr>
+							<tr><td> <br> </td></tr>
 							<tr><td>
 								<a href="https://www.youtube.com/watch?v=9eLjt5Lrocw" target">
 									<img src="https://i.ytimg.com/vi/9eLjt5Lrocw/hq720.jpg" width="95%">
 								</a>
 							</td></tr>
+							<!-- https://texblog.org/2014/06/24/big-o-and-related-notations-in-latex/ -->
+							<tr><td>
+								<table style="width: 99%;border-collapse: collapse;">
+									<tr>
+										<th style="border: 1px solid #666; padding:4px;">符號</th>
+										<th style="border: 1px solid #666; padding:4px;">定義</th>
+										<th style="border: 1px solid #666; padding:4px;">定義</th></tr>
+									<tr>
+										<td style="border: 1px solid #666; padding:4px;">\( f(n) = \mathcal{O}(g()) \)</td>
+										<td style="border: 1px solid #666; padding:4px;">Asymptotically upper bound</td>
+										<td style="border: 1px solid #666; padding:4px;">漸近上限</td></tr>
+									<tr>
+										<td style="border: 1px solid #666; padding:4px;">\( f(n) = o(g()) \)</td>
+										<td style="border: 1px solid #666; padding:4px;">Asymptotically negligible</td>
+										<td style="border: 1px solid #666; padding:4px;">漸近可忽略不計</td></tr>
+									<tr>
+										<td style="border: 1px solid #666; padding:4px;">\( f(n) = \Omega(g()) \)</td>
+										<td style="border: 1px solid #666; padding:4px;">Asymptotically lower bound</td>
+										<td style="border: 1px solid #666; padding:4px;">漸近下限</td></tr>
+									<tr>
+										<td style="border: 1px solid #666; padding:4px;">\( f(n) = \omega(g()) \)</td>
+										<td style="border: 1px solid #666; padding:4px;">Asymptotically dominant</td>
+										<td style="border: 1px solid #666; padding:4px;">漸近主導</td></tr>
+									<tr>
+										<td style="border: 1px solid #666; padding:4px;">\( f(n) = \Theta(g()) \)</td>
+										<td style="border: 1px solid #666; padding:4px;">Asymptotically tight bound</td>
+										<td style="border: 1px solid #666; padding:4px;">漸近緊約束</td></tr>
+								</table>
+							</td></tr>
+							<tr><td> <br> </td></tr>
+							<tr><td>
+								Big-\(O\) notation has been used in mathematics for more than a century. <u>In computer science it is widely used in the analysis of algorithms</u>, as will be seen in Section 3.3. The German mathematician <span style="color:red;">Paul Bachmann 保羅·巴赫曼 first introduced big-\(O\) notation in 1892</span> in an important book on number theory. The big-\(O\) symbol is sometimes called a <span style="color:red;">Landau symbol</span> after the German mathematician <span style="color:red;">Edmund Landau 愛德蒙·蘭道</span>, who used this notation throughout his work. 
+								<hr>
+								<span style="color:red;">The use of big-\(O\) notation in computer science was popularized by Donald Knuth</span>, who also introduced the big-\(Ω\) and big-\(Θ\) notations defined later in this section.
+								<hr>
+								The fact that \(f(x)\) is \(O(g(x))\) is sometimes written \(f(x) = O(g(x))\). However, it is acceptable to write \(f(x) ∈ O(g(x))\).
+								<hr>
+								Big-\(O\) notation is used extensively to describe the growth of functions, but it has limitations. In particular, when \(f(x)\) is \(O(g(x))\), we have an upper bound, in terms of \(g(x)\), for the size of \(f(x)\) for large values of \(x\).
+								<hr>
+								However, big-\(O\) notation does not provide a lower bound for the size of \(f(x)\) for large \(x\). 
+								For this, we use big-Omega (big-\(Ω\)) notation. 
+								<hr>
+								When we want to give both an upper and a lower bound on the size of a function \(f(x)\), relative to a reference function g(x), we use big-Theta (big-\(Θ\)) notation. 
+								<hr> 
+								<span style="color:red;">Both big-Omega and big-Theta notation were introduced by Donald Knuth in the 1970s.</span> His motivation for introducing these notations was the <u>common misuse of big-\(O\) notation<\u> when both an upper and a lower bound on the size of a function are needed.
+							</td></tr>
 							<tr><td> <br> </td></tr>
 							<!-- Why LaTeX ---------------------------------------------------- -->
 
-							<tr><td> <br> </td></tr>
+
 
 							<!-- Syllabus ---------------------------------------------------- -->
 							<tr><td valign="top" width="100%"><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
@@ -470,7 +519,7 @@ http://validator.w3.org/
 						</table>
 						<!-- 伍 -->
 						</td>
-						<td width="3"><img src="spacer_red.gif" alt="" height="6388" width="1"></td>
+						<td width="3"><img src="spacer_red.gif" alt="" height="6888" width="1"></td>
 						<!-- right bottom center _________________________________________________________________________________________________________________ -->
 						<!-- right bottom center _________________________________________________________________________________________________________________ -->
 						<!-- right bottom center _________________________________________________________________________________________________________________ -->
@@ -833,7 +882,7 @@ http://validator.w3.org/
 				</tbody></table>
 				<!-- 參 r4c1 -->
 			</td>
-			<td width="3"><img src="spacer_red.gif" alt="" height="6588" width="1"></td>
+			<td width="3"><img src="spacer_red.gif" alt="" height="7088" width="1"></td>
 		</tr>
 		<!-- 貳 r1 -->	
 		</tbody>
