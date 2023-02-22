@@ -64,7 +64,7 @@ http://validator.w3.org/
 	        transform: rotate(-8deg);
 	    }
 
-        .excellent-kid:hover {
+ /*       .excellent-kid:hover {
             animation-name: happy;
             animation-duration: 0.5s;
             animation-iteration-count: infinite;
@@ -96,8 +96,18 @@ http://validator.w3.org/
 		  position: fixed;
 		  bottom: 8px;
 		  right: -64px;
-        }
+        }*/
 
+		.animation {
+		  animation-name: example;
+		  animation-duration: 4s;
+		  animation-iteration-count: infinite;
+		  animation-direction: alternate;
+		}
+		@keyframes example {
+		  from {font-size: 12pt; line-height: normal;}
+		  to {font-size: 18pt; line-height: 1.5em;}
+		}
 	</style>
 
 
@@ -151,7 +161,7 @@ http://validator.w3.org/
 					allowtransparency="true">
 				</iframe>
 			</td>
-			<td width="3"><img src="spacer_red.gif" alt="" height="5988" width="1"></td>
+			<td width="3"><img src="spacer_red.gif" alt="" height="6988" width="1"></td>
 			<td width="3"><img src="spacer.gif" alt="" height="500" width="10"></td>
 
 			<!-- right  _________________________________________________________________________________________________________________ -->
@@ -440,12 +450,14 @@ http://validator.w3.org/
 							<tr><td valign="top" width="100%"><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
 							<tr><td> <br> </td></tr>
 							<tr><td> 
-								<a href="https://glyphsapp.com/"><img src="./fig/glyphs/glyphs.svg" width="45%"></a> 
-							    <a href="https://fontforge.org/en-US/"><img src="./fig/glyphs/FontForge_Logo,_2015.svg" width="45%"></a>
+								<a href="https://glyphsapp.com/"><img src="./fig/glyphs/glyphs.svg" width="32%"></a> 
+							    <a href="https://fontforge.org/en-US/"><img src="./fig/glyphs/FontForge_Logo,_2015.svg" width="32%"></a>
+							    <a href="https://fontforge.org/en-US/"><img src="./fig/glyphs/inkscape-logo.svg" width="32%"></a>
 							</td></tr>
 							<tr><td> 
-								<a href="https://glyphsapp.com/"> 「Glyphs 3」 is a Mac font editor. </a> 
-								<a href="https://fontforge.org/en-US/">「FontForge」 </a>
+								<a href="https://glyphsapp.com/"> 「Glyphs 3」 Mac </a> &nbsp; &ensp; &emsp; &thinsp; &zwnj; &zwj; <!-- https://note.charlestw.com/ -->
+								<a href="https://fontforge.org/en-US/">「FontForge」 </a> &nbsp; &ensp; &emsp; &thinsp; &zwnj; &zwj; <!-- https://note.charlestw.com/ -->
+								<a href="https://inkscape.org/">「Inkscape」 </a>
 							</td></tr>
 							<tr><td> <br> </td></tr>
 							<!--  ---------------------------------------------------- -->
@@ -496,7 +508,7 @@ http://validator.w3.org/
 							<tr><td> <br> </td></tr>
 							<tr><td>&#8226; <a href="https://www.writes.com.tw/old/"> WRITES 守寫字</a> <span class="photocredit"> 「守」住你的靈魂 「寫」出你的心情 「字」給你愛的每一個人 </a> 用你手心的溫度，來溫暖世界<!-- gray --> </span></td></tr>
 							<tr><td>&#8226; <a href="https://www.writes.com.tw/old/"> 致力於手寫文字的文藝復興者 </a> <span class="photocredit"> <!-- gray --> 
-								是什麼那麼重要，可以在過去三年裡，<span style="color:red;">讓三個碩士、一個博士畢業、一個工程師變成專案經理？</span>起初我們幾個<span style="color:red;">資工男孩</span>開始著手<span style="color:red;">中研院</span>的<span style="color:red;">「國家數位典藏技術研發」</span>計劃時，並沒有太大的熱情，<u>我們不懂中文與歷史的美，總認為「科技」才是王道</u>，但不知不覺被這個計畫霸王硬上弓了，<span style="color:red;">我們看到看到康熙真跡、胡適手稿</span>，<u>被這些文字的美感動，就像有一股暖流在身體流動</u>，「熱熱的…….刺刺的......」，所以這是我們的使命，要讓「守寫字」這股暖流，流到每個手寫繁體字的人心裡，不要讓他的好<u>只有我們幾個資工男孩知道</u>。我們花費<span style="color:red;">三年、1095天、26280小時</span>所累積的技術，可以在未來創造出無限的可能， 只要你們認同我們的理念，就用你們的手，守住這個理念，一起寫出寫的可能……  </span></td></tr>
+								是什麼那麼重要，可以在過去三年裡，<span style="color:red;">讓三個碩士、一個博士畢業、一個工程師變成專案經理？</span>起初我們幾個<span style="color:red;">資工男孩</span>開始著手<span style="color:red;">中研院</span>的<span style="color:red;">「國家數位典藏技術研發」</span>計劃時，並沒有太大的熱情，<u>我們不懂中文與歷史的美，總認為「科技」才是王道</u>，但不知不覺被這個計畫霸王硬上弓了，<span style="color:red;">我們看到看到康熙真跡、胡適手稿</span>，<u>被這些文字的美感動，就像有一股暖流在身體流動</u>，「熱熱的…….刺刺的......」，所以這是我們的使命，要讓「守寫字」這股暖流，流到每個手寫繁體字的人心裡，不要讓他的好<u>只有我們幾個資工男孩知道</u>。我們花費<span style="color:red;" class="animation">三年、1095天、26280小時</span>所累積的技術，可以在未來創造出無限的可能， 只要你們認同我們的理念，就用你們的手，守住這個理念，一起寫出寫的可能……  </span></td></tr>
 							<tr><td>&#8226; <a href="https://blog.writes.com.tw/2016/03/blog-post_16.html"> 稿紙造字小訣竅大分享 </a> <span class="photocredit"> <!-- gray --> 
 								說起【稿紙造字】，應該是守寫字平台上最早登場的造字方式吧。早在守寫字的前一代(fontwalker)的前一代(fontcloud)就已經存在類似的流程，提供使用者建立自己的字體，但其影像處理技術方面還有不少需要克服的難關，所以同時也是最讓我們的開發團隊最頭痛的造字方式......</span></td></tr>
 							<tr><td>&#8226; <a href="https://www.facebook.com/groups/ShowYourWord/"> 守寫字FB社團 </a> <span class="photocredit"> <!-- gray --> 
@@ -531,7 +543,7 @@ http://validator.w3.org/
 						</table>
 						<!-- 伍 -->
 						</td>
-						<td width="3"><img src="spacer_red.gif" alt="" height="5788" width="1"></td>
+						<td width="3"><img src="spacer_red.gif" alt="" height="6788" width="1"></td>
 						<!-- right bottom center _________________________________________________________________________________________________________________ -->
 						<!-- right bottom center _________________________________________________________________________________________________________________ -->
 						<!-- right bottom center _________________________________________________________________________________________________________________ -->
@@ -782,6 +794,56 @@ http://validator.w3.org/
 							<tr><td>&nbsp;</td></tr>
 							<tr><td><img src="./spacer_red.gif" alt="" height="1" width="100%"></td></tr>
 
+							<!-- figure -->
+							<tr><td><p align="center">
+								<a href="https://www.oxxostudio.tw/articles/201410/svg-tutorial.html">
+								<img src="https://www.oxxostudio.tw/img/articles/201410/svg-tutorial.jpg" alt="" width="140" style="border:1px solid black;">
+							</a></td></tr>
+							<tr><td><img src="spacer.gif" alt="" height="1" width="1"></td></tr>
+							<tr><td>&#8226; <a href="https://www.oxxostudio.tw/articles/201410/svg-tutorial.html">SVG 完整教學 31 天 - OXXO.STUDIO</a> <span class="photocredit"> <!-- gray --> </span></td></tr>
+							<tr><td>&nbsp;</td></tr>
+							<tr><td><img src="./spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+
+							<!-- figure -->
+							<tr><td><p align="center">
+								<a href="https://www.w3schools.com/colors/colors_names.asp">
+								<img src="https://www.w3schools.com/images/colorpicker.gif" alt="" width="140">
+							</a></td></tr>
+							<tr><td><img src="spacer.gif" alt="" height="1" width="1"></td></tr>
+							<tr><td>&#8226; <a href="http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/colors/colors_names.asp.html"> 「HTML Color Names」 </a> <span class="photocredit"> <!-- gray --> </span></td></tr>
+							<tr><td>&#8226; <a href="http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/colors/colors_picker.asp-colorhex=0000FF.html"> 「Shades」 </a> <span class="photocredit"> <!-- gray --> </span></td></tr>
+							<tr><td>&#8226; <a href="http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/colors/colors_mixer.asp-colorbottom=0000FF&colortop=FFFFFF.html"> 「Mixer」 </a></td></tr>
+							<tr><td>&nbsp;</td></tr>
+							<tr><td><img src="./spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+
+							<!-- figure -->
+							<tr><td><p align="center">
+								<a href="https://method.ac/">
+								<img src="https://method.ac/img/bezier.png" alt="" width="140" style="border:1px solid black;">
+							</a></td></tr>
+							<tr><td><img src="spacer.gif" alt="" height="1" width="1"></td></tr>
+							<tr><td>&#8226; <a href=""> <a href="https://method.ac/">The Bézier Game</a> </a> <span class="photocredit"> <!-- gray --> </span></td></tr>
+							<tr><td>&#8226; <a href="https://www.youtube.com/watch?v=iaqhrLOvwVU"> The Bezier Game - Walkthrough </a></td></tr>
+							<tr><td>&#8226; <a href="https://www.youtube.com/watch?v=ji6X6_unFEE"> MASTER the Pen Tool with the Bézier Game </a></td></tr>
+							<tr><td>&#8226; <a href="https://www.youtube.com/watch?v=G7sxV2G-OEo?t=30"> Bezier curves </a></td></tr>
+							<tr><td>&#8226; <a href="https://www.youtube.com/watch?v=M5BmtznHwwg"> How to Pronounce "Bezier Curve" </a></td></tr>
+							<tr><td>&nbsp;</td></tr>
+							<tr><td><img src="./spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+
+							<!-- figure -->
+							<tr><td><p align="center">
+								<a href="./bezier.html">
+								<img src="./bezier/beziercurve.png" alt="" width="140" style="border:1px solid black;">
+							</a></td></tr>
+							<tr><td><img src="spacer.gif" alt="" height="1" width="1"></td></tr>
+							<tr><td>&#8226; <a href="./bezier/bezier.html"> 「bezier」 </a> <span class="photocredit"> <!-- gray --> </span></td></tr>
+							<tr><td>&#8226; <a href="ttps://www.jasondavies.com/animated-bezier/"> © Jason Davies 2010 </a> <span class="photocredit"> <!-- gray --> </span></td></tr>
+							h
+							<tr><td>&nbsp;</td></tr>
+							<tr><td><img src="./spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+
+
+
 
 							<!-- figure -->
 							<tr><td><p align="center">
@@ -821,7 +883,7 @@ http://validator.w3.org/
 				</tbody></table>
 				<!-- 參 r4c1 -->
 			</td>
-			<td width="3"><img src="spacer_red.gif" alt="" height="5988" width="1"></td>
+			<td width="3"><img src="spacer_red.gif" alt="" height="6988" width="1"></td>
 		</tr>
 		<!-- 貳 r1 -->	
 		</tbody>
