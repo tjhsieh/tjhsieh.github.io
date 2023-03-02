@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+  <style>
+  @keyframes svg-01-a-outer-group{0%{transform:rotate(360deg)}to{transform:rotate(0deg)}}
+  @keyframes svg-01-a-rect{to{transform:rotate(360deg)}0%{transform:rotate(0deg)}}
+
+  /*
+  .svg-01-a-rect{stroke-width:.2;stroke:#000;fill:none}
+  */
+
+  .svg-01-a-inner-group:nth-child(even) 
+  .svg-01-a-rect{transform-origin:0 0;animation:svg-01-a-rect 5s linear infinite}
+  .svg-01-a-inner-group:nth-child(odd) 
+  .svg-01-a-rect{transform-origin:0 0;animation:svg-01-a-rect 5s linear reverse infinite}
+  .svg-01-a-outer-group{transform-origin:0 0;animation:svg-01-a-outer-group 2048s linear infinite}
+  </style>
+
+</head>
+<body>
+
+<a href="https://andrew.wang-hoyer.com/experiments/svg-animations/">SVG ANIMATIONS</a>
+<hr> 
+https://andrew.wang-hoyer.com/experiments/svg-animations/
+<hr>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512">
+  <rect x="10" y="10" width="100" height="100" fill="none" stroke="blue"/>
+</svg>
+
+<script>
+/* n-Queens */
+
+var i, j, k;
+var n = 8;
+
+
+var s = '<g class="svg-01-a-g svg-01-a-outer-group">';
+
+/*   p(i, j) and p(k, j) are not both true for integers j and k with 1 ≤ j < k ≤ n   */
+for (i=1; i<=n; i++) {
+  for (j=1; j<=(n-1); j++) {
+    s += '<rect x="' + j*50 + '" y="' + i*50 + '" width="50" height="50" fill="none" stroke="red"/>';
+
+    for (k=(j+1); k<=n; k++) {
+      //if (i == 1){
+      	//console.log('p(i,j) = p(' + i + ',' + j + ')' + ',   p(k,j) = (' + k + ',' + j + ')');
+      	console.log('p(i,j) = p(' + i + ',' + j + ')' + ',   p(i,k) = (' + i + ',' + k + ')');
+
+        s += '<rect x="' + k*50 + '" y="' + i*50 + '" width="50" height="50" fill="none" stroke="blue"/>';
+
+
+      //}
+    }
+  }
+}
+
+s += '</g>';
+
+document.querySelector('svg').innerHTML = s;
+
+</script>
+
+</body>
+</html>
