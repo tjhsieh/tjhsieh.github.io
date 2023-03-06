@@ -1,46 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>n-queens (8-queens)</title>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<!-- 
+<link rel="shortcut icon" href="https://www.ntut.edu.tw/var/file/7/1007/msys_1007_5994215_49612.png" type="image/x-icon" />
+<link rel="icon" href="https://www.ntut.edu.tw/var/file/7/1007/msys_1007_5994215_49612.png" type="image/x-icon" />
+<link rel="bookmark" href="https://www.ntut.edu.tw/var/file/7/1007/msys_1007_5994215_49612.png" type="image/x-icon" />
+<link rel="apple-touch-icon-precomposed" href="https://www.ntut.edu.tw/var/file/7/1007/msys_1007_5994215_49612.png">
+-->
 
-  <!-- 
-  <link rel="shortcut icon" href="https://www.ntut.edu.tw/var/file/7/1007/msys_1007_5994215_49612.png" type="image/x-icon" />
-  <link rel="icon" href="https://www.ntut.edu.tw/var/file/7/1007/msys_1007_5994215_49612.png" type="image/x-icon" />
-  <link rel="bookmark" href="https://www.ntut.edu.tw/var/file/7/1007/msys_1007_5994215_49612.png" type="image/x-icon" />
-  <link rel="apple-touch-icon-precomposed" href="https://www.ntut.edu.tw/var/file/7/1007/msys_1007_5994215_49612.png">
-  -->
+<link rel="shortcut icon" href="./Kizuna_AI_artwork.png" type="image/x-icon" />
+<link rel="icon" href="./Kizuna_AI_artwork.png" type="image/x-icon" />
+<link rel="bookmark" href="./Kizuna_AI_artwork.png" type="image/x-icon" />
+<link rel="apple-touch-icon-precomposed" href="./Kizuna_AI_artwork.png">
+<!-- <link rel="icon" href="Kizuna_AI_artwork.png" type="image/x-icon" /> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
 
+@keyframes svg-01-a-outer-group{0%{transform:rotate(360deg)}to{transform:rotate(0deg)}}
+@keyframes svg-01-a-rect{to{transform:rotate(360deg)}0%{transform:rotate(0deg)}}
 
-  <link rel="shortcut icon" href="./Kizuna_AI_artwork.png" type="image/x-icon" />
-  <link rel="icon" href="./Kizuna_AI_artwork.png" type="image/x-icon" />
-  <link rel="bookmark" href="./Kizuna_AI_artwork.png" type="image/x-icon" />
-  <link rel="apple-touch-icon-precomposed" href="./Kizuna_AI_artwork.png">
+/*
+.svg-01-a-rect{stroke-width:.2;stroke:#000;fill:none}
+*/
 
+.svg-01-a-inner-group:nth-child(even) 
+.svg-01-a-rect{transform-origin:0 0;animation:svg-01-a-rect 5s linear infinite}
+.svg-01-a-inner-group:nth-child(odd) 
+.svg-01-a-rect{transform-origin:0 0;animation:svg-01-a-rect 5s linear reverse infinite}
+.svg-01-a-outer-group{transform-origin:0 0;animation:svg-01-a-outer-group 16384s linear infinite}
 
-  <!-- <link rel="icon" href="Kizuna_AI_artwork.png" type="image/x-icon" /> -->
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  vertical-align: top;
+}
 
-
-
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style>
-
-  @keyframes svg-01-a-outer-group{0%{transform:rotate(360deg)}to{transform:rotate(0deg)}}
-  @keyframes svg-01-a-rect{to{transform:rotate(360deg)}0%{transform:rotate(0deg)}}
-
-  /*
-  .svg-01-a-rect{stroke-width:.2;stroke:#000;fill:none}
-  */
-
-  .svg-01-a-inner-group:nth-child(even) 
-  .svg-01-a-rect{transform-origin:0 0;animation:svg-01-a-rect 5s linear infinite}
-  .svg-01-a-inner-group:nth-child(odd) 
-  .svg-01-a-rect{transform-origin:0 0;animation:svg-01-a-rect 5s linear reverse infinite}
-  .svg-01-a-outer-group{transform-origin:0 0;animation:svg-01-a-outer-group 16384s linear infinite}
-  </style>
-
+</style>
 </head>
 <body>
   <i class="fa fa-car"></i>
@@ -61,6 +62,7 @@
 
   <!--brand icon-->
   <i class="fa fa-github-square" style="font-size:96px;"></i>
+
 <hr> 
 <a href="https://zh.wikipedia.org/zh-tw/%E5%85%AB%E7%9A%87%E5%90%8E%E9%97%AE%E9%A2%98">八皇后問題</a>
 八個皇后在8x8棋盤上共有4,426,165,368（64C8）種擺放方法，但只有92個可行（皇后間互不攻擊）的解。<br>如果將旋轉和對稱的解歸為一種的話，則一共有12個獨立解。
@@ -69,41 +71,34 @@
 <hr>
 
 <table>
-<tr><td style="vertical-align: top;">
-<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512">
-  <rect x="10" y="10" width="100" height="100" fill="none" stroke="blue"/>
-</svg>
-</td>
-<td><span></span><td>
+<tr>
+<td><svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" id="svg1"></svg></td>
+<td><svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" id="svg2"></svg></td>
+<td><svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" id="svg3"></svg></td>
+<td><svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" id="svg4"></svg></td>
+<td><svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" id="svg5"></svg></td>
+</tr>
+
+
+<tr><th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th><th>Q5</th></tr>
+<tr>
+  <td>\[ Q1 = \bigwedge_{i=1}^{n}\bigvee_{j=1}^{n}p(i,j)\]</td>
+  <td>\[ Q2 = \bigwedge_{i=1}^{n}\bigwedge_{j=1}^{n-1}\bigvee_{k=j+1}^{n} (\neg p(i,j) \lor \neg p(i,k)) \]</td>
+  <td>\[ Q3 = \bigwedge_{j=1}^{n}\bigwedge_{i=1}^{n-1}\bigvee_{k=i+1}^{n} (\neg p(i,j) \lor \neg p(k,j)) \]</td>
+  <td>\[ Q4 = \bigwedge_{i=2}^{n}\bigwedge_{j=1}^{n-1}\bigvee_{k=1}^{\text{min}(i-1,n-j)} (\neg p(i,j) \lor \neg p(i-k,k+j)) \]</td>
+  <td>\[ Q5 = \bigwedge_{i=1}^{n-1}\bigwedge_{j=1}^{n-1}\bigvee_{k=1}^{\text{min}(n-i,n-j)} (\neg p(i,j) \lor \neg p(i+k,j+k)) \]</td>
+</tr>
+
+<tr>
+<td><span id="q1"></span></td>
+<td><span id="q2"></span></td>
+<td><span id="q3"></span></td>
+<td><span id="q4"></span></td>
+<td><span id="q5"></span></td>
 </tr>
 </table>
 
 <script>
-/* n-Queens */
-
-
-var n = 8;
-
-
-var s = '<g class="svg-01-a-g svg-01-a-outer-group">';
-
-
-for (let i=1; i<=n; i++) {
-  for (let j=1; j<=n; j++) {
-    s += '<rect x="' + j*50 + '" y="' + (i*50) + '" width="50" height="50" id="r' + i + j + '"/>';
-    s += '<circle cx="' + (j*50+25) + '" cy="' + (i*50+25) + '" r="15" id="c' + i + j + '"/>';
-  }
-}
-
-/*   p(i, j) and p(k, j) are not both true for integers j and k with 1 ≤ j < k ≤ n   */
-for (let i=1; i<=n; i++) {
-  document.querySelector('span').innerHTML += '<br>';
-  for (let j=1; j<=(n-1); j++) {
-    for (let k=(j+1); k<=n; k++) {
-        document.querySelector('span').innerHTML += 'p(i,j) = p(' + i + ',' + j + ')' + ',   p(i,k) = (' + i + ',' + k + ')<br>';
-    }
-  }
-}
 
 // s += '<circle cx="225" cy="75" r="15"/>';
 // s += '<circle cx="125" cy="125" r="15"/>';
@@ -114,27 +109,97 @@ for (let i=1; i<=n; i++) {
 // s += '<circle cx="275" cy="375" r="15"/>';
 // s += '<circle cx="75" cy="425" r="15"/>';
 
-s += '</g>';
+/* n-Queens */
+var n = 8;
 
-s += '<style>';
-s += 'rect {fill: none; stroke: black;}';
-s += 'circle {fill: none; stroke: none;}';
-s += '.queen {fill: red;}';
-s += '.ij {stroke: red;  stroke-width: 8;}';
-s += '.ik {stroke: cyan; stroke-width: 8;}';
-s += '</style>';
+for (let q=1; q<=5; q++) {
+  var s = '<g class="svg-01-a-g svg-01-a-outer-group">';
 
-document.querySelector('svg').innerHTML = s;
+  for (let i=1; i<=n; i++) {
+    for (let j=1; j<=n; j++) {
+      s += '<rect x="' + j*50 + '" y="' + (i*50) + '" width="50" height="50" id="r' + i + j + q + '"/>';
+      s += '<circle cx="' + (j*50+25) + '" cy="' + (i*50+25) + '" r="15" id="c' + i + j + q + '"/>';
+    }
+  }
 
-//class="queen"
-document.querySelector('#c14').classList.add("queen");
-document.querySelector('#c22').classList.add("queen");
-document.querySelector('#c37').classList.add("queen");
-document.querySelector('#c43').classList.add("queen");
-document.querySelector('#c56').classList.add("queen");
-document.querySelector('#c68').classList.add("queen");
-document.querySelector('#c75').classList.add("queen");
-document.querySelector('#c81').classList.add("queen");
+  s += '</g>';
+  s += '<style>';
+  s += 'rect {fill: none; stroke: black;}';
+  s += 'circle {fill: none; stroke: none;}';
+  s += '.queen {fill: red;}';
+  s += '.ij {stroke: red;  stroke-width: 8;}';
+  s += '.ik {stroke: cyan; stroke-width: 8;}';
+  s += '</style>';
+
+  let id = '#svg' + q;
+  document.querySelector(id).innerHTML = s;
+}
+
+// red 8 queens
+for (let q=1; q<=5; q++) {
+  document.querySelector('#c14' + q.toString()).classList.add("queen");
+  document.querySelector('#c22' + q.toString()).classList.add("queen");
+  document.querySelector('#c37' + q.toString()).classList.add("queen");
+  document.querySelector('#c43' + q.toString()).classList.add("queen");
+  document.querySelector('#c56' + q.toString()).classList.add("queen");
+  document.querySelector('#c68' + q.toString()).classList.add("queen");
+  document.querySelector('#c75' + q.toString()).classList.add("queen");
+  document.querySelector('#c81' + q.toString()).classList.add("queen");
+}
+
+
+// Q1
+for (let i=1; i<=n; i++) {
+  document.querySelector('#q1').innerHTML += '<br>';
+  for (let j=1; j<=(n-1); j++) {
+    //document.querySelector('#q1').innerHTML += 'p(i,j) = p(' + i + ',' + j + ')<br>';
+    document.querySelector('#q1').innerHTML += '\\(p(' + i + ',' + j + ')\\)<br>';
+  }
+}
+
+// Q2
+/*   p(i, j) and p(k, j) are not both true for integers j and k with 1 ≤ j < k ≤ n   */
+for (let i=1; i<=n; i++) {
+  document.querySelector('#q2').innerHTML += '<br>';
+  for (let j=1; j<=(n-1); j++) {
+    for (let k=(j+1); k<=n; k++) {
+      //document.querySelector('#q2').innerHTML += 'p(i,j) = p(' + i + ',' + j + ')' + ',   p(i,k) = (' + i + ',' + k + ')<br>';
+      document.querySelector('#q2').innerHTML += '\\( \\neg p(' + i + ',' + j + ')' + ' \\lor \\neg p(' + i + ',' + k + ')\\)<br>';
+    }
+  }
+}
+
+// Q3
+for (let j=1; j<=n; j++) {
+  document.querySelector('#q3').innerHTML += '<br>';
+  for (let i=1; i<=(n-1); i++) {
+    for (let k=(i+1); k<=n; k++) {
+      document.querySelector('#q3').innerHTML += '\\( \\neg p(' + i + ',' + j + ')' + ' \\lor \\neg p(' + k + ',' + j + ')\\)<br>';
+    }
+  }
+}
+
+// Q4
+for (let i=2; i<=n; i++) {
+  document.querySelector('#q4').innerHTML += '<br>';
+  for (let j=1; j<=(n-1); j++) {
+    for (let k=1; k<=Math.min(i-1,n-j); k++) {
+      document.querySelector('#q4').innerHTML += '\\( \\neg p(' + i + ',' + j + ')' + ' \\lor \\neg p(' + (i-k) + ',' + (k+j) + ')\\)<br>';
+    }
+  }
+}
+
+// Q5
+for (let i=1; i<=(n-1); i++) {
+  document.querySelector('#q5').innerHTML += '<br>';
+  for (let j=1; j<=(n-1); j++) {
+    for (let k=1; k<=Math.min(n-i,n-j); k++) {
+      document.querySelector('#q5').innerHTML += '\\( \\neg p(' + i + ',' + j + ')' + ' \\lor \\neg p(' + (i+k) + ',' + (j+k) + ')\\)<br>';
+    }
+  }
+}
+
+
 
 // for (let i = 10; i > 0; i--) {
 //     setTimeout(function() {
@@ -185,9 +250,9 @@ c = 0;
 // }, 28000);
 
 setInterval(function() {
-  let redid = '#r' + i + aj[c];
-  let blueid = '#r' + i + ak[c];
-  console.log('c = ' + c + ', ' + redid + ', ' + blueid);
+  let redid = '#r' + i + aj[c] + 2;
+  let blueid = '#r' + i + ak[c] + 2;
+  //console.log('c = ' + c + ', ' + redid + ', ' + blueid);
 
   document.querySelector(redid).classList.add('ij');
   document.querySelector(blueid).classList.add('ik');
@@ -210,25 +275,24 @@ setInterval(function() {
 setInterval(function() {
   for (let i=1; i<=n; i++) {
     for (let j=1; j<=n; j++) {
-      let id = '#r' + i + j;
+      let id = '#r' + i + j + 2;
+      //alert(id)
+      //console.log(id)
       //document.querySelector(id).classList.remove('ij');
       document.querySelector(id).classList.remove('ik');  
     }
   }
 }, 1100);
 
-
-
 setInterval(function() {
   for (let i=1; i<=n; i++) {
     for (let j=1; j<=n; j++) {
-      let id = '#r' + i + j;
+      let id = '#r' + i + j + 2;
       document.querySelector(id).classList.remove('ij');
       //document.querySelector(id).classList.remove('ik');  
     }
   }
 }, 2800);
-
 
 </script>
 
