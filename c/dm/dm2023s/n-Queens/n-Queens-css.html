@@ -79,14 +79,14 @@ table, th, td {
 <td><svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" id="svg5"></svg></td>
 </tr>
 
-
-<tr><th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th><th>Q5</th></tr>
+<tr><th colspan="5">\( Q = Q_1 + Q_2 + Q_3 + Q_4 + Q_5\)</th></tr>
+<tr><th>\(Q_1\)</th><th>\(Q_2\)</th><th>\(Q_3\)</th><th>\(Q_4\)</th><th>\(Q_5\)</th></tr>
 <tr>
-  <td>\[ Q1 = \bigwedge_{i=1}^{n}\bigvee_{j=1}^{n}p(i,j)\]</td>
-  <td>\[ Q2 = \bigwedge_{i=1}^{n}\bigwedge_{j=1}^{n-1}\bigvee_{k=j+1}^{n} (\neg p(i,j) \lor \neg p(i,k)) \]</td>
-  <td>\[ Q3 = \bigwedge_{j=1}^{n}\bigwedge_{i=1}^{n-1}\bigvee_{k=i+1}^{n} (\neg p(i,j) \lor \neg p(k,j)) \]</td>
-  <td>\[ Q4 = \bigwedge_{i=2}^{n}\bigwedge_{j=1}^{n-1}\bigvee_{k=1}^{\text{min}(i-1,n-j)} (\neg p(i,j) \lor \neg p(i-k,k+j)) \]</td>
-  <td>\[ Q5 = \bigwedge_{i=1}^{n-1}\bigwedge_{j=1}^{n-1}\bigvee_{k=1}^{\text{min}(n-i,n-j)} (\neg p(i,j) \lor \neg p(i+k,j+k)) \]</td>
+  <td>\[ Q_1 = \bigwedge_{i=1}^{n}\bigvee_{j=1}^{n}p(i,j)\]</td>
+  <td>\[ Q_2 = \bigwedge_{i=1}^{n}\bigwedge_{j=1}^{n-1}\bigvee_{k=j+1}^{n} (\neg p(i,j) \lor \neg p(i,k)) \]</td>
+  <td>\[ Q_3 = \bigwedge_{j=1}^{n}\bigwedge_{i=1}^{n-1}\bigvee_{k=i+1}^{n} (\neg p(i,j) \lor \neg p(k,j)) \]</td>
+  <td>\[ Q_4 = \bigwedge_{i=2}^{n}\bigwedge_{j=1}^{n-1}\bigvee_{k=1}^{\text{min}(i-1,n-j)} (\neg p(i,j) \lor \neg p(i-k,k+j)) \]</td>
+  <td>\[ Q_5 = \bigwedge_{i=1}^{n-1}\bigwedge_{j=1}^{n-1}\bigvee_{k=1}^{\text{min}(n-i,n-j)} (\neg p(i,j) \lor \neg p(i+k,j+k)) \]</td>
 </tr>
 
 <tr>
