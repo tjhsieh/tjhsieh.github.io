@@ -158,6 +158,14 @@ http://validator.w3.org/
 									<img src="https://i.ytimg.com/vi/9eLjt5Lrocw/hq720.jpg" width="95%">
 								</a>
 							</td></tr>
+
+
+
+							<!-- Syllabus ---------------------------------------------------- -->
+							<tr><td valign="top" width="100%"><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+							<tr><td> <br> </td></tr>                    
+							<tr><td><font color="#993333"><span class="subtitle">\( f(n) = \mathcal{O}(g()) \)</span></font><br><br></td></tr>
+							<tr><td>
 							<!-- https://texblog.org/2014/06/24/big-o-and-related-notations-in-latex/ -->
 							<tr><td>
 								<table style="width: 99%;border-collapse: collapse;">
@@ -557,7 +565,19 @@ http://validator.w3.org/
 							<!-- https://www.qrcode-monkey.com/ -->
 							
 							<!-- figure -->
-							<tr><td><p align="center"><a href="./dm_code_png.svg"><img src="./QRCodeMonkey/qr-code.svg" alt="課程大綱" width="140"></a></td></tr>
+							<!-- <tr><td><p align="center"><a href="./dm_code_png.svg"><img src="./QRCodeMonkey/qr-code.svg" alt="課程大綱" width="140"></a></td></tr> -->
+							<tr><td><p align="center"><span id="container"></span></td></tr>
+<!-- https://github.com/papnkukn/qrcode-svg								 -->
+<script src="./qrcode.min.js"></script>
+<script type="text/javascript">
+// ecl - error correction level: L, M, H, Q
+var qrcode = new QRCode({ content: "https://tjhsieh.github.io/c/dm/dm2023s/", join: true, typeNumber: 8,background: "#fff", ecl: "L", padding: 1, width: 140, height: 140, color: "#6A4C9C", background: "#F1EEF7" });
+var svg = qrcode.svg();
+
+document.getElementById("container").innerHTML = svg;
+
+
+</script>
 							<tr><td>&#8226; <a href="https://tjhsieh.github.io/c/dm/dm2023s/">課程大綱</a> <span class="photocredit"> <!-- gray --> </span></td></tr>
 							<tr><td>&nbsp;</td></tr>
 							<tr><td><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
@@ -924,6 +944,14 @@ http://validator.w3.org/
 							<tr><td><img src="spacer.gif" alt="" height="1" width="1"></td></tr>
 							<tr><td>&#8226; <a href="./n-Queens/n-Queens.html" target="_blank"> n-Queens </a><span class="photocredit"> <!-- gray --> </span></td></tr>
 							<tr><td>&#8226; <a href="./n-Queens/n-Queens-css.html" target="_blank"> n-Queens-css </a><span class="photocredit"> <!-- gray --> </span></td></tr>
+							<tr><td>&nbsp;</td></tr>					
+							<tr><td><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+
+
+							<!-- figure -->
+							<tr><td><p align="center"><a href="https://ctan.org/author/oetiker"><img src="./fig/ctan-lion-d371c25e7eefcd9e0ada8e810fc88127.svg" alt="" width="150"></a></td></tr>
+							<tr><td><img src="spacer.gif" alt="" height="1" width="1"></td></tr>
+							<tr><td>&#8226; <a href="https://muyuuuu.github.io/2018/11/07/Brief-introduction-to-LaTex/" target="_blank">一份不太簡短的LaTeX簡介</a><span class="photocredit"> <!-- gray --> </span></td></tr>
 							<tr><td>&nbsp;</td></tr>					
 							<tr><td><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
 
