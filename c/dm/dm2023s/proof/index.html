@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<title>離散數學</title>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style type="text/css">
+  body {
+    font-family:'CircleFont';
+    background-color: rgb(106, 76, 156);
+    color: rgb(159, 53, 58);
+  }
+
+  .container-fluid {
+    width:  90%;
+  }
+
+  .hw12 {
+    border: 1px solid rgb(159, 53, 58);
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .twenty {
+    border: 1px solid #f9eced;
+    color: #f9eced;
+    padding: 8px;
+    font-size: 16pt;
+  }
+
+  .twenty a {
+    color:  yellow;
+    font-size:  16pt;
+  }
+
+  .twenty a:hover {
+    color: #f9eced;
+    font-size:  16pt;
+  }
+
+  .thirty {
+    border: 1px solid #f9eced;
+    color: #f9eced;
+  }
+
+  .ninety {
+    border: 1px solid rgb(159, 53, 58);
+    background-color: #f9eced;
+    padding: 8px;
+  }
+
+
+
+  svg {
+    border: 2px solid rgb(159, 53, 58);
+  }
+
+  path {
+    pointer-events: all;
+    fill: #f9eced;
+    stroke: rgb(159, 53, 58);
+    stroke-opacity: 0.95;
+    stroke-width: 1px;
+  }
+
+  .active circle {
+    stroke: #f9eced;
+    stroke-width: 2px;
+  }
+
+  svg g text {
+    fill: rgba(255, 255, 255, 1.0);
+    font-size: 24pt;
+    text-anchor: middle;
+  }
+
+    .twenty:hover {
+      /*
+        background-color: rgba(255, 255, 0, 0.1);
+      */
+        box-shadow: 0 0 5px 3px #f9eced;
+        color: cyan; 
+        text-shadow: 0 0 6px #FFFFFF, 0 0 6px #000000;
+    }
+
+    img:hover {
+      
+        box-shadow: 0 0 1px 1px #f9eced;
+      
+        animation-name: happy;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes happy {
+        0% {
+            transform: translateY(0px);
+        }
+
+        25% {
+            transform: translateY(-15px);
+        }
+
+        50% {
+            transform: translateY(0px);
+        }
+
+        75% {
+            transform: translateY(-5px);
+        }
+
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
+    @font-face {
+      font-family:'CircleFont';
+      /* src: url(https://circle472.github.io/ct2022s/hw04/CircleFont.ttf); */
+      src: url(CircleFont.woff2);
+      /* https://cloudconvert.com/ttf-to-woff2 */
+    }
+</style>
+</head>
+<body>
+
+<div class="container-fluid">
+
+  <div class="row hw12">
+    <div class="col-md-2 twenty"><img src="./img_kitty/133533.svg" width="90%">
+    </div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/hero-kitty.svg" width="90%">
+    </div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/pic03.svg" width="100%">
+    </div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/pic04.svg" width="90%">
+    </div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/pic05.svg" width="100%">
+    </div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/pic06.svg" width="100%">
+    </div>
+  </div>
+  
+  <!-- \(\) -->
+
+  <div class="row">
+    <div class="col-md-2 twenty">1.7.5<hr>Direct Proof</div>
+    <div class="col-md-8 twenty">
+      Direct proof of a conditional statement \( p \rightarrow q\).
+      <hr>
+      Assume \(p\) is T.
+      <hr>
+      Use rules of inference, with the final step showing \(q\) must be T.
+    </div>
+    <div class="col-md-2 twenty">Ex 1:<hr> Give a direct proof of the theorem "If n is an odd number, then n<span style="position: relative; top: -0.5em; font-size: 60%;">2</span> is odd."</div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2 twenty">1.7.6<hr>Proof by Contraposition 反證法</div>
+    <div class="col-md-8 twenty">Conditional statement \( p \rightarrow q\) can be proved by its contrapositive \( \neg q \rightarrow \neg p\) is T. <hr> Assume \( \neg q\), use axioms, definitions, theorems, rules of inference, we show that \( \neg p \) must follow.</div>
+    <div class="col-md-2 twenty">
+      Ex 3: 
+      <hr> 
+      Prove that if n is an integer and 3n + 2 is odd, then n is odd.
+      <hr>
+      Ex 9:
+      <hr>
+      Prove that if n is an integer and n<span style="position: relative; top: -0.5em; font-size: 60%;">2</span> is odd, then n is odd.
+    </div>
+  </div>
+
+
+  <!-- \(\) -->
+  <div class="row">
+    <div class="col-md-2 twenty">VACUOUS PROOFS 空泛證明</div>
+    <div class="col-md-8 twenty">If we can show that p is false, then we have a proof, called a vacuous proof, of the conditional statement p → q.</div>
+    <div class="col-md-2 twenty">Ex 5:<hr>Show that the proposition P(0) is true, where P(n) is “If n > 1, then n<span style="position: relative; top: -0.5em; font-size: 60%;">2</span> > n” and the domain consists of all integers.</div>
+  </div>
+
+
+  <!-- \(\) -->
+  <div class="row">
+    <div class="col-md-2 twenty">TRIVIAL PROOFS 平庸證明</div>
+    <div class="col-md-8 twenty">A proof of p → q that uses the fact that q is true is called a trivial proof. Trivial proofs are often important in mathematical induction.</div>
+    <div class="col-md-2 twenty">Ex 7: <hr>Let P(n) be “If a and b are positive integers with a ≥ b, then a<span style="position: relative; top: -0.5em; font-size: 60%;">n</span> ≥ b<span style="position: relative; top: -0.5em; font-size: 60%;">n</span>,” where the domain consists of all nonnegative integers. Show that P(0) is true.</div>
+  </div>
+
+
+  <!-- \(\) -->
+  <div class="row">
+    <div class="col-md-2 twenty">1.7.7<hr>Proofs by Contradiction 歸謬證法</div>
+    <div class="col-md-8 twenty">Suppose we want to <u>prove that a statement \(p\) is true</u>. We can prove that \(p\) is true if we can show that \(¬p → (r ∧ ¬r)\) is true for some proposition \(r\). Proofs of this type are called proofs by contradiction.</div>
+    <div class="col-md-2 twenty">Ex 11: <hr>Prove that \(√2\) is irrational by giving a proof by contradiction.</div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-2 twenty">1.7.7<hr>Proofs by Contradiction 歸謬證法</div>
+    <div class="col-md-8 twenty">
+      Proof by contradiction can be used to <u>prove conditional statements</u>. In such proofs, we first assume the negation of the conclusion.We then use the premises of the theorem and the negation of the conclusion to arrive at a contradiction. (The reason that such proofs are valid rests on the logical equivalence of \(p → q\) and \((p ∧ ¬q) → F\). 
+      <hr> 
+      Note that we can <u>rewrite a proof by contraposition of a conditional statement as a proof by contradiction</u>. In a proof of \(p → q\) by contraposition, we assume that \(¬q\) is true. We then show that \(¬p\) must also be true. <u>To rewrite a proof by contraposition of \(p → q\) as a proof by contradiction, we suppose that both \(p\) and \(¬q\) are true. Then, we use the steps from the proof of \(¬q → ¬p\) to show that \(¬p\) is true. This leads to the contradiction \(p ∧ ¬p\), completing the proof.</u> 
+      <hr>
+      Example 11 illustrates how <u>a proof by contraposition of a conditional statement</u> can be rewritten as <u>a proof by contradiction</u>.</div>
+    <div class="col-md-2 twenty">Ex 12:<hr>Give a proof by contradiction of the theorem “If 3n + 2 is odd, then n is odd.”</div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-2 twenty">PROOFS OF EQUIVALENCE</div>
+    <div class="col-md-8 twenty">To prove a theorem that is a biconditional statement, that is, a statement of the form p ↔ q, we show that p → q and q → p are both true.</div>
+    <div class="col-md-2 twenty">Ex 13:<hr>Prove the theorem “If n is an integer, then n is odd if and only if n<span style="position: relative; top: -0.5em; font-size: 60%;">2</span> is odd.”</div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-2 twenty"></div>
+    <div class="col-md-8 twenty"></div>
+    <div class="col-md-2 twenty"></div>
+  </div>
+
+
+
+
+  <!--  title -->
+  <div class="row hw12">
+    <div class="col-md-12 twenty"><iframe src="./ntut1act.svg" width="100%" height="100%" style="border:none;"></iframe></div>
+  </div>
+
+  <!--  title -->
+  <div class="row hw12">
+    <div class="col-md-12 twenty"><a href="./title.svg"><img src="./title.svg" width="100%"></a></div>
+  </div>
+
+
+
+
+</div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+
+<script>
+</script>
+
+</body>
+</html>
