@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<title>字體設計與文字編碼 111-2</title>
+<style type="text/css">
+  body {
+    background-color: rgb(106, 76, 156);
+    color: rgb(159, 53, 58);
+  }
+
+  .container-fluid {
+    width:  90%;
+  }
+
+  .hw12 {
+    border: 1px solid rgb(159, 53, 58);
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .twenty {
+    border: 1px solid #f9eced;
+    color: #f9eced;
+    padding: 8px;
+    font-size: 10pt;
+  }
+
+  .kitty {
+    color: #f9eced;
+    font-size: 10pt;
+    background-color: rgb(159, 53, 58);
+  }
+
+
+  .twenty a {
+    color:  yellow;
+    font-size:  10pt;
+  }
+
+  .twenty a:hover {
+    color: #f9eced;
+    font-size:  10pt;
+  }
+
+  .thirty {
+    border: 1px solid #f9eced;
+    color: #f9eced;
+  }
+
+  .ninety {
+    border: 1px solid rgb(159, 53, 58);
+    background-color: #f9eced;
+    padding: 8px;
+  }
+
+
+
+  svg {
+    border: 2px solid rgb(159, 53, 58);
+  }
+
+  path {
+    pointer-events: all;
+    fill: #f9eced;
+    stroke: rgb(159, 53, 58);
+    stroke-opacity: 0.95;
+    stroke-width: 1px;
+  }
+
+  .active circle {
+    stroke: #f9eced;
+    stroke-width: 2px;
+  }
+
+  svg g text {
+    fill: rgba(255, 255, 255, 1.0);
+    font-size: 24pt;
+    text-anchor: middle;
+  }
+
+    .twenty:hover {
+      /*
+        background-color: rgba(255, 255, 0, 0.1);
+      */
+        box-shadow: 0 0 5px 3px #f9eced;
+        color: cyan; 
+        text-shadow: 0 0 6px #FFFFFF, 0 0 6px #000000;
+    }
+
+    img:hover {
+      
+        box-shadow: 0 0 1px 1px #f9eced;
+      
+        animation-name: happy;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes happy {
+        0% {
+            transform: translateY(0px);
+        }
+
+        25% {
+            transform: translateY(-15px);
+        }
+
+        50% {
+            transform: translateY(0px);
+        }
+
+        75% {
+            transform: translateY(-5px);
+        }
+
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
+</style>
+</head>
+<body>
+
+<div class="container-fluid">
+
+  <div class="row hw12">
+    <div class="col-md-2 twenty"><a href="https://andrew.wang-hoyer.com/experiments/svg-animations/"><img src="./animation/1a.svg" width="100%"></a></div>
+    <div class="col-md-2 twenty"><a href="https://andrew.wang-hoyer.com/experiments/svg-animations/"><img src="./animation/27s.svg" width="100%"></a></div>
+    <div class="col-md-2 twenty"><a href="https://andrew.wang-hoyer.com/experiments/svg-animations/"><img src="./animation/5b.svg" width="100%"></a></div>
+    <div class="col-md-2 twenty"><a href="https://andrew.wang-hoyer.com/experiments/svg-animations/"><img src="./animation/31c.svg" width="100%"></a></div>
+    <div class="col-md-2 twenty"><a href="https://andrew.wang-hoyer.com/experiments/svg-animations/"><img src="./animation/49d.svg" width="100%"></a></div>
+    <div class="col-md-2 twenty"><a href="https://andrew.wang-hoyer.com/experiments/svg-animations/"><img src="./animation/18a.svg" width="100%"></a></div>
+  </div>
+
+  <div class="row hw12">
+    <div class="col-md-2 twenty"><a href="https://andrew.wang-hoyer.com/experiments/svg-animations/"><img src="./animation/39b.svg" width="100%"></a></div>
+    <div class="col-md-2 twenty"><a href="https://andrew.wang-hoyer.com/experiments/svg-animations/"><img src="./animation/24a.svg" width="100%"></a></div>
+    <div class="col-md-2 twenty"><a href="https://andrew.wang-hoyer.com/experiments/svg-animations/"><img src="./animation/3a.svg" width="100%"></a></div>
+    <div class="col-md-2 twenty"><a href="https://andrew.wang-hoyer.com/experiments/svg-animations/"><img src="./animation/42b.svg" width="100%"></a></div>
+    <div class="col-md-2 twenty"><a href="https://andrew.wang-hoyer.com/experiments/svg-animations/"><img src="./animation/37b.svg" width="100%"></a></div>
+    <div class="col-md-2 twenty"><a href="https://andrew.wang-hoyer.com/experiments/svg-animations/"><img src="./animation/45a.svg" width="100%"></a></div>
+  </div>
+
+  <div class="row hw12">
+    <div class="col-md-2 twenty"><a href="https://andrew.wang-hoyer.com/experiments/svg-animations/"><img src="./animation/25a.svg" width="100%"></a></div>
+    <div class="col-md-2 twenty"><a href="https://andrew.wang-hoyer.com/experiments/svg-animations/"><img src="./animation/25b.svg" width="100%"></a></div>
+    <div class="col-md-2 twenty"><a href="https://andrew.wang-hoyer.com/experiments/svg-animations/"><img src="./animation/25c.svg" width="100%"></a></div>
+    <div class="col-md-2 twenty"><a href="https://andrew.wang-hoyer.com/experiments/svg-animations/"><img src="./animation/25d.svg" width="100%"></a></div>
+    <div class="col-md-2 twenty"><a href="https://andrew.wang-hoyer.com/experiments/svg-animations/"><img src="./animation/21a.svg" width="100%"></a></div>
+    <div class="col-md-2 twenty"><a href="https://andrew.wang-hoyer.com/experiments/svg-animations/"><img src="./animation/21c.svg" width="100%"></a></div>
+  </div>
+
+  <div class="row hw12">
+    <div class="col-md-2 twenty"><a href="https://andrew.wang-hoyer.com/experiments/svg-animations/"><img src="./animation/21b.svg" width="100%"></a></div>
+    <div class="col-md-2 twenty"><a href="https://andrew.wang-hoyer.com/experiments/svg-animations/"><img src="./animation/6b.svg" width="100%"></a></div>
+    <div class="col-md-2 twenty"><a href="https://andrew.wang-hoyer.com/experiments/svg-animations/"><img src="./animation/32c.svg" width="100%"></a></div>
+    <div class="col-md-2 twenty"><a href="https://andrew.wang-hoyer.com/experiments/svg-animations/"><img src="./animation/48a.svg" width="100%"></a></div>
+    <div class="col-md-2 twenty"><a href="https://andrew.wang-hoyer.com/experiments/svg-animations/"><img src="./animation/7a.svg" width="100%"></a></div>
+    <div class="col-md-2 twenty"><a href="https://andrew.wang-hoyer.com/experiments/svg-animations/"><img src="./animation/star.svg" width="100%"></a></div>
+  </div>
+
+  <div class="row hw12">
+    <div class="col-md-2 twenty"><img src="./img_kitty/133533.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/hero-kitty.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/pic03.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/pic04.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/pic05.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/pic06.svg" width="100%"></div>
+  </div>
+
+
+
+
+
+  <div class="row hw12">
+    <div class="col-md-2 twenty"><img src="./img_kitty/133533.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/hero-kitty.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/pic03.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/pic04.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/pic05.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/pic06.svg" width="100%"></div>
+  </div>
+  
+</div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+
+<script>
+</script>
+
+</body>
+</html>
