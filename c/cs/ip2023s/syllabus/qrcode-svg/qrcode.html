@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<script src="qrcode.min.js"></script>
+</head>
+<body>
+<button id="download" onclick="downloadSVG()">Download SVG</button>
+<hr>
+<span id="container"></span>
+
+<script>
+	// https://datalog.github.io/demo/qrcode-svg/
+	var qrcodes = new QRCode({
+			 msg   :  'https://tjhsieh.github.io/c/cs/ip2023s/',
+			 dim   :   140,
+			 pad   :   1,
+			 mtx   :  -1,
+			 ecl   :  "H", // ecl - error correction level: L, M, H, Q
+			 ecb   :   1,
+			 pal   : ["#9F353A"], 
+			 // #9F353A https://nipponcolors.com/#enji 
+			 // #6A4C9C https://nipponcolors.com/#kikyo
+			 vrb   :   0
+		});
+
+	document.getElementById("container").appendChild( qrcodes );
+	//document.getElementById("container").innerHTML = qrcodes.innerHTML;
+
+	function downloadSVG() {
+	  const svg = document.getElementById('container').innerHTML; //.firstChild
+	  //alert(svg);
+	  console.log(svg);
+	  const blob = new Blob([svg.toString()]);
+	  const element = document.createElement("a");
+	  element.download = "w3c.svg";
+	  element.href = window.URL.createObjectURL(blob);
+	  element.click();
+	  element.remove();
+	}
+</script>
+
+</body>
+</html>
