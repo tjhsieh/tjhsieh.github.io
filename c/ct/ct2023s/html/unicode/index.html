@@ -321,7 +321,7 @@ function build_plane()
 
 	   	  svg2.append("text")
 	          // .text( (Math.floor(coords[1]/2)*256 + Math.floor(coords[0]/2)).toString() + ', ' + String.fromCodePoint( Math.floor(coords[1]/2)*256 + Math.floor(coords[0]/2) ) )
-	          .text( '0x' + "000000".substr(code_point.toString(16).length) + code_point.toString(16) + ', ' + code_point.toString() + ', ' + String.fromCodePoint(code_point))
+	          .text( 'U+' + "0000".substr(code_point.toString(16).length) + code_point.toString(16) + ', ' + code_point.toString() + ', ' + String.fromCodePoint(code_point))
 	          .attr("x", function(d, i){
 	      		return coords[0] + 8;
 	          })
@@ -344,7 +344,7 @@ function build_plane()
 	   	  code_point = Math.max(0, code_point);
 
 	   	  svg2.append("text")
-	          .text( '0x' + "000000".substr(code_point.toString(16).length) + code_point.toString(16) + ', ' + code_point.toString() + ', ' + String.fromCodePoint(code_point))
+	          .text( 'U+' + "0000".substr(code_point.toString(16).length) + code_point.toString(16) + ', ' + code_point.toString() + ', ' + String.fromCodePoint(code_point))
 	          .attr("x", function(d, i){
 	      		return coords[0] + 8;
 	          })
@@ -365,7 +365,7 @@ function build_plane()
 	    .append("title")
 	    .text(function(d, i) {
 	      var start = plane_select * 65536;
-	   	  return '0x' + "000000".substr(( start + i ).toString(16).length) + ( start + i ).toString(16) + ', ' + ( start + i ) + ', ' + String.fromCodePoint(start + i); 
+	   	  return 'U+' + "0000".substr(( start + i ).toString(16).length) + ( start + i ).toString(16) + ', ' + ( start + i ) + ', ' + String.fromCodePoint(start + i); 
 	    });
 
 	console.log('end build_plane()...');
