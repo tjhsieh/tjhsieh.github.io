@@ -1,0 +1,417 @@
+<!--
+http://bl.ocks.org/ndarville/7075823
+https://www.oxxostudio.tw/articles/201501/svg-d3-13-csv.html
+-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script src="./d3.v3.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&display=swap');
+
+        h3 {
+            background-color: rgba(255, 255, 0, 0.1);
+            color: white; 
+            text-shadow: 0 0 6px #FF0000, 0 0 6px #000000;
+            font-family: 'Noto Serif JP', serif;
+            font-size: 24pt;
+            border: solid 1px black;
+            width: 90%;
+            margin: 5px auto;
+            padding: 10px;
+            text-align: center;
+        }
+
+        div {
+            background-color: rgba(255, 255, 0, 0.1);
+            font-family: 'Noto Serif JP', serif;
+            font-size: 24pt;
+            border: solid 1px black;
+            width: 90%;
+            margin: 5px auto;
+            padding: 10px;
+            text-align: center;
+        }
+
+        body {
+            background-color: rgba(255, 128, 255, 0.1);
+        }
+
+        table {
+            border-collapse: collapse;
+            border: 2px black solid;
+            font: 24px sans-serif;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        td,
+        th {
+            border: 1px black solid;
+            padding: 5px;
+            background-color: rgba(128, 255, 255, 0.1);
+        }
+
+        td.left {
+            text-align: left;
+        }
+
+        td img {
+            transition: width, height;
+            transition-duration: 0.5s;
+            width: 50px;
+            height: 50px;
+            /* display: block; */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        img:hover {
+            box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+        }
+
+        /*
+        .excellent-kid {
+            background-color: skyblue;
+        }
+
+        .good-kid {
+            background-color: pink;
+        }
+
+        .fair-kid {
+            background-color: pink;
+        }
+
+        .poor-kid {
+            background-color: pink;
+        }
+        */
+
+        td:hover img {
+            transition: width, height;
+            transition-duration: 0.5s;
+            width: 100px;
+            height: 100px;
+        }
+
+        td.excellent-kid:hover img {
+            animation-name: happy;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+        }
+
+        td.good-kid:hover img {
+            animation-name: happy;
+            animation-duration: 1.0s;
+            animation-iteration-count: infinite;
+        }
+
+        td.fair-kid:hover img {
+            animation-name: angry;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+        }
+
+        td.poor-kid:hover img {
+            animation-name: angry;
+            animation-duration: 0.1s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes happy {
+            0% {
+                transform: translateY(0px);
+            }
+
+            25% {
+                transform: translateY(-5px);
+            }
+
+            50% {
+                transform: translateY(0px);
+            }
+
+            75% {
+                transform: translateY(-5px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        @keyframes angry {
+            0% {
+                transform: translate(1px, 3px);
+            }
+
+            25% {
+                transform: translate(7px, 2px);
+            }
+
+            50% {
+                transform: translate(4px, 5px);
+            }
+
+            75% {
+                transform: translate(12px, 3px);
+            }
+
+            100% {
+                transform: translate(2px, 0px);
+            }
+        }
+
+        #tooltip {
+            position: absolute;
+            width: 200px;
+            height: auto;
+            padding: 10px;
+            background-color: white;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+            -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+            -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+            pointer-events: none;
+        }
+        
+        #tooltip.hidden {
+            display: none;
+        }
+        
+        #tooltip p {
+            margin: 0;
+            font-family: sans-serif;
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h3>Data Visualization 109-2 Homework Grading</h3>
+
+    <div id="tooltip" class="hidden">
+        <strong> 座標 </strong>
+        <p><span id="value"></span></p>
+    </div>
+
+    <div id="div1"></div>
+
+    <div id="div2"></div>
+
+    <script type="text/javascript" charset="utf-8">
+
+        d3.select("#div1")
+            .append("table")
+            .append("tr")
+            .selectAll("td")
+            .data([100, 90, 80, 70])
+            .enter()
+            .append("td")
+            .text(function (d, i) {
+                if (i < 4 || isNaN(d)) {
+                    return d;
+                }
+
+            })
+
+            // img
+            .attr("class", function (d, i) { 
+                if (d == 100) return "excellent-kid"; 
+                else if (d >= 90 ) return "good-kid"; 
+                else if (d >= 80 ) return "fair-kid"; 
+                else return "poor-kid";})
+            .append("img")
+            .attr("src", function (d, i) { 
+                if (d == 100) return "./svg/a1455014.svg"; 
+                else if (d >= 90) return "./svg/a1455014_red.svg"; 
+                else if (d >= 80) return "./svg/a1455014_green.svg"; 
+                else return "./svg/a1455065.svg"; })
+            .attr("x", "0")
+            .attr("y", "0")
+            .attr("width",  function(d, i) { return (i + 1) * 60; })
+            .attr("height", function(d, i) { return (i + 1) * 60; });
+
+
+        d3.text("./csv/data.csv", function (data) {
+            //console.log(data);
+
+            var parsedCSV = d3.csv.parseRows(data);
+
+            //console.log(parsedCSV);
+            //alert(parsedCSV);
+
+            //var github = '';
+
+
+            toApple = function(id, score, hw){
+                if (score == ''){
+                    return '<td height="80px"></td>';
+                }
+                else if (score == 100){
+                    return '<td class="excellent-kid"><a href="https://' + id + '.github.io/vis2021s/' + hw + '/index.html">' + '<img src= "./svg/a1455014.svg" width="50" height="50"></a></td>'
+                }
+                else if (score >= 90){
+                    return '<td class="good-kid"><a href="https://' + id + '.github.io/vis2021s/' + hw + '/index.html">' + '<img src= "./svg/a1455014_red.svg" width="50" height="50"></a></td>'
+                }
+                else if (score >= 80){
+                    return '<td class="fair-kid"><a href="https://' + id + '.github.io/vis2021s/' + hw + '/index.html">' + '<img src= "./svg/a1455014_green.svg" width="50" height="50"></a></td>'
+                }
+                else if (score >= 70){
+                    return '<td class="poor-kid"><a href="https://' + id + '.github.io/vis2021s/' + hw + '/index.html">' + '<img src= "./svg/a1455065.svg" width="50" height="50"></a></td>'
+                }
+                else if (score[0] == 'l'){
+                    return '<td>' + score + '</td>'
+                }                
+                else {
+                    return '<td><a href="https://' + id + '.github.io/vis2021s/' + hw + '/index.html">' + score + '</a></td>';
+                }
+            }
+
+            var container = d3.select("#div2")
+                .append("table")
+                .selectAll("tr")
+                .data(parsedCSV)
+                .enter()
+                .append("tr")
+                .html(function (d) {
+                    var io = '';
+
+                    //alert(d[4]);
+
+                    if (d[4] == 'github.io' || d[4] == '')
+                        io = '<td>' +  d[4] + '</td>';
+                    else if (d[4] == 'f870103')
+                        io = '<td class="left"><a href="https://' +  d[4] + '.github.io/vis2021s/">' + '<img src="https://myweb.ntut.edu.tw/~tjhsieh/c/vis/vis2021s/fig/svg/133533.svg" height="50">' + d[4] + '</a></td>';
+                    else 
+                        io = '<td class="left"><a href="https://' +  d[4] + '.github.io/vis2021s/">' + '<img src="https://' + d[4] +'.github.io/vis2021s/lab00/1.svg" height="50">' + d[4] + '</a></td>';
+
+                    var git = '';
+
+                    if (d[3] == '姓名')
+                        git = '<td>' + d[3] + '</td>';
+                    else
+                        git = '<td><a href="http://www.github.com/' + d[4] + '/vis2021s/">' + d[3] + '</a></td>';
+
+                    // table
+                    return  '<td>' + d[0] + '</td>' + 
+                            '<td>' + d[1] + '</td>' +
+                            '<td>' + d[2] + '</td>' +
+                            git +
+                            io +
+                            toApple(d[4], d[5],  'lab01') +
+                            toApple(d[4], d[6],  'lab02') +
+                            toApple(d[4], d[7],  'lab03') +
+                            toApple(d[4], d[8],  'lab04') +
+                            toApple(d[4], d[9],  'lab05') +
+                            toApple(d[4], d[10], 'lab06') +
+                            toApple(d[4], d[11], 'lab07') +
+                            toApple(d[4], d[12], 'lab08') +
+                            toApple(d[4], d[13], 'lab09') +
+                            toApple(d[4], d[14], 'lab014') +
+                            toApple(d[4], d[15], 'lab66');
+                })
+                .filter(function(d){
+                    if (d[3] == '姓名')
+                        return false;
+                    else
+                        return true;
+                })
+                .on("mouseover", function(d) {
+
+                    //Update the tooltip position and value
+                    d3.select("#tooltip")
+                        .style("left", d3.event.pageX - 100 + "px")
+                        .style("top",  d3.event.pageY - 250 + "px")                     
+                        .select("#value")
+                        //.text(d)
+                        .html(
+                                '(' + d3.event.pageX + ',' + 
+                                d3.event.pageY + ')<hr>' +
+                                '<img src="https://' + d[4] +'.github.io/vis2021s/lab00/1.svg" height="50"><hr>' + d[1] + ' ' +  d[3]
+                        );
+               
+                    //Show the tooltip
+                    d3.select("#tooltip").classed("hidden", false);
+
+               })
+               .on("mouseout", function() {
+               
+                    //Hide the tooltip
+                    d3.select("#tooltip").classed("hidden", true);
+                    
+               })
+                ;
+/*
+
+
+                .selectAll("td")
+                .data(function (d) { 
+
+                    //if (i == 4) {
+                        //github = d[4]; 
+                        //alert('d = ' + d + ', i = ' + i);
+                    //}
+
+                    return d; 
+                })
+                .enter()
+                .append("td")
+                .text(function (d, i) {
+                    if (i < 5 || isNaN(d)) {
+                        return d;
+                    }
+                })
+
+                .filter(function (d, i) {
+                    return (i >= 5 && !isNaN(d) && d != ""); 
+                })
+
+                .attr("class", function (d, i) { 
+                    if (d == 100) 
+                        return "excellent-kid"; 
+                    else if (d >= 90 ) 
+                        return "good-kid"; 
+                    else if (d >= 80 ) 
+                        return "fair-kid"; 
+                    else 
+                        return "poor-kid";
+                })
+                .append("a")
+                .attr("href", function (d, i) {
+                    if (d >= 4) 
+                        return "https://" + github + ".github.io/vis2021s/lab0" + (i + 1) + "/index.html"; 
+                    else 
+                        return; 
+                })
+                .append("img")
+                .attr("src", function (d, i) { 
+                    if (d == 100) 
+                        return "./a1455014.svg"; 
+                    else if (d >= 90) 
+                        return "./a1455014_red.svg"; 
+                    else if (d >= 80) 
+                        return "./a1455014_green.svg"; 
+                    else 
+                        return "./a1455065.svg"; 
+                })
+                .attr("width", 50)
+                .attr("height", 50)
+                ;
+*/
+        });
+    </script>
+</body>
+
+</html>
