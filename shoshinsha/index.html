@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>初心者、新米</title>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap');
+
+.GFG {
+  margin: -10px auto; 
+  font-family: 'Noto Serif JP', serif;
+  color: white; 
+  font-size: 18pt;
+  -webkit-text-stroke-width: 1px; 
+  -webkit-text-stroke-color:  #AA0000;
+  animation: 16s pulsate infinite;
+}
+
+@keyframes pulsate {
+  35% { text-shadow: 0 0 12px #FF0000, 0 0 20px #0000FF; font-size: 24pt;}
+  50% { text-shadow: 0 0 16px #0000EE, 0 0 20px #FF0000; font-size: 24pt;}
+}
+
+ul:hover {
+  list-style-type: circle;
+}
+
+li {
+  font-size: 16pt;
+  margin-left: -40px;
+  padding-left:  0px;
+}
+
+li:hover {
+  font-family: 'Noto Serif JP', serif;
+  color: white; 
+  font-size: 16pt;
+  -webkit-text-stroke-width: 0.5px; 
+  -webkit-text-stroke-color:  #AA0000;
+  animation: 8s pulsate2 infinite;
+}
+
+@keyframes pulsate2 {
+  10% { text-shadow: 0 0 11px #FF0000, 0 0 11px #0000FF; font-size: 16pt;}
+  25% { text-shadow: 0 0 12px #0000EE, 0 0 12px #FF0000; font-size: 18pt;}
+}
+
+
+body {
+  font-family: 'Noto Serif JP', serif;
+  position: relative;
+}
+
+form {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+rect {
+  fill: none;
+  pointer-events: all;
+}
+
+circle,
+.line {
+  fill:	 none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+circle {
+  fill: #fff;
+  fill-opacity: .2;
+  cursor: move;
+}
+
+.selected {
+  fill: #ff7f0e;
+  stroke: #ff7f0e;
+}
+
+.yellow:hover, h1:hover, .polaroid:hover {
+  background-color: rgba(255, 255, 128, 0.2);
+}
+
+canvas#live2D{
+      position:fixed;
+      bottom:0;
+      right:0;
+}
+
+
+/* 
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:100&display=swap&subset=chinese-traditional');
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexkai.css); 
+*/
+
+
+body {
+    margin: 30px;
+    background-color: #EFF;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+div, h1 {
+    border: solid black 1px;
+    margin: 5px;
+    padding: 10px;
+}
+
+div.polaroid {
+    width: 128px;
+    padding: 10px 10px 10px 10px;
+    border: 1px solid #BFBFBF;
+    background-color: white;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    margin: 32px;
+    /* font-family: 'cwTeXKai', serif; */
+    font-family: 'Noto Sans TC', sans-serif;
+    text-align: center;
+}
+
+div.rotate_right {
+    float: left;
+    -ms-transform: rotate(7deg); /* IE 9 */
+    -webkit-transform: rotate(7deg); /* Safari */
+    transform: rotate(7deg);
+}
+
+div.rotate_left {
+    float: left;
+    -ms-transform: rotate(-8deg); /* IE 9 */
+    -webkit-transform: rotate(-8deg); /* Safari */
+    transform: rotate(-8deg);
+}
+
+#container{
+    overflow: auto;
+}
+
+/* http://csscoke.com/2013/09/21/%E4%BD%BF%E7%94%A8css3-nth-childn-%E9%81%B8%E5%8F%96%E5%99%A8%E8%A9%B3%E8%A7%A3/ */
+/* div.rotate_right { */
+#container div:nth-child(odd) {
+    float: left;
+    -ms-transform: rotate(7deg); /* IE 9 */
+    -webkit-transform: rotate(7deg); /* Safari */
+    transform: rotate(7deg);
+}
+
+/* div.rotate_left { */
+#container div:nth-child(even) {
+    float: left;
+    -ms-transform: rotate(-8deg); /* IE 9 */
+    -webkit-transform: rotate(-8deg); /* Safari */
+    transform: rotate(-8deg);
+}
+
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 90%;
+    height: auto;
+}
+
+img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+</style>
+<body>
+
+<div id="container">
+  <img src="./fig/header-foreground-image.svg"> <br>
+  Image courtesy of Academia.StackExchange
+</div>
+
+<div id="container">
+
+  <div class="polaroid" >
+  	<a target="_blank" href="https://ntutcc-my.sharepoint.com/:p:/g/personal/110598068_cc_ntut_edu_tw/EdK6A29MFQJKneZ5qxjln5IBZWSVFtvUgFeBrQsrWHEWTA">
+  		<img src="./fig/book-svgrepo-com.svg">
+  	</a>
+  	<hr>
+  	Computer Graphics Laboratory
+  	<hr>
+  	實驗室新生手冊
+    <!--
+  	<hr>
+  	aka 畢業秘笈
+    -->
+  </div>
+
+  <div class="polaroid" >
+    <a target="_blank" href="http://kesen.realtimerendering.com/">
+      <img src="./fig/studies-svgrepo-com.svg">
+    </a>
+    <hr>
+    Computer Graphics Paper Collection
+    <hr>
+    Ke-Sen Huang
+  </div>
+
+  <div class="polaroid" >
+    <a target="_blank" href="https://www.cs.cmu.edu/~Compose/shaw-icse03.pdf">
+      <img src="./fig/shaw-icse03_01.jpg">
+    </a>
+    <hr>
+    Writing Good Software Engineering Research Papers
+    <hr>
+    Mary Shaw, 28 May 2003
+  </div>
+
+  <div class="polaroid">
+    <a target="_blank" href="./fig/explain.png">
+      <img src="./fig/explain.png">
+    </a>
+    <hr>
+    Explain the relation to other work clearly …
+  </div>
+  
+  <div class="polaroid" >
+    <a target="_blank" href="https://microbiology.scu.edu.tw/MIB/wong/courses/writing/content-h.htm">
+      <img src="./fig/soochow.svg">
+    </a>
+    <hr>
+    摘要和緒論的撰寫
+    <hr>
+    東吳大學 黃顯宗教授, 2006.03.10
+  </div>
+</div>
+
+
+<div id="container">
+
+  <div class="polaroid">
+    <a target="" href="https://www.siggraph.org/preparing-your-content/author-instructions/">
+      <img src="./fig/siggraph-logo-left.svg">
+    </a>
+    <hr>
+    Author Instructions
+    <hr>
+    LaTeX template: 
+    <a target="_blank" href="https://www.acm.org/binaries/content/assets/publications/consolidated-tex-template/acmart-primary.zip">acmart-primary.zip</a>
+    <hr>
+    \cite{} [Richard et al. 2021]<br><br>
+
+    \citeA{} [Richard et al.]<br>
+    \citealt{} Richard et al. 2021<br>
+    \citeANP{} Richard et al.<br>
+    \citeauthor{} Richard et al.<br><br>
+
+    \citeN{} Richard et al. [2021]<br><br>
+
+    \citename{}<br>
+    \citeNN{} [2021]<br>
+    \citeNP{} Richard et al. 2021<br>
+    \citep{} [Richard et al. 2021]<br>
+    \citestyle{}<br>
+    \citeyear{} 2021<br>
+    \citeyearNP{} 2021<br>
+    \citeyearpar{} [2021]<br>
+  </div>
+
+  <div class="polaroid">
+    <a target="_blank" href="https://www.liyiwei.org/courses/how-siga11/">
+      <img src="./fig/acmsig-logo.png">
+    </a>
+    <hr>
+    Danny Cohen-Or, Baining Guo, Dani Lischinski, Kun Zhou, Olga Sorkine, Hao Zhang, Li-Yi Wei
+    <hr>
+    <a target="_blank" href="https://www.liyiwei.org/courses/how-siga11/">How to write a SIGGRAPH paper</a>
+  </div>
+
+  <div class="polaroid">
+    <a target="_blank" href="https://www.ee.columbia.edu/~sfchang/course/svia-F03/papers/siggraph-reject-how.htm">
+      <img src="./fig/ShihFu_Chang_2019.jpg">
+    </a>
+    <hr>
+    Shih-Fu Chang
+    <hr>
+    <a target="_blank" href="https://www.ee.columbia.edu/~sfchang/course/svia-F03/papers/siggraph-reject-how.htm">How to Get Your SIGGRAPH Paper Rejected</a>
+  </div>
+
+  <div class="polaroid">
+    <a target="_blank" href="https://research.siggraph.org/blog/guides/explanatory-paper-figures-with-illustrator-and-blender/">
+      <img src="./fig/paralleltransport.gif">
+    </a>
+    <hr>
+    by Ruben Wiersma, TU Delft
+    <hr>
+    <a target="_blank" href="https://research.siggraph.org/blog/guides/explanatory-paper-figures-with-illustrator-and-blender/">Explanatory paper figures</a>
+    <hr>
+    <a target="_blank" href="https://research.siggraph.org/blog/guides/writing-your-first-acm-siggraph-tog-paper/">Writing your first ACM SIGGRAPH / TOG paper</a>
+  </div>
+
+  <div class="polaroid">
+    <a target="_blank" href="">
+      <img src="./fig/">
+    </a>
+    <hr>
+    <a target="_blank" href="">xxx</a>
+  </div>
+
+</div>
+
+
+<div id="container">
+
+  <div class="polaroid" >
+  	<a target="_blank" href="./kwk/kwk2.pdf">
+  		<img src="./fig/document-file-research.svg">
+  	</a>
+  	<hr>
+  	Efficient Reading of Papers in Engineering and Technology
+  	<hr>
+  	柯開維教授 2011.10.01
+  </div>
+
+  <div class="polaroid">
+  	<a target="_blank" href="./kwk/kwk1.pdf">
+  		<img src="./fig/document-file-research.svg">
+  	</a>
+  	<hr>
+  	研究論文寫作指引
+  	<hr> 
+  	柯開維教授 2012.03.10
+  </div>
+
+  <div class="polaroid" >
+  	<a target="_blank" href="./perng/index.html">
+  		<img src="./fig/nthu.gif">
+  	</a>
+  	<hr>
+  	碩士班研究所新生手冊
+  	<hr>
+  	彭明輝教授 2008.09.17
+  </div>
+
+  <div class="polaroid" >
+    <a target="_blank" href="./yu/How_to_write_a_paper_2007.pdf">
+      <img src="./yu/100628520.png">
+    </a>
+    <hr>
+    如何撰寫論文?
+    <hr>
+    俞征武 2007.03.04
+  </div>
+
+  <div class="polaroid" >
+    <a target="_blank" href="https://www.cs.ccu.edu.tw/~ccc/article/TecWrite.htm">
+      <img src="./fig/National_Chung_Cheng_University.svg">
+    </a>
+    <hr>
+    撰寫科技研究論文之要領
+    <hr>
+      <em>切記一篇論文只有一個問題，也就是一篇論文只解決一個問題，一篇論文絕對不能同時出現兩個或更多的問題。</em>
+    <hr>
+    張真誠、張鎮驛
+  </div>
+
+</div>
+
+<div id="container">
+
+  <div class="polaroid">
+  	<a target="_blank" href="https://sms.cam.ac.uk/media/1464870/embed">
+  		<img src="./fig/hqdefault1.jpg">
+  	</a>
+  	<hr>
+  	<a target="_blank" href="./SimonPeytonJones/1/writing-a-paper-slides.pdf">PowerPoint Slides (PDF)</a>
+  	<hr>
+    <a target="_blank" href="./SimonPeytonJones/1/Writing-a-paper-Barcelona.ppt">PowerPoint Slides</a>
+    <hr>
+  	Simon Peyton Jones, Cambridge Computer Lab, Spring 2013
+  	<hr>
+  	<a target="_blank" href="https://www.microsoft.com/en-us/research/academic-program/write-great-research-paper/">How to write a great research paper</a>
+  </div>
+
+  <div class="polaroid">
+  	<a target="_blank" href="https://youtu.be/VK51E3gHENc">
+  		<img src="./fig/hqdefault2.jpg">
+  	</a>
+  	<hr> 
+  	<a target="_blank" href="./SimonPeytonJones/2/How-to-write-a-great-research-paper.pdf">PowerPoint Slides (PDF)</a>
+  	<hr> 
+  	<a target="_blank" href="./SimonPeytonJones/2/How-to-write-a-great-research-paper.pptx">PowerPoint Slides</a>
+  	<hr> 
+  	Simon Peyton Jones, 2016.07.27
+  	<hr>
+  	<a target="_blank" href="https://www.microsoft.com/en-us/research/academic-program/write-great-research-paper/">How to write a great research paper</a>
+  </div>
+</div>
+
+
+<div id="container">
+
+  <div class="polaroid" >
+    <a target="_blank" href="http://vis.cs.ucdavis.edu/papers/multiscaleRendering_sigA_11.pdf">
+      <img src="./fig_cite/sigA_11_2.png">
+    </a>
+    <hr>
+    Citing Images
+  </div>
+
+  <div class="polaroid" >
+    <a target="_blank" href="http://vis.cs.ucdavis.edu/papers/multiscaleRendering_sigA_11.pdf">
+      <img src="./fig_cite/sigA_11_1.png">
+    </a>
+    <hr>
+    Citing Images
+  </div>
+
+  <div class="polaroid" >
+    <a target="_blank" href="https://guides.libraries.uc.edu/citing/images#s-lg-box-4457081">
+      <img src="./fig/University_of_Cincinnati_seal.svg">
+    </a>
+    <hr>
+    Citing Images
+  </div>
+
+  <div class="polaroid" >
+    <a target="_blank" href="http://vis.cs.ucdavis.edu/papers/multiscaleRendering_sigA_11.pdf">
+      <img src="./fig/multiscaleRendering_sigA_11s_1.jpg">
+    </a>
+    <hr>
+    A Rendering Framework for Multiscale Views of 3D Models
+    <hr>
+    Hsu et al. 2011
+  </div>
+
+  <div class="polaroid" >
+    <a target="_blank" href="https://guides.lib.monash.edu/c.php?g=219786&p=6610144">
+      <img src="./fig/monash-logo-mono.svg">
+    </a>
+    <hr>
+    Citing and referencing: Figures & Tables (inc. Images)
+    <hr>
+    Rule: Fig. #. Caption of image. Adapted 改編 from [#]
+    <hr>
+    Example: Fig. 8. 5G Wireless tower. Adapted 改編 from [2]
+  </div>
+
+  <div class="polaroid" >
+    <a target="_blank" href="https://edubirdie.com/citation/ieee/cite-an-image/">
+      <img src="./fig/main-bird_v2.png">
+    </a>
+    <hr>
+    The Main Rules for Images Citing in IEEE Style
+    <hr>
+    [Your Image] <br>
+    Figure 1: SpaceX Shuttle Launch <br>
+    Source: Adapted from [14]. <br>
+  </div>
+
+</div>
+
+<div id="container">
+
+  <div class="polaroid" >
+    <a target="_blank" href="https://www.acm.org/publications/authors/bibtex-formatting">
+      <img src="./fig/Association_for_Computing_Machinery_(ACM)_logo.svg">
+    </a>
+    <hr>
+    ACM BibTeX Formatting
+  </div>
+
+  <div class="polaroid" >
+    <a target="_blank" href="https://www.acm.org/publications/authors/reference-formatting">
+      <img src="./fig/Association_for_Computing_Machinery_(ACM)_logo.svg">
+    </a>
+    <hr>
+    Citation Style and Reference Formats
+  </div>
+
+  <div class="polaroid" >
+    <a target="_blank" href="https://ieeeauthorcenter.ieee.org/wp-content/uploads/IEEE-Reference-Guide.pdf">
+      <img src="./fig/ieee-mb-blue.png">
+    </a>
+    <hr>
+    IEEE REFERENCE GUIDE
+  </div>
+
+  <div class="polaroid" >
+    <a target="_blank" href="http://ieeeauthorcenter.ieee.org/wp-content/uploads/IEEE-Editorial-Style-Manual.pdf#page=12">
+      <img src="./fig/ieee-mb-blue.png">
+    </a>
+    <hr>
+    IEEE EDITORIAL STYLE MANUAL FOR AUTHORS
+  </div>
+
+  <div class="polaroid" >
+    <a target="_blank" href="https://libguides.nps.edu/citation/ieee">
+      <img src="./fig/Naval_Postgraduate_School_emblem.svg">
+    </a>
+    <hr>
+    Citation Guide
+    <hr>
+    IEEE: Citation Examples
+  </div>
+  
+</div>
+
+
+<div id="container">
+
+  <div class="polaroid" >
+    <a target="_blank" href="https://apastyle.apa.org/products/publication-manual-7th-edition">
+      <img src="./fig/3D-manual-products-menu.png">
+    </a>
+    <hr>
+    Publication Manual of the American Psychological Association, Seventh Edition (2020)
+  </div>
+
+  <div class="polaroid" >
+    <a target="_blank" href="http://joemls.dils.tku.edu.tw/wp-content/uploads/2020/08/APA-7th-ed-0710.pdf">
+      <img src="./fig/apa-style-logo.png">
+    </a>
+    <hr>
+     APA 格式第七版參考文獻規範
+  </div>
+
+  <div class="polaroid" >
+    <a target="_blank" href="https://ssw.unc.edu/wp-content/uploads/sites/509/2020/10/apa-quick-reference-2020.pdf">
+      <img src="./fig/University_of_North_Carolina_at_Chapel_Hill_seal.svg">
+    </a>
+    <hr>
+    APA APA 7th Ed. Reference Guide
+  </div>
+
+  <div class="polaroid" >
+    <a target="_blank" href="https://www.uregina.ca/student/ssc/writinghelp/citation-help/APA-7th-Edition.pdf">
+      <img src="./fig/UniversityofRegina.svg">
+    </a>
+    <hr>
+    University of Regina APA 7th Edition
+  </div>
+</div>
+
+
+
+<div id="container">
+
+  <div class="polaroid">
+    <!-- https://www.youtube.com/watch?v=3R91InudFM0&t=705s -->
+    <a target="_blank" href="https://youtu.be/3R91InudFM0?t=705">
+      <img src="./fig/705.png">
+    </a>
+    <hr>
+    像我的博士論文
+    <hr> 
+    戰情室 2022.07.19
+  </div>
+
+  <div class="polaroid">
+    <a target="_blank" href="https://youtu.be/gcbCXqjicu0?t=160">
+      <img src="./fig/160.jpg">
+    </a>
+    <hr>
+    Feynman Technique
+    <hr> 
+    【好葉】費曼學習法：快速掌握新知識
+  </div>
+
+
+</div>
+
+
+
+<div id="container">
+
+  <div class="polaroid">
+    <a target="_blank" href="https://youtu.be/jWimwAZTbRg">
+      <img src="./fig/hq720(1).jpg">
+    </a>
+    <hr>
+    十分鐘看完一篇英文文獻
+    <hr> 
+    Yahua  2021.01.15
+  </div>
+
+  <div class="polaroid">
+    <a target="_blank" href="https://youtu.be/YzabBw3ZJeg">
+      <img src="./fig/hq720(2).jpg">
+    </a>
+    <hr>
+    愛上寫論文
+    <hr> 
+    Yahua 2020.11.20
+  </div>
+
+  <div class="polaroid">
+    <a target="_blank" href="https://youtu.be/txjl_Q4jCyQ">
+      <img src="./fig/hq720(3).jpg">
+    </a>
+    <hr>
+    如何讀論文
+    <hr> 
+    Mu Li 2021.10.22
+  </div>
+
+  <div class="polaroid">
+    <a target="_blank" href="https://youtu.be/vdYH0fE6thY">
+      <img src="./fig/hq720(4).jpg">
+    </a>
+    <hr>
+    重讀 AlexNet
+    <hr> 
+    Mu Li 2021.10.22
+  </div>
+
+  <div class="polaroid">
+    <a target="_blank" href="https://youtu.be/sejA2PtCITw">
+      <img src="./fig/hq720(5).jpg">
+    </a>
+    <hr>
+    零基礎多圖詳解圖神經網路
+    <hr>
+    <a target="_blank" href="https://distill.pub/2021/gnn-intro/">A Gentle Introduction to Graph Neural Networks</a>
+    <hr>
+    <a target="_blank" href="https://github.com/mli/paper-reading">深度學習論文精讀</a>
+    <hr> 
+    Mu Li 2021.11.05
+  </div>
+
+</div>
+
+
+</body>
+</html>
