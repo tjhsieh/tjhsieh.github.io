@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<meta http-equiv="refresh" content="100;url=../home/index.html" />
+
+<!-- Pollyfill script -->
+<script src = "./dist/core-minified.js"></script>
+<!-- Live2DCubismCore script -->
+<script src = "./core/live2dcubismcore.js"></script>
+<!-- Build script -->
+<script src = "./dist/bundle.js"></script>
+
+<style type="text/css">
+
+@font-face {
+	font-family:'CircleFont'; 
+	src: url(../home/CircleFont_v2.woff2);
+}
+
+body {
+	border: 0px solid red;
+	padding: 32px;
+	font-size: 24pt;
+	font-family:'CircleFont';
+	background-color: rgb(159, 53, 58);
+	color: rgb(255, 255, 255);
+}
+
+body:hover {
+  text-shadow: 0 0 16px #FFFF00, 0 0 16px #FF0000;
+}
+
+canvas {
+	border: 0px solid blue;
+	padding: 8px;
+}
+
+canvas#live2D{
+      position:fixed;
+      bottom:0;
+      right:0;
+}
+
+.title {
+	font-size: 48pt;
+}
+
+</style>
+</head>
+<body onclick="myFunction()">
+
+
+<br>
+<span class="title"> 計算機圖學 </span> 實驗室 Laboratory
+<br><br><br>
+&nbsp; &ensp; &emsp; &thinsp; &zwnj; &zwj; Computer Graphics
+<br><br>
+&nbsp; &ensp; &emsp; &thinsp; &zwnj; &zwj; Data Visualization
+<br><br>
+&nbsp; &ensp; &emsp; &thinsp; &zwnj; &zwj; Machine Llearning 
+<br><br>
+&nbsp; &ensp; &emsp; &thinsp; &zwnj; &zwj; Front End Web Programming
+<br><br>
+
+<!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_countdown -->
+<p id="demo"></p>
+
+<script>
+
+// https://www.w3schools.com/howto/howto_js_redirect_webpage.asp
+// 點擊前往網頁
+function myFunction() {
+  location.replace("../home/index.html")
+}
+
+// https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_countdown
+// 倒數計時前往網頁
+var countDownDate = new Date().getTime() + 20 * 1000; // 倒數計時 20 秒
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = '前往實驗室: ' + seconds + " 秒 ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "跳躍";
+    location.replace("../home/index.html")
+  }
+}, 1000);
+
+</script>
+
+</body>
+</html>
