@@ -47,14 +47,38 @@ canvas#live2D{
 	font-size: 48pt;
 }
 
+div.a {
+  width: 360px;
+  height: 80px;
+  font-size: 48pt;
+  transform: rotate(20deg);
+  position: absolute;
+  top: 48px;
+  right: 0px;
+}
+
+
+div.b {
+  width: 660px;
+  height: 260px;
+  font-size: 24pt;
+  transform: rotate(-10deg);
+  position: relative;
+  top: -32px;
+  left: -64px;
+  border: 1px yellow #f9eced;
+}
+
 </style>
 </head>
 <body onclick="myFunction()">
 
-
-<br>
-<span class="title"> 計算機圖學 </span> 實驗室 Laboratory
+Welcome to <span class="title"> 計算機圖學 </span> 實驗室 Laboratory
 <br><br><br>
+
+<div class="a">ようこそ</div>
+
+<div class="b">
 &nbsp; &ensp; &emsp; &thinsp; &zwnj; &zwj; Computer Graphics
 <br><br>
 &nbsp; &ensp; &emsp; &thinsp; &zwnj; &zwj; Data Visualization
@@ -62,7 +86,9 @@ canvas#live2D{
 &nbsp; &ensp; &emsp; &thinsp; &zwnj; &zwj; Machine Llearning 
 <br><br>
 &nbsp; &ensp; &emsp; &thinsp; &zwnj; &zwj; Front End Web Programming
-<br><br>
+<br>
+</div>
+
 
 <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_countdown -->
 <p id="demo"></p>
