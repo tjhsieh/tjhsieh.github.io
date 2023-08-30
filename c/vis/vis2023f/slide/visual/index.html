@@ -1,0 +1,1125 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Visual Encoding</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/serif.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<style type="text/css">
+			@font-face {
+			  font-family: Chogokuboso-Gothic;
+			  src: url("./woff2/Chogokuboso-Gothic.woff2");
+			}
+			.cho {
+			  font-family: Chogokuboso-Gothic;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<!-- https://revealjs.com/auto-animate/ -->
+				
+				
+				<section data-auto-animate>
+					<h1>DATA LOOKS BETTER NAKED</h1>
+				</section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section data-auto-animate>
+					<h3 style="margin-top: 100px; color: red;">DATA LOOKS BETTER NAKED</h3>
+					<h3 style="font-family: Chogokuboso-Gothic;">DATA LOOKS BETTER NAKED</h3>
+					<h6>Author: <a href="https://www.darkhorseanalytics.com/blog/data-looks-better-naked">Joey Cherdarchuk</a></h6>
+				</section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<cite>“<font color="red">Perfection</font> is achieved <br> 
+						<span class="fragment">not when there is <font color="red">nothing more to add</font>, </span><br> 
+						<span class="fragment">but when there is <font color="red">nothing left to take away</font>” </span>
+					</cite>
+					<hr>
+					– <a href="https://www.darkhorseanalytics.com/careers">Antoine de Saint-Exupery</a>
+				</section>
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<img src="./img/00_data-ink.gif">
+					<h6>Source: <a href="">The Visual Display of Quantitative Information</a> by Edward Tufte </h6>
+				</section>
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<img src="./img/00_slide_38.jpg" width="49%">
+					<img src="./img/00_slide_39.jpg" width="49%">
+				</section>
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					Data-ink is 
+					<ul>
+					<li><span class="fragment">the <font color="red">non-erasable core</font> of the graphic, </span></li>
+					<li><span class="fragment">the <font color="red">non-redundant ink</font> arranged in response to <font color="red">variation in the numbers</font> represented. </span></li>
+					</ul>
+				</section>
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					Tufte asserts that in displaying data 
+					<ul>
+					<li><span class="fragment">we should remove all <font color="red">non-data-ink</font> and <font color="red">redundant data-ink</font>, within reason, </span></li>
+					<li><span class="fragment">to increase the <font color="red">data-ink-ratio</font> </span></li>
+					<li><span class="fragment">and create a sound <font color="red">graphical design</font>. </span></li>
+					</ul>
+				</section>
+
+				</section>
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<h1>Visual Encoding</h1>
+					<hr>
+					<a href="https://www.targetprocess.com/articles/visual-encoding/">Visual Encoding</a> by Michael Dubakov, 9 years ago
+				</section>
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section><h1>視覺編碼</h1><hr></section>
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+				The <font color="red">visual encoding</font> is the way in which 
+
+				<ul style="list-style-type:none;">
+
+				<li><img src="./imgsvg/stats-diagram.svg" width="128"> <font color="red">data</font> is mapped into <font color="red">visual structures</font>, </li>
+
+				<li><img src="./imgsvg/pyramid-egypt.svg" width="128"> upon which we <font color="red">build the images</font> on a screen.</li>
+				</ul>
+
+				</section>
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					There are two types of <font color="red">visual encoding variables</font>: 
+
+					<img src="./imgsvg/stats-growth.svg" width="128"> 
+					<hr>
+					<ul>
+						<li>planar (平面的) and </li>
+						<li>retinal (視網膜的).</li>
+					</ul>
+				</section>
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					Humans are sensitive to the <font color="red">retinal variables</font>. 
+					<hr>
+					They easily differentiate between various <font color="red">colors</font>, <font color="red">shapes</font>, <font color="red">sizes</font> and other properties. 
+				</section>
+
+				</section>
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<h3>Data types</h3>
+				</section>
+				
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					There are three <font color="red">basic types</font> of data: 
+					<ul style="list-style-type:none;">
+						<li class="fragment"><img src="./imgsvg/presentation1.svg" width="128"> something you can <font color="red">count</font>, </li>
+						<li class="fragment"><img src="./imgsvg/presentation4.svg" width="128"> something you can <font color="red">order</font> and </li>
+						<li class="fragment"><img src="./imgsvg/presentation3.svg" width="128"> something you can <font color="red">just differentiate</font>. </li>
+					</ul>
+				</section>
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					These types get down to three <font color="red">un-intuitive</font> terms:
+					<ul style="list-style-type:none;">
+						<li class="fragment"><img src="./imgsvg/presentation2.svg" width="128"> Quantitative 數量的:</li>
+						<li class="fragment"><img src="./imgsvg/handshake-shake-hands.svg" width="128"> Ordered 順序/ Qualitative 性質上的:</li>
+						<li class="fragment"><img src="./imgsvg/teamwork.svg" width="128"> Categorical 範疇的:</li>
+					</ul>
+				</section>
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<ul style="list-style-type:none;">
+						<li><img src="./imgsvg/presentation2.svg" width="128"> Quantitative: <ul><li><span class="fragment"><font color="red">Effort in points</font>: 0, 1, 2, 3, 5, 8, 13.</span></li></ul></li>
+					</ul>
+				</section>
+
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<ul style="list-style-type:none;">
+
+						<li><img src="./imgsvg/handshake-shake-hands.svg" width="128">Ordered / Qualitative: 
+						<ul>
+							<li><span class="fragment"><font color="red">Bug Severity 嚴重性</font>: </span>
+							<span class="fragment"><ul> <li>Blocking 阻塞,</li> <li>Average,</li> <li>Who Cares.</li> </ul> </span>
+						</li>
+						</ul>
+						</li>
+
+					</ul>
+				</section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<ul style="list-style-type:none;">
+
+						<li><img src="./imgsvg/teamwork.svg" width="128">Categorical: <ul><li><span class="fragment"><font color="red">Fruits</font>: Apples, Oranges, Plums.</span></li></ul></li>
+					</ul>
+				</section>
+
+				</section>
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+
+
+
+
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<h3>Planar and Retinal Variables</h3>
+				</section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					OK, we've got some data. <br><br>
+					<span class="fragment">Now how do we present it?</span> <br><br>
+					<span class="fragment">We have several <font color="red">visual encoding variables</font>.</span>
+				</section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					X and Y
+					<hr>
+					<ul>
+						<li><span class="fragment"><font color="red">Planar variables</font> work for any data type.</span></li>
+						<li><span class="fragment">They work great to present any <font color="red">quantitative data</font>.</span></li>
+					</ul>
+					<img src="./img/01_x_y.jpg">
+				</section>
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					So what should we do then to present <font color="red">three or more variables</font>? <br><br>
+
+					<span class="fragment">We can use the <font color="red">retinal variables</font>!</span>
+				</section>
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					Size
+					<hr>
+					<ul>
+						<li>Size is a good visualizer for the <font color="red">quantitative data</font>.</li>
+						<img src="./img/02_scale_size.jpg">
+					</ul>
+				</section>
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					Texture
+					<hr>
+					<ul>
+						<li>Texture is <font color="red">less common</font>.</li>
+						<li><span class="fragment"> It's usually <font color="red">less catchy</font> than color </span></li>
+						<li><span class="fragment"> So, in theory texture can be used for <font color="red">soft encoding</font>, </span></li>
+						<li><span class="fragment"> but in practice it's better to <font color="red">pass on it</font>. </span></li>
+					</ul>
+					<img src="./img/03_scale_texture.jpg">
+				</section>
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					Shape <br> ○, ☆, █
+					<hr>
+					<ul>
+						<li>We can easily distinguish dozens of shapes. </li>
+						<li><span class="fragment">They do work well sometimes for the visual encoding of <font color="red">categories</font>. </span></li>
+					</ul>
+					<img src="./img/04_scale_shape.jpg">
+				</section>
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					Orientation
+					<hr>
+					<ul>
+						<li>Orientation is tricky.</li>
+						<li><span class="fragment">It is harder to  <font color="red">use it properly</font> for visual encoding. </span></li>
+					</ul>
+					<img src="./img/05_scale_orientation.jpg">
+				</section>
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					Color Value
+					<hr>
+					<ul>
+						<li>Any color value can be moved over a <font color="red"> scale</font>.  </span></li>
+						<li><span class="fragment"> It's a helpful technique to visualize the <font color="red">ordered data</font>.</span></li>
+					</ul>
+					<img src="./img/06_scale_value.jpg">
+				</section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<h3>Color Hue</h3>
+					<ul>
+						<li> <font color="red">Red</font> color is alarming. </li>
+						<li><span class="fragment">  <font color="green">Green</font> color is calm. </span></li>
+						<li><span class="fragment">  <font color="blue">Blue </font> color is peaceful.  </span></li>
+						<li><span class="fragment"> Colors are great to <font color="red">separate categories</font>.</span></li>
+					</ul>
+					<img src="./img/07_scale_category.jpg">
+				</section>
+
+					
+				</section>
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+				
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<h3>Color in More Detail</h3>
+					<hr>
+					There are three different <font color="red">scales</font> that we can use with color. 
+				</section>
+				
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					HSV (Hue, Saturation, Value) 色相、飽和度、明度
+					<img src="./imghsv/HSV_color_solid_cylinder_saturation_gray.png" width="384">
+					<hr>
+					<ul>
+						We've already mentioned two of them: 
+						<li><span class="fragment"> the  <font color="red">categorical</font> scale (color hue)  </span></li>
+						<li><span class="fragment"> the  <font color="red">sequential </font> scale (color value) </span></li>
+					</ul>
+				</section>
+				
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<font color="red">Diverging</font> scale is somewhat new.
+					<ul>
+						<li><span class="fragment"> It encodes <font color="red">positive</font> and <font color="red">negative</font> values, e.g. temperatures in range of <font color="red">-50 to +50 C</font>. </span></li>
+						<li><span class="fragment"> It would be a mistake to use any other color scales for that. </span></li>
+					</ul>
+					There are six primary colors:
+					<img src="./img/08_scale_div.jpg">
+				</section>
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<ul style="list-style-type:none;">
+						<li><img src="./imgsvg/auction.svg" width="128"> The general rule of thumb is that you can use no more than <font color="red">a dozen colors</font> to encode <font color="red">categories</font> effectively.</li>
+
+						<li><img src="./imgsvg/briefcase.svg" width="128"> If there's more, it'd be hard to differentiate between <font color="red">categories</font> quickly.</li>
+					</ul>
+				</section>
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<ul>
+
+						<li>These are the most commonly used colors:</li>
+					</ul>
+					<img src="./img/11_colors.jpg">
+				</section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<cite>
+					“<font color="red">Avoiding catastrophe</font> becomes the ﬁrst principle in bringing color to information: Above all, do no harm.”—Tufte
+					</cite>
+				</section>
+
+
+				</section>
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+
+
+
+
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<h4>How to Apply the <font color="red"> Retinal Variables </font> to Data?</h4>
+					<ul>
+						<li><span class="fragment"> It is quite clear that we can't use <font color="red">all variables</font> to present any data types. </span></li>
+						<li><span class="fragment"> For example, it is wrong to use <font color="red">color</font> to represent <font color="red">numbers</font> (1, 2, 3). </span></li>
+						<li><span class="fragment"> And it is bad to use <font color="red">size</font> to represent various currencies (€, £ , ¥). </span></li>
+					</ul>
+				</section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					Here's the <font color="red"> retinal variables </font> usage summary:
+					<img src="./img/12_retinal_data.jpg" width="384">
+				</section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<ul>
+						<li><span> Note that <font color="red"> planar variables</font> can be applied to all the data types.  </span></li>
+						<li><span class="fragment"> Indeed, we can use the <font color="red"> X-axis </font> for <font color="red">categories</font>, <font color="red">ordered</font> variables or <font color="red">numbers</font>. </span></li>
+					</ul>
+				</section>
+				
+					
+				</section>
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+
+
+
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<h3>The Basic Example</h3>
+				</section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					Sample data is very simple, we just want to visualize quantity of items:
+					<hr>
+					<table>
+						<tr>
+							<th>Item Type</th>
+							<th>Quantity</th>
+						</tr>
+						<tr>
+							<td>Features</td>
+							<td>3</td>
+						</tr>
+						<tr>
+							<td>Bugs</td>
+							<td>3</td>
+						</tr>
+						<tr>
+							<td>User Stories</td>
+							<td>6</td>
+						</tr>
+					</table>
+				</section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<ul>
+						We have just two variables:  
+						<li><span class="fragment"> Item <font color="red">Types</font> (Categorical) and  </span></li>
+						<li><span class="fragment"> Items <font color="red">Quantity</font> (well, Quantitative).</span></li>
+					</ul>
+				</section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					All the possible choices are based on the table above:
+					<table>
+						<tr>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td><font color="red">Item Type</font></td>
+							<td>
+								Orientation <br>
+								Color <br>
+								Shape <br>
+								Texture <br>
+								X (or Y)
+							</td>
+						</tr>
+						<tr>
+							<td><font color="red">Item Quantity</font></td>
+							<td>
+								Orientation <br>
+								Size <br>
+								Value <br>
+								X (or Y)
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</section>
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					In theory, you can mix these variables as you wish.
+					<hr>
+
+					I'm going to try four combinations.
+					<img src="./img/13_example1_shape_value.jpg">
+					<span class="fragment"> Hmm, looks like a puzzle. </span>
+					<span class="fragment"> Value doesn't work for the <font color="red">quantitative</font> data, it seems. </span>
+
+					<span class="fragment"> Let's try something else!</span>
+				</section>
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<h3>Color + Size</h3>
+					Well, slightly better. 
+					<hr>
+
+					<img src="./img/14_example1_color_size.jpg">
+			
+					<span class="fragment"> Still not very good.</span>
+				</section>
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<h3>Color + Size</h3>
+					The color coding works for <font color="red">entity 實體</font> types.
+					<img src="./img/14_example1_color_size.jpg">
+
+					
+
+					<span class="fragment"> For example, in Target Process we've got green <font color="red">Features</font>, red <font color="red">Bugs</font> and blue <font color="red">User Stories</font>. </span>
+				</section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<ul>
+						<li><span> A very simple rule in visualizations is to never map <font color="red">scalar data</font> to <font color="red">circle radii</font>.  </span></li>
+						<li><span class="fragment"> Humans do better in comparing <font color="red">relative areas</font>, so if you want to map data to a <font color="red">shape</font>, you have to map it to it's <font color="red">area</font>. </span></li>
+					</ul>
+					<a href="https://www.vis4.net/blog/2009/12/mapping-data-to-circles/">
+						(→)
+					</a>
+				</section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<h3>Texture + Y</h3>
+
+					<img src="./img/15_example1_y_texture.jpg">
+
+					Almost great. But why this legend with <font color="red">texture</font>? Can we just remove it? 
+
+					<span class="fragment"> Yes! Let's use the X and Y <font color="red">planar variables</font>.</span>
+				</section>
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<h3>X + Y</h3>
+					Now we have the best result! 
+
+					<img src="./img/16_example1_y.jpg" width="320">
+					<hr>
+					It turned out that <font color="red">X+Y</font> works great for a <font color="red">simple data</font> set with just <font color="red">two variables</font>.<span class="fragment"> So, there's no need to use <font color="red">retinal variables</font> at all.</span>
+				</section>
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<font color="red">Retinal variables</font> should be used 
+					<hr>
+					if you need to present <font color="red">three or more</font> data sources.
+				</section>
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<h3>The Four Variables Example</h3>
+				</section>
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					Three is quite trivial, so we'll take <font color="red">four variables</font>. Say, we have <font color="red">bugs</font>, <font color="red">stories</font>, and <font color="red">tasks</font> and we want to visualize some properties of these entities:
+					<hr>
+					<ul>
+						<li><span class="fragment"> Types </span></li>
+						<li><span class="fragment"> Priority </span></li>
+						<li><span class="fragment"> Average Effort in Points </span></li>
+						<li><span class="fragment"> Average Cycle Time in Days </span></li>
+					</ul>
+				</section>
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<font color="red">Bugs are reported</font> via tickets in a ticket system like Bugzilla, Jira or Mantis. 
+					<img src="./img/leadtimes1.png">
+					When the bug is detected a ticket is created and when the bugfix is live, the ticket is closed.
+					<hr>
+					This whole period of time is the <font color="red">lead time</font>.
+					<img src="./img/leadtimes2.png">
+				</section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					The lead time is the time and not the effort. You may have a lead time of 100 days and only have to work 1 hour to fix the bug.
+				</section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					Sometime you start working on the bug. The <font color="red">cycle time</font> is the time from the start of the work until the bugfix is live.
+					<img src="./img/leadtimes3.png">
+				</section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					Here is our data:
+					<hr>
+					<table style="font-size: 20pt;">
+						<tr>
+							<td>Type</td>
+							<td>Priority</td>
+							<td>Average Effort</td>
+							<td>Average Cycle Time</td>
+						</tr>
+						<tr>
+							<td>Features	</td>
+							<td>Must Have	</td>
+							<td>30	</td>
+							<td>40</td>
+						</tr>
+						<tr>
+							<td>Features	</td>
+							<td>Good	</td>
+							<td>20	</td>
+							<td>40</td>
+						</tr>
+						<tr>
+							<td>Features			</td>
+							<td>Nice to Have</td>
+							<td>15</td>
+							<td>20</td>
+						</tr>
+						<tr>
+							<td>Bugs		</td>
+							<td>Fix ASAP</td>
+							<td>2	</td>
+							<td>2</td>
+						</tr>
+						<tr>
+							<td>Bugs	</td>
+							<td>Fix		</td>
+							<td>2</td>
+							<td>8</td>
+						</tr>
+						<tr>
+							<td>Bugs			</td>
+							<td>Fix if Time</td>
+							<td>5</td>
+							<td>12</td>
+						</tr>
+						<tr>
+							<td>User Stories		</td>
+							<td>Must Have</td>
+							<td>8	</td>
+							<td>10</td>
+						</tr>
+
+						<tr>
+							<td>User Stories		</td>
+							<td>Good</td>
+							<td>5	</td>
+							<td>7</td>
+						</tr>
+						<tr>
+							<td>User Stories	</td>
+							<td>Nice to Have	</td>
+							<td>8	</td>
+							<td>7</td>
+						</tr>
+					</table>
+				</section>
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					We need to pick <font color="red">four variables</font>. Surely, there're other choices, but here's what I've selected:
+					<hr>
+					<table style="font-size: 20pt;">
+						<tr>
+							<td>Variable</td>
+							<td>Type</td>
+							<td>Encoding</td>
+						</tr>
+						<tr>
+							<td>Entity Type	</td>
+							<td>Categorical		</td>
+							<td>Color Hue	</td>
+						</tr>
+						<tr>
+							<td>Priority </td>
+							<td>Ordered	</td>
+							<td>Color Value</td>
+						</tr>
+						<tr>
+							<td>Average Effort in Points </td>
+							<td>Quantitative</td>
+							<td>X</td>
+						</tr>
+						<tr>
+							<td>Average Cycle Time in Days</td>
+							<td>Quantitative</td>
+							<td>Y</td>
+						</tr>
+					</table>
+				</section>
+
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					Now it's easy to draw the chart.
+				</section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					The <font color="red">important bugs</font> are shown in <font color="crimson">deep red</font>, the <font color="red">unimportant ones</font> — in <font color="pink">light red</font>. 
+
+
+					<img src="./img/17_example_cycle_time.jpg" width="640">
+					The same pattern applies to <font color="red">features</font> and <font color="red">user stories</font>.
+				</section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					What can we say about this chart? 
+					<hr>
+					Here are some useful observations:
+				</section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<ul>
+						<li><font color="red">Bugs</font> are usually are smaller than <font color="red">user stories</font>, and <font color="red">features</font> are the largest entities.</li>
+					</ul>
+					<img src="./img/17_example_cycle_time.jpg" width="640">
+				</section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<ul>
+						<li><font color="red">Important bugs</font> are small and get fixed quickly.</li>
+					</ul>
+					<img src="./img/17_example_cycle_time.jpg" width="640">
+				</section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<ul>
+						<li><font color="red">Important features</font> are the largest, and it takes more time to release them (interesting information, by the way!).</li>
+					</ul>
+					<img src="./img/17_example_cycle_time.jpg" width="640">
+				</section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<ul>
+						<li><font color="red">Unimportant bugs</font> are the largest, and it takes longer to fix them.</li>
+					</ul>
+					<img src="./img/17_example_cycle_time.jpg" width="640">
+				</section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<ul>
+						<li>There's a good correlation between <font color="red">effort</font> and <font color="red">cycle time</font>: it takes more time to deliver large entities.</li>
+					</ul>
+					<img src="./img/17_example_cycle_time.jpg" width="640">
+				</section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					Of course, you can get the same info from the plain table above, 
+					<hr>
+					but the chart is much more fun to explore.
+				</section>
+
+
+				</section>
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+
+
+
+
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<h3>The Eight Real Examples</h3>
+				</section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					Let's check some real-life examples to get an even better idea of what visual encoding is about. All these examples are related to sports.
+				</section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					#1. Usain Bolt vs. The World
+					<ul>
+						<li>New York Times is a never-ending source of cool visualizations. </li>
+						<li><span class="fragment"> This one is about the Olympics, the 
+							<a href="http://www.nytimes.com/interactive/2012/08/05/sports/olympics/the-100-meter-dash-one-race-every-medalist-ever.html"> Men's 100-Meter Sprint</a> </span></li>
+					</ul>
+					<img src="./img/18_ex_100m.jpg">
+				</section>
+			
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					Visual encoding variables:
+					<ul>
+						<li><span> Color: natural colors used to encode bronze, silver and gold medals</span></li>
+						<li><span class="fragment"> X: meters behind Bolt (a quite unusual but very impressive metric)</span></li>
+						<li><span class="fragment"> Y: year</span></li>
+					</ul>
+					<img src="./img/18_ex_100m.jpg">
+				</section>
+
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					#2. Olympic Medals
+					<ul>
+						<li><span> <a href="http://london2012.nytimes.com/results">That's how the world map can be used to visualize the medal counts. </a> </span></li>
+					</ul>
+				</section>
+
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<ul>
+						<li><span> Very smart. There are names for nations with many medals, all the rest can be identified by their geographic position (everybody knows where New Zealand) </span></li>
+					</ul>
+					<img src="./img/19_ex_medals.png">
+				</section>
+
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<ul>
+						Visual encoding variables:
+						<li><span class="fragment"> Color: continent</span></li>
+						<li><span class="fragment"> Size: medals count</span></li>
+						<li><span class="fragment"> X and Y: the world map</span></li>
+					</ul>
+					<img src="./img/19_ex_medals.png">
+				</section>
+	
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					#3. Baseball Teams Performance
+					<ul>
+						<li><span class="fragment"> The Y variable is used twice in this example. </span></li>
+						<li><span class="fragment"> The ranking on the left shows day-to-day standings. The salaries are on the right. </span></li>
+						<li><span class="fragment"> The lines connect teams with their salaries, the thicker the line, the higher the salary. </span></li>
+						<li><span class="fragment"> The blue color shows that the team is doing well for its money; the red color shows the oppo</span></li>
+					</ul>
+				</section>
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<ul>
+						<li><span> We can see right away that the Rays are doing fantastic as well as San Diego and Texas, while Chicago has some problems.</span></li>
+						<li><span class="fragment"> It would be great to be able to focus on the blue or red teams only, this visualization lacks some interactivity.</span></li>
+						<li><span class="fragment"> </span></li>
+					</ul>
+					<img src="./img/20_ex_baseball.jpg">
+				</section>
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<ul>
+						Visual encoding variables:
+						<li><span> Y: baseball teams</span></li>
+						<li><span> Y: salaries</span></li>
+						<li><span class="fragment"> Color: trend (good or bad)</span></li>
+						<li><span class="fragment"> Size: salary</span></li> 
+					</ul>
+					<img src="./img/20_ex_baseball.jpg">
+				</section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					#4. Basketball Teams Performance
+					<ul>
+						<li><span>A heatmap is one other nice way to get the best of colors. Here's a very nice visualization of basketball teams performance created by (surprise!)</span></li>
+						<li><span class="fragment"> New York Times.</span></li>
+						<li><span class="fragment"> You can immediately spot hot areas on the court and compare the shot patterns for both teams. The Thunder rely on 3 pts shots heavily, while the Heat are more di</span></li>
+					</ul>
+					<img src="./img/21_ex_baseball1.jpg">
+				</section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<ul>
+						Visual encoding variables:
+						<li><span> X and Y: basketball court map</span></li>
+						<li><span class="fragment"> Color: points per region</span></li>
+						<li><span class="fragment"> Size: number of attempts</span></li>
+					</ul>
+					<img src="./img/21_ex_baseball1.jpg">
+				</section>
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					#5. Football Clubs League Dominance
+					<ul>
+						<li><span"> Poor usage of encoding variables is not an exception. Most of such mistakes are related to the incorrect color choices. It might seem that color encodes a football team here, but it doesn't. </span></li>
+
+						<li><span class="fragment"> When you change the range, color changes as well — this is just a random color to help you differentiate between the areas. </span></li>
+					</ul>
+				</section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					#5. Football Clubs League Dominance
+					<ul>
+						<li><span> In this case it would've been better to not use any color at all or use it wisely and encode only the prominent teams with.</span></li>
+					</ul>
+					<img src="./img/22_ex_soccer.jpg">
+				</section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<ul>
+						Visual encoding variables:
+						<li><span> Color: ???</span></li>
+						<li><span class="fragment"> Size: championship years</span></li>
+					</ul>
+					<img src="./img/22_ex_soccer.jpg">
+				</section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					#6. Football World Championship
+					<ul>
+						<li><span class="fragment"> This one is an offbeat visualization of South Africa's Football World Champions of 2010. </span></li>
+						<li><span class="fragment"> Good usage of shapes and colors. The chart represents timelines of two footbal</span></li>
+					</ul>
+					<img src="./img/23_ex_soccer3.png">
+				</section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<ul>
+						Visual encoding variables:
+						<li><span> X: time line</span></li>
+						<li><span> Y: teams</span></li>
+						<li><span class="fragment"> Shape + Color: event (goal, pass, shot)</span></li>
+					</ul>
+					<img src="./img/23_ex_soccer3.png">
+				</section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					#7. Football Teams Performance
+					<ul>
+						<li><span> This visualization utilizes color scale and size. However, it has a mistake.</span></li>
+						<li><span class="fragment"> A diverging scale should have different colors for positive and negative values, but in this image we see just one color</span></li>
+					</ul>
+					<img src="./img/24_ex_soccer2.jpg">
+				</section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<ul>
+						Visual encoding variables:
+						<li><span> Color: passing accuracy</span></li>
+						<li><span class="fragment"> Size: payer performance</span></li>
+						<li><span class="fragment"> X and Y: player position on the field</span></li>
+					</ul>
+					<img src="./img/24_ex_soccer2.jpg">
+				</section>
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					#8. Shoes
+					<ul>
+						<li><span> A very complex and somewhat crazy example where all the retinal variables are used: the shoes wall. </span></li>
+						<li><span class="fragment"> Take a look at those diverse visualizations. </span></li>
+					</ul>
+				</section>
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+						<li><span class="fragment"> The concept can be quite hard to grasp, but it's curiosity that should be driving us to explore.</span></li>
+					</ul>
+					<img src="./img/25_ex_shoes.png">
+				</section>
+					
+				</section>
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+
+
+
+
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<h3>Wrap-up</h3>
+					<ul>
+						<li><span> The encoding variables power clear and intelligent visualizations when used wisely. </span></li>
+						<li><span> Avoid common mistakes, identify your data types and pick the relevant variables. </span></li>
+					</ul>
+				</section>
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<h3>Wrap-up</h3>
+					<img src="./img/26_retinal_data_flat.jpg">
+				</section>
+
+					
+				</section>
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<section>
+					<h1>The End!</h1>
+				</section>
+					
+				</section>
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+
+
+
+
+				<!-- ---------- ---------- ---------- ---------- ---------- ---------- -->
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				slideNumber: true,
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
