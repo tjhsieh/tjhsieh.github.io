@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>作業</title>
+<link rel="icon" href="./favicon.svg"/>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style type="text/css">
+
+  @font-face {
+    font-family:'CircleFont';
+    /* src: url(https://circle472.github.io/ct2022s/hw04/CircleFont.ttf); */
+    src: url(CircleFont_v2.woff2);
+    /* https://cloudconvert.com/ttf-to-woff2 */
+  }
+
+
+  body {
+    background-color: rgb(159, 53, 58);
+    color: rgb(159, 53, 58);
+  }
+
+  .container-fluid {
+    width:  90%;
+  }
+
+  .hw12 {
+    border: 1px solid rgb(159, 53, 58);
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .twenty {
+    border: 1px solid #f9eced;
+    color: #f9eced;
+    padding: 8px;
+    font-family:'CircleFont';
+    font-size: 18pt;
+  }
+
+  .twentykikyo {
+    color: #f9eced;
+    font-size: 16pt;
+    background-color: #6a4c9c;
+  }
+
+  .twentykonparuiro {
+    color: #f9eced;
+    font-size: 16pt;
+    background-color: #5ac2d9;
+  }
+
+  .twenty a {
+    color:  yellow;
+    font-size:  12pt;
+  }
+
+  .twenty a:hover {
+    color: #f9eced;
+    font-size:  16pt;
+  }
+
+  .thirty {
+    border: 1px solid #f9eced;
+    color: #f9eced;
+  }
+
+  .ninety {
+    border: 1px solid rgb(159, 53, 58);
+    background-color: #f9eced;
+    padding: 8px;
+  }
+
+  svg {
+    border: 2px solid rgb(159, 53, 58);
+  }
+
+  path {
+    pointer-events: all;
+    fill: #f9eced;
+    stroke: rgb(159, 53, 58);
+    stroke-opacity: 0.95;
+    stroke-width: 1px;
+  }
+
+  .active circle {
+    stroke: #f9eced;
+    stroke-width: 2px;
+  }
+
+  svg g text {
+    fill: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 0, 0.1);
+    text-shadow: 0 0 16px #FF0000, 0 0 16px #000000;
+    font-size: 24pt;
+    text-anchor: middle;
+  }
+
+  .twenty:hover {
+    /*
+      background-color: rgba(255, 255, 0, 0.1);
+    */
+      box-shadow: 0 0 5px 3px #f9eced;
+      color: cyan; 
+      text-shadow: 0 0 6px #FFFFFF, 0 0 6px #000000;
+  }
+
+  img:hover {
+      box-shadow: 0 0 1px 1px #f9eced;
+      animation-name: happy;
+      animation-duration: 0.5s;
+      animation-iteration-count: infinite;
+  }
+
+  @keyframes happy {
+      0% {
+          transform: translateY(0px);
+      }
+
+      25% {
+          transform: translateY(-15px);
+      }
+
+      50% {
+          transform: translateY(0px);
+      }
+
+      75% {
+          transform: translateY(-5px);
+      }
+
+      100% {
+          transform: translateY(0px);
+      }
+  }
+
+  .toprow {
+    margin-top: 36px;
+  }
+
+  .bottomrow {
+    margin-bottom: 36px;
+  }
+</style>
+</head>
+<body>
+<!-- ------------------------------------------------>
+<!-- ------------------------------------------------>
+<!-- ------------------------------------------------>
+<div class="container-fluid">
+
+  <!-- ------------------------------------------------>
+  <div class="row toprow">
+    <div class="col-md-2 twenty"><img src="./img_kitty/133533.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/hero-kitty.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/pic03.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/pic04.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/pic05.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/pic06.svg" width="100%"></div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykikyo">
+    <div class="col-md-1 twenty">組別</div>
+    <div class="col-md-3 twenty">題目</div>
+    <div class="col-md-2 twenty">期刊</div>
+    <div class="col-md-1 twenty">講義</div>
+    <div class="col-md-1 twenty">論文</div>
+    <div class="col-md-2 twenty">日期</div>
+    <div class="col-md-2 twenty">組長</div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-1 twenty">01</div>
+    <div class="col-md-3 twenty">Ambient Information Visualisation and Visitors’ Technology Acceptance of Mixed Reality in Museums</div>
+    <div class="col-md-2 twenty">ACM JOCCH 2020</div>
+    <div class="col-md-1 twenty"><a target="_blank" href=""><img src="img/ppt.svg" width="64"/></a></div>
+    <div class="col-md-1 twenty"><a target="_blank" href="https://dl.acm.org/doi/10.1145/3359590"><img src="img/html.svg" width="64"/></a></div>
+    <div class="col-md-2 twenty">2023.10.06<br>(第四週)</div>
+    <div class="col-md-2 twenty">許瑋哲</div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykikyo">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-1 twenty">02</div>
+    <div class="col-md-3 twenty">Omni-Learning XR Technologies and Visitor-Centered Experience in the Smart Art Museum</div>
+    <div class="col-md-2 twenty">AIVR 2018</div>
+    <div class="col-md-1 twenty"><a target="_blank" href=""><img src="img/ppt.svg" width="64"/></a></div>
+    <div class="col-md-1 twenty"><a target="_blank" href="https://ieeexplore.ieee.org/document/8613680"><img src="img/html.svg" width="64"/></a></div>
+    <div class="col-md-2 twenty">2023.10.06<br>(第四週)</div>
+    <div class="col-md-2 twenty">許加宜</div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-1 twenty">03</div>
+    <div class="col-md-3 twenty">Lessons Learned on Engaging Teenage Visitors in Museums with Story-Based and Game-Based Strategies</div>
+    <div class="col-md-2 twenty">ACM JOCCH 2023</div>
+    <div class="col-md-1 twenty"><a target="_blank" href=""><img src="img/ppt.svg" width="64"/></a></div>
+    <div class="col-md-1 twenty"><a target="_blank" href="https://dl.acm.org/doi/10.1145/3575867"><img src="img/html.svg" width="64"/></a></div>
+    <div class="col-md-2 twenty">2023.10.06<br>(第四週)</div>
+    <div class="col-md-2 twenty">吳泳霈</div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykikyo">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-1 twenty">04</div>
+    <div class="col-md-3 twenty">Egocentric Visitors Localization in Cultural Sites</div>
+    <div class="col-md-2 twenty">ACM JOCCH 2019</div>
+    <div class="col-md-1 twenty"><a target="_blank" href=""><img src="img/ppt.svg" width="64"/></a></div>
+    <div class="col-md-1 twenty"><a target="_blank" href="https://dl.acm.org/doi/abs/10.1145/3276772"><img src="img/html.svg" width="64"/></a></div>
+    <div class="col-md-2 twenty">2023.10.13<br>(第五週)</div>
+    <div class="col-md-2 twenty">王麗雅</div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-1 twenty">05</div>
+    <div class="col-md-3 twenty">Visualization of Cultural Heritage Collection Data: State of the Art and Future Challenges</div>
+    <div class="col-md-2 twenty">IEEE TVCG 2019</div>
+    <div class="col-md-1 twenty"><a target="_blank" href=""><img src="img/ppt.svg" width="64"/></a></div>
+    <div class="col-md-1 twenty"><a target="_blank" href="https://ieeexplore.ieee.org/document/8352050"><img src="img/html.svg" width="64"/></a></div>
+    <div class="col-md-2 twenty">2023.10.13<br>(第五週)</div>
+    <div class="col-md-2 twenty">蕭裕憲</div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykikyo">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-1 twenty">06</div>
+    <div class="col-md-3 twenty">"New Media and Space: An Empirical Study of Learning and Enjoyment Through Museum Hybrid Space"</div>
+    <div class="col-md-2 twenty">IEEE TVCG 2022</div>
+    <div class="col-md-1 twenty"><a target="_blank" href=""><img src="img/ppt.svg" width="64"/></a></div>
+    <div class="col-md-1 twenty"><a target="_blank" href="https://ieeexplore.ieee.org/document/9286680"><img src="img/html.svg" width="64"/></a></div>
+    <div class="col-md-2 twenty">2023.10.13<br>(第五週)</div>
+    <div class="col-md-2 twenty">曾詠暄</div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-1 twenty">07</div>
+    <div class="col-md-3 twenty">"Bundled Visualization of Dynamic Graph and Trail Data"</div>
+    <div class="col-md-2 twenty">IEEE TVCG 2014</div>
+    <div class="col-md-1 twenty"><a target="_blank" href=""><img src="img/ppt.svg" width="64"/></a></div>
+    <div class="col-md-1 twenty"><a target="_blank" href="https://ieeexplore.ieee.org/document/6636295"><img src="img/html.svg" width="64"/></a></div>
+    <div class="col-md-2 twenty">2023.10.20<br>(第六週)</div>
+    <div class="col-md-2 twenty">林立森</div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykikyo">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-1 twenty">08</div>
+    <div class="col-md-3 twenty">Virtual Museum: Playful Visitor Experience in the Real and Virtual World</div>
+    <div class="col-md-2 twenty">VS-GAMES 2018</div>
+    <div class="col-md-1 twenty"><a target="_blank" href=""><img src="img/ppt.svg" width="64"/></a></div>
+    <div class="col-md-1 twenty"><a target="_blank" href="https://ieeexplore.ieee.org/document/7590376"><img src="img/html.svg" width="64"/></a></div>
+    <div class="col-md-2 twenty">2023.10.20<br>(第六週)</div>
+    <div class="col-md-2 twenty">陳昱霖</div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-1 twenty">09</div>
+    <div class="col-md-3 twenty">Group Navigation for Guided Tours in Distributed Virtual Environments</div>
+    <div class="col-md-2 twenty">IEEE TVCG 2021</div>
+    <div class="col-md-1 twenty"><a target="_blank" href=""><img src="img/ppt.svg" width="64"/></a></div>
+    <div class="col-md-1 twenty"><a target="_blank" href="https://ieeexplore.ieee.org/document/9382870"><img src="img/html.svg" width="64"/></a></div>
+    <div class="col-md-2 twenty">2023.10.20<br>(第六週)</div>
+    <div class="col-md-2 twenty">林文心</div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykikyo">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-1 twenty">10</div>
+    <div class="col-md-3 twenty">Optimal Path Maps on the GPU</div>
+    <div class="col-md-2 twenty">IEEE TVCG 2020</div>
+    <div class="col-md-1 twenty"><a target="_blank" href=""><img src="img/ppt.svg" width="64"/></a></div>
+    <div class="col-md-1 twenty"><a target="_blank" href=""><img src="img/html.svg" width="64"/></a></div>
+    <div class="col-md-2 twenty">2023.10.27<br>(第七週)</div>
+    <div class="col-md-2 twenty">羅名彥</div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykikyo">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-1 twenty">11</div>
+    <div class="col-md-3 twenty">Living Liquid: Design and Evaluation of an Exploratory Visualization Tool for Museum Visitors<hr>Decoding a Complex Visualization in a Science Museum – An Empirical Study<hr>Sea of Genes: A Reflection on Visualising Metagenomic Data for Museums</div>
+    <div class="col-md-2 twenty">IEEE TVCG 2012, 2020, 2021</div>
+    <div class="col-md-1 twenty"><a target="_blank" href=""><img src="img/ppt.svg" width="64"/></a></div>
+    <div class="col-md-1 twenty"><a target="_blank" href=""><img src="img/html.svg" width="64"/></a></div>
+    <div class="col-md-2 twenty">2023.10.27<br>(第七週)</div>
+    <div class="col-md-2 twenty">李瑄文</div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykikyo">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-1 twenty">12</div>
+    <div class="col-md-3 twenty">"Conducting Visitor Studies Using Smartphone-Based Location Sensing"</div>
+    <div class="col-md-2 twenty">ACM JOCCH 2015</div>
+    <div class="col-md-1 twenty"><a target="_blank" href=""><img src="img/ppt.svg" width="64"/></a></div>
+    <div class="col-md-1 twenty"><a target="_blank" href=""><img src="img/html.svg" width="64"/></a></div>
+    <div class="col-md-2 twenty">2023.10.27<br>(第七週)</div>
+    <div class="col-md-2 twenty">卓亞璇</div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykikyo">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-1 twenty">13</div>
+    <div class="col-md-3 twenty">Effective Visualization of Short Routes</div>
+    <div class="col-md-2 twenty">IEEE TVCG 2008</div>
+    <div class="col-md-1 twenty"><a target="_blank" href=""><img src="img/ppt.svg" width="64"/></a></div>
+    <div class="col-md-1 twenty"><a target="_blank" href=""><img src="img/html.svg" width="64"/></a></div>
+    <div class="col-md-2 twenty">2023.11.03<br>(第八週)</div>
+    <div class="col-md-2 twenty">王俞喬</div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykikyo">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-1 twenty">14</div>
+    <div class="col-md-3 twenty">Path Tracing in 2D, 3D, and Physicalized Networks</div>
+    <div class="col-md-2 twenty">IEEE TVCG 2022</div>
+    <div class="col-md-1 twenty"><a target="_blank" href=""><img src="img/ppt.svg" width="64"/></a></div>
+    <div class="col-md-1 twenty"><a target="_blank" href=""><img src="img/html.svg" width="64"/></a></div>
+    <div class="col-md-2 twenty">2023.11.03<br>(第八週)</div>
+    <div class="col-md-2 twenty">梁佑駿</div>
+  </div>
+
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykikyo bottomrow">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-1 twenty">15</div>
+    <div class="col-md-3 twenty">Forecasting Museum Visitor Behaviors Using Deep Learning</div>
+    <div class="col-md-2 twenty">MLBDBI 2019</div>
+    <div class="col-md-1 twenty"><a target="_blank" href=""><img src="img/ppt.svg" width="64"/></a></div>
+    <div class="col-md-1 twenty"><a target="_blank" href="https://ieeexplore.ieee.org/document/8945582"><img src="img/html.svg" width="64"/></a></div>
+    <div class="col-md-2 twenty">2023.11.03<br>(第八週)</div>
+    <div class="col-md-2 twenty">雷岱蓉</div>
+  </div>
+
+
+
+</div>
+<!-- ------------------------------------------------>
+<!-- ------------------------------------------------>
+<!-- ------------------------------------------------>
+
+<!-- ------------------------------------------------>
+<!-- ------------------------------------------------>
+<!-- ------------------------------------------------>
+<div class="container-fluid">
+  <!-- ------------------------------------------------>
+  <div class="row bottomrow">
+    <div class="col-md-12 twenty">師大美術館: <img src="./img/sun-svgrepo-com.svg" width="64"></div>
+  </div>
+</div>
+<!-- ------------------------------------------------>
+<!-- ------------------------------------------------>
+<!-- ------------------------------------------------>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+
+
+
+</body>
+</html>
