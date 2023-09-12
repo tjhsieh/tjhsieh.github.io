@@ -6,7 +6,7 @@
 <html>
 <head>
 <title>計算機程式語言</title>
-<link rel="icon" href="./welcome/favicon.svg"/>
+<link rel="icon" href="./syllabus/favicon.svg"/>
 <style>
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&display=swap');
@@ -120,8 +120,7 @@ var circles = d3.packSiblings(d3.range(dataset.length)
 svg
   .data(['計算機程式語言'])
   .append("a")
-  //.attr("xlink:href", 'https://myweb.ntut.edu.tw/~tjhsieh/c/cg/cg2021f/syllabus.html')
-  .attr("xlink:href", './syllabus/index.html')
+  .attr("xlink:href", './welcome/index.html')
   .append("text")
     .attr("x", function(d) { cgx += Math.random()*200; return cgx - 448; })
     .attr("y", function(d) { cgy += Math.random()*200; return cgy - 128; })
