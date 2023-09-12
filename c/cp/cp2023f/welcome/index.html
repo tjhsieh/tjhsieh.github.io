@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<meta http-equiv="refresh" content="100;url=../syllabus/index.html" />
+<link rel="icon" href="./favicon.svg"/>
+
+<style type="text/css">
+
+@font-face {
+	font-family:'CircleFont'; 
+	src: url(./CircleFont_v2.woff2);
+}
+
+body {
+	border: 0px solid red;
+	padding: 32px;
+	font-size: 24pt;
+	font-family:'CircleFont';
+	background-color: rgb(159, 53, 58);
+	color: rgb(255, 255, 255);
+}
+
+body:hover {
+  text-shadow: 0 0 16px #FFFF00, 0 0 16px #FF0000;
+}
+
+canvas {
+	border: 0px solid blue;
+	padding: 8px;
+}
+
+.title {
+	font-size: 48pt;
+}
+
+div.a {
+  width: 360px;
+  height: 80px;
+  font-size: 48pt;
+  transform: rotate(20deg);
+  position: absolute;
+  top: 48px;
+  right: 0px;
+}
+
+
+div.b {
+  width: 660px;
+  height: 260px;
+  font-size: 24pt;
+  transform: rotate(-10deg);
+  position: relative;
+  top: -32px;
+  left: -64px;
+  border: 1px yellow #f9eced;
+}
+
+</style>
+</head>
+<body onclick="myFunction()">
+
+<hr>
+
+謝教授您好！<br>
+我是電資新生鄭伊辰，<br><br>
+因上傳的暑輔心得在我深夜思量後有感而發而進行了修改，然而時間剛好截止了傳不上去，因此我只想到用寄mail的方式將我修改後的暑輔心得寄予您，謝謝！<br><br>
+
+修改後的暑輔心得如下：
+
+<hr>
+
+兩個禮拜的暑輔終於結束了！<br><br>
+
+上課前看到課表全部都是英文，緊張到不行，還在算總共幾個單元一天要上幾章？<br><br>
+結果正式上課才知道原來不會照著單元上，而是直接切到中後段的主題去了。<br><br>
+然後也不是從基礎開始的快樂Ｃ語言，而是從一百多行的程式碼開始講解。<br><br>
+甚至在短短的九天裡面，還有期中考和期末考，教授其實也說不該讓新手一下學那麼難。<br><br>
+但還是繼續義無反顧地上下去了😭<br><br>
+
+<hr>
+
+雖然後來在一片哀嚎中有放慢速度，但說真的我在前三天都是崩潰的狀態，身為一個程式小白想哭都沒時間哭，不管在學校，還是回家，都只能一直寫、一直查、一直看影片，來減輕我聽不懂的焦慮。<br><br>
+甚至連搭捷運，我都繼續使用手機打程式及看影片，印象中我從來沒這麼認真用過所謂的零碎時間 <br><br>
+我其實是在跟程式談戀愛吧！<br><br>
+
+<hr>
+
+雖然現在回想起來，還是覺得那種寫到頭腦發燙、眼睛刺痛，感覺靈魂快出竅的滋味，我暫時不想再體會。<br><br>
+但說真的兩個禮拜的集訓，對我來說<br><br>
+真的是把一個對程式完全沒概念，scanf printf 都分不清楚， ％d %s \0 \n 都不知道代表什麼的程式小白。<br><br>
+硬是激發出潛能，寫出一兩百行程式，雖然教授說這不是什麼艱深的題目，但這是暑輔前的我想都不敢想的任務。<br><br>
+然而到了上機考時，我能自己把程式完整的寫出來，其實超有成就感、超開心的。<br><br>
+
+<hr>
+
+另外我的新朋友就坐我旁邊，第一天看她超厲害，打字超快。我那時候只能在旁邊跟鍵盤打架（找不到各種符號），但經過了兩個禮拜的惡戰後，今天上機考的時候，意外發現我寫一個程式花的時間竟然跟新朋友差不多了。我想我的英打速度，也在無形中提升了很多。<br><br>
+結論是暑輔真的有夠硬，北科的訓練真的十分紮實，名不虛傳。<br><br>
+
+<hr>
+
+
+不過平心而論教授上課真的很有趣，對我們也真的很好，怕我們撐不下去，中間還會穿插找一些學長姐回來分享留學或工作經驗，其實對了解未來走向滿有幫助的。<br><br>
+
+<hr>
+
+最後還是很感謝教授及兩位助教盡心盡力的指導我們，人們都說好的開始就是成功的一半，再次感謝教授及兩位助教精心設計這樣的課程，讓我們能夠在暑假就先馳得點賺到兩個學分😆<br><br>
+
+</div>
+
+<hr>
+
+<!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_countdown -->
+<p>&nbsp; &ensp; &emsp; &thinsp; &zwnj; &zwj;</p>
+<p id="demo"></p>
+
+<script>
+
+// https://www.w3schools.com/howto/howto_js_redirect_webpage.asp
+// 點擊前往網頁
+function myFunction() {
+  location.replace("../syllabus/index.html")
+}
+
+// https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_countdown
+// 倒數計時前往網頁
+var countDownDate = new Date().getTime() + 180 * 1000; // 倒數計時 180 秒
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  var seconds = Math.floor((distance % (1000 * 180)) / 1000); // 倒數計時 180 秒
+
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = '前往課程網頁: ' + seconds + " 秒 ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "跳躍";
+    location.replace("../syllabus/index.html")
+  }
+}, 1000);
+
+</script>
+
+</body>
+</html>
