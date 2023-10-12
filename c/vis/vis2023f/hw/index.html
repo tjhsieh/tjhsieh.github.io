@@ -11,141 +11,154 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style type="text/css">
+@font-face {
+  font-family:'CircleFont';
+  /* src: url(https://circle472.github.io/ct2022s/hw04/CircleFont.ttf); */
+  src: url(CircleFont_v2.woff2);
+  /* https://cloudconvert.com/ttf-to-woff2 */
+}
 
-  @font-face {
-    font-family:'CircleFont';
-    /* src: url(https://circle472.github.io/ct2022s/hw04/CircleFont.ttf); */
-    src: url(CircleFont_v2.woff2);
-    /* https://cloudconvert.com/ttf-to-woff2 */
-  }
+body {
+  background-color: rgb(159, 53, 58);
+  color: rgb(159, 53, 58);
+}
 
+.container-fluid {
+  width:  90%;
+}
 
-  body {
-    background-color: rgb(159, 53, 58);
-    color: rgb(159, 53, 58);
-  }
+.hw12 {
+  border: 1px solid rgb(159, 53, 58);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
 
-  .container-fluid {
-    width:  90%;
-  }
+.twenty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+  padding: 8px;
+  font-family:'CircleFont';
+  font-size: 18pt;
+}
 
-  .hw12 {
-    border: 1px solid rgb(159, 53, 58);
-    margin-top: 8px;
-    margin-bottom: 8px;
-  }
+.twentykikyo {
+  color: #f9eced;
+  font-size: 16pt;
+  background-color: #6a4c9c;
+}
 
-  .twenty {
-    border: 1px solid #f9eced;
-    color: #f9eced;
-    padding: 8px;
-    font-family:'CircleFont';
-    font-size: 18pt;
-  }
+.twentykonparuiro {
+  color: #f9eced;
+  font-size: 16pt;
+  background-color: #5ac2d9;
+}
 
-  .twentykikyo {
-    color: #f9eced;
-    font-size: 16pt;
-    background-color: #6a4c9c;
-  }
+.twenty a {
+  color:  yellow;
+  font-size:  12pt;
+}
 
-  .twentykonparuiro {
-    color: #f9eced;
-    font-size: 16pt;
-    background-color: #5ac2d9;
-  }
+.twenty a:hover {
+  color: #f9eced;
+  font-size:  16pt;
+}
 
-  .twenty a {
-    color:  yellow;
-    font-size:  12pt;
-  }
+.thirty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+}
 
-  .twenty a:hover {
-    color: #f9eced;
-    font-size:  16pt;
-  }
+.ninety {
+  border: 1px solid rgb(159, 53, 58);
+  background-color: #f9eced;
+  padding: 8px;
+}
 
-  .thirty {
-    border: 1px solid #f9eced;
-    color: #f9eced;
-  }
+svg {
+  border: 2px solid rgb(159, 53, 58);
+}
 
-  .ninety {
-    border: 1px solid rgb(159, 53, 58);
-    background-color: #f9eced;
-    padding: 8px;
-  }
+path {
+  pointer-events: all;
+  fill: #f9eced;
+  stroke: rgb(159, 53, 58);
+  stroke-opacity: 0.95;
+  stroke-width: 1px;
+}
 
-  svg {
-    border: 2px solid rgb(159, 53, 58);
-  }
+.active circle {
+  stroke: #f9eced;
+  stroke-width: 2px;
+}
 
-  path {
-    pointer-events: all;
-    fill: #f9eced;
-    stroke: rgb(159, 53, 58);
-    stroke-opacity: 0.95;
-    stroke-width: 1px;
-  }
+svg g text {
+  fill: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 0, 0.1);
+  text-shadow: 0 0 16px #FF0000, 0 0 16px #000000;
+  font-size: 24pt;
+  text-anchor: middle;
+}
 
-  .active circle {
-    stroke: #f9eced;
-    stroke-width: 2px;
-  }
-
-  svg g text {
-    fill: rgba(255, 255, 255, 0.95);
+.twenty:hover {
+  /*
     background-color: rgba(255, 255, 0, 0.1);
-    text-shadow: 0 0 16px #FF0000, 0 0 16px #000000;
-    font-size: 24pt;
-    text-anchor: middle;
-  }
+  */
+    box-shadow: 0 0 5px 3px #f9eced;
+    color: cyan; 
+    text-shadow: 0 0 6px #FFFFFF, 0 0 6px #000000;
+}
 
-  .twenty:hover {
-    /*
-      background-color: rgba(255, 255, 0, 0.1);
-    */
-      box-shadow: 0 0 5px 3px #f9eced;
-      color: cyan; 
-      text-shadow: 0 0 6px #FFFFFF, 0 0 6px #000000;
-  }
+img:hover {
+    box-shadow: 0 0 1px 1px #f9eced;
+    animation-name: happy;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
 
-  img:hover {
-      box-shadow: 0 0 1px 1px #f9eced;
-      animation-name: happy;
-      animation-duration: 0.5s;
-      animation-iteration-count: infinite;
-  }
+@keyframes happy {
+    0% {
+        transform: translateY(0px);
+    }
 
-  @keyframes happy {
-      0% {
-          transform: translateY(0px);
-      }
+    25% {
+        transform: translateY(-15px);
+    }
 
-      25% {
-          transform: translateY(-15px);
-      }
+    50% {
+        transform: translateY(0px);
+    }
 
-      50% {
-          transform: translateY(0px);
-      }
+    75% {
+        transform: translateY(-5px);
+    }
 
-      75% {
-          transform: translateY(-5px);
-      }
+    100% {
+        transform: translateY(0px);
+    }
+}
 
-      100% {
-          transform: translateY(0px);
-      }
-  }
+.toprow {
+  margin-top: 36px;
+}
 
-  .toprow {
-    margin-top: 36px;
-  }
+.bottomrow {
+  margin-bottom: 36px;
+}
 
-  .bottomrow {
-    margin-bottom: 36px;
-  }
+.GFG {
+  margin: -10px auto; 
+  font-family: 'CircleFont', serif;
+  color: yellow; 
+  font-size: 18pt;
+  -webkit-text-stroke-width: 0.1px; 
+  -webkit-text-stroke-color:  yellow;
+  animation: 8s pulsate infinite;
+}
+
+@keyframes pulsate {
+  35% {font-size: 24pt;} /* text-shadow: 0 0 12px #FFF, 0 0 20px #FFF;  */
+  50% {font-size: 10pt;} /* text-shadow: 0 0 16px #FFF, 0 0 20px #FFF;  */
+}
 </style>
 </head>
 <body>
@@ -183,7 +196,7 @@
     <div class="col-md-2 twenty">JavaScript</div>
     <div class="col-md-1 twenty"><a target="_blank" href="https://docs.google.com/presentation/d/10SG9nQmKSMI9a3bKFxZ-nQt7EhBLQJSt/edit?usp=drive_link&ouid=115156210972726726940&rtpof=true&sd=true"><img src="img/ppt.svg" width="64"/></a></div>
     <div class="col-md-1 twenty"><a target="_blank" href="https://tjhsieh.github.io/c/vis/vis2023f/hw01/"><img src="img/html.svg" width="64"/></a></div>
-    <div class="col-md-2 twenty">2023.11.17 (第十週)</div>
+    <div class="col-md-2 twenty"><span class="GFG">2023.11.17 (第十週)</span></div>
     <div class="col-md-2 twenty">吳泳霈</div>
   </div>
 
@@ -195,7 +208,7 @@
     <div class="col-md-2 twenty">observablehq.com</div>
     <div class="col-md-1 twenty"><a target="_blank" href="https://docs.google.com/presentation/d/1tiOS6A8ahi9I1-udFx2vFIxohZvMbO5n/edit?usp=drive_link&ouid=115156210972726726940&rtpof=true&sd=true"><img src="img/ppt.svg" width="64"/></a></div>
     <div class="col-md-1 twenty"><a target="_blank" href="https://joycehsu0.github.io/vis2023f/hw02/index.html"><img src="img/html.svg" width="64"/></a></div>
-    <div class="col-md-2 twenty">2023.11.17 (第十週)</div>
+    <div class="col-md-2 twenty"><span class="GFG">2023.11.17 (第十週)</span></div>
     <div class="col-md-2 twenty">許加宜</div>
   </div>
 
@@ -250,9 +263,9 @@
   <!-- ------------------------------------------------>
   <div class="row">
     <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
-    <div class="col-md-2 twenty">07<img src="./img/sun-svgrepo-com.svg" width="64"></div>
-    <div class="col-md-2 twenty">尋寶遊戲-順點遊(軌跡)</div>
-    <div class="col-md-2 twenty">Unity App</div>
+    <div class="col-md-2 twenty">07</div>
+    <div class="col-md-2 twenty">順點遊(軌跡)</div>
+    <div class="col-md-2 twenty">Unity 手機 App</div>
     <div class="col-md-1 twenty"><a target="_blank" href="https://docs.google.com/presentation/d/1Pk24CMiGLqZMZmdL9lpx4UfKseteBcuc/edit?usp=drive_link&ouid=115156210972726726940&rtpof=true&sd=true"><img src="img/ppt.svg" width="64"/></a></div>
     <div class="col-md-1 twenty"><a target="_blank" href="https://linlisen.github.io/vis2023f/hw07/index.html"><img src="img/html.svg" width="64"/></a></div>
     <div class="col-md-2 twenty">2023.12.15 (第十四週)</div>
@@ -263,23 +276,23 @@
   <div class="row twentykikyo">
     <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
     <div class="col-md-2 twenty">08</div>
-    <div class="col-md-2 twenty">尋寶遊戲-有氧漫遊, 尋寶遊戲-主題遊</div>
-    <div class="col-md-2 twenty">Unity App</div>
+    <div class="col-md-2 twenty">有氧漫遊, 主題遊</div>
+    <div class="col-md-2 twenty">Unity 手機 App</div>
     <div class="col-md-1 twenty"><a target="_blank" href="https://docs.google.com/presentation/d/1IggNdOA_IC8uGB4cl5WKVlKd7HLEiX97/edit?usp=drive_link&ouid=115156210972726726940&rtpof=true&sd=true"><img src="img/ppt.svg" width="64"/></a></div>
     <div class="col-md-1 twenty"><a target="_blank" href="https://xxaslxx.github.io/vis2023f/hw08/index.html"><img src="img/html.svg" width="64"/></a></div>
     <div class="col-md-2 twenty">2023.12.22 (第十五週)</div>
-    <div class="col-md-2 twenty">陳昱霖</div>
+    <div class="col-md-2 twenty">陳昱霖、許瑋哲</div>
   </div>
 
   <!-- ------------------------------------------------>
   <div class="row">
     <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
     <div class="col-md-2 twenty">09</div>
-    <div class="col-md-2 twenty">尋寶遊戲-順點遊(解說)</div>
-    <div class="col-md-2 twenty">Unity App</div>
+    <div class="col-md-2 twenty">順點遊(解說)</div>
+    <div class="col-md-2 twenty">Unity + GitHub</div>
     <div class="col-md-1 twenty"><a target="_blank" href="https://docs.google.com/presentation/d/1tJDk5MP3AuAMEVBu7leY7jzAyGz4nB04/edit?usp=drive_link&ouid=115156210972726726940&rtpof=true&sd=true"><img src="img/ppt.svg" width="64"/></a></div>
     <div class="col-md-1 twenty"><a target="_blank" href="https://wenshin1109.github.io/vis2023f/hw09/index.html"><img src="img/html.svg" width="64"/></a></div>
-    <div class="col-md-2 twenty">2023.11.17 (第十週)</div>
+    <div class="col-md-2 twenty"><span class="GFG">2023.11.17 (第十週)</span></div>
     <div class="col-md-2 twenty">林文心</div>
   </div>
 
