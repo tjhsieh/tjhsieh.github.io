@@ -57,7 +57,6 @@ div.a {
   right: 0px;
 }
 
-
 div.b {
   width: 660px;
   height: 260px;
@@ -72,6 +71,17 @@ div.b {
 </style>
 </head>
 <body onclick="myFunction()">
+
+ <!-- https://www.youtube.com/watch?v=pYGly8xhlEM -->
+<audio  id="myAudio" autoplay="" controls="" hidden="" loop="loop">
+  <source src="../home/inuyasha.mp3" type="audio/mp3">
+</audio>
+
+<script>
+  var x = document.getElementById("myAudio");
+  x.volume = 0.5;
+  x.play();
+</script> 
 
 Welcome to <span class="title"> 計算機圖學 </span> 實驗室 Laboratory
 <br><br><br>
