@@ -11,140 +11,156 @@
 <title>作業</title>
 <style type="text/css">
 
-  @font-face {
-    font-family:'CircleFont';
-    /* src: url(https://circle472.github.io/ct2022s/hw04/CircleFont.ttf); */
-    src: url(CircleFont_v2.woff2);
-    /* https://cloudconvert.com/ttf-to-woff2 */
-  }
+@font-face {
+  font-family:'CircleFont';
+  /* src: url(https://circle472.github.io/ct2022s/hw04/CircleFont.ttf); */
+  src: url(CircleFont_v2.woff2);
+  /* https://cloudconvert.com/ttf-to-woff2 */
+}
 
 
-  body {
-    background-color: rgb(159, 53, 58);
-    color: rgb(159, 53, 58);
-  }
+body {
+  background-color: rgb(159, 53, 58);
+  color: rgb(159, 53, 58);
+}
 
-  .container-fluid {
-    width:  90%;
-  }
+.container-fluid {
+  width:  90%;
+}
 
-  .hw12 {
-    border: 1px solid rgb(159, 53, 58);
-    margin-top: 8px;
-    margin-bottom: 8px;
-  }
+.hw12 {
+  border: 1px solid rgb(159, 53, 58);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
 
-  .twenty {
-    border: 1px solid #f9eced;
-    color: #f9eced;
-    padding: 8px;
-    font-family:'CircleFont';
-    font-size: 18pt;
-  }
+.twenty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+  padding: 8px;
+  font-family:'CircleFont';
+  font-size: 18pt;
+}
 
-  .twentykikyo {
-    color: #f9eced;
-    font-size: 16pt;
-    background-color: #6a4c9c;
-  }
+.twentykikyo {
+  color: #f9eced;
+  font-size: 16pt;
+  background-color: #6a4c9c;
+}
 
-  .twentykonparuiro {
-    color: #f9eced;
-    font-size: 16pt;
-    background-color: #5ac2d9;
-  }
+.twentykonparuiro {
+  color: #f9eced;
+  font-size: 16pt;
+  background-color: #5ac2d9;
+}
 
-  .twenty a {
-    color:  yellow;
-    font-size:  12pt;
-  }
+.twenty a {
+  color:  yellow;
+  font-size:  12pt;
+}
 
-  .twenty a:hover {
-    color: #f9eced;
-    font-size:  16pt;
-  }
+.twenty a:hover {
+  color: #f9eced;
+  font-size:  16pt;
+}
 
-  .thirty {
-    border: 1px solid #f9eced;
-    color: #f9eced;
-  }
+.thirty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+}
 
-  .ninety {
-    border: 1px solid rgb(159, 53, 58);
-    background-color: #f9eced;
-    padding: 8px;
-  }
+.ninety {
+  border: 1px solid rgb(159, 53, 58);
+  background-color: #f9eced;
+  padding: 8px;
+}
 
-  svg {
-    border: 2px solid rgb(159, 53, 58);
-  }
+svg {
+  border: 2px solid rgb(159, 53, 58);
+}
 
-  path {
-    pointer-events: all;
-    fill: #f9eced;
-    stroke: rgb(159, 53, 58);
-    stroke-opacity: 0.95;
-    stroke-width: 1px;
-  }
+path {
+  pointer-events: all;
+  fill: #f9eced;
+  stroke: rgb(159, 53, 58);
+  stroke-opacity: 0.95;
+  stroke-width: 1px;
+}
 
-  .active circle {
-    stroke: #f9eced;
-    stroke-width: 2px;
-  }
+.active circle {
+  stroke: #f9eced;
+  stroke-width: 2px;
+}
 
-  svg g text {
-    fill: rgba(255, 255, 255, 0.95);
+svg g text {
+  fill: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 0, 0.1);
+  text-shadow: 0 0 16px #FF0000, 0 0 16px #000000;
+  font-size: 18pt;
+  text-anchor: middle;
+}
+
+.twenty:hover {
+  /*
     background-color: rgba(255, 255, 0, 0.1);
-    text-shadow: 0 0 16px #FF0000, 0 0 16px #000000;
-    font-size: 18pt;
-    text-anchor: middle;
-  }
+  */
+    box-shadow: 0 0 5px 3px #f9eced;
+    color: cyan; 
+    text-shadow: 0 0 6px #FFFFFF, 0 0 6px #000000;
+}
 
-  .twenty:hover {
-    /*
-      background-color: rgba(255, 255, 0, 0.1);
-    */
-      box-shadow: 0 0 5px 3px #f9eced;
-      color: cyan; 
-      text-shadow: 0 0 6px #FFFFFF, 0 0 6px #000000;
-  }
+img:hover {
+    box-shadow: 0 0 1px 1px #f9eced;
+    animation-name: happy;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
 
-  img:hover {
-      box-shadow: 0 0 1px 1px #f9eced;
-      animation-name: happy;
-      animation-duration: 0.5s;
-      animation-iteration-count: infinite;
-  }
+@keyframes happy {
+    0% {
+        transform: translateY(0px);
+    }
 
-  @keyframes happy {
-      0% {
-          transform: translateY(0px);
-      }
+    25% {
+        transform: translateY(-15px);
+    }
 
-      25% {
-          transform: translateY(-15px);
-      }
+    50% {
+        transform: translateY(0px);
+    }
 
-      50% {
-          transform: translateY(0px);
-      }
+    75% {
+        transform: translateY(-5px);
+    }
 
-      75% {
-          transform: translateY(-5px);
-      }
+    100% {
+        transform: translateY(0px);
+    }
+}
 
-      100% {
-          transform: translateY(0px);
-      }
-  }
+.toprow {
+  margin-top: 36px;
+}
 
-  .toprow {
-    margin-top: 36px;
-  }
+.bottomrow {
+  margin-bottom: 36px;
+}
 
-  .bottomrow {
-    margin-bottom: 36px;
-  }
+.GFG {
+  margin: -10px auto; 
+  font-family: 'CircleFont', serif;
+  color: yellow; 
+  font-size: 18pt;
+  -webkit-text-stroke-width: 0.1px; 
+  -webkit-text-stroke-color:  yellow;
+  animation: 24s pulsate infinite;
+}
+
+@keyframes pulsate {
+  35% {font-size: 24pt;} /* text-shadow: 0 0 12px #FFF, 0 0 20px #FFF;  */
+  50% {font-size: 10pt;} /* text-shadow: 0 0 16px #FFF, 0 0 20px #FFF;  */
+}
+
 </style>
 </head>
 <body>
@@ -230,7 +246,7 @@
   <!-- ------------------------------------------------>
   <div class="row">
     <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
-    <div class="col-md-2 twenty">Ch 07</div>
+    <div class="col-md-2 twenty">Ch 07<hr><span class="GFG">截止 2023.10.31 (第八週)</span></div>
     <div class="col-md-2 twenty">o21三<img src="./img/sun-svgrepo-com.svg" width="64"> </div>
     <div class="col-md-2 twenty">以陣列實做長浮點小數的運算</div>
     <div class="col-md-2 twenty"><a target="_blank" href="https://muying-fumi.github.io/cp2023f/o21-3.html"><img src="img/html.svg" width="64"/></a></div>
@@ -241,7 +257,7 @@
   <!-- ------------------------------------------------>
   <div class="row">
     <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
-    <div class="col-md-2 twenty">Ch 07</div>
+    <div class="col-md-2 twenty">Ch 07<hr><span class="GFG">截止 2023.10.31 (第八週)</span></div>
     <div class="col-md-2 twenty">o12五</div>
     <div class="col-md-2 twenty">OX遊戲</div>
     <div class="col-md-2 twenty"><a target="_blank" href="https://muying-fumi.github.io/cp2023f/o12-5.html"><img src="img/html.svg" width="64"/></a></div>
@@ -252,7 +268,7 @@
   <!-- ------------------------------------------------>
   <div class="row twentykikyo">
     <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
-    <div class="col-md-2 twenty">Ch 08</div>
+    <div class="col-md-2 twenty">Ch 08<hr><span class="GFG">截止 2023.10.31 (第八週)</span></div>
     <div class="col-md-2 twenty">o11五<img src="./img/sun-svgrepo-com.svg" width="64"></div>
     <div class="col-md-2 twenty">撲克牌梭哈</div>
     <div class="col-md-2 twenty"><a target="_blank" href="https://t598092.github.io/cp2023f/o11-5.html"><img src="img/html.svg" width="64"/></a></div>
@@ -263,7 +279,7 @@
   <!-- ------------------------------------------------>
   <div class="row twentykikyo">
     <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
-    <div class="col-md-2 twenty">Ch 08</div>
+    <div class="col-md-2 twenty">Ch 08<hr><span class="GFG">截止 2023.10.31 (第八週)</span></div>
     <div class="col-md-2 twenty">o21七</div>
     <div class="col-md-2 twenty">大數除法</div>
     <div class="col-md-2 twenty"><a target="_blank" href="https://t598092.github.io/cp2023f/o21-7.html"><img src="img/html.svg" width="64"/></a></div>
@@ -274,7 +290,7 @@
   <!-- ------------------------------------------------>
   <div class="row">
     <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
-    <div class="col-md-2 twenty">Ch 09</div>
+    <div class="col-md-2 twenty">Ch 09<hr><span class="GFG">截止 2023.11.21 (第九週)</span></div>
     <div class="col-md-2 twenty">o11一</div>
     <div class="col-md-2 twenty">迴圈應用</div>
     <div class="col-md-2 twenty"><a target="_blank" href="https://muying-fumi.github.io/cp2023f/o11-1.html"><img src="img/html.svg" width="64"/></a></div>
@@ -285,7 +301,7 @@
   <!-- ------------------------------------------------>
   <div class="row">
     <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
-    <div class="col-md-2 twenty">Ch 09</div>
+    <div class="col-md-2 twenty">Ch 09<hr><span class="GFG">截止 2023.11.21 (第九週)</span></div>
     <div class="col-md-2 twenty">o12一</div>
     <div class="col-md-2 twenty">理想大學環境</div>
     <div class="col-md-2 twenty"><a target="_blank" href="https://muying-fumi.github.io/cp2023f/o12-1.html"><img src="img/html.svg" width="64"/></a></div>
@@ -296,7 +312,7 @@
   <!-- ------------------------------------------------>
   <div class="row twentykikyo">
     <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
-    <div class="col-md-2 twenty">Ch 10</div>
+    <div class="col-md-2 twenty">Ch 10<hr><span class="GFG">截止 2023.11.14 (第十週)</span></div>
     <div class="col-md-2 twenty">o11三</div>
     <div class="col-md-2 twenty">POKER 十點半</div>
     <div class="col-md-2 twenty"><a target="_blank" href="https://t598092.github.io/cp2023f/o11-3.html"><img src="img/html.svg" width="64"/></a></div>
@@ -307,7 +323,7 @@
   <!-- ------------------------------------------------>
   <div class="row twentykikyo">
     <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
-    <div class="col-md-2 twenty">Ch 10</div>
+    <div class="col-md-2 twenty">Ch 10<hr><span class="GFG">截止 2023.11.14 (第十週)</span></div>
     <div class="col-md-2 twenty">o12六<img src="./img/sun-svgrepo-com.svg" width="64"></div>
     <div class="col-md-2 twenty">撲克牌遊戲</div>
     <div class="col-md-2 twenty"><a target="_blank" href="https://t598092.github.io/cp2023f/o12-6.html"><img src="img/html.svg" width="64"/></a></div>
