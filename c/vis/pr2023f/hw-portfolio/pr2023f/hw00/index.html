@@ -10,114 +10,114 @@
 
 <title>作品集 Portfolio</title>
 <style type="text/css">
-  body {
-    background-color: rgb(159, 53, 58);
-    color: rgb(159, 53, 58);
-  }
+body {
+  background-color: rgb(159, 53, 58);
+  color: rgb(159, 53, 58);
+}
 
-  .container-fluid {
-    width:  90%;
-  }
+.container-fluid {
+  width:  90%;
+}
 
-  .hw12 {
-    border: 1px solid rgb(159, 53, 58);
-    margin-top: 8px;
-    margin-bottom: 8px;
-  }
+.hw12 {
+  border: 1px solid rgb(159, 53, 58);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
 
-  .twenty {
-    border: 1px solid #f9eced;
-    color: #f9eced;
-    padding: 8px;
-    font-size: 18pt;
-  }
+.twenty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+  padding: 8px;
+  font-size: 18pt;
+}
 
-  .twenty a {
-    color:  yellow;
-  }
+.twenty a {
+  color:  yellow;
+}
 
-  .twenty a:hover {
-    color: #f9eced;
-    font-size:  24pt;
-  }
+.twenty a:hover {
+  color: #f9eced;
+  font-size:  24pt;
+}
 
-  .thirty {
-    border: 1px solid #f9eced;
-    color: #f9eced;
-  }
+.thirty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+}
 
-  .ninety {
-    border: 1px solid rgb(159, 53, 58);
-    background-color: #f9eced;
-    padding: 8px;
-  }
+.ninety {
+  border: 1px solid rgb(159, 53, 58);
+  background-color: #f9eced;
+  padding: 8px;
+}
 
 
 
-  svg {
-    border: 2px solid rgb(159, 53, 58);
-  }
+svg {
+  border: 2px solid rgb(159, 53, 58);
+}
 
-  path {
-    pointer-events: all;
-    fill: #f9eced;
-    stroke: rgb(159, 53, 58);
-    stroke-opacity: 0.95;
-    stroke-width: 1px;
-  }
+path {
+  pointer-events: all;
+  fill: #f9eced;
+  stroke: rgb(159, 53, 58);
+  stroke-opacity: 0.95;
+  stroke-width: 1px;
+}
 
-  .active circle {
-    stroke: #f9eced;
-    stroke-width: 2px;
-  }
+.active circle {
+  stroke: #f9eced;
+  stroke-width: 2px;
+}
 
-  svg g text {
-    fill: rgba(255, 255, 255, 0.95);
+svg g text {
+  fill: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 0, 0.1);
+  text-shadow: 0 0 16px #FF0000, 0 0 16px #000000;
+  font-size: 24pt;
+  text-anchor: middle;
+}
+
+.twenty:hover {
+  /*
     background-color: rgba(255, 255, 0, 0.1);
-    text-shadow: 0 0 16px #FF0000, 0 0 16px #000000;
-    font-size: 24pt;
-    text-anchor: middle;
-  }
+  */
+    box-shadow: 0 0 5px 3px #f9eced;
+    color: cyan; 
+    text-shadow: 0 0 6px #FFFFFF, 0 0 6px #000000;
+}
 
-    .twenty:hover {
-      /*
-        background-color: rgba(255, 255, 0, 0.1);
-      */
-        box-shadow: 0 0 5px 3px #f9eced;
-        color: cyan; 
-        text-shadow: 0 0 6px #FFFFFF, 0 0 6px #000000;
+img:hover {
+  
+    box-shadow: 0 0 1px 1px #f9eced;
+  
+    animation-name: happy;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes happy {
+    0% {
+        transform: translateY(0px);
     }
 
-    img:hover {
-      
-        box-shadow: 0 0 1px 1px #f9eced;
-      
-        animation-name: happy;
-        animation-duration: 0.5s;
-        animation-iteration-count: infinite;
+    25% {
+        transform: translateY(-15px);
     }
 
-    @keyframes happy {
-        0% {
-            transform: translateY(0px);
-        }
-
-        25% {
-            transform: translateY(-15px);
-        }
-
-        50% {
-            transform: translateY(0px);
-        }
-
-        75% {
-            transform: translateY(-5px);
-        }
-
-        100% {
-            transform: translateY(0px);
-        }
+    50% {
+        transform: translateY(0px);
     }
+
+    75% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
 </style>
 </head>
 <body>
