@@ -17,10 +17,33 @@ body {
   overflow: hidden; /* Hide scrollbars */
 }
 
+@font-face {
+  font-family:'MyFont0';
+  src: url(111c51502.ttf);
+}
+@font-face {
+  font-family:'MyFont1';
+  src: url(111c51520.ttf);
+}
+@font-face {
+  font-family:'MyFont2';
+  src: url(111c51537.ttf);
+}
+
+.s0 {
+  font-family: 'MyFont0', 'Noto Serif JP', serif;
+}
+.s1 {
+  font-family: 'MyFont1', 'Noto Serif JP', serif;
+}
+.s2 {
+  font-family: 'MyFont2', 'Noto Serif JP', serif;
+}
+
 svg {
   font-family: 'Noto Serif JP', serif;
   text-shadow: 0 0 16px #FF0000, 0 0 16px #000000;
-  font-size: 96pt;
+  font-size: 128pt;
   border: 1px solid #f9eced;
 }
 
@@ -30,7 +53,7 @@ svg text {
 
 svg g text {
   fill: rgba(255, 255, 255, 0.95);
-  font-size: 16pt;
+  font-size: 36pt;
   text-anchor: middle;
 }
 
@@ -157,7 +180,8 @@ svg
         .style("top", yPosition + "px")
         .select("#value")
         //.text('hw' + ((myScale(Math.atan2(d.y, d.x)) + 7) % 12 + 1) + ', (' + xPosition + ', ' + yPosition + '), ' + Math.atan2(d.y, d.x).toFixed(2) + ', ' + color(Math.atan2(d.y, d.x)) + ', ' + String.fromCharCode(getRandomInt(19968, 40959)) );
-        .text('hw' + ((myScale(Math.atan2(d.y, d.x)) + 7) % 12 + 1) + ', (' + xPosition + ', ' + yPosition + '), ' + Math.atan2(d.y, d.x).toFixed(2) + ', ' + color(Math.atan2(d.y, d.x)) )
+        //.text('hw' + ((myScale(Math.atan2(d.y, d.x)) + 7) % 12 + 1) + ', (' + xPosition + ', ' + yPosition + '), ' + Math.atan2(d.y, d.x).toFixed(2) + ', ' + color(Math.atan2(d.y, d.x)) )
+        .text('傅敬堯、潤培芳、胡瑄芩')
 
       //Show the tooltip
       d3.select("#tooltip").classed("hidden", false);
@@ -194,6 +218,7 @@ svg
   .data(circles)
   .enter()
     .append("text")
+    //.classed("className", true)
     .attr("x", 1600)
     .attr("y", 0)
     .text(function(d,i){
@@ -229,7 +254,16 @@ function getRandomInt(min, max) {
   //The maximum is exclusive and the minimum is inclusive
 }
 
+setTimeout(function() {
+  var texts = document.getElementsByTagName('text');
 
+  var myClass = 's' + new Date().getTime() % 3;
+
+  for (var i = 0; i < texts.length; i++) {
+      texts[i].classList.add(myClass);
+  }
+
+}, 1000);
 
 
 </script>
