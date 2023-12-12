@@ -1,0 +1,52 @@
+<!-- https://andrew.wang-hoyer.com/experiments/svg-animations/ -->
+<svg 
+	xmlns="http://www.w3.org/2000/svg" 
+	data-animation-duration="15s" 
+	viewBox="-50 -50 100 100">
+	<title>ANIMATION 01 - VARIATION A</title>
+
+	<style>
+		svg{background-color:#6A4C9C;}
+
+		@font-face {
+			font-family:'CircleFont';
+			/* src: url(https://circle472.github.io/ct2022s/hw04/CircleFont.ttf); */
+			src: url(CircleFont.woff2);
+			/* https://cloudconvert.com/ttf-to-woff2 */
+		}
+
+		/*  */ 
+		@keyframes svg-01-a-outer-group{0%{transform:rotate(360deg)}to{transform:rotate(0deg)}}
+
+		.svg-01-a-outer-group{transform-origin:0 0;animation:svg-01-a-outer-group 25s linear infinite} 
+
+		@keyframes svg-01-a-rect{to{transform:rotate(360deg)}0%{transform:rotate(0deg)}}
+
+		.svg-01-a-rect{stroke-width:.2;stroke:#F1EEF7;fill:none;font-family:'CircleFont';}
+
+		.svg-01-a-inner-group:nth-child(even) 
+		.svg-01-a-rect{transform-origin:0 0;animation:svg-01-a-rect 25s linear infinite}
+
+		.svg-01-a-inner-group:nth-child(odd) 
+		.svg-01-a-rect{transform-origin:0 0;animation:svg-01-a-rect 25s linear reverse infinite}
+		/*  */
+	</style>
+	<g class="svg-01-a-g svg-01-a-outer-group">
+		<g class="svg-01-a-g svg-01-a-inner-group" transform="rotate(0) translate(0 18.75)">
+			<text class="svg-01-a-rect" x="-8" y="6">手</text>
+			<rect class="svg-01-a-rect" height="25" width="25" x="-12.5" y="-12.5"></rect>
+		</g>
+		<g class="svg-01-a-g svg-01-a-inner-group" transform="rotate(90) translate(0 18.75)">
+			<text class="svg-01-a-rect" x="-8" y="6">寫</text>
+			<rect class="svg-01-a-rect" height="25" width="25" x="-12.5" y="-12.5"></rect>
+		</g>
+		<g class="svg-01-a-g svg-01-a-inner-group" transform="rotate(180) translate(0 18.75)">
+			<text class="svg-01-a-rect" x="-8" y="6">溫</text>
+			<rect class="svg-01-a-rect" height="25" width="25" x="-12.5" y="-12.5"></rect>
+		</g>
+		<g class="svg-01-a-g svg-01-a-inner-group" transform="rotate(270) translate(0 18.75)">
+			<text class="svg-01-a-rect" x="-8" y="6">度</text>
+			<rect class="svg-01-a-rect" height="25" width="25" x="-12.5" y="-12.5"></rect>
+		</g>
+	</g>
+</svg>

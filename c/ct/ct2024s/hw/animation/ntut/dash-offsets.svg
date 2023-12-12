@@ -1,0 +1,79 @@
+<svg
+  preserveAspectRatio="xMidYMid meet"
+  version="1.1"
+  viewBox="-50 -50 100 100"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <style>
+    /* <![CDATA[ */
+      svg {
+        background-color: #6A4C9C;
+      }
+
+      text {
+        stroke: #F1EEF7;
+        stroke-width: 0.1%;
+        fill: none;
+      }
+
+      .background {
+        stroke: #F1EEF7;
+        opacity: 0.5;
+        stroke-width: 2%;
+        fill: none;
+      }
+
+      .example3-rect {
+        stroke: #F1EEF7;
+        stroke-width: 1%;
+        stroke-dasharray: 192, 192;
+        fill: none;
+        animation:
+          example3-animation
+          5.5s
+          linear
+          infinite;
+      }
+      .example3-rect:nth-of-type(odd) {
+        animation-direction: reverse;
+      }
+      @keyframes example3-animation {
+        from {
+          stroke-dashoffset: 0;
+        }
+        to {
+          stroke-dashoffset: 192;
+        }
+      }
+    /* ]]> */
+  </style>
+
+
+
+  <rect
+    class="example3-rect"
+    x="-24"
+    y="-24"
+    height="48"
+    width="48"
+  />
+
+  <rect
+    class="background"
+    x="-24"
+    y="-24"
+    height="48"
+    width="48"
+  />
+
+  <text x="-12" y="6">6</text>
+
+  <script>
+    <!-- https://jakearchibald.com/2013/animated-line-drawing-svg/ -->
+    var path = document.querySelector('.example3-rect');
+    path.getTotalLength();
+    document.querySelector('text').innerHTML = path.getTotalLength();
+  </script>
+
+</svg>
