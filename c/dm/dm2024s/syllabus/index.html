@@ -1,0 +1,848 @@
+<!--
+https://www.w3schools.com/tags/tag_doctype.asp
+http://validator.w3.org/ 
+<!DOCTYPE html>
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+	<title>離散數學</title> <!-- Discrete Mathematics -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> <!-- iso-8859-1 -->
+	<link href="./styles.css" rel="stylesheet" type="text/css">
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<!-- https://alexlenail.me/NN-SVG/about.html -->
+	<link rel="icon" href="./favicon.svg"/>	
+</head>
+
+<body>
+	<!-- 壹 r4c1 -->
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+	<!-- 壹 r1 -->
+	<tr><td id="topbar" valign="top"><img src="spacer.gif" alt="" height="6" width="100"></td></tr>
+	<!-- 壹 r2 -->	
+	<tr><td id="middlebar" valign="top"><img src="spacer.gif" alt="" height="3" width="100"></td></tr>
+	<!-- 壹 r3 -->	
+	<tr><td>
+		<!-- 貳 r1c4 -->
+		<table border="0" cellpadding="0" cellspacing="0" width="800">
+		<tbody>
+		<!-- 貳 r1 -->		
+		<tr>
+			<!-- left ___________________________________________________________________________________________________________________ -->
+			<td valign="top" width="172">
+				<p align="center">
+				<iframe 
+					src="./dm2024s.svg" 
+	 				marginheight="1" 
+	 				marginwidth="1" 
+					width="129" 
+					height="163" 
+					seamless="seamless" 
+					scrolling="no" 
+					frameborder="0" 
+					allowtransparency="true">
+				</iframe>
+			</td>
+			<td width="3"><img src="spacer_red.gif" alt="" height="6588" width="1"></td>
+			<td width="3"><img src="spacer.gif" alt="" height="500" width="10"></td>
+
+			<!-- right  _________________________________________________________________________________________________________________ -->
+			<td id="maincontent">
+				<!-- 參 r4c1 -->
+				<table border="0" cellpadding="0" cellspacing="0" width="630">
+				<tbody>
+				<!-- right top _________________________________________________________________________________________________________________ -->
+				<tr><td id="pagebanner">
+					<span style="font-size: 24pt">
+						<font color="#993333" face="Georgia">Discrete Mathematics (Spring 2024)<br></font>
+						<font color="#993333" face="&#27161;&#26999;&#39636;">離散數學</font>
+					</span>
+					<span style="font-size: 24pt">
+						<font color="#993333" face="Georgia"> (112-2)</font>
+					</span>
+					</td>
+				</tr>
+				<tr><td id="bannerline" valign="top"><img src="spacer.gif" alt="" height="1" width="100"> </td></tr>
+				<tr><td id="pagesubtitle"><img src="spacer.gif" alt="" width="1" height="1"> </td></tr>
+				<!-- right bottom _________________________________________________________________________________________________________________ -->
+				<tr><td valign="top" width="100%"><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+				<!-- 參 r4 -->
+				<tr>
+					<td>
+					<!-- 肆 r1c2 -->
+					<table border="0" cellpadding="0" cellspacing="0">
+					<tbody>
+					<!-- 肆 r1 -->
+					<tr>
+						<!-- right bottom center _________________________________________________________________________________________________________________ -->
+						<!-- right bottom center _________________________________________________________________________________________________________________ -->
+						<!-- right bottom center _________________________________________________________________________________________________________________ -->
+						<td id="pagecontent">
+						<!-- 伍 -->
+						<table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tbody>							
+							<!-- _____________________________________________________________________________________________________________ -->
+							<!--
+							<tr><td valign="top" width="100%"><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+							-->
+							<tr><td> <br> </td></tr>
+							<!-- _____________________________________________________________________________________________________________ -->
+							<tr><td> ε, ζ, η, ξ, φ, χ, ψ, </td></tr>
+							<tr><td> ε epsilon, ζ zeta, η eta, ξ xi 再, φ phi, χ chi 愾, ψ psi 賽, </td></tr>
+							<tr><td> <br> </td></tr>
+
+							<!-- Schedule -->
+							<tr><td valign="top" width="100%"><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+							<tr><td> <br> </td></tr> 
+							<tr><td><font color="#993333"><span class="subtitle">Schedule</span></font><br><br></td></tr>
+							<tr><td>
+								<li><a href="https://oaa.ntut.edu.tw/var/file/8/1008/img/2878/112Calendar.pdf">行事曆 (112 學年度)</a></li><br>
+							</td></tr>
+							<tr><td>
+								<table border="1" cellpadding="2" cellspacing="0" width="98%">
+								<tbody>
+									<tr><th width="15">W </th><th> Lecture Notes  </th></tr>
+									<tr><td>01</td><td> </td></tr>
+									<tr><td>02</td><td> <font color="red">2/28(星期三) 放假</font></td></tr>
+									<tr><td>03</td><td> </td></tr>
+									<tr><td>04</td><td> </td></tr>
+									<tr><td>05</td><td> </td></tr>
+									<tr><td>06</td><td> </td></tr>
+									<tr><td>07</td><td> <font color="red">4/3 Midterm Eexam I</font></td></tr>
+									<tr><td>08</td><td> </td></tr>
+									<tr><td>09</td><td> </td></tr>
+									<tr><td>10</td><td> </td></tr>
+									<tr><td>11</td><td> </td></tr>
+									<tr><td>12</td><td> <font color="red">5/8 Midterm Eexam II</font></td></tr>
+									<tr><td>13</td><td> </td></tr>
+									<tr><td>14</td><td> </td></tr>
+									<tr><td>15</td><td> </td></tr>
+									<tr><td>16</td><td> </td></tr>
+									<tr><td>17</td><td> <font color="red">6/12 Final Eexam</font></td></tr>
+									<tr><td>18</td><td> </td></tr>
+								</tbody>
+								</table>
+							</td></tr>
+							<tr><td> <br> </td></tr>
+							<!-- Schedule -->
+
+							<!-- Syllabus ---------------------------------------------------- -->
+							<tr><td valign="top" width="100%"><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+							<tr><td> <br> </td></tr>                    
+							<tr><td><font color="#993333"><span class="subtitle">Syllabus</span></font><br><br></td></tr>
+							<tr><td>
+								<dl>
+								<!-- --------------------------------------------------------- -->
+									<dt>Lecture:</dt> 
+										<dd>&#8226; Tuesday 9:10-10:00 am, Wednesday 1:10-3:00 pm  </dd>
+									<dt>Location:</dt>
+										<dd>&#8226; <a href="https://www-en.ntut.edu.tw/p/404-1006-37132.php">Sixth Academic Building</a>, 327</dd>
+										<dd>&#8226; <a href="https://www.ntut.edu.tw/p/404-1007-53400.php">第六教學大樓</a>, 327</dd>
+										<!-- <dd>&#8226; <a href="https://www-en.ntut.edu.tw/p/404-1006-37132.php">Hong-Yue Technology Research Building</a>, 1223</dd> -->
+										<!-- <dd>&#8226; <a href="https://www.ntut.edu.tw/p/404-1007-53400.php">宏裕科技研究大樓</a>, 1223</dd> -->
+									<dt>Class webpage:<dt>
+										<dd>&#8226; 課程大綱 <a href="https://tjhsieh.github.io/c/dm/dm2024s/">https://tjhsieh.github.io/c/dm/dm2024s/</a></dd>
+									<dt>Submissions:<dt>
+										<dd>&#8226; 北科ｉ學園 PLUS <a href="http://www.ischool.ntut.edu.tw/">https://istudy.ntut.edu.tw/learn/index.php</a> </dd>      
+									<dt>Instructor:</dt>
+										<dd>&#8226; Prof. H<span style="font-size: 1pt"> </span>s<span style="font-size: 1pt"> </span>i<font style="font-size: 1pt"> </font>e<font style="font-size: 1pt"> </font>h</dd>
+										<dd>&#8226; Office: Technology Building 1535</dd>
+										<dd>&#8226; Office hours: TBA</dd>
+									<dt>Teaching Assistant:</dt>
+										<dd>&#8226; TBA</dd>
+										<dd>&#8226; Office: Technology Building 1422</dd>
+										<dd>&#8226; Office hours: TBA</dd>
+									<dt>Textbook:</dt>
+										<dd>&#8226; Kenneth H. Rosen, <a href="https://www.tunghua.com.tw/portal_b10_cnt_page.php?button_num=b10&folder_id=670&cnt_id=8688"> Discrete Mathematics and Its Applications 8/e</a>, McGraw-Hill.</dd>
+									<dt>Reference Book:</dt>
+										<dd>&#8226; </dd>
+									<!-- &amp; 取代 URL 中的 & 符號 -->
+									<dt>Outline: (from <a href="http://aps.ntut.edu.tw/course/tw/Curr.jsp?format=-2&amp;code=5901201">Catalog</a>)</dt>
+										<dd>
+										&#8226; Covered topics include: (1) Sets and Propositions, (2) Counting, Permutations, and Combinations, (3) Relations and Functions, (4) Graphs, (5) Trees, (6) Finite State Machines, (7) Analysis of Algorithms, (8) Generating Functions, (9) Recurrence Relations, (10) Groups, and (11) Boolean Algebras.
+										</dd>
+									<dt>Grading: (暫定)</dt>
+										<dd>&#8226; homework & quiz 10% </dd>
+										<dd>&#8226; midterm I 30% </dd>
+										<dd>&#8226; midterm II 30% </dd>
+										<dd>&#8226; final exam 30% </dd>
+										<dd>&#8226; <span style="color:red;">class participation 10% </span></dd>
+										<!-- <dd>&#8226; class participation 10%</dd> -->
+									<dt>Policies:</dt>					
+										<dd>&#8226; No late homework will be accepted.</dd>
+										<dd>&#8226; A regrade request must be submitted within one week after the original grade is received.</dd>
+										<dd>&#8226; Students are not allowed to copy solutions from others, and students should not share your answers with others. Students will receive a score of zero for doing this.</dd>
+										<dd>&#8226; Be sure to check the course website frequently.</dd>
+										<dd>&#8226; Academic Honesty: (<a href="http://www.ics.uci.edu/~frost/cheating.html" target="_blank">UCI</a>) (<a href="http://www.cs.columbia.edu/education/honesty" target="_blank">Columbia</a>)</dd>
+										<dd>&#8226; <a href="https://oaa.ntut.edu.tw/var/file/8/1008/img/2966/H1.pdf" target="_blank">國立臺北科技大學 考試規則</a></dd>
+										<dd>&#8226; <a href="https://osa.ntut.edu.tw/var/file/41/1041/img/1569/349535134.pdf" target="_blank">國立臺北科技大學 學生獎懲辦法</a></dd>
+								<!-- --------------------------------------------------------- -->
+								</dl>							
+							</td></tr>
+							<tr><td> <br> </td></tr>
+							<!-- Syllabus ---------------------------------------------------- -->
+
+
+							<!-- Why LaTeX ---------------------------------------------------- -->
+							<tr><td valign="top" width="100%"><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+							<tr><td> <br> </td></tr> 
+							<tr><td><font color="#993333"><span class="subtitle">Why LaTeX</span></font><br><br></td></tr>
+							<tr><td>
+								<table border="1" cellpadding="2" cellspacing="0" width="98%">
+									<tbody>
+										<tr><th> LaTeX (基於 TeX 的排版系統) </th><th> TeX (排版軟體) </th></tr>
+										<tr><td> Leslie Lamport </td><td> Donald Ervin Knuth </td></tr>
+										<tr><td> 萊斯利·蘭伯特 </td><td> 唐納德·爾文·克努斯 「高德納」 </td></tr>
+									</tbody>
+									</table>
+							</td></tr>
+							<!-- &nbsp; &ensp;	&emsp; &thinsp; &zwnj; &zwj; -->
+							<!-- 中文名，1977年，儲楓（姚期智夫人）命名 -->
+							<tr><td> <br> </td></tr>
+							<tr><td>
+								<a href="https://www.youtube.com/watch?v=9eLjt5Lrocw" target">
+									<img src="https://i.ytimg.com/vi/9eLjt5Lrocw/hq720.jpg" width="95%">
+								</a>
+							</td></tr>
+							<tr><td>
+								<dl>
+									<dt>Tools:</dt>
+										<dd>&#8226; <a href="https://www.overleaf.com/">Overleaf (online, collaborative LaTeX editor)</a></dd>
+										<dd>&#8226; <a href="http://www.xm1math.net/texmaker/">Texmaker</a></dd>
+										<dd>&#8226; <a href="https://miktex.org/">MiKTeX</a></dd>
+										<dd>&#8226; <a href="http://leavedcorn.pixnet.net/blog/post/24773932-%E6%96%B0%E6%89%8B%E5%AE%89%E8%A3%9Dlatex%E6%87%B6%E4%BA%BA%E6%95%99%E5%AD%B8%28step-by-step%29">新手安裝LaTeX懶人教學</a></dd>
+										<dd>&#8226; <a href="http://www.winedt.com/">WinEdt</a></dd>
+									<dt>Resources:</dt>
+										<dd>&#8226; <a href="http://detexify.kirelabs.org/classify.html">Detexify</a></dd>
+										<dd>&#8226; <a href="http://www.hostmath.com/">HostMath</a></dd>
+										<dd>&#8226; <a href="http://www.codecogs.com/latex/eqneditor.php">Online LaTeX Equation Editor</a></dd>
+										<dd>&#8226; <a href="https://www.latex4technics.com/">LaTeX4technics</a></dd>
+										<dd>&#8226; <a href="http://www.sciweavers.org/free-online-latex-equation-editor">Sciweavers</a></dd>
+										<dd>&#8226; <a href="https://chrome.google.com/webstore/detail/tex-equation-editor/eggdddnmjoomglnkjhcpcnjbieiojini">TeX equation editor</a></dd>
+								</dl>							
+							</td></tr>
+							<tr><td> <br> </td></tr>
+							<!-- Why LaTeX ---------------------------------------------------- -->
+
+
+							<!-- O ---------------------------------------------------- -->
+							<tr><td valign="top" width="100%"><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+							<tr><td> <br> </td></tr>                    
+							<tr><td><font color="#993333"><span class="subtitle">\( f(n) = \mathcal{O}(g()) \)</span></font><br><br></td></tr>
+							<tr><td>
+							<!-- https://texblog.org/2014/06/24/big-o-and-related-notations-in-latex/ -->
+							<tr><td>
+								<table style="width: 99%;border-collapse: collapse;">
+									<tr>
+										<th style="border: 1px solid #666; padding:4px;">符號</th>
+										<th style="border: 1px solid #666; padding:4px;">定義</th>
+										<th style="border: 1px solid #666; padding:4px;">定義</th></tr>
+									<tr>
+										<td style="border: 1px solid #666; padding:4px;">\( f(n) = \mathcal{O}(g()) \)</td>
+										<td style="border: 1px solid #666; padding:4px;">Asymptotically upper bound</td>
+										<td style="border: 1px solid #666; padding:4px;">漸近上限</td></tr>
+									<tr>
+										<td style="border: 1px solid #666; padding:4px;">\( f(n) = o(g()) \)</td>
+										<td style="border: 1px solid #666; padding:4px;">Asymptotically negligible</td>
+										<td style="border: 1px solid #666; padding:4px;">漸近可忽略不計</td></tr>
+									<tr>
+										<td style="border: 1px solid #666; padding:4px;">\( f(n) = \Omega(g()) \)</td>
+										<td style="border: 1px solid #666; padding:4px;">Asymptotically lower bound</td>
+										<td style="border: 1px solid #666; padding:4px;">漸近下限</td></tr>
+									<tr>
+										<td style="border: 1px solid #666; padding:4px;">\( f(n) = \omega(g()) \)</td>
+										<td style="border: 1px solid #666; padding:4px;">Asymptotically dominant</td>
+										<td style="border: 1px solid #666; padding:4px;">漸近主導</td></tr>
+									<tr>
+										<td style="border: 1px solid #666; padding:4px;">\( f(n) = \Theta(g()) \)</td>
+										<td style="border: 1px solid #666; padding:4px;">Asymptotically tight bound</td>
+										<td style="border: 1px solid #666; padding:4px;">漸近緊約束</td></tr>
+								</table>
+							</td></tr>
+							<tr><td> <br> </td></tr>
+							<tr><td>
+								Big-\(O\) notation has been used in mathematics for more than a century. <u>In computer science it is widely used in the analysis of algorithms</u>, as will be seen in Section 3.3. The German mathematician <span style="color:red;">Paul Bachmann 保羅·巴赫曼 first introduced big-\(O\) notation in 1892</span> in an important book on number theory. The big-\(O\) symbol is sometimes called a <span style="color:red;">Landau symbol</span> after the German mathematician <span style="color:red;">Edmund Landau 愛德蒙·蘭道</span>, who used this notation throughout his work. 
+								<hr>
+								<span style="color:red;">The use of big-\(O\) notation in computer science was popularized by Donald Knuth</span>, who also introduced the big-\(Ω\) and big-\(Θ\) notations defined later in this section.
+								<hr>
+								The fact that \(f(x)\) is \(O(g(x))\) is sometimes written \(f(x) = O(g(x))\). However, it is acceptable to write \(f(x) ∈ O(g(x))\).
+								<hr>
+								Big-\(O\) notation is used extensively to describe the growth of functions, but it has limitations. In particular, when \(f(x)\) is \(O(g(x))\), we have an upper bound, in terms of \(g(x)\), for the size of \(f(x)\) for large values of \(x\).
+								<hr>
+								However, big-\(O\) notation does not provide a lower bound for the size of \(f(x)\) for large \(x\). 
+								For this, we use big-Omega (big-\(Ω\)) notation. 
+								<hr>
+								When we want to give both an upper and a lower bound on the size of a function \(f(x)\), relative to a reference function g(x), we use big-Theta (big-\(Θ\)) notation. 
+								<hr> 
+								<span style="color:red;">Both big-Omega and big-Theta notation were introduced by Donald Knuth in the 1970s.</span> His motivation for introducing these notations was the <u>common misuse of big-\(O\) notation<\u> when both an upper and a lower bound on the size of a function are needed.
+							</td></tr>
+							<tr><td> <br> </td></tr>
+							<!-- O ---------------------------------------------------- -->
+
+							<!-- p np ---------------------------------------------------- -->		
+							<tr><td valign="top" width="100%"><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+							<tr><td> <br> </td></tr> 
+							<tr><td><font color="#993333"><span class="subtitle">P versus NP problem</span></font><br><br></td></tr>
+
+							<tr><td> <a href=""></a></td></tr>
+							<tr><td> overleaf <a href="https://www.overleaf.com/read/rmpvpxxthjzn" target="_blank">P versus NP</a></td></tr>
+							<tr><td>
+								<a href="https://en.wikipedia.org/wiki/Oracle_machine"><img src="./fig/complexity/Black_box_diagram.svg" width="48%"></a> 
+								<a href="https://en.wikipedia.org/wiki/Complexity_class"><img src="./fig/complexity/Complexity_subsets_pspace.svg" width="48%"></a> 
+							</td></tr>
+							<tr><td> <a href="https://en.wikipedia.org/wiki/P_versus_NP_problem"><img src="./fig/complexity/P_np_np-complete_np-hard.svg" width="98%"></a> </td></tr>
+							<tr><td> <br> </td></tr>
+							<tr><td>
+								<table style="width: 99%;border-collapse: collapse;">
+									<tr>
+										<th width="35%" style="border: 1px solid #666; padding:4px;"> P problem <hr> Polynomial Time</th>
+										<th></th>
+										<th style="border: 1px solid #666; padding:4px;"> NP problem <hr> Nondeterministic Polynomial Time</th>
+									</tr>
+									<tr>
+										<td style="border: 1px solid #666; padding:4px;"> The general class of questions for which <span style="color: red;">some algorithm can provide an answer in polynomial time </span> is "P" or "class P". </td>
+										<td></td>
+										<td style="border: 1px solid #666; padding:4px;"> For some questions, there is <span style="color: red;">no known way to find an answer quickly</span>, but if one is provided with information showing what the answer is, it is possible to verify the answer quickly. 
+										<hr>
+										The class of questions for which <span style="color: red;">an answer can be verified in polynomial time</span> is NP, which stands for "nondeterministic polynomial time". </td>
+									</tr>
+								</table>
+							</td></tr>
+							<tr><td> <br> </td></tr>
+							<tr><td>
+								<table style="width: 99%;border-collapse: collapse;">
+									<tr>
+										<th width="35%" style="border: 1px solid #666; padding:4px;"> NP-hard problem </th>
+										<th></th>
+										<th style="border: 1px solid #666; padding:4px;"> NP-complete problem</th>
+									</tr>
+									<tr>
+										<td style="border: 1px solid #666; padding:4px;"> NP-hard problems are those <span style="color: red;">at least as hard as NP problems</span>; i.e., <span style="color: red;">all NP problems can be reduced (in polynomial time) to them</span>. <hr> NP-hard problems need not be in NP; i.e., they <u>need not have solutions verifiable in polynomial time</u>.</td>
+										<td></td>
+										<td style="border: 1px solid #666; padding:4px;"> NP-complete problems are a set of problems to each of which <span style="color: red;">any other NP problem can be reduced in polynomial time</span> and <u>whose solution may still be verified in polynomial time</u>. That is, <span style="color: red;">any NP problem can be transformed into any of the NP-complete problems</span>. <hr> Informally, an NP-complete problem is an NP problem that is at least as "tough" as any other problem in NP.</td>
+									</tr>
+								</table>
+							</td></tr>
+							<tr><td> <br> </td></tr>
+							<!-- p np ---------------------------------------------------- -->
+
+
+							<!--  A*  ---------------------------------------------------- -->
+							<tr><td valign="top" width="100%"><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+							<tr><td> <br> </td></tr>                    
+							<tr><td>
+								<a href="./fig/Dijkstra/Dijkstras_progress_animation.gif"><img src="./fig/Dijkstra/Dijkstras_progress_animation.gif" alt="" width="48%"></a> 
+								<a href="./fig/Dijkstra/Astar_progress_animation.gif"><img src="./fig/Dijkstra/Astar_progress_animation.gif" alt="" width="48%"></a>
+							</td></tr>
+							<tr><td> Dijkstra's algorithm, &nbsp; &ensp; &emsp; &thinsp; &zwnj; &zwj;  &nbsp; &ensp; &emsp; &thinsp; &zwnj; &zwj; A* search algorithm</td></tr>
+							<tr><td> <br> </td></tr>
+							<!-- A*  ---------------------------------------------------- -->
+
+
+							<!-- MathJax -->
+							<tr><td valign="top" width="100%"><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+							<tr><td> <br> </td></tr> 
+							<tr><td><font color="#993333"><span class="subtitle">MathJax</span></font><br><br></td></tr>
+							<tr><td> 
+								<a href="https://www.desmos.com/calculator/2rnqgoa6a4?lang=zh-TW"><img src="./fig/latex/homepage-student.png" width="10%"></a> 
+								&nbsp; &ensp; &emsp; &thinsp; &zwnj; &zwj; <!-- https://note.charlestw.com/html-space/ -->
+								<a href="https://www.mathjax.org/#gettingstarted"><img src="./fig/latex/mj-logo.svg" width="45%"></a> 
+							</td></tr>
+							<tr><td>
+								<span style="font-size: 12pt;">
+								\[ Q_1 = \bigwedge_{i=1}^{n}\bigvee_{j=1}^{n}p(i,j)\]
+								</span>
+							</td></tr>
+							<tr><td> <br> </td></tr>
+							<!-- MathJax -->
+
+
+
+							<!-- book  ---------------------------------------------------- -->
+							<tr><td valign="top" width="100%"><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+							<tr><td> <br> </td></tr>                    
+							<tr><td>
+								<a href="./fig/book/rosen_xii.png"><img src="./fig/book/rosen_xii.png" width="90%"></a> 
+								<a href="./fig/book/rosen_xiii.png"><img src="./fig/book/rosen_xiiI.png" width="90%"></a> 
+							</td></tr>
+							<tr><td> <br> </td></tr>
+							<!-- book  ---------------------------------------------------- -->
+
+
+							<!-- toc ---------------------------------------------------- -->							
+							<tr><td valign="top" width="100%"><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+							<tr><td> <br> </td></tr>                    
+							<tr><td><font color="#993333"><span class="subtitle">Table of Contents (8/e)</span></font><br><br></td></tr>
+							<tr><td>
+								<dl>
+									<!-- --------------------------------------------------------- -->		
+									<dt>1 The Foundations: Logic and Proofs:</dt>
+										<dd>&#8226; 1.1 Propositional Logic</dd>
+										<dd>&#8226; 1.2 Applications of Propositional Logic</dd>
+										<dd>&#8226; 1.3 Propositional Equivalences</dd>
+										<dd>&#8226; 1.4 Predicates and Quantifiers</dd>
+										<dd>&#8226; 1.5 Nested Quantifiers</dd>
+										<dd>&#8226; 1.6 Rules of Inference</dd>
+										<dd>&#8226; <s>1.7 Introduction to Proofs</s></dd>
+										<dd>&#8226; <s>1.8 Proof Methods and Strategy</s></dd>
+									<dt>2 Basic Structures: Sets, Functions, Sequences, Sums, and Matrices</dt>
+										<dd>&#8226; 2.1 Sets</dd>
+										<dd>&#8226; 2.2 Set Operations</dd>
+										<dd>&#8226; 2.3 Functions</dd>
+										<dd>&#8226; 2.4 Sequences and Summations</dd>
+										<dd>&#8226; 2.5 Cardinality of Sets</dd>
+										<dd>&#8226; 2.6 Matrices</dd>
+									<dt>3 Algorithms</dt>
+										<dd>&#8226; <s>3.1 Algorithms</s></dd>
+										<dd>&#8226; 3.2 The Growth of Functions</dd>
+										<dd>&#8226; <s>3.3 Complexity of Algorithms</s></dd>
+									<dt>4 Number Theory and Cryptography</dt>
+										<dd>&#8226; 4.1 Divisibility and Modular Arithmetic</dd>
+										<dd>&#8226; 4.2 Integer Representations and Algorithms</dd>
+										<dd>&#8226; 4.3 Primes and Greatest Common Divisors</dd>
+										<dd>&#8226; 4.4 Solving Congruences</dd>
+										<dd>&#8226; 4.5 Applications of Congruences</dd>
+										<dd>&#8226; 4.6 Cryptography</dd>
+									<dt>5 Induction and Recursion</dt>
+										<dd>&#8226; <s>5.1 Mathematical Induction</s></dd>
+										<dd>&#8226; <s>5.2 Strong Induction and Well-Ordering</s></dd>
+										<dd>&#8226; <s>5.3 Recursive Definitions and Structural Induction</s></dd>
+										<dd>&#8226; <s>5.4 Recursive Algorithms</s></dd>
+										<dd>&#8226; <s>5.5 Program Correctness</s></dd>
+									<dt>6 Counting</dt>
+										<dd>&#8226; <s>6.1 The Basics of Counting</s></dd>
+										<dd>&#8226; <s>6.2 The Pigeonhole Principle</s></dd>
+										<dd>&#8226; <s>6.3 Permutations and Combinations</s></dd>
+										<dd>&#8226; <s>6.4 Binomial Coefficients and Identities</s></dd>
+										<dd>&#8226; <s>6.5 Generalized Permutations and Combinations</s></dd>
+										<dd>&#8226; <s>6.6 Generating Permutations and Combinations</s></dd>
+									<dt>7 Discrete Probability</dt>
+										<dd>&#8226; <s>7.1 An Introduction to Discrete Probability</s></dd>
+										<dd>&#8226; <s>7.2 Probability Theory</s></dd>
+										<dd>&#8226; <s>7.3 Bayes’ Theorem</s></dd>
+										<dd>&#8226; <s>7.4 Expected Value and Variance</s></dd>
+									<dt>8 Advanced Counting Techniques</dt>
+										<dd>&#8226; <s>8.1 Applications of Recurrence Relations</s></dd>
+										<dd>&#8226; <s>8.2 Solving Linear Recurrence Relations</s></dd>
+										<dd>&#8226; <s>8.3 Divide-and-Conquer Algorithms and Recurrence Relations</s></dd>
+										<dd>&#8226; <s>8.4 Generating Functions</s></dd>
+										<dd>&#8226; <s>8.5 Inclusion–Exclusion</s></dd>
+										<dd>&#8226; <s>8.6 Applications of Inclusion–Exclusion</s></dd>
+									<dt>9 Relations</dt>
+										<dd>&#8226; 9.1 Relations and Their Properties</dd>
+										<dd>&#8226; 9.2 n-ary Relations and Their Applications</dd>
+										<dd>&#8226; 9.3 Representing Relations</dd>
+										<dd>&#8226; 9.4 Closures of Relations</dd>
+										<dd>&#8226; 9.5 Equivalence Relations</dd>
+										<dd>&#8226; 9.6 Partial Orderings</dd>
+									<dt>10 Graphs</dt>
+										<dd>&#8226; 10.1 Graphs and Graph Models</dd>
+										<dd>&#8226; 10.2 Graph Terminology and Special Types of Graphs</dd>
+										<dd>&#8226; 10.3 Representing Graphs and Graph Isomorphism</dd>
+										<dd>&#8226; 10.4 Connectivity</dd>
+										<dd>&#8226; 10.5 Euler and Hamilton Paths</dd>
+										<dd>&#8226; 10.6 Shortest-Path Problems</dd>
+										<dd>&#8226; 10.7 Planar Graphs</dd>
+										<dd>&#8226; 10.8 Graph Coloring</dd>
+									<dt>11 Trees</dt>
+										<dd>&#8226; 11.1 Introduction to Trees</dd>
+										<dd>&#8226; 11.2 Applications of Trees</dd>
+										<dd>&#8226; 11.3 Tree Traversal</dd>
+										<dd>&#8226; 11.4 Spanning Trees</dd>
+										<dd>&#8226; 11.5 Minimum Spanning Trees</dd>
+									<dt>12 Boolean Algebra </dt>
+										<dd>&#8226; <s>12.1 Boolean Functions</s></dd>
+										<dd>&#8226; <s>12.2 Representing Boolean Functions</s>/dd>
+										<dd>&#8226; <s>12.3 Logic Gates</s></dd>
+										<dd>&#8226; <s>12.4 Minimization of Circuits</s></dd>
+									<dt>13 Modeling Computation</dt>
+										<dd>&#8226; 13.1 Languages and Grammars </dd>
+										<dd>&#8226; 13.2 Finite-State Machines with Output </dd>
+										<dd>&#8226; 13.3 Finite-State Machines with No Output </dd>
+										<dd>&#8226; 13.4 Language Recognition </dd>
+										<dd>&#8226; 13.5 Turing Machines </dd>
+									<dt>Appendices</dt>
+										<dd>&#8226; <s>A1 Axioms for the Real Numbers and the Positive Integers</s></dd>
+										<dd>&#8226; <s>A2 Exponential and Logarithmic Functions</s></dd>
+										<dd>&#8226; <s>A3 Pseudocode</s></dd>
+									<!-- --------------------------------------------------------- -->
+								</dl>							
+							</td></tr>
+							<tr><td> <br> </td></tr>
+							<!-- toc ---------------------------------------------------- -->
+
+				
+
+							<!-- ---------------------------------------------------- -->
+							<!--
+							<tr><td valign="top" width="100%"><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+							<tr><td> <br> </td></tr>
+							<tr><td>
+								<iframe width="373" height="210" src="https://www.youtube.com/embed/sEl7dnapFRM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+							</td></tr>
+							<tr><td> <br> </td></tr>
+							-->
+							<!--  ---------------------------------------------------- -->
+
+
+
+							<!-- _____________________________________________________________________________________________________________ -->
+							<tr><td valign="top" width="100%"><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr> 
+							<tr><td> <br> </td></tr> 
+							<!-- _____________________________________________________________________________________________________________ -->
+						</tbody>
+						</table>
+						<!-- 伍 -->
+						</td>
+						<td width="3"><img src="spacer_red.gif" alt="" height="6388" width="1"></td>
+						<!-- right bottom center _________________________________________________________________________________________________________________ -->
+						<!-- right bottom center _________________________________________________________________________________________________________________ -->
+						<!-- right bottom center _________________________________________________________________________________________________________________ -->
+						
+						<!-- right bottom right __________________________________________________________________________________________________________________ -->
+						<!-- right bottom right __________________________________________________________________________________________________________________ -->
+						<!-- right bottom right __________________________________________________________________________________________________________________ -->
+						<td id="rightcolumn">
+						<!-- 陸 -->
+						<table border="0" cellpadding="0" cellspacing="0">
+						<tbody>
+							<!-- _____________________________________________________________________________________________________________ -->
+							<!-- 圖 figure -->
+							<!-- &amp; 取代 URL 中的 & 符號 -->
+							
+							<!-- https://www.qrcode-monkey.com/ -->
+							
+							<!-- figure -->
+							<!-- <tr><td><p align="center"><a href="./dm_code_png.svg"><img src="./QRCodeMonkey/qr-code.svg" alt="課程大綱" width="140"></a></td></tr> -->
+							<tr><td><p align="center"><span id="container"></span></td></tr>
+								<!-- https://github.com/papnkukn/qrcode-svg								 -->
+								<script src="./qrcode.min.js"></script>
+								<script type="text/javascript">
+								// ecl - error correction level: L, M, H, Q
+								var qrcode = new QRCode({ 
+									content: "https://tjhsieh.github.io/c/dm/dm2024s/", 
+									join: true, 
+									typeNumber: 8,
+									background: "#fff", 
+									ecl: "L", 
+									padding: 1, 
+									width: 140, 
+									height: 140, 
+									color: "#9F353A", // #6A4C9C #9F353A https://nipponcolors.com/#enji #6A4C9C https://nipponcolors.com/#kikyo
+									background: "#FFF" }); // #F1EEF7
+								var svg = qrcode.svg();
+								document.getElementById("container").innerHTML = svg;
+								</script>
+							<tr><td>&#8226; 課程大綱 <a href="https://tjhsieh.github.io/c/dm/dm2024s/">112-2</a>, <a href="https://tjhsieh.github.io/c/dm/dm2023s/">111-2</a><span class="photocredit"> <!-- gray --> </span></td></tr>
+							<tr><td>&nbsp;</td></tr>
+							<tr><td><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+
+							<!-- figure -->
+							<tr><td><p align="center"><a href="https://www.mheducation.com/highered/product/discrete-mathematics-applications-rosen/M125967651X.html"><img src="./fig/book/125967651X.jpeg" alt="" width="140"></a></td></tr>
+							<tr><td><img src="spacer.gif" alt="" height="1" width="1"></td></tr>
+							<tr><td>
+								&#8226; Kenneth Rosen<br>
+								&#8226; Discrete Mathematics and Its Applications 8/e<br>
+								&#8226; <a href="https://www.mheducation.com/highered/product/discrete-mathematics-applications-rosen/M9781259676512.html"> McGraw-Hill </a><br>
+								&#8226; <a href="https://www.tunghua.com.tw/portal_b10_cnt_page.php?button_num=b10&folder_id=670&cnt_id=8688"> 東華書局 新月圖書公司</a><br>
+								<span class="photocredit"> <!-- gray --> </span>
+							</td></tr>
+							<tr><td>
+								&#8226; 7e <a href="http://highered.mheducation.com/sites/0073383090/student_view0/interactive_demonstration_applets.html"> Demonstration </a><br>
+								&#8226; 7e <a href="http://highered.mheducation.com/sites/0073383090/student_view0/lecture_powerpoint_slides.html"> Lecture PowerPoint <!-- Slides 投影片 --> </a><br>
+								&#8226; 7e <a href="http://highered.mheducation.com/sites/0073383090/information_center_view0/reporting_of_errata.html"> Errata </a><br>
+								&#8226; 7e <a href="http://highered.mheducation.com/sites/0073383090/information_center_view0/index.html"> Online Resources </a><br>
+								<!-- http://www.mhhe.com/rosen -->
+								&#8226; 8e <a href="http://highered.mheducation.com/sites/125967651x/information_center_view0/index.html"> Online Resources </a><br>
+							</td></tr>
+							<tr><td>&nbsp;</td></tr>
+							<tr><td><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+
+							<!-- figure -->
+							<tr><td><p align="center"><a href=""><img src="./fig/book/15795003441.jpg" alt="" width="140"></a></td></tr>
+							<tr><td><img src="spacer.gif" alt="" height="1" width="1"></td></tr>
+							<tr><td>
+								&#8226; Discrete Mathematics and Its Applications 8/e (Annotated Edition) 導讀本 <br>
+								&#8226; <a href="https://www.tunghua.com.tw/portal_b9_page.php?button_num=b9&cnt_id=8535"> 東華書局 新月圖書公司</a><br>
+							</td></tr>
+							<tr><td>&nbsp;</td></tr>
+							<tr><td><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+							
+
+							<!-- figure -->
+							<tr><td><p align="center"><a href="https://www.mheducation.com/highered/product/discrete-mathematics-applications-rosen/M125967651X.html"><img src="./fig/book/1259731693.jpeg" alt="" width="140"></a></td></tr>
+							<tr><td><img src="spacer.gif" alt="" height="1" width="1"></td></tr>
+							<tr><td>
+								&#8226; <a href="https://www.mheducation.com/highered/product/9781259731693.authorbio.html"> Student's Solutions Guide </a><br>
+								<span class="photocredit"> <!-- gray --> </span>
+							</td></tr>
+							<tr><td>&nbsp;</td></tr>
+							<tr><td><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+
+							<!-- figure -->
+							<tr><td><p align="center"><a href="../hw/index.html" target="_blank"><img src="../hw/img_kitty/133533-159-53-58.svg" alt="" width="140"></a></td></tr>
+							<tr><td><img src="spacer.gif" alt="" height="1" width="1"></td></tr>
+							<tr><td>&#8226; <a href="../hw/index.html" target="_blank"> 作業總表 </a><span class="photocredit"> <!-- gray --> </span></td></tr>
+							<tr><td>&nbsp;</td></tr>
+							<tr><td><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+
+							<!-- figure -->
+							<tr><td><p align="center">
+								<iframe width="140" height="79" src="https://www.youtube.com/embed/s0U3spPF0pw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+							</td></tr>
+							<tr><td><img src="spacer.gif" alt="" height="1" width="1"></td></tr>
+							<tr><td>&#8226; <a href="https://youtu.be/s0U3spPF0pw" target="_blank">作業繳交 Overleaf 操作說明</a><span class="photocredit"> <!-- gray --> </span></td></tr>
+							<tr><td>&nbsp;</td></tr>					
+							<tr><td><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+
+							<!-- figure -->
+							<tr><td><p align="center"><a href="../hw/proof.html" target="_blank"><img src="../hw/img_kitty/133533-106-76-156.svg" alt="" width="140"></a></td></tr>
+							<tr><td>&#8226; <a href="../proof/index.html" target="_blank">1.7 Introduction to Proofs</a> <span class="photocredit"> <!-- gray --> </span></td></tr>
+							<tr><td>&nbsp;</td></tr>
+							<tr><td><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+
+							<!-- figure -->
+							<tr><td><p align="center"><a href="https://www.heidelberg-laureate-forum.org/laureate/donald-ervin-knuth.html"><img src="./fig/latex/Knuth.jpg" alt="" width="150"></a></td></tr>
+							<tr><td><img src="spacer.gif" alt="" height="1" width="1"></td></tr>
+							<tr><td>&#8226; <a href="https://amturing.acm.org/" target="_blank">1974: ACM A.M. Turing Award</a><span class="photocredit"> <!-- gray --> DONALD ERVIN KNUTH </span></td></tr>
+							<tr><td>&nbsp;</td></tr>					
+							<tr><td><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+
+							<!-- figure -->
+							<tr><td><p align="center"><a href="https://ctan.org/author/oetiker"><img src="./fig/latex/ctan-lion-d371c25e7eefcd9e0ada8e810fc88127.svg" alt="" width="150"></a></td></tr>
+							<tr><td><img src="spacer.gif" alt="" height="1" width="1"></td></tr>
+							<tr><td>&#8226; <a href="https://muyuuuu.github.io/2018/11/07/Brief-introduction-to-LaTex/" target="_blank">一份不太簡短的LaTeX簡介</a><span class="photocredit"> <!-- gray --> </span></td></tr>
+							<tr><td>&#8226; <a href="https://web.stanford.edu/class/archive/cs/cs103/cs103.1234/guide_to_latex" target="_blank">Guide to LaTeX</a><span class="photocredit"> <!-- gray --> </span></td></tr>
+							<tr><td>&nbsp;</td></tr>					
+							<tr><td><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+
+							<!-- figure -->
+							<tr><td><p align="center"><a href="https://en.wikipedia.org/wiki/Leonhard_Euler" target="_blank"><img src="./fig/Leonhard_Euler/Leonhard_Euler.jpg" alt="" width="150"></a></td></tr>
+							<tr><td><img src="spacer.gif" alt="" height="1" width="1"></td></tr>
+							<tr><td>&#8226; 李昂哈德·歐拉 Leonhard Euler (1707 – 1783) <span class="photocredit"><!-- gray --></span></td></tr>
+							<tr><td>&#8226; <a href="https://www.britannica.com/topic/Konigsberg-bridge-problem" target="_blank"> Königsberg bridge problem </a>Graph theory and topology, both born in the work of Euler.<span class="photocredit"><!-- gray --> </span></td></tr>
+							<tr><td>&nbsp;</td></tr>
+							<tr><td><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+
+							<!-- figure -->
+							<tr><td><p align="center"><a href="https://en.wikipedia.org/wiki/Seven_Bridges_of_K%C3%B6nigsberg"><img src="./fig/Leonhard_Euler/Konigsberg_bridges.png" alt="textbook" width="140"></a></td></tr>
+							<tr><td><img src="spacer.gif" alt="" height="1" width="1"></td></tr>				
+							<tr><td>&#8226; <a href="https://en.wikipedia.org/wiki/Seven_Bridges_of_K%C3%B6nigsberg"> 柯尼斯堡七橋問題 </a> <span class="photocredit"> <!-- gray --> </span></td></tr>
+							<tr><td>&#8226; <a href="https://www.britannica.com/topic/Konigsberg-bridge-problem"> Seven Bridges of Königsberg </a> <span class="photocredit"> <!-- gray --> </span></td></tr>
+							<tr><td>&#8226; <a href="https://www.google.com/maps/place/%E4%BF%84%E7%BE%85%E6%96%AF%E5%8A%A0%E9%87%8C%E5%AF%A7%E6%A0%BC%E5%8B%92%E5%B7%9E%E5%8A%A0%E9%87%8C%E5%AF%A7%E6%A0%BC%E5%8B%92/@54.7054292,20.5113118,1425m/data=!3m1!1e3!4m5!3m4!1s0x46e33d8d4b7c21a9:0x5050960016126ed3!8m2!3d54.7104264!4d20.4522144">加里寧格勒 Калининград </a> <span class="photocredit"> <!-- gray --> </span></td></tr>
+							<tr><td>&nbsp;</td></tr>
+							<tr><td><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+							
+							<!-- figure -->
+							<tr><td><p align="center"><a href="https://en.wikipedia.org/wiki/Topology"><img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Mug_and_Torus_morph.gif" alt="textbook" width="150"></a></td></tr>
+							<tr><td><img src="spacer.gif" alt="" height="1" width="1"></td></tr>
+							<tr><td>&#8226; 位相幾何學<a href="https://en.wikipedia.org/wiki/Topology"> Topology </a> <span class="photocredit"> <!-- gray --> </span></td></tr>
+							<tr><td>&nbsp;</td></tr>
+							<tr><td><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+
+							<!-- figure -->
+							<tr><td><p align="center"><a href="https://en.wikipedia.org/wiki/Srinivasa_Ramanujan"><img src="./fig/SrinivasaRamanujan/3o0r0000oppr141s9nn5.jpg" alt="" width="80%"></a></td></tr>
+							<tr><td><img src="spacer.gif" alt="" height="1" width="1"></td></tr>
+							<tr><td>&#8226; <a href="https://en.wikipedia.org/wiki/Srinivasa_Ramanujan"> 斯里尼瓦瑟·拉馬努金 </a> <span class="photocredit"><!-- gray --> </span></td></tr>
+							<tr><td>&#8226; <a href="https://en.wikipedia.org/wiki/The_Man_Who_Knew_Infinity_(film)"> The Man Who Knew Infinity </a> <span class="photocredit"><!-- gray --> </span></td></tr>
+							<tr><td>&nbsp;</td></tr>
+							<tr><td><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+
+							<!-- figure -->
+							<tr><td><p align="center"><a href="https://en.wikipedia.org/wiki/Cantor/Georg_Cantor"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Georg_Cantor_%28Portr%C3%A4t%29.jpg/330px-Georg_Cantor_%28Portr%C3%A4t%29.jpg" alt="" width="80%"></a></td></tr>
+							<tr><td><img src="spacer.gif" alt="" height="1" width="1"></td></tr>
+							<tr><td>&#8226; <a href="https://en.wikipedia.org/wiki/Georg_Cantor" target="_blank">Georg Cantor</a><span class="photocredit"> <!-- gray --> </span></td></tr>
+							<tr><td>&nbsp;</td></tr>					
+							<tr><td><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+
+							<!-- figure -->
+							<tr><td>&nbsp;</td></tr>
+							<tr><td><p align="center"><a href="https://youtu.be/dEOBDIyz0BU"><img src="./fig/Cantor/hqdefault1.webp" alt="" width="150"></a></td></tr>
+							<tr><td><img src="spacer.gif" alt="" height="1" width="1"></td></tr>
+							<tr><td>&#8226; <a href="https://youtu.be/dEOBDIyz0BU"> Some Infinities ARE Bigger Than Other Infinities (Diagonalization) </a> <span class="photocredit"> <!-- gray --> </span></td></tr>
+							<tr><td>&nbsp;</td></tr>
+							<tr><td><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+
+							<!-- figure -->
+							<tr><td>&nbsp;</td></tr>
+							<tr><td><p align="center"><a href="https://youtu.be/lA6hE7NFIK0"><img src="./fig/Cantor/hqdefault2.webp" alt="" width="150"></a></td></tr>
+							<tr><td><img src="spacer.gif" alt="" height="1" width="1"></td></tr>
+							<tr><td>&#8226; <a href="https://youtu.be/lA6hE7NFIK0"> Proof some infinities are bigger than other infinities </a> <span class="photocredit"> <!-- gray --> </span></td></tr>
+							<tr><td>&nbsp;</td></tr>
+							<tr><td><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+
+							<!-- figure -->
+							<!--
+							<tr><td>&nbsp;</td></tr>
+							<tr><td><p align="center"><a href="http://benesse-artsite.jp/art/assets_c/2015/10/chichu_top-thumb-1440x960-384.jpg"><img src="./fig/chichu_top-thumb-1440x960-384.jpg" alt="" width="150"></a></td></tr>
+							<tr><td><img src="spacer.gif" alt="" height="1" width="1"></td></tr>
+							<tr><td>&#8226; <a href="https://ja.wikipedia.org/wiki/%E5%9C%B0%E4%B8%AD%E7%BE%8E%E8%A1%93%E9%A4%A8"> 地中美術館 </a> <span class="photocredit">  </span></td></tr>
+							<tr><td>&nbsp;</td></tr>
+							<tr><td><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+							-->
+
+							<!-- figure -->
+							<!--
+							<tr><td><p align="center"><a href="https://www.ignant.com/wp-content/uploads/2019/02/ignant-art-walter-de-maria-012-1440x955.png"><img src="./fig/ignant-art-walter-de-maria-012-1440x955.png" alt="" width="150"></a></td></tr>
+							<tr><td><img src="spacer.gif" alt="" height="1" width="1"></td></tr>
+							<tr><td>&#8226; Walter De Maria, <a href="https://www.benesse-artsite.jp/">‘Time/Timeless/No Time’, (2004). </a> Chichu Art Museum, Japan.<span class="photocredit"> Image © Mitsuo Matsuoka </span></td></tr>
+							<tr><td>&nbsp;</td></tr>
+							<tr><td><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+							-->
+
+							<!-- figure -->
+							<!-- 
+							<tr><td><p align="center">
+							<iframe width="140" height="78" src="https://www.youtube.com/embed/2_ruwgiWMGU?start=1350" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</p></td></tr>
+							<tr><td><img src="spacer.gif" alt="" height="1" width="1"></td></tr>
+							<tr><td>&#8226; <a href="https://www.youtube.com/watch?v=2_ruwgiWMGU&feature=youtu.be&t=1350" target="_blank">【一席】王南：營造密碼</a><span class="photocredit"> 22:30 林徽因 林徽音。 23:00 是以柱子的直徑，來做為正個建築設計的基本模數...，都是柱徑的整數倍或者分數。... 23:20 西方的柱徑和東方古建築的才，有異曲同工之妙。</span></td></tr>
+							<tr><td>&nbsp;</td></tr>
+							<tr><td><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+							-->
+
+							<!-- figure -->
+							<tr><td><p align="center"><a href="https://en.wikipedia.org/wiki/David_Hilbert"><img src="./fig/Hilbert/David_Hilbert,_1907.jpg" alt="" width="80%"></a></td></tr>
+							<tr><td><img src="spacer.gif" alt="" height="1" width="1"></td></tr>
+							<tr><td>&#8226; <a href="" target="_blank">David Hilbert</a><span class="photocredit"> <!-- gray --> </span></td></tr>
+							<tr><td>&nbsp;</td></tr>					
+							<tr><td><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+
+							<!-- figure -->
+							<tr><td><p align="center"><a href="https://en.wikipedia.org/wiki/David_Hilbert"><img src="./fig/Hilbert/JeffDekofsky.jpg" alt="" width="80%"></a></td></tr>
+							<tr><td>&#8226; <a href="https://www.youtube.com/watch?v=Uj3_KqkI9Zo" target="_blank">無限旅館悖論</a><span class="photocredit"> <!-- gray --> </span></td></tr>
+							<tr><td>&#8226; <a href="https://www.youtube.com/watch?v=faQBrAQ87l4" target="_blank">Hilbert's Infinite Hotel</a><span class="photocredit"> <!-- gray --> </span></td></tr>
+							<tr><td>&nbsp;</td></tr>
+							<tr><td><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+
+							<!-- figure -->
+							<tr><td><p align="center">
+								<a href="https://web.stanford.edu/class/cs103/tools/truth-table-tool/"><img src="./fig/truth-table-tool/s1.png" alt="" width="150"></a>
+								<a href="https://web.stanford.edu/class/cs103/tools/truth-table-tool/"><img src="./fig/truth-table-tool/s2.png" alt="" width="150"></a>
+								<a href="https://web.stanford.edu/class/cs103/tools/truth-table-tool/"><img src="./fig/truth-table-tool/s3.png" alt="" width="150"></a>
+							</td></tr>
+							<tr><td><img src="spacer.gif" alt="" height="1" width="1"></td></tr>
+							<tr><td>&#8226; <a href="https://web.stanford.edu/class/cs103/tools/truth-table-tool/" target="_blank"><span style="font-size: smaller;">(p ∨ ¬q) ∧ (q ∨ ¬r) ∧ (r ∨ ¬p)</a></span><span class="photocredit"> <!-- gray --> </span></td></tr>
+							<tr><td>&#8226; <a href="https://web.stanford.edu/class/cs103/tools/truth-table-tool/" target="_blank"><span style="font-size: smaller;">(p ∨ q ∨ r) ∧ (¬p ∨ ¬q ∨ ¬r)</a></span><span class="photocredit"> <!-- gray --> </span></td></tr>
+							<tr><td>&#8226; <a href="https://web.stanford.edu/class/cs103/tools/truth-table-tool/" target="_blank"><span style="font-size: smaller;">(p ∨ ¬q) ∧ (q ∨ ¬r) ∧ (r ∨ ¬p) ∧ (p ∨ q ∨ r) ∧ (¬p ∨ ¬q ∨ ¬r)</a></span><span class="photocredit"> <!-- gray --> </span></td></tr>
+							<tr><td>&nbsp;</td></tr>					
+							<tr><td><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+
+							<!-- figure -->
+							<!--
+							<tr><td><p align="center"><a href="./n-Queens/n-Queens-css.html"><img src="./n-Queens/n-Queens.svg" alt="" width="150"></a></td></tr>
+							<tr><td>&#8226; <a href="./n-Queens/n-Queens.html" target="_blank"> n-Queens </a><span class="photocredit"></span></td></tr>
+							<tr><td>&#8226; <a href="./n-Queens/n-Queens-css.html" target="_blank"> n-Queens-css </a><span class="photocredit">  </span></td></tr>
+							<tr><td><p align="center"><a href="https://codepen.io/onon1101/pen/GRXBOOr/"><img src="./n-Queens/8.png" alt="" width="150"></a></td></tr>
+							-->
+							<tr><td><p align="center"><a href="https://codepen.io/onon1101/pen/GRXBOOr/"><img src="https://avatars.githubusercontent.com/u/98307453?v=4" alt="" width="150"></a></td></tr>
+							<tr><td><img src="spacer.gif" alt="" height="1" width="1"></td></tr>
+							<tr><td>&#8226; <a href="https://codepen.io/onon1101/pen/GRXBOOr/" target="_blank"> 八皇后問題的靜態網頁動畫 </a><span class="photocredit"> <!-- gray --> </span></td></tr>
+							<tr><td>&nbsp;</td></tr>					
+							<tr><td><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+
+
+							<!-- figure -->
+							<!-- <tr><td><p align="center"><iframe width="140" height="78" src="https://www.youtube.com/embed/eHZifpgyH_4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p></td></tr> -->
+							<tr><td><p align="center"><a href="https://arxiv.org/pdf/1203.1895.pdf"><img src="./fig/Demaine/mario_finish.png" alt="" width="140"></a></td></tr>
+							<tr><td><p align="center"><a href="https://erikdemaine.org/"><img src="./fig/Demaine/tenure_headshot_small.jpg" alt="" width="140"></a></td></tr>
+							<tr><td><img src="spacer.gif" alt="" height="1" width="1"></td></tr>
+							<tr><td>&#8226; <a href="https://erikdemaine.org/" target="_blank">Erik D. Demaine</a><span class="photocredit"> <!-- gray --> </span></td></tr>
+							<tr><td>&#8226; <a href="https://arxiv.org/abs/1203.1895" target="_blank">Classic Nintendo Games are (Computationally) Hard</a><span class="photocredit"> <!-- gray --> </span></td></tr>
+							<!-- 					 https://arxiv.org/pdf/1203.1895.pdf -->
+							<tr><td>&nbsp;</td></tr>					
+							<tr><td><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+
+							<!-- figure -->
+							<tr><td><p align="center"><a href="./fig/">
+								<a href="https://twitter.com/hayamizu_lab" target="_blank">
+									<img src="./fig/waseda/w.svg" width="95%">
+								</a>
+								&nbsp;<br>&nbsp;<br>
+								<a href="http://apmath.jp/professors/momoko-hayamizu" target="_blank">
+									<img src="https://pbs.twimg.com/profile_images/1367107014057332739/rCPaijfL_400x400.jpg" width="90%">
+								</a>
+							</td></tr>
+							<tr><td> 
+								<a href="https://twitter.com/hayamizu_lab/status/1492879366988075014" target="_blank"> 
+									<img src="https://pbs.twimg.com/media/FLfF3uYVcAIUMdN?format=jpg&name=900x900" width="45%">
+									<img src="https://pbs.twimg.com/media/FLfF3uvVkAIH4B0?format=jpg&name=900x900" width="45%">
+									<img src="https://pbs.twimg.com/media/FLfF3vwUYAEQn6t?format=jpg&name=900x900" width="45%">
+									<img src="https://pbs.twimg.com/media/FLfF3wtVgAASj9N?format=jpg&name=900x900" width="45%">
+								</a>
+							</td></tr>
+							<tr><td><img src="spacer.gif" alt="" height="1" width="1"></td></tr>
+							<tr><td>&#8226; <a href="http://apmath.jp/professors/momoko-hayamizu" target="_blank">早稲田大学　応用数理学科</a><span class="photocredit"> <!-- gray --> </span></td></tr>
+							<tr><td>&#8226; twitter <a href="https://twitter.com/hayamizu_lab" target="_blank">早水桃子研究室</a><span class="photocredit"> <!-- gray --> </span></td></tr>
+							<tr><td>&#8226; youtube <a href="https://www.youtube.com/watch?v=d0KPWURyFIs&list=PLCo60G1m_ibpJgfB4WcGwWybC6sfyawoL" target="_blank"><!--2021年度--> 離散数学入門 〜グラフ理論の世界にようこそ〜</a><span class="photocredit"> <!-- gray --> </span></td></tr>
+							<!--
+							<tr><td>&#8226; 開講箇所	基幹理工学部。2021年度 授業シラバス <a href="https://www.wsl.waseda.jp/syllabus/JAA104.php?pKey=2602023030012021260202303026&pLng=jp">シラバス詳細照会</a><span class="photocredit"> </span></td></tr>
+							-->
+							<tr><td>&#8226; <a href="https://www.amazon.co.jp/dp/4627052812/ref=cm_sw_r_tw_dp_XY1C405DW1N0ZHG0NF7H" target="_blank">『例題で学ぶグラフ理論』</a><!--（安藤清, 土屋守正, 松井泰子）森北出版 --><span class="photocredit"> <!-- gray --> </span></td></tr>
+							<tr><td> <br> </td></tr>
+							<!-- <tr><td><iframe width="373" height="210" src="https://www.youtube.com/embed/SBtLlOW8jWY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td></tr> -->
+							<tr><td>&nbsp;</td></tr>					
+							<tr><td><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+
+
+							<!-- figure -->
+							<tr><td><p align="center"><a href="../video/index.html" target="_blank"><img src="../video/hqdefault1.webp" alt="" width="150"></a></td></tr>
+							<tr><td><p align="center"><a href="../video/index.html" target="_blank"><img src="../video/hqdefault2.webp" alt="" width="150"></a></td></tr>
+							<tr><td><img src="spacer.gif" alt="" height="1" width="1"></td></tr>
+							<tr><td>&#8226; <a href="../video/index.html" target="_blank">輔助教學影片</a><span class="photocredit"> <!-- gray --> </span></td></tr>
+							<tr><td>&nbsp;</td></tr>					
+							<tr><td><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+	
+	
+							<!-- figure -->
+							<tr><td><p align="center"><a href="" target="_blank"><img src="./fig/xxx.png" alt="" width="150"></a></td></tr>
+							<tr><td><img src="spacer.gif" alt="" height="1" width="1"></td></tr>
+							<tr><td>&#8226; <a href="" target="_blank"></a><span class="photocredit"> <!-- gray --> </span></td></tr>
+							<tr><td>&nbsp;</td></tr>					
+							<tr><td><img src="spacer_red.gif" alt="" height="1" width="100%"></td></tr>
+
+
+
+
+							<!-- &amp; 取代 URL 中的 & 符號 -->
+							<!-- 圖 figure -->
+							<!-- _____________________________________________________________________________________________________________ -->
+							<tr><td><img src="spacer.gif" alt="" height="24" width="10"></td></tr> 
+							<!-- _____________________________________________________________________________________________________________ -->
+						</tbody>
+						</table>
+						<!-- 陸 -->
+						</td>
+						<!-- right bottom right __________________________________________________________________________________________________________________ -->
+						<!-- right bottom right __________________________________________________________________________________________________________________ -->
+						<!-- right bottom right __________________________________________________________________________________________________________________ -->
+					</tr>
+					<!-- 肆 r1 -->
+					<!-- ________________________________________________________________________________________________________________________ -->
+					</tbody>
+					</table>
+					</td>
+				</tr>
+				<!-- 參 r4 -->
+				</tbody></table>
+				<!-- 參 r4c1 -->
+			</td>
+			<td width="3"><img src="spacer_red.gif" alt="" height="6588" width="1"></td>
+		</tr>
+		<!-- 貳 r1 -->	
+		</tbody>
+		</table>
+		<!-- 貳 r1c2 -->
+		</td>
+	</tr>
+	<!-- 壹 r4 -->	
+	<tr><td id="footerbar"></td></tr>
+	</tbody>
+	</table>
+	<!-- 壹 r4c2 -->
+</body>
+
+</html>
