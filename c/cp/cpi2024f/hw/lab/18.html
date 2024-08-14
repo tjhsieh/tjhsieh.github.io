@@ -185,6 +185,212 @@ img:hover {
     <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
     <div class="col-md-12 twenty">
 
+18. 圖形繪製<br><br>
+
+請使用迴圈繪製4種不同的圖形 <br>
+圖形請參考範例測資<br><br>
+
+菱形:兩對角線長度為N且由”*”構成的菱形<br>
+魚形:身體由"*"組成，是一個對角線長度皆為 N 的菱形，尾巴由"-"組成三角形，三角形的最長邊(底邊)在右，頂端朝左，是一個底為(N-2)，高為((N-1)/2)的三角形<br><br>
+
+---------------------------------------------------<br><br>
+
+輸入說明 :<br>
+第一行，輸入整數 C，1 <= C <= 4，代表接下來要畫的圖形種類<br>
+C=1,為第一種圖形 正三角形 (參考 範例輸出 1)<br>
+C=2,為第二種圖形 倒三角形 (參考 範例輸出 2)<br>
+C=3,為第三種圖形 菱形        (參考 範例輸出 9)<br>
+C=4,為第四種圖形 魚形        (參考 範例輸出 13)<br><br>
+
+第二行，輸入整數 N ，0 < N < 50，代表這個圖形有N行<br><br>
+
+輸出說明 :<br>
+若N為奇數且3<=N<=49。根據輸入，畫出對應的圖形<br>
+若N為偶數或者N<=2或N>=50。輸出 error<br><br>
+
+此題不考慮C<1或C>4的情況<br><br>
+
+---------------------------------------------------<br><br>
+
+範例輸入1:<br>
+1<br>
+5<br><br>
+
+範例輸出 1:<br>
+<!-- <img src=https://imgur.com/mE3IEjj.png><br><br> -->
+&ltimg src=https://imgur.com/mE3IEjj.png&gt<br><br> -->
+
+ 
+
+--------------------------------------------------<br><br>
+
+範例輸入2:<br>
+2<br>
+5<br><br>
+
+範例輸出 2:<br>
+<!-- <img src=https://imgur.com/coDIqRt.png><br><br> -->
+&ltimg src=https://imgur.com/coDIqRt.png&gt<br><br>
+
+
+
+
+--------------------------------------------------<br><br>
+
+範例輸入3:<br>
+1<br>
+11<br><br>
+
+
+範例輸出 3:<br>
+<!-- <img src=https://imgur.com/hl6D1df.png><br><br> -->
+&ltimg src=https://imgur.com/hl6D1df.png&gt<br><br>
+
+
+
+--------------------------------------------------<br><br>
+
+範例輸入4:<br>
+2<br>
+11<br><br>
+
+範例輸出 4:<br>
+<!-- <img src=https://imgur.com/6S1g4HT.png><br><br> -->
+&ltimg src=https://imgur.com/6S1g4HT.png&gt<br><br>
+
+
+
+--------------------------------------------------<br><br>
+
+範例輸入5:<br>
+1<br>
+19<br><br>
+
+範例輸出 5:<br>
+<!-- <img src=https://imgur.com/YvmwL28.png><br><br> -->
+&ltimg src=https://imgur.com/YvmwL28.png&gt<br><br>
+
+
+
+--------------------------------------------------<br><br>
+
+範例輸入6:<br>
+2<br>
+19<br><br>
+
+範例輸出 6:<br>
+<!-- <img src=https://imgur.com/7wpT9iq.png><br><br> -->
+&ltimg src=https://imgur.com/7wpT9iq.png&gt<br><br>
+
+
+
+--------------------------------------------------<br><br>
+
+範例輸入7:<br>
+1<br>
+10<br><br>
+
+範例輸出 7:<br>
+error<br><br>
+
+--------------------------------------------------<br><br>
+
+範例輸入8:<br>
+2<br>
+10<br><br>
+
+範例輸出 8:<br>
+error<br><br>
+
+--------------------------------------------------<br><br>
+
+範例輸入 9:<br>
+3<br>
+7<br><br>
+
+
+範例輸出 9:<br>
+<!-- <img src=https://i.imgur.com/6ZWFwb1.png><br><br> -->
+&ltimg src=https://i.imgur.com/6ZWFwb1.png&gt<br><br>
+
+
+--------------------------------------------------<br><br>
+
+範例輸入 10:<br>
+3<br>
+51<br><br>
+
+範例輸出 10:<br>
+error<br><br>
+
+
+--------------------------------------------------<br><br>
+
+範例輸入 11:<br>
+3<br>
+21<br><br>
+
+範例輸出 11:<br>
+<!-- <img src=https://i.imgur.com/TzfgzZj.png><br><br> -->
+&ltimg src=https://i.imgur.com/TzfgzZj.png&gt<br><br>
+
+
+--------------------------------------------------<br><br>
+
+範例輸入 12:<br>
+3<br>
+2<br><br>
+
+範例輸出 12:<br>
+error<br><br>
+
+
+--------------------------------------------------<br><br>
+
+範例輸入 13:<br>
+4<br>
+15<br><br>
+
+範例輸出 13:<br>
+<!-- <img src=https://i.imgur.com/CZmlLQP.png><br><br> -->
+&ltimg src=https://i.imgur.com/CZmlLQP.png&gt<br><br>
+
+
+
+--------------------------------------------------<br><br>
+
+範例輸入 14:<br>
+4<br>
+21<br><br>
+
+範例輸出 14:<br>
+<!-- <img src=https://i.imgur.com/QHysOb2.png><br><br> -->
+&ltimg src=https://i.imgur.com/QHysOb2.png&gt<br><br>
+
+
+
+
+--------------------------------------------------<br><br>
+
+範例輸入 15:<br>
+4<br>
+10<br><br>
+
+範例輸出 15:<br>
+error<br><br>
+
+
+--------------------------------------------------<br><br>
+
+範例輸入 16:<br>
+4<br>
+1<br><br>
+
+範例輸出 16:<br>
+error<br><br>
+
+--------------------------------------------------<br><br>
+
 
 
     </div>

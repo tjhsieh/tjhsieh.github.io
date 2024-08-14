@@ -185,6 +185,93 @@ img:hover {
     <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
     <div class="col-md-12 twenty">
 
+5. 判斷何種三角形<br><br>
+
+當三個邊長能構成三角形時，判斷該三角形是否為正三角形，若否，則判斷是否為等腰三角形。若皆非正三角形或等腰三角形，再判斷該三角形為鈍角三角形、銳角三角形或直角三角形。<br><br>
+
+1. 不能成為三角形：任兩邊和不大於第三邊，或任一邊長不大於0。<br>
+2. 正三角形：三個邊相等。<br>
+3. 等腰三角形：任兩邊相等，且平方和大於第三邊的平方。<br>
+4. 鈍角三角形: 最長邊平方大於兩短邊平方和<br>
+5. 銳角三角形: 最長邊平方小於兩短邊平方和<br>
+6. 直角三角形: 最長邊平方等於兩短邊平方和<br><br>
+
+此題必須寫一個運算的function<br>
+def getTriangle(a, b, c)<br><br>
+
+【輸入參數資料型態與類別說明】<br>
+ 1.輸入三個整數邊長(int)<br><br>
+
+【輸出參數資料型態與類別說明】<br>
+1. 不能成為三角形：輸出not a triangle。<br>
+2. 正三角形：輸出equilateral triangle。<br>
+3. 等腰三角形：輸出isosceles triangle。<br>
+4. 鈍角三角形:輸出obtuse triangle。<br>
+5. 銳角三角形:輸出acute triangle。<br>
+6. 直角三角形:輸出right triangle。<br><br>
+
+範例:<br>
+【輸入與輸出對應說明】<br>
+輸入:第一行為第一邊邊長，第二行為第二邊邊長，第三行為第三邊邊長<br>
+輸出:第一行為三角形種類<br>
+Input：<br>
+5<br>
+2<br>
+6<br>
+Output：<br>
+obtuse triangle<br><br>
+
+
+
+
+測試案例(Test Case)資料：<br>
+Input：<br>
+4<br>
+1<br>
+1<br>
+Output：<br>
+not a triangle<br><br>
+
+---------------<br>
+Input：<br>
+3<br>
+3<br>
+3<br>
+Output：<br>
+equilateral triangle<br><br>
+
+---------------<br>
+Input：<br>
+3<br>
+2<br>
+3<br>
+Output：<br>
+isosceles triangle<br><br>
+
+---------------<br>
+Input：<br>
+8<br>
+11<br>
+5<br>
+Output：<br>
+obtuse triangle<br><br>
+
+---------------<br>
+Input：<br>
+5<br>
+7<br>
+8<br>
+Output：<br>
+acute triangle<br><br>
+
+---------------<br>
+Input：<br>
+3<br>
+4<br>
+5<br>
+Output：<br>
+right triangle<br><br>
+
 
 
     </div>

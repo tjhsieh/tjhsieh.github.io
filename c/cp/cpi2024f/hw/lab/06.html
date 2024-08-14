@@ -185,6 +185,62 @@ img:hover {
     <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
     <div class="col-md-12 twenty">
 
+6. 一元二次方程式<br><br>
+
+一元二次方程式，aX^2 + bx + c = 0，輸入a, b, c, 求方程式的兩個實/虛根。<br>
+T = math.sqrt(b*b-4*a*c)<br>
+第一個根，x1 = (-b+T)/(2*a)<br>
+第二個根，x2= (-b-T)/(2*a)<br><br>
+
+本題需 import math<br>
+---------------------------------------------------<br><br>
+
+輸入說明：<br>
+第一行，輸入a (Integer)<br>
+第二行，輸入b (Integer)<br>
+第三行，輸入c (Integer)<br><br>
+
+輸出說明：<br>
+當T>=0，輸出x1, x2為實根，輸出到小數點第一位 <br>
+第一行，輸出 print("%.1f” %(x1))<br>
+第二行，輸出 print("%.1f” %(x2))<br><br>
+
+當T<0，輸出x1 , x2為虛根，輸出到小數點第一位<br>
+第一行，輸出 print("%.1f+%.1fi" %(x11,x12))<br>
+第二行，輸出 print("%.1f-%.1fi" %(x21,x22))<br>
+若x11或x21為0.0時，則不須輸出正負號<br><br>
+
+---------------------------------------------------<br><br>
+
+Example Input 1<br>
+1<br>
+-2<br>
+1<br><br>
+
+Example Output 1<br>
+1.0<br>
+1.0<br><br>
+
+---------------------------------------------------<br>
+Example Input 2<br>
+1<br>
+2<br>
+2<br><br>
+
+Example Output 2<br>
+-1.0+1.0i<br>
+-1.0-1.0i<br><br>
+---------------------------------------------------
+
+Example Input 3<br>
+2<br>
+0<br>
+2<br><br>
+
+Example Output 3<br>
+0.0+1.0i<br>
+0.0-1.0i<br><br>
+
 
 
     </div>
