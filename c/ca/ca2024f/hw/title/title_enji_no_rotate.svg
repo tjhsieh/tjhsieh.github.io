@@ -1,0 +1,57 @@
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   viewBox="0 0 1280 180"
+   width="1280"
+   height="180">
+
+    <style type="text/css">
+      /*
+      https://fonts.google.com/noto/specimen/Noto+Serif+JP
+      */
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200');
+      /*
+      @import url('https://fonts.googleapis.com/earlyaccess/cwtexkai.css?');
+      */
+      text {
+        fill: white;
+        /*
+        font-family: cwTeXKai;
+        */
+        font-family: 'Noto Serif JP';
+
+        font-size: 48pt; 
+        writing-mode: vertical-rl;
+        letter-spacing: 12px;
+        opacity: 1.0;
+      }
+    </style>
+
+    <rect x="0" y="0" fill="#9F353A" stroke="#fff" stroke-width="3" width="1280" height="180"/>
+
+    <text x="640" y="24">燕脂ㄧㄢㄓ
+      <animate id="1" attributeType="CSS" attributeName="opacity" from="1.0" to="0.3" dur="5s" begin="0;2.end"/>
+      <animate id="2" attributeType="CSS" attributeName="opacity" from="0.3" to="1.0" dur="5s" begin="1.end"/>
+    </text>
+
+      <text x="680" y="50" style="writing-mode: horizontal-tb; font-size: 18pt; fill: white;">
+        ㄧ
+        <animate id="1" attributeType="CSS" attributeName="opacity" from="1.0" to="0.3" dur="5s" begin="0;2.end"/>
+        <animate id="2" attributeType="CSS" attributeName="opacity" from="0.3" to="1.0" dur="5s" begin="1.end"/>
+      </text>
+
+      <text x="680" y="70" style="writing-mode: horizontal-tb; font-size: 18pt;" rotate="0" >
+        ㄢ
+        <animate id="1" attributeType="CSS" attributeName="opacity" from="1.0" to="0.3" dur="5s" begin="0;2.end"/>
+        <animate id="2" attributeType="CSS" attributeName="opacity" from="0.3" to="1.0" dur="5s" begin="1.end"/>
+      </text>
+
+
+      <text x="680" y="140" style="writing-mode: horizontal-tb; font-size: 18pt; fill: white;">
+        ㄓ
+        <animate id="1" attributeType="CSS" attributeName="opacity" from="1.0" to="0.3" dur="5s" begin="0;2.end"/>
+        <animate id="2" attributeType="CSS" attributeName="opacity" from="0.3" to="1.0" dur="5s" begin="1.end"/>
+      </text>
+
+ </svg>

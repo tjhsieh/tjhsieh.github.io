@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<title>電腦動畫/動態捕捉與虛擬網紅</title>
+<link rel="icon" href="https://www.apple.com/favicon.ico"/>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<style type="text/css">
+
+@font-face {
+  font-family:'CircleFont';
+  src: url(https://circle472.github.io/ct2022s/hw04/CircleFont_v2.woff2); 
+  /* src: url(CircleFont_v2.woff2); */
+  /* https://cloudconvert.com/ttf-to-woff2 */
+}
+
+body {
+  background-color: rgb(159, 53, 58);
+  color: rgb(159, 53, 58);
+  font-family:'CircleFont';
+  font-size: 16pt;
+}
+
+.container-fluid {
+  width:  90%;
+}
+
+.hw12 {
+  border: 1px solid rgb(159, 53, 58);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.twenty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+  padding: 8px;
+}
+
+.twentykikyo {
+  color: #f9eced;
+  background-color: #6a4c9c;
+}
+
+.twentykonparuiro {
+  color: #f9eced;
+  background-color: #5ac2d9;
+}
+
+.twenty a {
+  color:  yellow;
+}
+
+.twenty a:hover {
+  color: #f9eced;
+  font-size:  16pt;
+}
+
+.thirty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+}
+
+.ninety {
+  border: 1px solid rgb(159, 53, 58);
+  background-color: #f9eced;
+  padding: 8px;
+}
+
+svg {
+  border: 2px solid rgb(159, 53, 58);
+}
+
+path {
+  pointer-events: all;
+  fill: #f9eced;
+  stroke: rgb(159, 53, 58);
+  stroke-opacity: 0.95;
+  stroke-width: 1px;
+}
+
+.active circle {
+  stroke: #f9eced;
+  stroke-width: 2px;
+}
+
+svg g text {
+  fill: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 0, 0.1);
+  text-shadow: 0 0 16px #FF0000, 0 0 16px #000000;
+  font-size: 24pt;
+  text-anchor: middle;
+}
+
+.twenty:hover {
+  /*
+    background-color: rgba(255, 255, 0, 0.1);
+  */
+    box-shadow: 0 0 5px 3px #f9eced;
+    color: cyan; 
+    text-shadow: 0 0 6px #FFFFFF, 0 0 6px #000000;
+}
+
+img:hover {
+    box-shadow: 0 0 1px 1px #f9eced;
+    animation-name: happy;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes happy {
+    0% { transform: translateY(0px);}
+    25% {transform: translateY(-15px);}
+    50% {transform: translateY(0px);}
+    75% {transform: translateY(-5px);}
+    100% {transform: translateY(0px);}
+}
+
+.toprow {
+  margin-top: 36px;
+}
+
+.bottomrow {
+  margin-bottom: 36px;
+}
+
+.GFG {
+  margin: -10px auto; 
+  font-family: 'CircleFont', serif;
+  color: yellow; 
+  font-size: 16pt;
+  -webkit-text-stroke-width: 0.1px; 
+  -webkit-text-stroke-color:  yellow;
+  animation: 24s pulsate infinite;
+}
+
+@keyframes pulsate {
+  50% {font-size: 10pt;} /* text-shadow: 0 0 16px #FFF, 0 0 20px #FFF;  */
+  100% {font-size: 16pt;} /* text-shadow: 0 0 16px #FFF, 0 0 20px #FFF;  */
+}
+
+</style>
+</head>
+<body>
+
+<!-- ---------------------- -->
+<div class="container-fluid">
+<!-- ---------------------- -->
+
+
+
+
+  <!-- ------------------------------------------------>
+  <!-- 
+  <div class="row toprow">
+    <div class="col-md-12 twenty">
+        教學大綱與進度: 
+        <a target="_blank" href="https://aps.ntut.edu.tw/course/tw/ShowSyllabus.jsp?snum=337851&code=11324">電腦動畫</a>
+        <a target="_blank" href="https://courseap2.itc.ntnu.edu.tw/acadmOpenCourse/index.jsp">、</a>
+        <a target="_blank" href="https://courseap2.itc.ntnu.edu.tw/acadmOpenCourse/SyllabusCtrl?year=113&term=1&courseCode=T0C9010&courseGroup=&deptCode=T&formS=&classes1=9&deptGroup=">動態捕捉與虛擬網紅</a>、
+        <a target="_blank" href="https://mocap.metarealitylab.com/">師大「元宇宙動捕實驗室」</a>、
+    </div>
+  </div>
+  -->
+
+  <!-- ------------------------------------------------>
+  <div class="row toprow">
+    <div class="col-md-2 twenty"><img src="./img_kitty/133533.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/hero-kitty.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/pic03.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/pic04.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/pic05.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="./img_kitty/pic06.svg" width="100%"></div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row toprow">
+    <div class="col-md-2 twenty">編號</div>
+    <div class="col-md-3 twenty">Handout 講義</div>
+    <div class="col-md-1 twenty">教學影片</div>
+    <div class="col-md-2 twenty">作業</div>
+    <div class="col-md-2 twenty">作業 (範例)</div>
+    <div class="col-md-2 twenty">TA</div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <div class="col-md-2 twenty">0-1-1</div>
+    <div class="col-md-3 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/1paI9CsIjuq0_1Z13Tt8bUV7QswqS7T-c/edit?usp=drive_link&ouid=115156210972726726940&rtpof=true&sd=true"><img src="./img/ppt.svg" width="64px"></a>
+      VTuber
+    </div>
+    <div class="col-md-1 twenty"></div>
+    <div class="col-md-2 twenty">
+        <a target="_blank" href="https://tjhsieh.github.io/ca2024f/"><img src="./img/ppt.svg" width="64px"></a>
+        <a target="_blank" href="https://github.com/tjhsieh/ca2024f"><img src="./img/ppt.svg" width="64px"></a>
+         作品集
+    </div>
+    <div class="col-md-2 twenty"><a target="_blank" href="https://www.youtube.com/watch?v=ECOpi3tQUH0"><img src="./img/mp3.svg" width="64px"></a></div><!-- https://youtu.be/ECOpi3tQUH0 -->
+    <div class="col-md-2 twenty"></div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <div class="col-md-2 twenty">0-1-2</div>
+    <div class="col-md-3 twenty">      
+      <a target="_blank" href="https://docs.google.com/presentation/d/1hbOsz5zJkAc1dFOpOwMl6_nTuMChxRNs/edit?usp=drive_link&ouid=115156210972726726940&rtpof=true&sd=true"><img src="./img/ppt.svg" width="64px"></a>
+      Cubism
+    </div>
+    <div class="col-md-1 twenty"></div>
+    <div class="col-md-2 twenty"></div>
+    <div class="col-md-2 twenty"></div>
+    <div class="col-md-2 twenty"></div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <div class="col-md-2 twenty">0-1-3</div>
+    <div class="col-md-3 twenty">      
+        <a target="_blank" href="https://docs.google.com/presentation/d/1iymNKYgkZNBwBpQt6Q1KUt6H9Ikvm2_f/edit?usp=drive_link&ouid=115156210972726726940&rtpof=true&sd=true"><img src="./img/ppt.svg" width="64px"></a>
+        故事課 <!-- 「靶心人公式」７步驟 -->
+    </div>
+    <div class="col-md-1 twenty"></div>
+    <div class="col-md-2 twenty"></div>
+    <div class="col-md-2 twenty"></div>
+    <div class="col-md-2 twenty"></div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <div class="col-md-2 twenty">0-1-4</div>
+    <div class="col-md-3 twenty">      
+        <a target="_blank" href="https://docs.google.com/presentation/d/1sz0iU3MnhTLsH4u5_dEUaJu7XUTa-x4C/edit?usp=drive_link&ouid=115156210972726726940&rtpof=true&sd=true"><img src="./img/ppt.svg" width="64px"></a>
+        影片上字幕
+    </div>
+    <div class="col-md-1 twenty"><a target="_blank" href="https://youtu.be/xK4Ka3AaXB8"><img src="./img/mpg-video.svg" width="64px"></a></div>
+    <div class="col-md-2 twenty"></div>
+    <div class="col-md-2 twenty"><a target="_blank" href="https://drive.google.com/file/d/1cR0RsAODknAtbTNkxEl8CHrxVgTAhyD_/view?usp=sharing"><img src="./img/mp3.svg" width="64px"></a></div>
+    <div class="col-md-2 twenty"><a href="mailto:t113598xxx@ntut.org.tw"><img src="./img/eml.svg" width="64px"></a>林敬翰</div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <div class="col-md-2 twenty">0-2-0</div>
+    <div class="col-md-3 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/1I5cZgl44539stqwZ3aBI8q_p3nsZedhL/edit?usp=drive_link&ouid=115156210972726726940&rtpof=true&sd=true"><img src="./img/ppt.svg" width="64px"></a>
+        Copilot
+    </div>
+    <div class="col-md-1 twenty"><a target="_blank" href="https://drive.google.com/file/d/10MysL--v2dquNlROICoWizZilk_gxpwE/view?usp=sharing"><img src="./img/mpg-video.svg" width="64px"></a></div>
+    <div class="col-md-2 twenty"></div>
+    <div class="col-md-2 twenty"></div>
+    <div class="col-md-2 twenty"><a href="mailto:t112598016@ntut.org.tw"><img src="./img/eml.svg" width="64px"></a>許加宜</div>
+  </div>
+
+  
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <div class="col-md-2 twenty">0-2-1</div>
+    <div class="col-md-3 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/1WIu8h29az1dJ9eTqfCVnEQlenX-XuUYV/edit?usp=drive_link&ouid=115156210972726726940&rtpof=true&sd=true"><img src="./img/ppt.svg" width="64px"></a>
+        nizimaLIVE
+    </div>
+    <div class="col-md-1 twenty"><a target="_blank" href="https://drive.google.com/file/d/18WOrsGdngtumfib590ngCvE2yrumgzT9/view?usp=sharing"><img src="./img/mpg-video.svg" width="64px"></a></div>
+    <div class="col-md-2 twenty">
+        <a target="_blank" href="https://docs.google.com/presentation/d/11pX-6RIfJs8QXIu4cogX3p1lgdEx-ppW/edit?usp=drive_link&ouid=115156210972726726940&rtpof=true&sd=true"><img src="./img/ppt.svg" width="64px"></a>
+         作業一
+    </div>
+    <div class="col-md-2 twenty"><a target="_blank" href="https://www.youtube.com/watch?v=smESzbCHM64"><img src="./img/mp3.svg" width="64px"></a></div>
+    <div class="col-md-2 twenty"><a href="mailto:t112598016@ntut.org.tw"><img src="./img/eml.svg" width="64px"></a>許加宜</div>
+  </div>
+
+
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <div class="col-md-2 twenty">0-2-2</div>
+    <div class="col-md-3 twenty">      
+      <a target="_blank" href="https://docs.google.com/presentation/d/1BuozaZ9R6Hgc87yEbDy-y8KZHAfUyxnA/edit?usp=drive_link&ouid=115156210972726726940&rtpof=true&sd=true"><img src="./img/ppt.svg" width="64px"></a>
+      VTubeStudio
+    </div>
+    <div class="col-md-1 twenty"><a target="_blank" href="https://drive.google.com/file/d/1zKpbEqDoiLCLA1u_3fF4P88_I1WkSM9W/view?usp=sharing"><img src="./img/mpg-video.svg" width="64px"></a></div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/1VsdtB07jCwC4YfnHmr9VaDwTy2UsmpZe/edit?usp=drive_link&ouid=115156210972726726940&rtpof=true&sd=true"><img src="./img/ppt.svg" width="64px"></a>
+      作業二
+    </div>
+    <div class="col-md-2 twenty"><a target="_blank" href="https://drive.google.com/file/d/17_3WC4pG0KCAAGpuHuP5Ym8tdTtaPESI/view?usp=sharing"><img src="./img/mp3.svg" width="64px"></a></div>
+    <div class="col-md-2 twenty"><a href="mailto:t112598016@ntut.org.tw"><img src="./img/eml.svg" width="64px"></a>許加宜</div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <div class="col-md-2 twenty">0-2-3</div>
+    <div class="col-md-3 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/19qAqVYc_FJmV1u_UnO1lirRElaA5MgDM/edit?usp=drive_link"><img src="./img/ppt.svg" width="64px"></a>
+      Animaze
+    </div>
+    <div class="col-md-1 twenty"><a target="_blank" href="https://drive.google.com/file/d/1glq5efnwjdPlOJdug9rYXazWdDmfEWT0/view?usp=sharing"><img src="./img/mpg-video.svg" width="64px"></a></div>
+    <div class="col-md-2 twenty">
+        <a target="_blank" href="https://docs.google.com/presentation/d/1fKmaYBzpqTZxlNjlemLJKQNbnJwc9fsq/edit?usp=drive_link&ouid=115156210972726726940&rtpof=true&sd=true"><img src="./img/ppt.svg" width="64px"></a>
+         作業三
+    </div>
+    <div class="col-md-2 twenty"><a target="_blank" href="https://drive.google.com/file/d/1UCcOkHAGowoZPkvOX6EGW5PT-bkds0KI/view?usp=sharing"><img src="./img/mp3.svg" width="64px"></a></div>
+    <div class="col-md-2 twenty"><a href="mailto:t112598040@ntut.org.tw"><img src="./img/eml.svg" width="64px"></a>許加宜吳泳霈</div>
+  </div>
+
+  
+  <!-- ------------------------------------------------>
+  <div class="row">
+    <div class="col-md-2 twenty">0-2</div>
+    <div class="col-md-3 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/1nJiFjqxm16hSwlq8yDIEC1hjVnBcbNW1/edit?usp=drive_link&ouid=115156210972726726940&rtpof=true&sd=true"><img src="./img/ppt.svg" width="64px"></a>
+      OBS 直播
+    </div>
+    <div class="col-md-1 twenty"><a target="_blank" href="https://drive.google.com/file/d/10hyVcM21DG-DYLV1G7kwSdbxpgc3ATm7/view?usp=sharing"><img src="./img/mpg-video.svg" width="64px"></a></div>
+    <div class="col-md-2 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/1iXXcvmW4FlLpgb4kOPlsQRE0aX-ZQj2a/edit?usp=drive_link&ouid=115156210972726726940&rtpof=true&sd=true"><img src="./img/ppt.svg" width="64px"></a>
+      作業四
+    </div>
+    <div class="col-md-2 twenty"><a target="_blank" href="https://drive.google.com/file/d/1t2z8nvtWW_v8fxassuqBTlhzHaT43HPv/view?usp=sharing"><img src="./img/mp3.svg" width="64px"></a></div>
+    <div class="col-md-2 twenty"><a href="mailto:t112598033@ntut.org.tw"><img src="./img/eml.svg" width="64px"></a>許加宜</div>
+  </div>
+
+
+  
+  <!-- ------------------------------------------------>
+  <div class="row twentykikyo">
+    <div class="col-md-2 twenty">0-3</div>
+    <div class="col-md-3 twenty">      
+      <a target="_blank" href="https://docs.google.com/presentation/d/1GPkdxgC7MKRcK1_6T9BbA8p6z8I06WJc/edit?usp=drive_link&ouid=115156210972726726940&rtpof=true&sd=true"><img src="./img/ppt.svg" width="64px"></a>
+      Unity SDK
+    </div>
+    <div class="col-md-1 twenty">
+      <a target="_blank" href="https://www.youtube.com/watch?v=MJfYyxWAXYo">
+        <img src="./img/mpg-video.svg" width="64px">
+      </a>
+    </div>
+    <div class="col-md-2 twenty"></div>
+    <div class="col-md-2 twenty"></div>
+    <div class="col-md-2 twenty"><a href="mailto:t113598xxx@ntut.org.tw"><img src="./img/eml.svg" width="64px"></a>林敬翰</div>
+  </div>  
+
+  
+  <!-- ------------------------------------------------>
+  <div class="row twentykikyo">
+    <div class="col-md-2 twenty">0-3</div>
+    <div class="col-md-3 twenty">      
+      <a target="_blank" href="https://docs.google.com/presentation/d/1m5LYAZlIUAQD-Y-krgGAC7RhzunirP93/edit?usp=drive_link&ouid=115156210972726726940&rtpof=true&sd=true"><img src="./img/ppt.svg" width="64px"></a>
+      MediaPipe
+    </div>
+    <div class="col-md-1 twenty"><a target="_blank" href="https://drive.google.com/file/d/1_eBbnXVgJeubXS1ziBBVXdL3l9sA5uDC/view?usp=drive_link"><img src="./img/mpg-video.svg" width="64px"></a></div>
+    <div class="col-md-2 twenty"></div>
+    <div class="col-md-2 twenty"></div>
+    <div class="col-md-2 twenty"><a href="mailto:t113598xxx@ntut.org.tw"><img src="./img/eml.svg" width="64px"></a>林敬翰</div>
+  </div>  
+
+ <!-- ------------------------------------------------>
+ <div class="row twentykikyo">
+  <div class="col-md-2 twenty">0-3</div>
+  <div class="col-md-3 twenty">
+    <a target="_blank" href="https://docs.google.com/presentation/d/1d4NnyVlWzEdVHIo_-9zzJKuq8l4YHmlY/edit?usp=drive_link&ouid=115156210972726726940&rtpof=true&sd=true"><img src="./img/ppt.svg" width="64px"></a>
+    Unity 視覺化編程
+  </div>
+  <div class="col-md-1 twenty"><a target="_blank" href="https://drive.google.com/file/d/1MsVIkALnod7v4hedC6gbc7ZzGRqqsVKw/view?usp=drive_link"><img src="./img/mpg-video.svg" width="64px"></a>
+  </div>
+  <div class="col-md-2 twenty"> </div>
+  <div class="col-md-2 twenty"> </div>
+  <div class="col-md-2 twenty"><a href="mailto:t113598xxx@ntut.org.tw"><img src="./img/eml.svg" width="64px"></a>鄭傳脩</div>
+</div>
+
+ <!-- ------------------------------------------------>
+ <div class="row twentykikyo">
+  <div class="col-md-2 twenty">0-4</div>
+  <div class="col-md-3 twenty">
+    <a target="_blank" href="https://docs.google.com/presentation/d/1AoSLwTfoWu6Zan8zed2acQwnLA8z2qPR/edit?usp=drive_link&ouid=115156210972726726940&rtpof=true&sd=true"><img src="./img/ppt.svg" width="64px"></a>
+    直播事件
+  </div>
+  <div class="col-md-1 twenty"><a target="_blank" href="https://drive.google.com/file/d/116GQ9KA90CblVwyQ_J4Jh0d-STdxknqZ/view?usp=drive_link"><img src="./img/mpg-video.svg" width="64px"></a>
+  </div>
+  <div class="col-md-2 twenty">
+    <a target="_blank" href="https://docs.google.com/presentation/d/1eYjyltvF3lbS5Hv4F_zFssuevgzuw88N/edit?usp=drive_link"><img src="./img/ppt.svg" width="64px"></a>
+   作業五
+  </div>
+  <div class="col-md-2 twenty"><a target="_blank" href="https://drive.google.com/file/d/1-bi3VW2k0WqVUE5mqgLle7RCsdMnoJeM/view?usp=sharing"><img src="./img/mp3.svg" width="64px"></a></div>
+  <div class="col-md-2 twenty"><a href="mailto:t113598xxx@ntut.org.tw"><img src="./img/eml.svg" width="64px"></a>鄭傳脩</div>
+</div>
+
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykonparuiro">
+    <div class="col-md-2 twenty">1-1</div>
+    <div class="col-md-3 twenty">      
+      <a target="_blank" href="https://docs.google.com/presentation/d/1ZWl12a9oNjof2NJtJkVP7V__u7eLqlYt/edit?usp=drive_link&ouid=115156210972726726940&rtpof=true&sd=true"><img src="./img/ppt.svg" width="64px"></a>
+      VRoid Studio
+      <a target="_blank" href="https://vrm.dev/"><img src="./img/html.svg" width="64px"></a>
+      VRM
+    </div>
+    <div class="col-md-1 twenty"><a target="_blank" href="https://drive.google.com/file/d/1TgGPNTkhdrlvuIjrJo-O1iTJkxVxVzMG/view?usp=sharing"><img src="./img/mpg-video.svg" width="64px"></a></div>
+    <div class="col-md-2 twenty"></div>
+    <div class="col-md-2 twenty"> </div>
+    <div class="col-md-2 twenty"><a href="mailto:t112598033@ntut.org.tw"><img src="./img/eml.svg" width="64px"></a>吳泳霈</div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykonparuiro">
+    <div class="col-md-2 twenty">1-2</div>
+    <div class="col-md-3 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/1PeveQ25LFfQuNrFDKNNyequ7P9S1Drle/edit?usp=drive_link&ouid=115156210972726726940&rtpof=true&sd=true"><img src="./img/ppt.svg" width="64px"></a>
+      Mixamo         
+      <a target="_blank" href="https://docs.google.com/document/d/1aW96jgMQOADSbY2kIX2yxis-Y4CfCXud/edit?usp=drive_link&ouid=115156210972726726940&rtpof=true&sd=true"><img src="./img/doc-svgrepo-com.svg" width="64px"></a>
+      3D格式表
+    </div>
+    <div class="col-md-1 twenty"><a target="_blank" href="https://drive.google.com/file/d/1aSoxpF-A5NR6P58W2b98iyRpmOg146Hw/view?usp=drive_link
+      "><img src="./img/mpg-video.svg" width="64px"></a></div>
+    <div class="col-md-2 twenty"></div>
+    <div class="col-md-2 twenty"> </div>
+    <div class="col-md-2 twenty"><a href="mailto:t112598040@ntut.org.tw"><img src="./img/eml.svg" width="64px"></a>王麗雅</div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykonparuiro">
+    <div class="col-md-2 twenty">1-3-1</div>
+    <div class="col-md-3 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/1Cruaj8u5ymqeUI2WRquYZWVaB1FU5ThF/edit?usp=drive_link&ouid=115156210972726726940&rtpof=true&sd=true"><img src="./img/ppt.svg" width="64px"></a>
+      Vicon FBX   
+    </div>
+    <div class="col-md-1 twenty"><a target="_blank" href="https://drive.google.com/file/d/1pzbUhYfaZWhvgk3acNEs6_2X4wENb4CX/view?usp=sharing
+      1-3 Vicon Unity3D_video.mp4
+       "><img src="./img/mpg-video.svg" width="64px"></a></div>
+    <div class="col-md-2 twenty"> </div>
+    <div class="col-md-2 twenty"></div>
+    <div class="col-md-2 twenty"><a href="mailto:t112598016@ntut.org.tw"><img src="./img/eml.svg" width="64px"></a>許加宜</div>
+  </div>
+
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykonparuiro">
+    <div class="col-md-2 twenty">1-3-2</div>
+    <div class="col-md-3 twenty"><a target="_blank" href="https://docs.google.com/presentation/d/1elOYrQ1KkArboJEGQZornt_dt99Et2hu/edit?usp=drive_link&ouid=115156210972726726940&rtpof=true&sd=true"><img src="./img/ppt.svg" width="64px"></a>
+      Unity Recorder設定        
+    </div>
+    <div class="col-md-1 twenty"><a target="_blank" href="https://drive.google.com/file/d/1l6t3m9bM4ICtaVqjYpo0fv3r4zg-ubKo/view?usp=sharing"><img src="./img/mpg-video.svg" width="64px"></a></div>
+    <div class="col-md-2 twenty"> </div>
+    <div class="col-md-2 twenty"></div>
+    <div class="col-md-2 twenty"><a href="mailto:t112598016@ntut.org.tw"><img src="./img/eml.svg" width="64px"></a>許加宜</div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykonparuiro">
+    <div class="col-md-2 twenty">1-3-3</div>
+    <div class="col-md-3 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/1NtwwJvQvhkhqx2JD4A3T-CGJ5hcMJ0Kw/edit?usp=drive_link&ouid=115156210972726726940&rtpof=true&sd=true"><img src="./img/ppt.svg" width="64px"></a>      
+        Unity 專案上傳 Github
+    </div>
+    <div class="col-md-1 twenty"><a target="_blank" href="https://www.youtube.com/watch?v=IR2JNaH2B18"><img src="./img/mpg-video.svg" width="64px"></a></div>
+    <div class="col-md-2 twenty"></div>
+    <div class="col-md-2 twenty"></div>
+    <div class="col-md-2 twenty"><a href="mailto:t112598048@ntut.org.tw"><img src="./img/eml.svg" width="64px"></a>曾詠暄</div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykonparuiro">
+    <div class="col-md-2 twenty">1-3-4</div>
+    <div class="col-md-3 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/1C011ouveonvNFxHQGC7jXCgpaNhqEOre/edit?usp=drive_link&ouid=115156210972726726940&rtpof=true&sd=true"><img src="./img/ppt.svg" width="64px"></a>      
+      Github Desktop Clone專案
+    </div>
+    <div class="col-md-1 twenty"><a target="_blank" href="https://www.youtube.com/watch?v=X2tQfQSIDdk"><img src="./img/mpg-video.svg" width="64px"></a></div>
+    <div class="col-md-2 twenty"></div>
+    <div class="col-md-2 twenty"></div>
+    <div class="col-md-2 twenty"><a href="mailto:t112598048@ntut.org.tw"><img src="./img/eml.svg" width="64px"></a>曾詠暄</div>
+  </div>
+
+ <!-- ------------------------------------------------>
+ <div class="row twentykonparuiro">
+  <div class="col-md-2 twenty">2-0</div>
+  <div class="col-md-3 twenty">    
+    <a target="_blank" href="https://docs.google.com/presentation/d/1y1OKBnTphqJYQ-wIhvX9Cd1BPWZF8JTsYJfMP_fCoYA/edit?usp=drive_link"><img src="./img/ppt.svg" width="64px"></a>
+    Unity 運鏡
+  </div>
+  <div class="col-md-1 twenty"><a target="_blank" href=""><img src="./img/mpg-video.svg" width="64px"></a></div>
+  <div class="col-md-2 twenty"></div>
+  <div class="col-md-2 twenty"> </div>
+  <div class="col-md-2 twenty"><a href="mailto:t112598006@ntut.org.tw"><img src="./img/eml.svg" width="64px"></a>李瑄文</div>
+</div>
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykonparuiro">
+    <div class="col-md-2 twenty">2-1</div>
+    <div class="col-md-3 twenty">
+      <a target="_blank" href="https://docs.google.com/presentation/d/1wjeN5SIp2dhfXI6H7edvJWXsKz47TSW8/edit?usp=drive_link"><img src="./img/ppt.svg" width="64px"></a>
+        Unity 場景
+      </a>
+    </div>
+    <div class="col-md-1 twenty"><a target="_blank" href="https://drive.google.com/file/d/1IZ60NlP_d_4SZXYqpwtjSztB32Xu29JI/view?usp=drive_link"><img src="./img/mpg-video.svg" width="64px"></a>
+    </div>
+    <div class="col-md-2 twenty"> </div>
+    <div class="col-md-2 twenty"></div>
+    <div class="col-md-2 twenty"><a href="mailto:t112598018@ntut.org.tw"><img src="./img/eml.svg" width="64px"></a>蕭裕憲</div>
+  </div>
+
+  
+  <!-- ------------------------------------------------>
+  <div class="row twentykonparuiro bottomrow">
+    <div class="col-md-2 twenty">2-2</div>
+    <div class="col-md-3 twenty">      
+      <a target="_blank" href="https://docs.google.com/presentation/d/1dQIcqfV4vQZLvph7VA3X-0H-SbpaG07X/edit?usp=drive_link&ouid=115156210972726726940&rtpof=true&sd=true"><img src="./img/ppt.svg" width="64px"></a>
+      MMD 轉檔
+    </div>
+    <div class="col-md-1 twenty"><a target="_blank" href="https://drive.google.com/file/d/1fXv8pvPCBgwZ4GGYSIiHX6gaOTpjcDJk/view?usp=sharing"><img src="./img/mpg-video.svg" width="64px"></a></div>
+    <div class="col-md-2 twenty">      
+      <a target="_blank" target="_blank" href="https://docs.google.com/presentation/d/1nPbkcHzppDkEHSunNISpBrqtrLU48yTd/edit?usp=drive_link"><img src="./img/ppt.svg" width="64px"></a>
+     作業六(演唱)
+    </div>
+    <div class="col-md-2 twenty"><a target="_blank" href="https://drive.google.com/file/d/1gNLz9IA6iJN7IVjcGFVqbAv2ZcopJfqi/view?usp=sharing"><img src="./img/mp3.svg" width="64px"></a></div>
+    <div class="col-md-2 twenty"><a href="mailto:t112598048@ntut.org.tw"><img src="./img/eml.svg" width="64px"></a>曾詠暄</div>
+  </div>
+
+
+
+
+
+
+  <!-- ------------------------------------------------>
+  <div class="row bottomrow">
+    <div class="col-md-4 twenty">
+      <a target="_blank" href="https://www.youtube.com/watch?v=pouVB-5aElE"><img src="https://i.ytimg.com/vi/pouVB-5aElE/hq720.jpg" width="100%"></a>
+    </div>
+    <div class="col-md-4 twenty twentykikyo">
+      <a target="_blank" href="https://www.youtube.com/watch?v=19JbmL-Eddc"><img src="https://i.ytimg.com/vi/19JbmL-Eddc/hq720.jpg" width="100%"></a>
+    </div>
+    <div class="col-md-4 twenty twentykonparuiro">
+        <a target="_blank" href="https://www.youtube.com/watch?v=ujcUdrf7YBg"><img src="https://i.ytimg.com/vi/ujcUdrf7YBg/hq720.jpg" width="100%"></a>
+    </div>
+  </div>
+
+
+<!-- ---------------------- -->
+</div>
+<!-- ---------------------- -->
+
+
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+-->
+
+</body>
+</html>

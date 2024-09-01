@@ -1,0 +1,137 @@
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   viewBox="0 0 1280 180"
+   width="1280"
+   height="180">
+
+    <style type="text/css">
+      /*
+      https://fonts.google.com/noto/specimen/Noto+Serif+JP
+      */
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200');
+      /*
+      @import url('https://fonts.googleapis.com/earlyaccess/cwtexkai.css?');
+      */
+
+      text {
+        /*
+        font-family: cwTeXKai;
+        */
+        font-family: 'Noto Serif JP';
+
+        font-size: 48pt; 
+        writing-mode: vertical-rl;
+        letter-spacing: 12px;
+        opacity: 1.0;
+        fill: #f1eef7;
+        stoke: #6A4C9C;
+      }
+    </style>
+
+    <rect x="0" y="0" fill="#5ac2d9" stroke="#fff" stroke-width="3" width="1280" height="180"/>
+
+    <a href="https://nipponcolors.com/#enji" target="_blank">
+      <text x="80" y="45" textLength="384" lengthAdjust="spacing" style="writing-mode: horizontal-tb; font-size: 12pt;">
+        NIPPON COLORS - 日本の伝統色
+      </text>
+    </a>
+
+    <a href="https://www.seikowatches.com/jp-ja/special/140th_limited_3rd" target="_blank">
+      <text x="32" y="100" textLength="512" lengthAdjust="spacing" style="writing-mode: horizontal-tb; font-size: 24pt;">
+        「金春色(こんぱるいろ)」
+      </text>
+    </a>
+
+    <a href="https://www.seikowatches.com/jp-ja/special/140th_limited_3rd" target="_blank">
+      <text x="32" y="130" textLength="512" lengthAdjust="spacing" style="writing-mode: horizontal-tb; font-size: 12pt; stoke: #f1eef7;">
+銀座を象徴する伝統色
+      </text>
+    </a>
+
+    <a href="https://www.seikowatches.com/jp-ja/special/140th_limited_3rd" target="_blank">
+      <text x="32" y="155" textLength="512" lengthAdjust="spacing" style="writing-mode: horizontal-tb; font-size: 12pt;">
+        セイコー創業140周年記念限定モデル｜セイコーウオッチ
+      </text>
+    </a>
+
+    <a href="https://www.w3schools.com/colors/colors_picker.asp" target="_blank">
+      <text x="860" y="30" textLength="256" lengthAdjust="spacing" style="writing-mode: horizontal-tb; font-size: 12pt; fill: white; stoke:#f1eef7;">
+        90% (213,240,246) #d5f0f6
+      </text>
+    </a>
+
+    <a href="https://www.w3schools.com/colors/colors_picker.asp" target="_blank">
+      <text x="760" y="60" textLength="512" lengthAdjust="spacing" style="writing-mode: horizontal-tb; font-size: 18pt; stoke: #f1eef7;">
+        60% (90,194,217) #5ac2d9
+      </text>
+    </a>
+
+
+    <a href="https://www.seikowatches.com/jp-ja/special/140th_limited_3rd" target="_blank">
+      <text x="760" y="120" textLength="256" lengthAdjust="spacing" style="writing-mode: horizontal-tb; font-size: 12pt; stoke: #f1eef7;">
+「金春色」の秒針
+      </text>
+    </a>
+
+    <a href="https://www.seikowatches.com/jp-ja/special/140th_limited_3rd" target="_blank">
+      <text x="760" y="140" textLength="512" lengthAdjust="spacing" style="writing-mode: horizontal-tb; font-size: 12pt; stoke: #f1eef7;">
+秒針のカラーは、明治末期に最もハイカラな色の一つであった、
+      </text>
+    </a>
+
+    <a href="https://www.seikowatches.com/jp-ja/special/140th_limited_3rd" target="_blank">
+      <text x="760" y="160" textLength="512" lengthAdjust="spacing" style="writing-mode: horizontal-tb; font-size: 12pt; stoke: #f1eef7;">
+緑色を帯びた柔らかな青色「金春色(こんぱるいろ)」を採用しています。
+      </text>
+    </a>
+
+    <a href="https://www.seikowatches.com/jp-ja/special/140th_limited_3rd" target="_blank">
+    <g>
+      <text x="640" y="24">
+        金春
+        <animate id="1" attributeType="CSS" attributeName="opacity" from="1.0" to="0.3" dur="5s" begin="0;2.end"/>
+        <animate id="2" attributeType="CSS" attributeName="opacity" from="0.3" to="1.0" dur="5s" begin="1.end"/>
+      </text>
+
+      <text x="680" y="45" style="writing-mode: horizontal-tb; font-size: 18pt; fill: white;" rotate="0">
+        ㄐ
+        <animate id="1" attributeType="CSS" attributeName="opacity" from="1.0" to="0.3" dur="5s" begin="0;2.end"/>
+        <animate id="2" attributeType="CSS" attributeName="opacity" from="0.3" to="1.0" dur="5s" begin="1.end"/>
+      </text>
+
+      <text x="680" y="65" style="writing-mode: horizontal-tb; font-size: 18pt;" rotate="0" >
+        ㄧ
+        <animate id="1" attributeType="CSS" attributeName="opacity" from="1.0" to="0.3" dur="5s" begin="0;2.end"/>
+        <animate id="2" attributeType="CSS" attributeName="opacity" from="0.3" to="1.0" dur="5s" begin="1.end"/>
+      </text>
+
+      <text x="680" y="85" style="writing-mode: horizontal-tb; font-size: 18pt;" rotate="0" >
+        ㄣ
+        <animate id="1" attributeType="CSS" attributeName="opacity" from="1.0" to="0.3" dur="5s" begin="0;2.end"/>
+        <animate id="2" attributeType="CSS" attributeName="opacity" from="0.3" to="1.0" dur="5s" begin="1.end"/>
+      </text>
+
+      <text x="680" y="120" style="writing-mode: horizontal-tb; font-size: 18pt; fill: white;">
+        ㄔ
+        <animate id="1" attributeType="CSS" attributeName="opacity" from="1.0" to="0.3" dur="5s" begin="0;2.end"/>
+        <animate id="2" attributeType="CSS" attributeName="opacity" from="0.3" to="1.0" dur="5s" begin="1.end"/>
+      </text>
+
+      <text x="680" y="140" style="writing-mode: horizontal-tb; font-size: 18pt; fill: white;">
+        ㄨ
+        <animate id="1" attributeType="CSS" attributeName="opacity" from="1.0" to="0.3" dur="5s" begin="0;2.end"/>
+        <animate id="2" attributeType="CSS" attributeName="opacity" from="0.3" to="1.0" dur="5s" begin="1.end"/>
+      </text>
+
+      <text x="680" y="160" style="writing-mode: horizontal-tb; font-size: 18pt; fill: white;">
+        ㄣ
+        <animate id="1" attributeType="CSS" attributeName="opacity" from="1.0" to="0.3" dur="5s" begin="0;2.end"/>
+        <animate id="2" attributeType="CSS" attributeName="opacity" from="0.3" to="1.0" dur="5s" begin="1.end"/>
+      </text>
+
+    </g>
+    </a>
+
+ </svg>
