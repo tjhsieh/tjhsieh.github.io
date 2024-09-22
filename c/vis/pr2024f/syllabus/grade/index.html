@@ -112,18 +112,18 @@
                 if ( d > 20 ) {
                      return d;
                 }
-                else if ( d == 'GitHub') {
-                    return d;
-                }
-                else if ( i == 2) {
-                    return '<a href="https://' + d + '.github.io/pr2023f/">' + d + ' <img src="https://' + d + '.github.io/pr2023f/hw00/me.jpg">' + '</a>';
-                }
+//                else if ( d == 'GitHub') {
+//                    return d;
+//                }
+//                else if ( i == 2) {
+//                    return '<a href="https://' + d + '.github.io/pr2023f/">' + d + ' <img src="https://' + d + '.github.io/pr2023f/hw00/me.jpg">' + '</a>';
+//                }
                 else if ( i == 0 || isNaN(d)) {
                     return d;
                 }
             })
             .filter(function (d, i) { 
-                return (d <= 20 && i > 2 && !isNaN(d) && d != ""); 
+                return (d <= 20 && i > 1 && !isNaN(d) && d != ""); 
             })
             .append("img")
             .attr("src", function (d, i) {
