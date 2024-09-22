@@ -30,8 +30,8 @@
   td img {
     transition: width, height;
     transition-duration: 0.5s;
-    /* width: 50px; */
-    height: 50px;
+    /* width: 50px;  */
+    /* height: 50px; */
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -50,32 +50,35 @@
     writing-mode: vertical-rl;
     text-orientation: upright;
   }
+
+  .jump {
+    animation-name: happy;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes happy {
+    0% { transform: translateY(0px);}
+    25% {transform: translateY(-15px);}
+    50% {transform: translateY(0px);}
+    75% {transform: translateY(-5px);}
+    100% {transform: translateY(0px);}
+}
 </style>
 </head>
 
 <body>
-
-
-<div></div>
-
 <script src="./d3.v3.min.js"></script>
 
 <script type="text/javascript" charset="utf-8">
-
     d3.text("./data.csv", function (data) {
-
-        //var parsedCSV = d3.csv.parseRows(data);
         parsedCSV = d3.csv.parseRows(data);
-
-        //console.log(parsedCSV);
 
         var container = d3.select("body")
             .append("table")
-
             .selectAll("tr")
             .data(parsedCSV).enter()
             .append("tr")
-
             .selectAll("td")
             .data(function (d) { 
                 return d; 
@@ -94,8 +97,6 @@
             })
             .append("img")
             .attr("src", function (d, i) {
-                //alert('d = ' + d);
-
                 if (d == 1) 
                     return "./png/92.png"; 
                 else if (d == 0) 
@@ -103,11 +104,24 @@
                 else 
                     return "./png/infinitejapanese.svg"; 
             })
-            .attr("width", 50)
-            .attr("height", 50)
+            .attr("width", function (d, i) {
+                if (d == 1) 
+                    return "45"; 
+                else
+                    return "60"; 
+            })
+            .attr("height", function (d, i) {
+                if (d == 1) 
+                    return "45"; 
+                else 
+                    return "60"; 
+            })
+            .attr("class", function (d, i) {
+                if (d == 0) 
+                    return "jump"; 
+            })
             ;
     });
 </script>
 </body>
-
 </html>
