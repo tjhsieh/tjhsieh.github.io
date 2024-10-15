@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant-TW">
+
+<head>
+<meta charset="utf-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&display=swap');
+
+  body {
+    background-color: rgba(255, 128, 255, 0.1);
+  }
+
+  table {
+    border-collapse: collapse;
+    border: 2px black solid;
+    font: 16px sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8px;
+  }
+
+  td,
+  th {
+    border: 1px black solid;
+    padding: 5px;
+    background-color: rgba(255, 255, 0, 0.1);
+  }
+
+  td img {
+    transition: width, height;
+    transition-duration: 0.5s;
+    /* width: 50px;  */
+    /* height: 50px; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  }
+
+  div {
+    margin: 16px auto;
+  }
+
+  .v {
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/text-orientation */
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+  }
+
+  .jump {
+    animation-name: happy;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes happy {
+    0% { transform: translateY(0px);}
+    25% {transform: translateY(-15px);}
+    50% {transform: translateY(0px);}
+    75% {transform: translateY(-5px);}
+    100% {transform: translateY(0px);}
+}
+</style>
+</head>
+
+<body>
+<script src="./d3.v3.min.js"></script>
+
+<script type="text/javascript" charset="utf-8">
+    d3.text("./data.csv", function (data) {
+        parsedCSV = d3.csv.parseRows(data);
+
+        var container = d3.select("body")
+            .append("table")
+            .selectAll("tr")
+            .data(parsedCSV).enter()
+            .append("tr")
+            .selectAll("td")
+            .data(function (d) { 
+                return d; 
+            }).enter()
+            .append("td")
+            .html(function (d, i) {
+                if ( d > 20 ) {
+                     return d;
+                }
+                else if ( i == 0 || isNaN(d)) {
+                    return d;
+                }
+            })
+            .filter(function (d, i) { 
+                return (d <= 20 && i > 1 && !isNaN(d) && d != ""); 
+            })
+            .append("img")
+            .attr("src", function (d, i) {
+                if (d == 1) 
+                    return "./png/92.png"; 
+                else if (d == 0) 
+                    return "./png/93.png"; 
+                else
+                    return "./png/infinitejapanese.svg";  // https://www.svgrepo.com/svg/517051/infinitejapanese
+            })
+            .attr("width", function (d, i) {
+                if (d == 1) 
+                    return "45"; 
+                else if (d == 0) 
+                    return "60"; 
+                else
+                    return "30"; 
+            })
+            .attr("height", function (d, i) {
+                if (d == 1) 
+                    return "45"; 
+                else  if (d == 0) 
+                    return "60"; 
+                else
+                    return "30"; 
+            })
+            .attr("class", function (d, i) {
+                if (d == 0) 
+                    return "jump"; 
+            })
+            ;
+    });
+</script>
+</body>
+</html>
