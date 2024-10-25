@@ -245,7 +245,7 @@ If the character does not have an HTML entity, you can use the decimal (dec) or 
                     return d;
                 }
             })
-            .filter(function (d, i) { return (i >= 2 && !isNaN(d) && d != ""); })
+            .filter(function (d, i) { return (i >= 3 && !isNaN(d) && d != ""); })
             .append("img")
             .attr("src", function (d, i) {
                 if (d == 10) 
