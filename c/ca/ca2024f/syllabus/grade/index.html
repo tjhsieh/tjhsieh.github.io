@@ -248,27 +248,27 @@ If the character does not have an HTML entity, you can use the decimal (dec) or 
             .filter(function (d, i) { return (i >= 3 && !isNaN(d) && d != ""); })
             .append("img")
             .attr("src", function (d, i) {
-                if (d == 10) 
+                if (d >= 10) 
                     return "./svg10/52.svg"; 
-                else if (d == 9) 
+                else if (d >= 9) 
                     return "./svg10/51.svg"; 
-                else if (d == 8) 
+                else if (d >= 8) 
                     return "./svg10/42.svg"; 
-                else if (d == 7) 
+                else if (d >= 7) 
                     return "./svg10/41.svg"; 
-                else if (d == 6) 
+                else if (d >= 6) 
                     return "./svg10/32.svg"; 
-                else if (d == 5) 
+                else if (d >= 5) 
                     return "./svg10/31.svg"; 
-                else if (d == 4) 
+                else if (d >= 4) 
                     return "./svg10/22.svg"; 
-                else if (d == 3) 
+                else if (d >= 3) 
                     return "./svg10/21.svg"; 
-                else if (d == 2) 
+                else if (d >= 2) 
                     return "./svg10/12.svg"; 
-                else if (d == 1) 
+                else if (d >= 1) 
                     return "./svg10/11.svg"; 
-                else if (d == 0) 
+                else if (d >= 0) 
                     return "./svg10/01.svg"; 
                 else 
                     return "./svg10/00.svg"; 
