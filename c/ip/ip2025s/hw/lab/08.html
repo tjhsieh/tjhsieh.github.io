@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<title>作業</title>
+<style type="text/css">
+
+@font-face {
+  font-family:'CircleFont';
+  /* src: url(https://circle472.github.io/ct2022s/hw04/CircleFont.ttf); */
+  /* https://github.com/Circle472/ct2022s/tree/main/hw04 */
+  src: url(../CircleFont_v2.woff2);
+  /* https://cloudconvert.com/ttf-to-woff2 */
+}
+
+
+body {
+  background-color: rgb(159, 53, 58);
+  color: rgb(159, 53, 58);
+}
+
+.container-fluid {
+  width:  90%;
+}
+
+.hw12 {
+  border: 1px solid rgb(159, 53, 58);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.twenty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+  padding: 8px;
+  font-family:'CircleFont';
+  font-size: 18pt;
+}
+
+.twentykikyo {
+  color: #f9eced;
+  font-size: 16pt;
+  background-color: #6a4c9c;
+}
+
+.twentykonparuiro {
+  color: #f9eced;
+  font-size: 16pt;
+  background-color: #5ac2d9;
+}
+
+.twenty a {
+  color:  yellow;
+  font-size:  12pt;
+}
+
+.twenty a:hover {
+  color: #f9eced;
+  font-size:  16pt;
+}
+
+.thirty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+}
+
+.ninety {
+  border: 1px solid rgb(159, 53, 58);
+  background-color: #f9eced;
+  padding: 8px;
+}
+
+svg {
+  border: 2px solid rgb(159, 53, 58);
+}
+
+path {
+  pointer-events: all;
+  fill: #f9eced;
+  stroke: rgb(159, 53, 58);
+  stroke-opacity: 0.95;
+  stroke-width: 1px;
+}
+
+.active circle {
+  stroke: #f9eced;
+  stroke-width: 2px;
+}
+
+svg g text {
+  fill: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 0, 0.1);
+  text-shadow: 0 0 16px #FF0000, 0 0 16px #000000;
+  font-size: 18pt;
+  text-anchor: middle;
+}
+
+.twenty:hover {
+  /*
+    background-color: rgba(255, 255, 0, 0.1);
+  */
+    box-shadow: 0 0 5px 3px #f9eced;
+    color: cyan; 
+    text-shadow: 0 0 6px #FFFFFF, 0 0 6px #000000;
+}
+
+img:hover {
+    box-shadow: 0 0 1px 1px #f9eced;
+    animation-name: happy;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes happy {
+    0% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(-15px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    75% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.toprow {
+  margin-top: 36px;
+}
+
+.bottomrow {
+  margin-bottom: 36px;
+}
+
+.GFG {
+  margin: -10px auto; 
+  font-family: 'CircleFont', serif;
+  color: yellow; 
+  font-size: 16pt;
+  -webkit-text-stroke-width: 0.1px; 
+  -webkit-text-stroke-color:  yellow;
+  animation: 24s pulsate infinite;
+}
+
+@keyframes pulsate {
+  50% {font-size: 10pt;} /* text-shadow: 0 0 16px #FFF, 0 0 20px #FFF;  */
+  100% {font-size: 16pt;} /* text-shadow: 0 0 16px #FFF, 0 0 20px #FFF;  */
+}
+
+</style>
+</head>
+<body>
+
+<!-- ------------------------------------------------------------------------------------------------>
+<div class="container-fluid">
+
+  <!-- ------------------------------------------------>
+  <div class="row toprow">
+    <div class="col-md-2 twenty"><img src="../img_kitty/133533.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/hero-kitty.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic03.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic04.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic05.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic06.svg" width="100%"></div>
+  </div>
+
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykikyo bottomrow">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-12 twenty">
+
+8. 請檢查輸入的三門課程是否衝堂。<br><br>
+
+依序輸入 : <br>
+課程編號 (科目名稱 + 4位數字)、<br>
+上課小時數 (1-3 小時)、<br>
+上課時間 (依小時數輸入上課時間, 星期 1-5, 第 1-9,a,b,c 節)。<br><br>
+
+-----------------------------------------------------------------------------------------------<br><br>
+輸入說明:<br>
+輸入三門課程的資訊<br>
+每一門課程的資訊<br>
+第一行 : 輸入課程編號(字串)<br>
+第二行 : 上課小時數 H (整數，1<=H<=3)<br>
+接下來有 H 行<br>
+每一行為一個字串，第一個字元表示星期幾，第二個字元表示第幾節<br><br>
+
+輸出說明:<br>
+輸入任何錯誤，輸出 -1<br>
+若無發生衝堂，則輸出correct<br><br>
+若發生衝堂 : <br>
+輸出所有衝堂的課程，每次輸出兩個衝堂的課程編號，以及在哪一天的哪一節衝突，參考下列格式 :<br>
+{課程1編號},{課程2編號},{衝堂在哪天哪節}<br>
+先輸入的課程為課程1，後輸入的課程為課程2<br><br>
+
+-----------------------------------------------------------------------------------------------<br><br>
+
+範例輸入說明<br><br>
+
+Chinese1001 (第一門課課程編號)<br>
+3 (3小時，每節課1小時)<br>
+11 (星期1 第1節課)<br>
+12 (星期1 第2節課)<br>
+13 (星期1 第3節課)<br>
+English1002 (第二門課課程編號)<br>
+3 (3小時，每節課1小時)<br>
+21 (星期2 第1節課)<br>
+22 (星期2 第2節課)<br>
+23 (星期2 第3節課)<br>
+Math1003 (第三門課課程編號)<br>
+3 (3小時，每節課1小時)<br>
+31 (星期3 第1節課)<br>
+32 (星期3 第2節課)<br>
+13 (星期1 第3節課)<br>
+
+範例輸出說明 (兩課程編號衝突在哪幾節)<br>
+Chinese1001,Math1003,13 (課程Chinese1001跟課程Math1003，在星期1第3節衝堂，因課程Chinese1001先輸入，所以課程Chinese1001放前面)<br><br>
+
+-----------------------------------------------------------------------------------------------<br><br>
+
+Example Input 1 :<br><br>
+
+Programming1002<br>
+2 <br>
+3b <br>
+4c <br>
+Biology1003<br>
+2 <br>
+11 <br>
+3b <br>
+Math3003<br>
+2 <br>
+11 <br>
+3b <br><br>
+
+Example Output 1:<br>
+Programming1002,Biology1003,3b<br>
+Programming1002,Math3003,3b<br>
+Biology1003,Math3003,11<br>
+Biology1003,Math3003,3b<br><br>
+
+-----------------------------------------------------------------------------------------------<br><br>
+
+Example Input 2:<br><br>
+
+Physics3000<br>
+1<br>
+37<br>
+Biology2004<br>
+3<br>
+2a<br>
+2b<br>
+2c<br>
+Chemistry1003<br>
+1<br>
+1c<br><br>
+
+Example Output 2:<br>
+correct<br><br>
+
+-----------------------------------------------------------------------------------------------<br><br>
+
+Example Input 3:<br><br>
+
+Math1011<br>
+1<br>
+46<br>
+Chinese1002<br>
+2<br>
+45<br>
+46<br>
+English1003<br>
+2<br>
+61<br>
+5a<br><br>
+
+Example Output 3:<br>
+-1<br><br>
+
+-----------------------------------------------------------------------------------------------<br><br>
+
+
+
+    </div>
+  </div>
+  <!-- ------------------------------------------------>
+
+  
+</div>
+<!-- ------------------------------------------------------------------------------------------------>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+
+
+
+</body>
+</html>
