@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<title>作業</title>
+<style type="text/css">
+
+@font-face {
+  font-family:'CircleFont';
+  /* src: url(https://circle472.github.io/ct2022s/hw04/CircleFont.ttf); */
+  /* https://github.com/Circle472/ct2022s/tree/main/hw04 */
+  src: url(../CircleFont_v2.woff2);
+  /* https://cloudconvert.com/ttf-to-woff2 */
+}
+
+
+body {
+  background-color: rgb(159, 53, 58);
+  color: rgb(159, 53, 58);
+}
+
+.container-fluid {
+  width:  90%;
+}
+
+.hw12 {
+  border: 1px solid rgb(159, 53, 58);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.twenty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+  padding: 8px;
+  font-family:'CircleFont';
+  font-size: 18pt;
+}
+
+.twentykikyo {
+  color: #f9eced;
+  font-size: 16pt;
+  background-color: #6a4c9c;
+}
+
+.twentykonparuiro {
+  color: #f9eced;
+  font-size: 16pt;
+  background-color: #5ac2d9;
+}
+
+.twenty a {
+  color:  yellow;
+  font-size:  12pt;
+}
+
+.twenty a:hover {
+  color: #f9eced;
+  font-size:  16pt;
+}
+
+.thirty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+}
+
+.ninety {
+  border: 1px solid rgb(159, 53, 58);
+  background-color: #f9eced;
+  padding: 8px;
+}
+
+svg {
+  border: 2px solid rgb(159, 53, 58);
+}
+
+path {
+  pointer-events: all;
+  fill: #f9eced;
+  stroke: rgb(159, 53, 58);
+  stroke-opacity: 0.95;
+  stroke-width: 1px;
+}
+
+.active circle {
+  stroke: #f9eced;
+  stroke-width: 2px;
+}
+
+svg g text {
+  fill: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 0, 0.1);
+  text-shadow: 0 0 16px #FF0000, 0 0 16px #000000;
+  font-size: 18pt;
+  text-anchor: middle;
+}
+
+.twenty:hover {
+  /*
+    background-color: rgba(255, 255, 0, 0.1);
+  */
+    box-shadow: 0 0 5px 3px #f9eced;
+    color: cyan; 
+    text-shadow: 0 0 6px #FFFFFF, 0 0 6px #000000;
+}
+
+img:hover {
+    box-shadow: 0 0 1px 1px #f9eced;
+    animation-name: happy;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes happy {
+    0% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(-15px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    75% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.toprow {
+  margin-top: 36px;
+}
+
+.bottomrow {
+  margin-bottom: 36px;
+}
+
+.GFG {
+  margin: -10px auto; 
+  font-family: 'CircleFont', serif;
+  color: yellow; 
+  font-size: 16pt;
+  -webkit-text-stroke-width: 0.1px; 
+  -webkit-text-stroke-color:  yellow;
+  animation: 24s pulsate infinite;
+}
+
+@keyframes pulsate {
+  50% {font-size: 10pt;} /* text-shadow: 0 0 16px #FFF, 0 0 20px #FFF;  */
+  100% {font-size: 16pt;} /* text-shadow: 0 0 16px #FFF, 0 0 20px #FFF;  */
+}
+
+</style>
+</head>
+<body>
+
+<!-- ------------------------------------------------------------------------------------------------>
+<div class="container-fluid">
+
+  <!-- ------------------------------------------------>
+  <div class="row toprow">
+    <div class="col-md-2 twenty"><img src="../img_kitty/133533.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/hero-kitty.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic03.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic04.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic05.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic06.svg" width="100%"></div>
+  </div>
+
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykikyo bottomrow">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-12 twenty">
+
+16. 判斷三角形並找最大/最小面積<br><br>
+
+給定n個三角形和其三邊長，輸出該三角形類型，若可構成三角形則再輸出面積。全部輸入完後，再輸出其中最大和最小面積。輸出面積四捨五入取到小數點第二位。<br><br>
+
+若輸入的所有三角形皆不是三角形，則不輸出最大與最小面積，改為輸出 All inputs are not triangles!<br><br>
+
+※三角形面積可利用海龍公式計算(a,b,c表示三角形三邊長)：<br><br>
+ 
+
+※三角形類型輸出如下<br>
+1. 不能成為三角形：輸出not a triangle，且不用輸出面積。<br>
+2. 正三角形：輸出equilateral triangle。<br>
+3. 等腰三角形：輸出isosceles triangle。<br>
+4. 鈍角三角形:輸出obtuse triangle。<br>
+5. 銳角三角形:輸出acute triangle。<br>
+6. 直角三角形:輸出right triangle。<br><br>
+
+當三個邊長能構成三角形時，判斷該三角形是否為正三角形，若否，則判斷是否為等腰三角形。若皆非正三角形或等腰三角形，再判斷該三角形為鈍角三角形、銳角三角形或直角三角形。<br><br>
+
+1. 不能成為三角形：任兩邊和不大於第三邊，或任一邊長不大於0。<br>
+2. 正三角形：三個邊相等。<br>
+3. 等腰三角形：任兩邊相等，且平方和大於第三邊的平方。<br>
+4. 鈍角三角形: 最長邊平方大於兩短邊平方和<br>
+5. 銳角三角形: 最長邊平方小於兩短邊平方和<br>
+6. 直角三角形: 最長邊平方等於兩短邊平方和<br><br>
+
+---------------------------------------------------------------------------------------<br><br>
+
+輸入說明<br>
+第1行：輸入一個正整數，表示接下來將輸入n個三角形的三邊長（2<=n<=10）<br>
+第2~n+1行：輸入三個正整數，以空白隔開。表示該三角形的三邊長。<br><br>
+
+輸出說明<br>
+第1~n行：輸出三角形類型。若可構成三角形，則再輸出面積(四捨五入取到小數點第二位)<br>，面積為一浮點數。三角形類型與面積以空白隔開。<br><br>
+
+若輸入有任一個可構成三角形，輸出兩行<br>
+第n+1行：為一浮點數，表示最大的三角形面積<br>
+第n+2行：為一浮點數，表示最小的三角形面積<br><br>
+
+若全部輸入皆不可構成三角形，則輸出一行<br>
+第n+1行：All inputs are not triangles!<br><br>
+
+---------------------------------------------------------------------------------------<br><br>
+
+範例輸入說明:<br>
+4   #表示接下來將輸入4個三角形<br>
+3 4 5   #第1個三角形，邊長為3、4、5<br>
+2 8 6   #第2個三角形，邊長為2、8、6<br>
+4 4 3   #第3個三角形，邊長為4、4、3<br>
+3 3 3   #第4個三角形，邊長為3、3、3<br><br>
+
+範例輸出說明:<br>
+right triangle 6.00   #邊長為3、4、5的三角形為直角三角形，面積=6<br>
+not a triangle      #邊長為2、8、6的三角形非三角形<br>
+isosceles triangle 5.56   #邊長為4、4、3的三角形為等腰三角形，面積=5.56<br>
+equilateral triangle 3.90 #邊長為3、3、3的三角形為正三角形，面積=3.9<br>
+6.00        #面積最大為6<br>
+3.90        #面積最小為3.9<br><br>
+
+---------------------------------------------------------------------------------------<br><br>
+
+Example Input 1:<br>
+3<br>
+3 3 7<br>
+2 5 1<br>
+8 4 4<br><br>
+
+
+Example Output 1:<br>
+not a triangle<br>
+not a triangle<br>
+not a triangle<br>
+All inputs are not triangles!<br><br>
+
+
+    </div>
+  </div>
+  <!-- ------------------------------------------------>
+
+  
+</div>
+<!-- ------------------------------------------------------------------------------------------------>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+
+
+
+</body>
+</html>

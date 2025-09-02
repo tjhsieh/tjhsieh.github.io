@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<title>作業</title>
+<style type="text/css">
+
+@font-face {
+  font-family:'CircleFont';
+  /* src: url(https://circle472.github.io/ct2022s/hw04/CircleFont.ttf); */
+  /* https://github.com/Circle472/ct2022s/tree/main/hw04 */
+  src: url(../CircleFont_v2.woff2);
+  /* https://cloudconvert.com/ttf-to-woff2 */
+}
+
+
+body {
+  background-color: rgb(159, 53, 58);
+  color: rgb(159, 53, 58);
+}
+
+.container-fluid {
+  width:  90%;
+}
+
+.hw12 {
+  border: 1px solid rgb(159, 53, 58);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.twenty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+  padding: 8px;
+  font-family:'CircleFont';
+  font-size: 18pt;
+}
+
+.twentykikyo {
+  color: #f9eced;
+  font-size: 16pt;
+  background-color: #6a4c9c;
+}
+
+.twentykonparuiro {
+  color: #f9eced;
+  font-size: 16pt;
+  background-color: #5ac2d9;
+}
+
+.twenty a {
+  color:  yellow;
+  font-size:  12pt;
+}
+
+.twenty a:hover {
+  color: #f9eced;
+  font-size:  16pt;
+}
+
+.thirty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+}
+
+.ninety {
+  border: 1px solid rgb(159, 53, 58);
+  background-color: #f9eced;
+  padding: 8px;
+}
+
+svg {
+  border: 2px solid rgb(159, 53, 58);
+}
+
+path {
+  pointer-events: all;
+  fill: #f9eced;
+  stroke: rgb(159, 53, 58);
+  stroke-opacity: 0.95;
+  stroke-width: 1px;
+}
+
+.active circle {
+  stroke: #f9eced;
+  stroke-width: 2px;
+}
+
+svg g text {
+  fill: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 0, 0.1);
+  text-shadow: 0 0 16px #FF0000, 0 0 16px #000000;
+  font-size: 18pt;
+  text-anchor: middle;
+}
+
+.twenty:hover {
+  /*
+    background-color: rgba(255, 255, 0, 0.1);
+  */
+    box-shadow: 0 0 5px 3px #f9eced;
+    color: cyan; 
+    text-shadow: 0 0 6px #FFFFFF, 0 0 6px #000000;
+}
+
+img:hover {
+    box-shadow: 0 0 1px 1px #f9eced;
+    animation-name: happy;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes happy {
+    0% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(-15px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    75% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.toprow {
+  margin-top: 36px;
+}
+
+.bottomrow {
+  margin-bottom: 36px;
+}
+
+.GFG {
+  margin: -10px auto; 
+  font-family: 'CircleFont', serif;
+  color: yellow; 
+  font-size: 16pt;
+  -webkit-text-stroke-width: 0.1px; 
+  -webkit-text-stroke-color:  yellow;
+  animation: 24s pulsate infinite;
+}
+
+@keyframes pulsate {
+  50% {font-size: 10pt;} /* text-shadow: 0 0 16px #FFF, 0 0 20px #FFF;  */
+  100% {font-size: 16pt;} /* text-shadow: 0 0 16px #FFF, 0 0 20px #FFF;  */
+}
+
+</style>
+</head>
+<body>
+
+<!-- ------------------------------------------------------------------------------------------------>
+<div class="container-fluid">
+
+  <!-- ------------------------------------------------>
+  <div class="row toprow">
+    <div class="col-md-2 twenty"><img src="../img_kitty/133533.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/hero-kitty.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic03.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic04.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic05.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic06.svg" width="100%"></div>
+  </div>
+
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykikyo bottomrow">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-12 twenty">
+
+20. 數字矩陣<br><br>
+
+給定一個正整數n，產生一個n*n的初始矩陣。初始矩陣中每個元素為一個數字，從1開始，由左到右、由上往下增加。例如：<br><br>
+
+n = 4 的初始矩陣<br>
+1 2 3 4<br>
+5 6 7 8<br>
+9 10 11 12<br>
+13 14 15 16<br><br>
+
+輸入n後，需要再輸入一串由L、R組成的字串，字串由左到右進行讀取，每次讀取一個字元。<br>
+L表示將整個矩陣往逆時針轉90度，R表示將整個矩陣往順時針轉90度<br><br>
+
+下面是n = 4 的初始矩陣讀取到L，往逆時針翻轉90度的範例：<br>
+4 8 12 16<br>
+3 7 11 15<br>
+2 6 10 14<br>
+1 5 9 13<br><br>
+
+下面是n = 4 的初始矩陣讀取到R，往順時針翻轉90度的範例：<br>
+13 9 5 1<br>
+14 10 6 2<br>
+15 11 7 3<br>
+16 12 8 4<br><br>
+
+當字串讀取完成後，輸出翻轉後的矩陣。<br>
+※注意，僅需要輸出完成所有翻轉後的結果，無需顯示過程<br><br>
+
+------------------------------------------------------------------------------<br><br>
+
+輸入說明：<br>
+第一行：輸入一個正整數n，表示n*n的矩陣（2 <= n <= 5）<br>
+第二行：輸入由L、R組成的字串，長度<=10。字串由左到右讀取每個字元，當讀取到L時將矩陣向逆時針翻轉90度，讀取到R時將矩陣向順時針翻轉90度。 <br><br>
+
+輸出說明：<br>
+輸出一個矩陣，為初始矩陣經過翻轉後的結果。<br><br>
+
+-----------------------------------------------------------------------------<br><br>
+
+範例輸入說明 1:<br>
+3<br>
+# 表示一個3*3的初始矩陣，如下：<br>
+# 1 2 3<br>
+# 4 5 6<br>
+# 7 8 9<br><br>
+
+RRL<br>
+# 表示對初始矩陣進行以下操作<br>
+# 1. R , 向順時針轉90度<br>
+#   7 4 1<br>
+#   8 5 2<br>
+#   9 6 3<br>
+# 2. R , 向順時針轉90度<br>
+#   9 8 7<br>
+#   6 5 4<br>
+#   3 2 1<br>
+# 3. L , 向逆時針轉90度<br>
+#   7 4 1<br>
+#   8 5 2<br>
+#   9 6 3<br><br>
+
+範例輸出說明 1:<br>
+7 4 1<br>
+8 5 2<br>
+9 6 3<br>
+#此為初始矩陣經過RRL三次翻轉後的結果<br><br>
+
+
+-----------------------------------------------------------------------------<br><br>
+
+範例輸入 1:<br>
+3<br>
+LLL<br><br>
+
+範例輸出 1:<br>
+7 4 1<br>
+8 5 2<br>
+9 6 3<br><br>
+
+-----------------------------------------------------------------------------<br><br>
+
+範例輸入 2:<br>
+4<br>
+LRLRRL<br><br>
+
+範例輸出 2:<br>
+1 2 3 4<br>
+5 6 7 8<br>
+9 10 11 12<br>
+13 14 15 16<br><br>
+
+-----------------------------------------------------------------------------<br><br>
+
+範例輸入 3:<br>
+5<br>
+RLLLRLLR<br><br>
+
+範例輸出 3:<br>
+25 24 23 22 21<br>
+20 19 18 17 16 <br>
+15 14 13 12 11<br>
+10 9 8 7 6<br>
+5 4 3 2 1<br><br>
+
+-----------------------------------------------------------------------------<br><br>
+
+範例輸入 4:<br>
+4<br>
+RLRRRLR<br><br>
+
+範例輸出 4:<br>
+4 8 12 16 <br>
+3 7 11 15 <br>
+2 6 10 14 <br>
+1 5 9 13<br><br>
+
+
+
+    </div>
+  </div>
+  <!-- ------------------------------------------------>
+
+  
+</div>
+<!-- ------------------------------------------------------------------------------------------------>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+
+
+
+</body>
+</html>

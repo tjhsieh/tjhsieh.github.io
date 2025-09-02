@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<title>作業</title>
+<style type="text/css">
+
+@font-face {
+  font-family:'CircleFont';
+  /* src: url(https://circle472.github.io/ct2022s/hw04/CircleFont.ttf); */
+  /* https://github.com/Circle472/ct2022s/tree/main/hw04 */
+  src: url(../CircleFont_v2.woff2);
+  /* https://cloudconvert.com/ttf-to-woff2 */
+}
+
+
+body {
+  background-color: rgb(159, 53, 58);
+  color: rgb(159, 53, 58);
+}
+
+pre {
+  font-family:'CircleFont';
+  font-size: 16pt;
+}
+
+.container-fluid {
+  width:  90%;
+}
+
+.hw12 {
+  border: 1px solid rgb(159, 53, 58);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.twenty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+  padding: 8px;
+  font-family:'CircleFont';
+  font-size: 18pt;
+}
+
+.twentykikyo {
+  color: #f9eced;
+  font-size: 16pt;
+  background-color: #6a4c9c;
+}
+
+.twentykonparuiro {
+  color: #f9eced;
+  font-size: 16pt;
+  background-color: #5ac2d9;
+}
+
+.twenty a {
+  color:  yellow;
+  font-size:  12pt;
+}
+
+.twenty a:hover {
+  color: #f9eced;
+  font-size:  16pt;
+}
+
+.thirty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+}
+
+.ninety {
+  border: 1px solid rgb(159, 53, 58);
+  background-color: #f9eced;
+  padding: 8px;
+}
+
+svg {
+  border: 2px solid rgb(159, 53, 58);
+}
+
+path {
+  pointer-events: all;
+  fill: #f9eced;
+  stroke: rgb(159, 53, 58);
+  stroke-opacity: 0.95;
+  stroke-width: 1px;
+}
+
+.active circle {
+  stroke: #f9eced;
+  stroke-width: 2px;
+}
+
+svg g text {
+  fill: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 0, 0.1);
+  text-shadow: 0 0 16px #FF0000, 0 0 16px #000000;
+  font-size: 18pt;
+  text-anchor: middle;
+}
+
+.twenty:hover {
+  /*
+    background-color: rgba(255, 255, 0, 0.1);
+  */
+    box-shadow: 0 0 5px 3px #f9eced;
+    color: cyan; 
+    text-shadow: 0 0 6px #FFFFFF, 0 0 6px #000000;
+}
+
+img:hover {
+    box-shadow: 0 0 1px 1px #f9eced;
+    animation-name: happy;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes happy {
+    0% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(-15px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    75% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.toprow {
+  margin-top: 36px;
+}
+
+.bottomrow {
+  margin-bottom: 36px;
+}
+
+.GFG {
+  margin: -10px auto; 
+  font-family: 'CircleFont', serif;
+  color: yellow; 
+  font-size: 16pt;
+  -webkit-text-stroke-width: 0.1px; 
+  -webkit-text-stroke-color:  yellow;
+  animation: 24s pulsate infinite;
+}
+
+@keyframes pulsate {
+  50% {font-size: 10pt;} /* text-shadow: 0 0 16px #FFF, 0 0 20px #FFF;  */
+  100% {font-size: 16pt;} /* text-shadow: 0 0 16px #FFF, 0 0 20px #FFF;  */
+}
+
+</style>
+</head>
+<body>
+
+<!-- ------------------------------------------------------------------------------------------------>
+<div class="container-fluid">
+
+  <!-- ------------------------------------------------>
+  <div class="row toprow">
+    <div class="col-md-2 twenty"><img src="../img_kitty/133533.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/hero-kitty.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic03.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic04.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic05.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic06.svg" width="100%"></div>
+  </div>
+
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykikyo bottomrow">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-12 twenty">
+      <pre>
+
+40. 基因序列
+
+DNA序列由英文字母組成的字串(string), 基因(gene)是隱藏於 DNA 序列中的部分片段(子字串)。
+給定一個 DNA 序列字串,序列字串長度小於 50, 找出在 DNA 序列字串中的基因,找法如下:
+
+1. 給定一個前面序列字串以及三個後面序列字串，
+被前面序列字串與後面序列字串夾在中間的字串即為基因;
+如:DNA 序列字串為 AHTGTTTTAA，前面序列字串為 A??G，
+
+其中??兩個是(E~T)任兩個符號不同組合；
+後面序列字串為 TAG、TAA、TGA,
+那被 AHTG 與 TAA 所夾在中間的 TTT,則為一個基因。
+
+2. 基因長度為質數,其中未含有前面序列字串與後面序列字串;
+如:根據規則一所得到的基因 TTT,其長度為 3,而 3 是質數,因此基因 TTT 會被找出。
+
+【輸入說明】
+第1行：輸入一個基因前面序列字串
+第2行：輸入三個基因後面序列字串,以空格隔開
+第3行：輸入一個 DNA 序列字串
+所有字串的長度皆小於 50
+
+【輸出說明】
+第1~N行：找出 DNA序列字串中所有的基因,並且輸出排序後的結果
+找出的基因數需進行排序，以字母由小到大排序，小的優先輸出。
+
+若沒有找到基因,則輸出"No gene"
+
+【測試資料一】
+輸入：
+AEHG
+TAG TAA TGA
+AEHGTTTTAA
+
+輸出：
+TTT
+
+【測試資料二】
+輸入：
+ACA
+CAG TCA AGT
+ACATTTTACGCT
+
+輸出：
+No gene
+
+【測試資料三】
+輸入：
+AETG
+TAG TAA TGA
+AETGTTTTAGAETGCTATGAAETGACGTTTAAAETGACCCATAG
+
+輸出：
+CTA
+TTT
+ACCCA
+ACGTT
+
+【測試資料四】
+輸入：
+AKLG
+GAT GTA CAT
+AKLGCCCTAGTAAKLGTTTAAACCATAKLGGGGGTAAKLGCTGGAT
+
+輸出：
+CTG
+GGG
+CCCTA
+TTTAAAC
+
+【隱藏測試資料一】
+輸入：
+AGHG
+GAT GTA CAT
+AGHGTATGTA
+
+輸出：
+TAT
+
+【隱藏測試資料二】
+輸入：
+AIJG
+GAT GTA CAT
+GGCTATGTA
+
+輸出：
+No gene
+
+【隱藏測試資料三】
+輸入：
+AKLG
+GAT GTA CAT
+AKLGGGCGTAAKLGGACCATAKLGGGGGGGGGTAAKLGCTGGAT
+
+輸出：
+CTG
+GAC
+GGC
+GGGGGGG
+
+【隱藏測試資料四】
+輸入：
+AKMG
+GAT GTA CAT
+AKMGQAQCAT
+
+輸出：
+QAQ
+
+
+
+
+        
+      </pre>
+    </div>
+  </div>
+  <!-- ------------------------------------------------>
+
+  
+</div>
+<!-- ------------------------------------------------------------------------------------------------>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+
+
+
+</body>
+</html>

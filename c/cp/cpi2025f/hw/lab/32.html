@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<title>作業</title>
+<style type="text/css">
+
+@font-face {
+  font-family:'CircleFont';
+  /* src: url(https://circle472.github.io/ct2022s/hw04/CircleFont.ttf); */
+  /* https://github.com/Circle472/ct2022s/tree/main/hw04 */
+  src: url(../CircleFont_v2.woff2);
+  /* https://cloudconvert.com/ttf-to-woff2 */
+}
+
+
+body {
+  background-color: rgb(159, 53, 58);
+  color: rgb(159, 53, 58);
+}
+
+pre {
+  font-family:'CircleFont';
+  font-size: 16pt;
+}
+
+.container-fluid {
+  width:  90%;
+}
+
+.hw12 {
+  border: 1px solid rgb(159, 53, 58);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.twenty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+  padding: 8px;
+  font-family:'CircleFont';
+  font-size: 18pt;
+}
+
+.twentykikyo {
+  color: #f9eced;
+  font-size: 16pt;
+  background-color: #6a4c9c;
+}
+
+.twentykonparuiro {
+  color: #f9eced;
+  font-size: 16pt;
+  background-color: #5ac2d9;
+}
+
+.twenty a {
+  color:  yellow;
+  font-size:  12pt;
+}
+
+.twenty a:hover {
+  color: #f9eced;
+  font-size:  16pt;
+}
+
+.thirty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+}
+
+.ninety {
+  border: 1px solid rgb(159, 53, 58);
+  background-color: #f9eced;
+  padding: 8px;
+}
+
+svg {
+  border: 2px solid rgb(159, 53, 58);
+}
+
+path {
+  pointer-events: all;
+  fill: #f9eced;
+  stroke: rgb(159, 53, 58);
+  stroke-opacity: 0.95;
+  stroke-width: 1px;
+}
+
+.active circle {
+  stroke: #f9eced;
+  stroke-width: 2px;
+}
+
+svg g text {
+  fill: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 0, 0.1);
+  text-shadow: 0 0 16px #FF0000, 0 0 16px #000000;
+  font-size: 18pt;
+  text-anchor: middle;
+}
+
+.twenty:hover {
+  /*
+    background-color: rgba(255, 255, 0, 0.1);
+  */
+    box-shadow: 0 0 5px 3px #f9eced;
+    color: cyan; 
+    text-shadow: 0 0 6px #FFFFFF, 0 0 6px #000000;
+}
+
+img:hover {
+    box-shadow: 0 0 1px 1px #f9eced;
+    animation-name: happy;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes happy {
+    0% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(-15px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    75% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.toprow {
+  margin-top: 36px;
+}
+
+.bottomrow {
+  margin-bottom: 36px;
+}
+
+.GFG {
+  margin: -10px auto; 
+  font-family: 'CircleFont', serif;
+  color: yellow; 
+  font-size: 16pt;
+  -webkit-text-stroke-width: 0.1px; 
+  -webkit-text-stroke-color:  yellow;
+  animation: 24s pulsate infinite;
+}
+
+@keyframes pulsate {
+  50% {font-size: 10pt;} /* text-shadow: 0 0 16px #FFF, 0 0 20px #FFF;  */
+  100% {font-size: 16pt;} /* text-shadow: 0 0 16px #FFF, 0 0 20px #FFF;  */
+}
+
+</style>
+</head>
+<body>
+
+<!-- ------------------------------------------------------------------------------------------------>
+<div class="container-fluid">
+
+  <!-- ------------------------------------------------>
+  <div class="row toprow">
+    <div class="col-md-2 twenty"><img src="../img_kitty/133533.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/hero-kitty.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic03.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic04.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic05.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic06.svg" width="100%"></div>
+  </div>
+
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykikyo bottomrow">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-12 twenty">
+      <pre>
+
+32. 迷你數獨
+
+迷你數獨由4*4個格子組成，每格空白或1~4間的整數，而4*4個格子又可以被分為左上、右上、左下、右下4個2*2大小的區域。例如以下的迷你數獨矩陣：
+3 1 4 2
+4 2 3 1
+1 3 2 4
+2 4 1 3
+此矩陣又可分為左上、右上、左下、右下4個2*2大小的區域 (Block)，以上面的矩陣為例，左上區域為
+3 1
+4 2
+右下區域為
+2 4
+1 3
+矩陣中的值須滿足以下數獨規則：
+1. 每個直欄  (Column)中，數字1~4皆不能缺少也不會重複出現。
+2. 每個橫列 (Row)中，數字1~4皆不能缺少也不會重複出現。
+3. 每個區域(Block)中，數字1~4皆不能缺少也不會重複出現。
+
+本題目需計算出完整的迷你數獨矩陣，例如輸入矩陣：
+0 0 0 0
+0 2 3 1
+0 3 2 4
+2 0 0 3
+其中：
+(1) 本題目0 表示需要程式計算取代數字的地方；
+(2) 本題目非0數字固定8個；
+(3) 本題目至少2個直欄、橫列、或區域，存在一個0，
+計算出完整數獨矩陣步驟：
+(1)右下區域中已知有[2 3 4]，因此0應被取代為1。
+(2) index=3的直欄  (Column)已有[1 3 4]，因此0應被取代為2。
+(3) index=1的橫列(Row)已有[1 2 3]，因此0應被取代為4。
+(4) index=2的橫列(Row)已有[2 3 4]，因此0應被取代為1。
+因此矩陣變為
+0 0 0 2
+4 2 3 1
+1 3 2 4
+2 0 1 3
+繼續第二、三輪計算，即可完成所有0的替換。
+
+【輸入說明】
+輸入共有4行，每行有4個0~4的整數，其中0表示空白的格子，輸入的每個整數中間以一個空白隔開，表示一個4*4迷你數獨的初始狀態
+
+【輸出說明】
+輸出共有4行，每行有4個1~4的整數，每個整數間以一個空白隔開。表示一個4*4迷你數獨的結果，且結果符合數獨規則。
+
+【測試資料一】
+輸入：
+3 0 1 4
+0 0 0 2
+2 0 4 0
+1 4 0 0
+
+輸出：
+3 2 1 4
+4 1 3 2
+2 3 4 1
+1 4 2 3
+
+【測試資料二】
+輸入：
+1 0 4 2
+4 0 3 0
+0 1 0 4
+0 0 1 0
+
+輸出：
+1 3 4 2
+4 2 3 1
+3 1 2 4
+2 4 1 3
+
+【測試資料三】
+輸入：
+1 0 0 0
+4 2 3 0
+0 0 1 0
+3 1 0 2
+
+輸出：
+1 3 2 4
+4 2 3 1
+2 4 1 3
+3 1 4 2
+
+【隱藏測試資料一】
+輸入：
+0 2 3 0
+4 0 0 2
+0 0 0 3
+3 4 0 1
+
+輸出：
+1 2 3 4
+4 3 1 2
+2 1 4 3
+3 4 2 1
+
+【隱藏測試資料二】
+輸入：
+0 4 0 0
+2 3 4 0
+0 0 2 0
+4 2 0 3
+
+輸出：
+1 4 3 2
+2 3 4 1
+3 1 2 4
+4 2 1 3
+
+【隱藏測試資料三】
+輸入：
+1 3 0 0
+0 2 1 0
+3 0 2 0
+0 4 3 0
+
+輸出：
+1 3 4 2
+4 2 1 3
+3 1 2 4
+2 4 3 1
+
+
+        
+      </pre>
+    </div>
+  </div>
+  <!-- ------------------------------------------------>
+
+  
+</div>
+<!-- ------------------------------------------------------------------------------------------------>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+
+
+
+</body>
+</html>
