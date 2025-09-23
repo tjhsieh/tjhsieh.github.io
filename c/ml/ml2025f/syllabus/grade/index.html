@@ -164,64 +164,6 @@
 </tr>
 </table>
 
-
-<!-- <table>
-    <tr>
-        <td>學號</td>
-        <td>姓名</td>
-        <td>github</td>
-        <td>HW01</td>
-        <td>HW02</td>
-        <td>HW03</td>
-        <td>HW04</td>
-        <td>HW05</td>
-        <td>HW06</td>
-        <td>HW07</td>
-        <td>HW08</td>
-        <td>HW09</td>
-        <td>HW10</td>
-        <td>HW11</td>
-        <td>HW12</td>
-        <td>HW13</td>
-        <td>HW14</td>
-        <td>HW15</td>
-        <td>HW16</td>
-        <td>HW17</td>
-        <td>HW18</td>        
-        <td>姓名</td>
-    </tr>
-
-    <tr>
-        <td>110598999</td>
-        <td>米津玄師</td>
-        <td>
-            <a href="https://tjhsieh.github.io/cg2021f/" target="_blank"><img src="https://raw.githubusercontent.com/tjhsieh/cg2021f/main/me.svg"></a>
-            <hr>
-            <a href="https://www.github.com/tjhsieh/cg2021f/" target="_blank">tjhsieh</a>
-        </td>
-        <td><img src="./svg10/00.svg" width="50" height="50"></td>
-        <td><img src="./svg10/01.svg" width="50" height="50"></td>
-        <td><img src="./svg10/11.svg" width="50" height="50"></td>
-        <td><img src="./svg10/12.svg" width="50" height="50"></td>
-        <td><img src="./svg10/21.svg" width="50" height="50"></td>
-        <td><img src="./svg10/22.svg" width="50" height="50"></td>
-        <td><img src="./svg10/31.svg" width="50" height="50"></td>
-        <td><img src="./svg10/32.svg" width="50" height="50"></td>
-        <td><img src="./svg10/41.svg" width="50" height="50"></td>
-        <td><img src="./svg10/42.svg" width="50" height="50"></td>
-        <td><img src="./svg10/51.svg" width="50" height="50"></td>
-        <td><img src="./svg10/52.svg" width="50" height="50"></td>
-        <td><img src="./svg10/52.svg" width="50" height="50"></td>
-        <td><img src="./svg10/52.svg" width="50" height="50"></td>
-        <td><img src="./svg10/52.svg" width="50" height="50"></td>
-        <td><img src="./svg10/52.svg" width="50" height="50"></td>
-        <td><img src="./svg10/52.svg" width="50" height="50"></td>
-        <td><img src="./svg10/52.svg" width="50" height="50"></td>        
-        <td>米津玄師</td>
-    </tr>
-</table>
- -->
-
 </div>
 <div> </div>
 <div id="div1"></div>
@@ -247,10 +189,8 @@
             .data(function (d) { return d; }).enter()
             .append("td")
             .html(function (d, i) {
-                if ( i == 2 && d != 'github' ) {
-                    return '<a href="https://' + d + '.github.io/ai2025s/" target="_blank"><img src="https://' + d + '.github.io/ai2025s/hw00/me.png"></a>' + '<hr><a href="https://github.com/' + d + '/ai2025s/" target="_blank">' + d + '</a>';
-
-                    //return '<a href="https://ntut-cg-lab.github.io/ca2022f-hw-' + d + '/" target="_blank"><img src="https://ntut-cg-lab.github.io/ca2022f-hw-' + d + '/hw00/' + d + '.svg"></a>' + '<hr><a href="https://github.com/NTUT-CG-Lab/ca2022f-hw-' + d + '/" target="_blank">' + d + '</a>';
+                if ( i == 2 && d != 'GitHubID' ) {
+                    return '<a href="https://' + d + '.github.io/ml2025f/" target="_blank"><img src="https://' + d + '.github.io/ml2025f/hw00/me.png"></a>' + '<hr><a href="https://github.com/' + d + '/ml2025f/" target="_blank">' + d + '</a>';
                 }
                 else if ( i == 0 || isNaN(d)) {
                     return d;
