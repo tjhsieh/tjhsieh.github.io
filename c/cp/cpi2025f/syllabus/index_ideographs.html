@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet"> -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+
+<style type="text/css">
+
+body {
+	background-color: rgb(159, 53, 58);
+	
+	color: white;
+}
+div {
+	border: rgb(159, 53, 58) solid 1px;
+	margin: 10px;
+	text-align: center;
+}
+#id0 {
+	height: 400px;
+	line-height: 300px;
+	align-items: center;
+	font-size: 128pt;
+
+  font-family: "標楷體", "新細明體", "Noto Sans TC", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+#id1 {
+	font-size: 24pt;
+}
+</style>
+</head>
+<body>
+	<div id = 'id0'></div>
+	<div id = 'id1'></div>
+
+<script type="text/javascript">
+
+window.onload = function() {
+	//i = 13660;
+	//i = 26481; // 4E00至9FFF
+	i = 0x4E00;
+	setInterval(function() {
+		document.getElementById('id0').innerHTML = String.fromCodePoint(i); // 0x6771
+
+		const encoder = new TextEncoder(); // 默認編碼為 'utf8'
+		const uint8Array = encoder.encode(String.fromCodePoint(i));
+		const standardArray = Array.from(uint8Array);
+		const uint8Array2 = standardArray.map(byte => byte.toString(16).padStart(2, '0'));
+
+		//console.log(uint8Array + ' ' + uint8Array2);
+
+		document.getElementById('id1').innerHTML = 
+		'U+' + i.toString(16).toUpperCase().padStart(4, '0') + "<br>" + 
+		i.toString(10) + "<br>" + 
+		'UTF-8 編碼 ' + uint8Array2;
+
+		i++;
+		//document.write(String.fromCodePoint(i++));
+	}, 200);
+};
+	
+</script>
+
+</body>
+</html>
