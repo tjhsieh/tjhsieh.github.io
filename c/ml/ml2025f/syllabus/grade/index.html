@@ -192,14 +192,20 @@
                 if ( i == 2 && d != 'GitHubID' ) {
                     return '<a href="https://' + d + '.github.io/ml2025f/" target="_blank"><img src="https://' + d + '.github.io/ml2025f/hw00/me.png"></a>' + '<hr><a href="https://github.com/' + d + '/ml2025f/" target="_blank">' + d + '</a>';
                 }
-                else if ( i == 0 || isNaN(d)) {
+                else if ( i == 0 || isNaN(d) || i == 12) {
                     return d;
                 }
             })
             .filter(function (d, i) { return (i >= 3 && !isNaN(d) && d != ""); })
             .append("img")
             .attr("src", function (d, i) {
-                if (d == 10) 
+                if (d >= 60) 
+                    return "./svg10/lover-svgrepo-com.svg"; 
+                else if (d >= 50) 
+                    return "./svg10/badge-svgrepo-com.svg"; 
+                else if (d > 10 || i == 8) 
+                    return "./svg10/fuse-explosion-svgrepo-com.svg"; 
+                else if (d == 10) 
                     return "./svg10/52.svg"; 
                 else if (d == 9) 
                     return "./svg10/51.svg"; 
