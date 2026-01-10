@@ -61,7 +61,7 @@ div.a {
 
 div.b{
   width: 660px;
-  height: 260px;
+  height: 120px;
   font-size: 24pt;
   transform: rotate(0deg);
   position: relative;
@@ -70,6 +70,9 @@ div.b{
   border: 1px yellow #f9eced;
 }
 
+#demo {
+  font-size: 66pt;
+}
 </style>
 </head>
 <body onclick="myFunction()">
@@ -80,10 +83,11 @@ div.b{
 <!-- ↧ 實驗室 Laboratory -->
 <br><br><br>
 
+<!-- https://digitalarchive.npm.gov.tw/Collection/Detail/27540?dep=P -->
 <div class="a">
 ↓ 披羅衣之璀粲兮、珥瑤碧之華琚<br>
 ↓ 戴金翠之首飾、 綴明珠以耀軀<br>
-↓ 踐遠游之文履、 曳霧綃之輕裾<br>
+↓ 踐遠遊之文履、 曳霧綃之輕裾<br>
 ↓ 微幽蘭之芳藹兮、步踟躕於山隅<br>
 </div>
 
@@ -100,8 +104,6 @@ div.b{
 <!-- &nbsp; &ensp; &emsp; &thinsp; &zwnj; &zwj; Front-end Web Development -->
 <br>
 </div>
-
-
 
 <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_countdown -->
 <p>&nbsp; &ensp; &emsp; &thinsp; &zwnj; &zwj;</p>
@@ -131,7 +133,7 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = '前往實驗室: ' + seconds + " 秒 ";
+  document.getElementById("demo").innerHTML = ' ' + seconds;
     
   // If the count down is over, write some text 
   if (distance < 0) {
