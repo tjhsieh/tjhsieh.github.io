@@ -61,7 +61,7 @@ div.a {
 
 div.b{
   width: 660px;
-  height: 120px;
+  height: 166px;
   font-size: 24pt;
   transform: rotate(0deg);
   position: relative;
@@ -71,14 +71,14 @@ div.b{
 }
 
 #demo {
-  font-size: 66pt;
+  font-size: 24pt;
 }
 </style>
 </head>
 <body onclick="myFunction()">
 
 <!-- Welcome to  -->
-<span class="title"> 計算機圖學 </span> 研究室
+<span class="title"> 計算機圖學 </span> あずま研究室
 
 <!-- ↧ 實驗室 Laboratory -->
 <br><br><br>
@@ -133,7 +133,8 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = ' ' + seconds;
+  document.getElementById("demo").innerHTML = 'あずま研究室へ行きます...' + seconds + " <br> " + 
+  '<img src="./geogebra.svg" width="100%">';
     
   // If the count down is over, write some text 
   if (distance < 0) {
