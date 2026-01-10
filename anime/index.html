@@ -16,7 +16,8 @@
 
 @font-face {
 	font-family:'CircleFont'; 
-	src: url(../home/CircleFont_v2.woff2);
+	/*src: url(../home/CircleFont_v2.woff2);*/
+  src: url('https://github.com/tjhsieh/tjhsieh.github.io/blob/main/home/CircleFont_v2.woff2');
 }
 
 body {
@@ -48,20 +49,21 @@ canvas#live2D{
 }
 
 div.a {
+  writing-mode: vertical-rl;
   width: 360px;
-  height: 80px;
-  font-size: 48pt;
-  transform: rotate(20deg);
+  height: 480px;
+  font-size: 18pt;
+  transform: rotate(-4deg);
   position: absolute;
-  top: 48px;
-  right: 0px;
+  top: 64px;
+  right: 512px;
 }
 
-div.b {
+div.b{
   width: 660px;
   height: 260px;
   font-size: 24pt;
-  transform: rotate(-10deg);
+  transform: rotate(0deg);
   position: relative;
   top: -32px;
   left: -64px;
@@ -72,24 +74,18 @@ div.b {
 </head>
 <body onclick="myFunction()">
 
- <!-- https://www.youtube.com/watch?v=pYGly8xhlEM -->
-<audio  id="myAudio" autoplay="" controls="" hidden="" loop="loop">
-  <source src="../home/inuyasha.mp3" type="audio/mp3">
-</audio>
-
-<script>
-  var x = document.getElementById("myAudio");
-  x.volume = 0.1;
-  x.play();
-</script> 
-
 <!-- Welcome to  -->
 <span class="title"> 計算機圖學 </span> 研究室
 
 <!-- 實驗室 Laboratory -->
 <br><br><br>
 
-<div class="a">......</div>
+<div class="a">
+披羅衣之璀粲兮 珥瑤碧之華琚<br>
+&nbsp; 戴金翠之首飾 綴明珠以耀軀<br>
+&nbsp; &nbsp; 踐遠游之文履 曳霧綃之輕裾<br>
+&nbsp; &nbsp; &nbsp; 微幽蘭之芳藹兮 步踟躕於山隅<br>
+</div>
 
 <div class="b">
 &nbsp; &ensp; &emsp; &thinsp; &zwnj; &zwj; Machine Llearning
@@ -98,12 +94,13 @@ div.b {
 <br><br>
 &nbsp; &ensp; &emsp; &thinsp; &zwnj; &zwj; Computer Graphics
 <br><br>
-&nbsp; &ensp; &emsp; &thinsp; &zwnj; &zwj; WebGL WebXR = AR + VR + MR
+&nbsp; &ensp; &emsp; &thinsp; &zwnj; &zwj; WebXR = AR + VR + MR
+<!-- WebGL  -->
 <br><br>
 <!-- &nbsp; &ensp; &emsp; &thinsp; &zwnj; &zwj; Front-end Web Development -->
 <br>
-
 </div>
+
 
 
 <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_countdown -->
