@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta http-equiv="refresh" content="1;URL=../home.html">
+  <meta charset="UTF-8">
+  <title>CodePen - Chinese</title>
+  <link rel="icon" href="../syllabus/favicon.svg"/>
+  <style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&display=swap');
+
+    html, body { 
+      height: 100%;
+      margin: 0;
+      background-color: #f1eef7;
+    }
+
+    body { 
+      display: flex; 
+      align-items: center; 
+      justify-content: center 
+    }
+  </style>
+</head>
+<body>
+
+
+<!-- https://codepen.io/yuanchuan/ -->
+<!-- https://css-tricks.com/more-unicode-patterns/ -->
+
+
+<!-- partial:index.partial.html -->
+<css-doodle>
+  :doodle {
+    @grid: 1x500 / 90vmin 50vmin;
+    overflow: hidden;
+    transform: scale(2);
+  }
+
+  :container {
+    grid-template-rows: auto;
+    grid-template-columns: repeat(auto-fill, 1vmin);
+    grid-auto-flow: dense;
+    grid-auto-rows: 1vmin;
+  } 
+  
+  --span: @rand(6);
+  grid-column-end: span var(--span);
+  grid-row-end: span var(--span);
+  :nth-child(17n) {
+    --span: 9; 
+  }
+
+  :after {
+    font-family: 'Noto Serif JP', "Helvetica Neue", Helvetica;
+    content: '\@hex(@rand(0x2f3c, 0x2f9f))';
+    font-size: calc(var(--span) * 1vmin);
+    color: @pick(#e3ddee, #ac98cd, #6a4c9c, #463267);
+  }
+</css-doodle>
+<!-- partial -->
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/css-doodle/0.3.0/css-doodle.min.js'></script>
+
+<script type="text/javascript">
+document.body.addEventListener('click', function(e) {
+  e.target.update && e.target.update();
+});
+</script>
+
+</body>
+</html>
