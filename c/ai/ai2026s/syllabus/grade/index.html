@@ -252,14 +252,20 @@
 
                     //return '<a href="https://ntut-cg-lab.github.io/ca2022f-hw-' + d + '/" target="_blank"><img src="https://ntut-cg-lab.github.io/ca2022f-hw-' + d + '/hw00/' + d + '.svg"></a>' + '<hr><a href="https://github.com/NTUT-CG-Lab/ca2022f-hw-' + d + '/" target="_blank">' + d + '</a>';
                 }
-                else if ( i == 0 || isNaN(d)) {
+                else if ( i == 0 ||  i == 9 ||  i == 10 || isNaN(d)) {
                     return d;
                 }
             })
-            .filter(function (d, i) { return (i >= 3 && !isNaN(d) && d != ""); })
+            .filter(function (d, i) { return (i ==11 && !isNaN(d) ) || (i >= 3 && i <= 8 && !isNaN(d) && d != ""); })
             .append("img")
             .attr("src", function (d, i) {
-                if (d == 10) 
+                if (d == 200){
+                    return "./svg/female-doctor-with-a-circle-mark.svg";
+                }
+                else if (d == 300){
+                    return "./svg/male-doctor-with-cross-mark.svg";
+                }
+                else if (d == 10) 
                     return "./svg10/52.svg"; 
                 else if (d == 9) 
                     return "./svg10/51.svg"; 
