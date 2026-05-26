@@ -33,19 +33,19 @@
   <rect width="129" height="163" x="0" y="0" style="stroke:#f9eced;stroke-width:2.0;stroke-opacity:1;fill:none;" />
 
   <!-- 'Noto Serif JP' -->
-  <text x="110" y="5">基礎
+  <text x="107" y="5">基礎
     <animate id="1" attributeType="CSS" attributeName="opacity" from="0.1" to="0.9" dur="2s" fill="freeze" begin="0;8.end"/>
     <animate id="2" attributeType="CSS" attributeName="opacity" from="0.9" to="0.1" dur="2s" fill="freeze" begin="1.end"/>
   </text>
-  <text x="80"  y="5">程式設計
+  <text x="77"  y="5">程式設計
     <animate id="3" attributeType="CSS" attributeName="opacity" from="0.1" to="0.9" dur="2s" fill="freeze" begin="2.end"/>
     <animate id="4" attributeType="CSS" attributeName="opacity" from="0.9" to="0.1" dur="2s" fill="freeze" begin="3.end"/>
   </text>
-  <text x="50"  y="5">貳零貳陸
+  <text x="47"  y="5">貳零貳陸
     <animate id="5" attributeType="CSS" attributeName="opacity" from="0.1" to="0.9" dur="2s" fill="freeze" begin="4.end"/>
     <animate id="6" attributeType="CSS" attributeName="opacity" from="0.9" to="0.1" dur="2s" fill="freeze" begin="5.end"/>
   </text>
-  <text x="20"  y="5">丙午年夏
+  <text x="17"  y="5">丙午年夏
     <animate id="7" attributeType="CSS" attributeName="opacity" from="0.1" to="0.9" dur="2s" fill="freeze" begin="6.end"/>
     <animate id="8" attributeType="CSS" attributeName="opacity" from="0.9" to="0.1" dur="2s" fill="freeze" begin="7.end"/>
   </text>
