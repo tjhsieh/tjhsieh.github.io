@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<title>作業</title>
+<style type="text/css">
+
+@font-face {
+  font-family:'CircleFont';
+  /* src: url(https://circle472.github.io/ct2022s/hw04/CircleFont.ttf); */
+  /* https://github.com/Circle472/ct2022s/tree/main/hw04 */
+  src: url(../CircleFont_v2.woff2);
+  /* https://cloudconvert.com/ttf-to-woff2 */
+}
+
+
+body {
+  background-color: rgb(159, 53, 58);
+  color: rgb(159, 53, 58);
+}
+
+pre {
+  font-family:'CircleFont';
+  font-size: 16pt;
+}
+
+.container-fluid {
+  width:  90%;
+}
+
+.hw12 {
+  border: 1px solid rgb(159, 53, 58);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.twenty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+  padding: 8px;
+  font-family:'CircleFont';
+  font-size: 18pt;
+}
+
+.twentykikyo {
+  color: #f9eced;
+  font-size: 16pt;
+  background-color: #6a4c9c;
+}
+
+.twentykonparuiro {
+  color: #f9eced;
+  font-size: 16pt;
+  background-color: #5ac2d9;
+}
+
+.twenty a {
+  color:  yellow;
+  font-size:  12pt;
+}
+
+.twenty a:hover {
+  color: #f9eced;
+  font-size:  16pt;
+}
+
+.thirty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+}
+
+.ninety {
+  border: 1px solid rgb(159, 53, 58);
+  background-color: #f9eced;
+  padding: 8px;
+}
+
+svg {
+  border: 2px solid rgb(159, 53, 58);
+}
+
+path {
+  pointer-events: all;
+  fill: #f9eced;
+  stroke: rgb(159, 53, 58);
+  stroke-opacity: 0.95;
+  stroke-width: 1px;
+}
+
+.active circle {
+  stroke: #f9eced;
+  stroke-width: 2px;
+}
+
+svg g text {
+  fill: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 0, 0.1);
+  text-shadow: 0 0 16px #FF0000, 0 0 16px #000000;
+  font-size: 18pt;
+  text-anchor: middle;
+}
+
+.twenty:hover {
+  /*
+    background-color: rgba(255, 255, 0, 0.1);
+  */
+    box-shadow: 0 0 5px 3px #f9eced;
+    color: cyan; 
+    text-shadow: 0 0 6px #FFFFFF, 0 0 6px #000000;
+}
+
+img:hover {
+    box-shadow: 0 0 1px 1px #f9eced;
+    animation-name: happy;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes happy {
+    0% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(-15px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    75% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.toprow {
+  margin-top: 36px;
+}
+
+.bottomrow {
+  margin-bottom: 36px;
+}
+
+.GFG {
+  margin: -10px auto; 
+  font-family: 'CircleFont', serif;
+  color: yellow; 
+  font-size: 16pt;
+  -webkit-text-stroke-width: 0.1px; 
+  -webkit-text-stroke-color:  yellow;
+  animation: 24s pulsate infinite;
+}
+
+@keyframes pulsate {
+  50% {font-size: 10pt;} /* text-shadow: 0 0 16px #FFF, 0 0 20px #FFF;  */
+  100% {font-size: 16pt;} /* text-shadow: 0 0 16px #FFF, 0 0 20px #FFF;  */
+}
+
+</style>
+</head>
+<body>
+
+<!-- ------------------------------------------------------------------------------------------------>
+<div class="container-fluid">
+
+  <!-- ------------------------------------------------>
+  <div class="row toprow">
+    <div class="col-md-2 twenty"><img src="../img_kitty/133533.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/hero-kitty.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic03.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic04.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic05.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic06.svg" width="100%"></div>
+  </div>
+
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykikyo bottomrow">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-12 twenty">
+
+<pre>
+23. 撲克牌十點半
+
+電腦與玩家進行撲克牌比大小，兩方輪流發撲克牌，結束時加總點數最接近10.5者贏。
+
+點數:
+      牌面A~10 點數為 1~10,J, K, Q 為 0.5。
+
+規則:
+1.  第一回合雙方各發一張牌
+2.  除了第一回合外，玩家每回合開始可以決定是否要牌
+3.  任一方點數超過10.5，即分數歸零，另一方獲勝
+4.  任一回合並未要牌的一方，之後回合失去要牌權利
+5.  電腦判斷要牌標準:
+1. 總點數比玩家小 或 2. 總點數8點以下(含)
+6.  結束時雙方點數相同則平手
+
+【輸入說明】
+第一行: 輸入一個字元，表示玩家獲得的第一張牌
+第二行: 輸入一個字元，表示電腦獲得的第一張牌
+第三行: 輸入一個字元，表示玩家是否繼續要牌
+第四行: 輸入一個字元，表示如果玩家繼續要牌，玩家在這回合所獲得的牌
+第五行: 輸入一個字元，表示如果電腦繼續要牌，電腦在這回合所獲得的牌
+
+每回合重複第三行到第五行
+注意: 第三行到第五行是可選的，依據電腦或玩家是否要牌
+
+輸入範例說明:
+A (先發一張給給玩家，玩家獲得A)
+J (再發一張給電腦，電腦獲得J)
+Y (玩家選擇要牌)
+9 (發一張給玩家，玩家獲得9)
+2 (電腦牌面0.5點，未超過8點，電腦要牌，電腦獲得2)
+N (玩家選擇不要牌)
+9 (電腦牌面2.5，未超過8點，電腦要牌，電腦獲得9)
+
+
+【輸出說明】
+第一行: 輸出勝負結果字串
+可能輸出:
+1.  computer win
+2.  player win
+3.  it's a tie
+
+輸出範例說明:
+player win (電腦點數超過10.5，分數歸零)
+
+【測試資料一】
+
+輸入:
+A
+J
+Y
+9
+2
+N
+3
+5
+
+輸出:
+computer win
+
+【測試資料二】
+
+輸入:
+2
+A
+Y
+3
+5
+N
+6
+
+輸出:
+player win
+
+【測試資料三】
+
+輸入:
+A
+J
+Y
+2
+2
+Y
+3
+4
+Y
+5
+
+輸出:
+computer win
+
+【測試資料四】
+
+輸入:
+A
+J
+Y
+2
+2
+Y
+3
+4
+Y
+A
+7
+
+輸出:
+player win
+
+【測試資料五】
+
+輸入:
+A
+J
+Y
+2
+9
+Y
+3
+Y
+5
+
+輸出:
+computer win
+
+【測試資料六】
+
+輸入:
+2
+A
+Y
+3
+2
+Y
+3
+7
+Y
+A
+Y
+J
+Y
+A
+N
+
+輸出:
+player win
+
+【測試資料七】
+
+輸入:
+2
+8
+Y
+4
+2
+Y
+4
+N
+
+輸出:
+it's a tie
+
+【測試資料八】
+
+輸入:
+K
+Q
+Y
+10
+A
+N
+3
+3
+3
+
+輸出:
+it's a tie
+
+【測試資料九】
+
+輸入:
+5
+10
+Y
+A
+Y
+6
+
+
+輸出:
+computer win
+
+【測試資料十】
+輸入:
+5
+9
+Y
+A
+Y
+4
+N
+
+輸出:
+player win
+
+
+【隱藏測試資料一】
+
+輸入:
+K
+3
+Y
+5
+2
+N
+3
+2
+
+輸出:
+computer win
+
+【隱藏測試資料二】
+
+輸入:
+10
+3
+N
+6
+5
+
+輸出:
+player win
+
+【隱藏測試資料三】
+
+輸入:
+10
+3
+Y
+A
+
+
+輸出:
+computer win
+
+【隱藏測試資料四】
+
+輸入:
+10
+3
+Y
+Q
+9
+
+輸出:
+player win
+
+【隱藏測試資料五】
+
+輸入:
+5
+9
+Y
+A
+Y
+6
+
+
+輸出:
+computer win
+
+【隱藏測試資料六】
+
+輸入:
+5
+9
+Y
+A
+Y
+4
+N
+
+輸出:
+player win
+
+【隱藏測試資料七】
+
+輸入:
+5
+9
+Y
+A
+Y
+3
+N
+
+輸出:
+it's a tie
+
+【隱藏測試資料八】
+
+輸入:
+J
+K
+Y
+10
+4
+N
+6
+
+輸出:
+it's a tie
+
+
+
+
+</pre>
+
+    </div>
+  </div>
+  <!-- ------------------------------------------------>
+
+  
+</div>
+<!-- ------------------------------------------------------------------------------------------------>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+
+
+
+</body>
+</html>

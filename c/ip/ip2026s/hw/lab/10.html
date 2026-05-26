@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<title>作業</title>
+<style type="text/css">
+
+@font-face {
+  font-family:'CircleFont';
+  /* src: url(https://circle472.github.io/ct2022s/hw04/CircleFont.ttf); */
+  /* https://github.com/Circle472/ct2022s/tree/main/hw04 */
+  src: url(../CircleFont_v2.woff2);
+  /* https://cloudconvert.com/ttf-to-woff2 */
+}
+
+
+body {
+  background-color: rgb(159, 53, 58);
+  color: rgb(159, 53, 58);
+}
+
+.container-fluid {
+  width:  90%;
+}
+
+.hw12 {
+  border: 1px solid rgb(159, 53, 58);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.twenty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+  padding: 8px;
+  font-family:'CircleFont';
+  font-size: 18pt;
+}
+
+.twentykikyo {
+  color: #f9eced;
+  font-size: 16pt;
+  background-color: #6a4c9c;
+}
+
+.twentykonparuiro {
+  color: #f9eced;
+  font-size: 16pt;
+  background-color: #5ac2d9;
+}
+
+.twenty a {
+  color:  yellow;
+  font-size:  12pt;
+}
+
+.twenty a:hover {
+  color: #f9eced;
+  font-size:  16pt;
+}
+
+.thirty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+}
+
+.ninety {
+  border: 1px solid rgb(159, 53, 58);
+  background-color: #f9eced;
+  padding: 8px;
+}
+
+svg {
+  border: 2px solid rgb(159, 53, 58);
+}
+
+path {
+  pointer-events: all;
+  fill: #f9eced;
+  stroke: rgb(159, 53, 58);
+  stroke-opacity: 0.95;
+  stroke-width: 1px;
+}
+
+.active circle {
+  stroke: #f9eced;
+  stroke-width: 2px;
+}
+
+svg g text {
+  fill: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 0, 0.1);
+  text-shadow: 0 0 16px #FF0000, 0 0 16px #000000;
+  font-size: 18pt;
+  text-anchor: middle;
+}
+
+.twenty:hover {
+  /*
+    background-color: rgba(255, 255, 0, 0.1);
+  */
+    box-shadow: 0 0 5px 3px #f9eced;
+    color: cyan; 
+    text-shadow: 0 0 6px #FFFFFF, 0 0 6px #000000;
+}
+
+img:hover {
+    box-shadow: 0 0 1px 1px #f9eced;
+    animation-name: happy;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes happy {
+    0% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(-15px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    75% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.toprow {
+  margin-top: 36px;
+}
+
+.bottomrow {
+  margin-bottom: 36px;
+}
+
+.GFG {
+  margin: -10px auto; 
+  font-family: 'CircleFont', serif;
+  color: yellow; 
+  font-size: 16pt;
+  -webkit-text-stroke-width: 0.1px; 
+  -webkit-text-stroke-color:  yellow;
+  animation: 24s pulsate infinite;
+}
+
+@keyframes pulsate {
+  50% {font-size: 10pt;} /* text-shadow: 0 0 16px #FFF, 0 0 20px #FFF;  */
+  100% {font-size: 16pt;} /* text-shadow: 0 0 16px #FFF, 0 0 20px #FFF;  */
+}
+
+</style>
+</head>
+<body>
+
+<!-- ------------------------------------------------------------------------------------------------>
+<div class="container-fluid">
+
+  <!-- ------------------------------------------------>
+  <div class="row toprow">
+    <div class="col-md-2 twenty"><img src="../img_kitty/133533.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/hero-kitty.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic03.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic04.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic05.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic06.svg" width="100%"></div>
+  </div>
+
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykikyo bottomrow">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-12 twenty">
+
+10. 小明到保齡球館打保齡球,一輪有十局,假設小明一到八局都拿零分,剩下最後兩局
+，試算總分，保齡球規則如下:<br><br>
+
+(1)每局有10個保齡球瓶，擊倒1個球瓶得1分<br>
+(2)每局最多有兩次投球機會<br>
+(3)當局如果第一球將10個保齡球瓶全部擊倒(稱為strike)，當局只有一次投球機會，此局計分除了10分外，再加上後面兩球擊倒的球瓶數。<br>
+(4)當局如果第一球未將10個保齡球瓶全部擊倒，但加上第二球則將10個保齡球瓶全部擊倒(稱為spare)，此局計分除了10分外，再加上後面一球擊倒的球瓶數。<br>
+(5)當局若兩球都無法將球瓶全部擊倒，此局計分為兩球擊倒的球瓶數。<br>
+(6)第10局如果第一球將球瓶全部擊倒，後面還有2次投球機會。<br>
+(7)第10局如果第二球才將球瓶全部擊倒，後面還有1次投球機會。<br>
+(8)第10局若兩球都無法將球瓶全部擊倒，則結束比賽。<br>
+(9)總分為10局分數總合。<br><br>
+
+-----------------------------------------------------------------------------------------------------------------------<br><br>
+    輸入說明:<br>
+    第9局第一球分數 (int,0~10)<br>
+    第9局第二球分數(上一球為10則省略) (int,和上一球總和最多為10)<br>
+    第10局第一球分數 (int,0~10)<br>
+    第10局第二球分數(上一球為10則省略) (int,和上一球總和最多為10)<br>
+    第一次額外投球分數(第10局投球總分為10才輸入) (int,0~10)<br>
+    第二次額外投球分數(第10局第一球為10才輸入) (int,0~10)<br>
+    輸出說明:<br>
+    總分 (int)<br><br>
+
+---------------------------------------------------------------------------------------------------------------------<br><br>
+
+範例輸入說明<br>
+5(第9局第一球)<br>
+5(第9局第二球)<br>
+10(第10局第一球)<br>
+0(因為第10局第一次就全倒，第一次額外投球)<br>
+8(因為第10局第一次就全倒，第二次額外投球)<br><br>
+
+範例輸出說明<br>
+34(第9局兩次全倒，分數為5+5+10=20。第10局一次全倒，分數為10+0+8=18。總分為20+18=38) <br><br>
+
+---------------------------------------------------------------------------------------------------------------------<br><br>
+
+Example Input1:<br>
+2<br>
+5<br>
+7<br>
+1<br>
+Example Output1:<br>
+15<br><br>
+
+----------------------------------------------------------------------------------------------------------------------<br><br>
+
+Example Input2:<br>
+5<br>
+5<br>
+10<br>
+0<br><br>
+8<br>
+Example Output2:<br>
+38<br><br>
+
+------------------------------------------------------------------------------------------------------------------<br><br>
+
+Example Input3:<br>
+3<br>
+1<br>
+10<br>
+1<br>
+3<br>
+Example Output3:<br>
+18<br><br>
+
+
+
+    </div>
+  </div>
+  <!-- ------------------------------------------------>
+
+  
+</div>
+<!-- ------------------------------------------------------------------------------------------------>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+
+
+
+</body>
+</html>

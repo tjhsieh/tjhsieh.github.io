@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<title>作業</title>
+<style type="text/css">
+
+@font-face {
+  font-family:'CircleFont';
+  /* src: url(https://circle472.github.io/ct2022s/hw04/CircleFont.ttf); */
+  /* https://github.com/Circle472/ct2022s/tree/main/hw04 */
+  src: url(../CircleFont_v2.woff2);
+  /* https://cloudconvert.com/ttf-to-woff2 */
+}
+
+
+body {
+  background-color: rgb(159, 53, 58);
+  color: rgb(159, 53, 58);
+}
+
+pre {
+  font-family:'CircleFont';
+  font-size: 16pt;
+}
+
+.container-fluid {
+  width:  90%;
+}
+
+.hw12 {
+  border: 1px solid rgb(159, 53, 58);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.twenty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+  padding: 8px;
+  font-family:'CircleFont';
+  font-size: 18pt;
+}
+
+.twentykikyo {
+  color: #f9eced;
+  font-size: 16pt;
+  background-color: #6a4c9c;
+}
+
+.twentykonparuiro {
+  color: #f9eced;
+  font-size: 16pt;
+  background-color: #5ac2d9;
+}
+
+.twenty a {
+  color:  yellow;
+  font-size:  12pt;
+}
+
+.twenty a:hover {
+  color: #f9eced;
+  font-size:  16pt;
+}
+
+.thirty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+}
+
+.ninety {
+  border: 1px solid rgb(159, 53, 58);
+  background-color: #f9eced;
+  padding: 8px;
+}
+
+svg {
+  border: 2px solid rgb(159, 53, 58);
+}
+
+path {
+  pointer-events: all;
+  fill: #f9eced;
+  stroke: rgb(159, 53, 58);
+  stroke-opacity: 0.95;
+  stroke-width: 1px;
+}
+
+.active circle {
+  stroke: #f9eced;
+  stroke-width: 2px;
+}
+
+svg g text {
+  fill: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 0, 0.1);
+  text-shadow: 0 0 16px #FF0000, 0 0 16px #000000;
+  font-size: 18pt;
+  text-anchor: middle;
+}
+
+.twenty:hover {
+  /*
+    background-color: rgba(255, 255, 0, 0.1);
+  */
+    box-shadow: 0 0 5px 3px #f9eced;
+    color: cyan; 
+    text-shadow: 0 0 6px #FFFFFF, 0 0 6px #000000;
+}
+
+img:hover {
+    box-shadow: 0 0 1px 1px #f9eced;
+    animation-name: happy;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes happy {
+    0% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(-15px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    75% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.toprow {
+  margin-top: 36px;
+}
+
+.bottomrow {
+  margin-bottom: 36px;
+}
+
+.GFG {
+  margin: -10px auto; 
+  font-family: 'CircleFont', serif;
+  color: yellow; 
+  font-size: 16pt;
+  -webkit-text-stroke-width: 0.1px; 
+  -webkit-text-stroke-color:  yellow;
+  animation: 24s pulsate infinite;
+}
+
+@keyframes pulsate {
+  50% {font-size: 10pt;} /* text-shadow: 0 0 16px #FFF, 0 0 20px #FFF;  */
+  100% {font-size: 16pt;} /* text-shadow: 0 0 16px #FFF, 0 0 20px #FFF;  */
+}
+
+</style>
+</head>
+<body>
+
+<!-- ------------------------------------------------------------------------------------------------>
+<div class="container-fluid">
+
+  <!-- ------------------------------------------------>
+  <div class="row toprow">
+    <div class="col-md-2 twenty"><img src="../img_kitty/133533.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/hero-kitty.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic03.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic04.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic05.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic06.svg" width="100%"></div>
+  </div>
+
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykikyo bottomrow">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-12 twenty">
+      <pre>
+
+27. 成對檢查
+
+給定 N個 ( 1 <= N <= 3 ) 字串，
+每一個字串M (1 <= len(M) <= 50) 由括號與英文字母組成
+括號共有三種： {, }, [, ], (, )
+檢查這字串M中的括號是否成對出現，
+如果括號成對出現，代表通過檢查，輸出"pass"
+如果括號沒有成對出現，代表未通過檢查，輸出"fail"
+並且輸出深度D(1<= D <= 6) 中的所有英文字母 
+
+深度：字串由左至右閱讀，深度從0開始，當遇到左括號深度加一層，遇到右括號深度減一層，且字串中括號必須成對出現，深度才成立。
+例: {a[b(c)d]e}
+深度 1: a, e
+深度 2: b, d
+深度 3: c
+
+
+【輸入說明】
+第1行:輸入一整數N (1<=N<=3)
+第2行:輸入一整數D (1<= D <= 6)
+第3~N+2行:輸入一字串
+
+範例輸入說明:
+3 (3個字串)
+3 (深度3)
+{b[bc][c(bd)]}(字串1)
+{q(ac)(df)(bn)r}(字串2)
+{b{[h]}dc[d(i)a]}(字串3)
+
+【輸出說明】
+第1~N行根據輸入的各行字串判斷如下:
+   (1)如果字串內括號成對出現，輸出"pass, "
+       依照深度要求，接續輸出深度內的所有字母
+       如果深度要求內沒有任何字母，輸出"EMPTY"
+   (2)如果字串內括號沒有成對出現，輸出"fail"
+
+範例輸出說明:
+pass, bd (括號皆有成對，且深度要求內也有字母)
+pass, EMPTY(括號皆有成對，但深度要求內沒有字母)
+pass, hi (括號皆有成對，且深度要求內也有字母)
+
+【測試資料一】
+輸入:
+3
+3
+{[()][]}
+{}[(])
+{{{{{{
+
+輸出:
+pass, EMPTY
+fail
+fail
+
+【測試資料二】
+輸入:
+2
+1
+(he[ad(dsa{fd}asdf)srfa]l(ssd)lo)
+{(qq{ww}ee){rr}}
+
+
+輸出:
+pass, hello
+pass, EMPTY
+
+【測試資料三】
+輸入:
+1
+2
+([{abc}]qwe({}[qe)qw]hgh)
+
+輸出:
+fail
+
+【測試資料四】
+輸入:
+3
+4
+{a(b[c(d)e][f(g)h]i)(j[k(l)m][n(o)p]q)r}
+(q[w(e{[q]}r)a][a(s{}d)f]z)
+[p(o{i})l((j{h}t)j}g{m)h]
+
+輸出:
+pass, dglo
+pass, EMPTY
+fail
+
+【隱藏測試資料一】
+輸入:
+3
+3
+(({}))
+[)(]
+}}}}}}}
+
+輸出:
+pass, EMPTY
+fail
+fail
+
+【隱藏測試資料二】
+輸入:
+2
+1
+(n{d(g[z]n[y]m)w(q)})
+([M{T}f](s)(B))
+
+輸出:
+pass, n
+pass, EMPTY
+
+【隱藏測試資料三】
+輸入:
+1
+2
+{([)]}
+
+輸出:
+fail
+
+【隱藏測試資料四】
+輸入:
+3
+3
+({i}s[m{k}y]k{h}d{h{q}})
+((l)f{k()p({d})p}u)
+[h{(ah)b}{]
+
+輸出:
+pass, kq
+pass, EMPTY
+fail
+
+
+        
+      </pre>
+    </div>
+  </div>
+  <!-- ------------------------------------------------>
+
+  
+</div>
+<!-- ------------------------------------------------------------------------------------------------>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+
+
+
+</body>
+</html>

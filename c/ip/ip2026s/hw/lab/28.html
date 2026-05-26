@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<title>作業</title>
+<style type="text/css">
+
+@font-face {
+  font-family:'CircleFont';
+  /* src: url(https://circle472.github.io/ct2022s/hw04/CircleFont.ttf); */
+  /* https://github.com/Circle472/ct2022s/tree/main/hw04 */
+  src: url(../CircleFont_v2.woff2);
+  /* https://cloudconvert.com/ttf-to-woff2 */
+}
+
+
+body {
+  background-color: rgb(159, 53, 58);
+  color: rgb(159, 53, 58);
+}
+
+pre {
+  font-family:'CircleFont';
+  font-size: 16pt;
+}
+
+.container-fluid {
+  width:  90%;
+}
+
+.hw12 {
+  border: 1px solid rgb(159, 53, 58);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.twenty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+  padding: 8px;
+  font-family:'CircleFont';
+  font-size: 18pt;
+}
+
+.twentykikyo {
+  color: #f9eced;
+  font-size: 16pt;
+  background-color: #6a4c9c;
+}
+
+.twentykonparuiro {
+  color: #f9eced;
+  font-size: 16pt;
+  background-color: #5ac2d9;
+}
+
+.twenty a {
+  color:  yellow;
+  font-size:  12pt;
+}
+
+.twenty a:hover {
+  color: #f9eced;
+  font-size:  16pt;
+}
+
+.thirty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+}
+
+.ninety {
+  border: 1px solid rgb(159, 53, 58);
+  background-color: #f9eced;
+  padding: 8px;
+}
+
+svg {
+  border: 2px solid rgb(159, 53, 58);
+}
+
+path {
+  pointer-events: all;
+  fill: #f9eced;
+  stroke: rgb(159, 53, 58);
+  stroke-opacity: 0.95;
+  stroke-width: 1px;
+}
+
+.active circle {
+  stroke: #f9eced;
+  stroke-width: 2px;
+}
+
+svg g text {
+  fill: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 0, 0.1);
+  text-shadow: 0 0 16px #FF0000, 0 0 16px #000000;
+  font-size: 18pt;
+  text-anchor: middle;
+}
+
+.twenty:hover {
+  /*
+    background-color: rgba(255, 255, 0, 0.1);
+  */
+    box-shadow: 0 0 5px 3px #f9eced;
+    color: cyan; 
+    text-shadow: 0 0 6px #FFFFFF, 0 0 6px #000000;
+}
+
+img:hover {
+    box-shadow: 0 0 1px 1px #f9eced;
+    animation-name: happy;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes happy {
+    0% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(-15px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    75% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.toprow {
+  margin-top: 36px;
+}
+
+.bottomrow {
+  margin-bottom: 36px;
+}
+
+.GFG {
+  margin: -10px auto; 
+  font-family: 'CircleFont', serif;
+  color: yellow; 
+  font-size: 16pt;
+  -webkit-text-stroke-width: 0.1px; 
+  -webkit-text-stroke-color:  yellow;
+  animation: 24s pulsate infinite;
+}
+
+@keyframes pulsate {
+  50% {font-size: 10pt;} /* text-shadow: 0 0 16px #FFF, 0 0 20px #FFF;  */
+  100% {font-size: 16pt;} /* text-shadow: 0 0 16px #FFF, 0 0 20px #FFF;  */
+}
+
+</style>
+</head>
+<body>
+
+<!-- ------------------------------------------------------------------------------------------------>
+<div class="container-fluid">
+
+  <!-- ------------------------------------------------>
+  <div class="row toprow">
+    <div class="col-md-2 twenty"><img src="../img_kitty/133533.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/hero-kitty.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic03.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic04.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic05.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic06.svg" width="100%"></div>
+  </div>
+
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykikyo bottomrow">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-12 twenty">
+      <pre>
+
+28. 字串操作
+
+輸入兩個英文句子A, B,以及兩個英文單字 X, Y，操作步驟如下:
+1. 將兩個英文句子A, B串聯成句子 C （A和B兩個句子串聯時，中間用空白隔開），並輸出C
+2. 將句子C中的單字X替換成Y變成句子D，並輸出D
+    （1）假如句子C中有個單字為Cards或是Card$，X=Card，此時並不符合替換條件
+    （2）無視單字大小寫差異
+3. 輸出C和D的各自字串長度（不包含空白，但包含符號），中間以空白隔開
+4. 將句子D中單字為Y的部分倒著輸出（假如句子D中有個單字為Cards，Y=Card，此
+    時並不符合倒著輸出條件）
+5. N為單字X和單字Y的字數差異，N為大於0的整數（即X和Y字數不會相同）
+6. 將句子C從第1個字開始，每隔N個輸出（輸出過程中，不得連續輸出2次空白）
+
+【輸入說明】
+第1行：輸入一行字串A
+第2行：輸入一行字串B
+第3行：輸入一行字串X
+第4行：輸入一行字串Y
+ 
+範例輸入說明：
+If you have a card , （句子A）
+I will give you some cards. （句子B）
+card （單字X）
+pokers （單字Y）
+
+【輸出說明】
+第1行：輸出句子C
+第2行：輸出句子D
+第3行：輸出句子C和句子D的各自長度（不包含空白）
+第4行：將句子D中單字為Y的部分倒著輸出
+第5行：將句子C從第1個字開始，每隔N個輸出
+
+範例輸出說明：
+If you have a card , I will give you some cards. （句子A, B串聯成句子 C，中間用空白隔開）
+If you have a pokers , I will give you some cards.（句子C中的單字X替換成單字Y變成句子D， card符合替換的條件，但是cards並不符合）
+37 39 （句子C長度為37，句子D長度為39）
+If you have a srekop , I will give you some cards. （將句子D中單字為Y（pokers）的部分倒著輸出）
+I o aeacr   ilgv o oecrs （句子C從第1個字開始，每隔2個（X字數和Y字數差異為2）輸出）
+
+
+
+
+
+
+
+【測試資料一】
+輸入：
+This is a book isa.
+That is a cat
+is
+was
+
+輸出：
+This is a book isa. That is a cat
+This was a book isa. That was a cat
+25 27
+This saw a book isa. That saw a cat
+This is a book isa. That is a cat
+
+【測試資料二】
+輸入：
+today is a good day god thing goods good tips
+every good change is goo CC.
+good
+BP
+
+輸出：
+today is a good day god thing goods good tips every good change is goo CC.
+today is a BP day god thing goods BP tips every BP change is goo CC.
+59 53
+today is a PB day god thing goods PB tips every PB change is goo CC.
+tdyi  oddygdtiggosgo iseeygo hnei o C
+
+【測試資料三】
+輸入：
+Can you can a can.
+as a canner can can a can .
+can
+BaNNCr
+
+輸出：
+Can you can a can. as a canner can can a can .
+BaNNCr you BaNNCr a can. as a canner BaNNCr BaNNCr a BaNNCr .
+34 49
+rCNNaB you rCNNaB a can. as a canner rCNNaB rCNNaB a rCNNaB .
+C uaaa  cn naaa.
+
+【測試資料四】
+輸入：
+Whether the weather be cold or
+whether the weather be hot
+thE
+TtTtTtT
+
+輸出：
+Whether the weather be cold or whether the weather be hot
+Whether TtTtTtT weather be cold or whether TtTtTtT weather be hot
+47 55
+Whether TtTtTtT weather be cold or whether TtTtTtT weather be hot
+Whtwhbooheheeet
+
+【隱藏測試資料一】
+輸入：
+The bmi doctors want to develop a bmi calculator to help
+people calculate bmi
+bmI
+EMII
+
+輸出：
+The bmi doctors want to develop a bmi calculator to help people calculate bmi
+The EMII doctors want to develop a EMII calculator to help people calculate EMII
+64 67
+The IIME doctors want to develop a IIME calculator to help people calculate IIME
+The bmi doctors want to develop a bmi calculator to help people calculate bmi
+
+【隱藏測試資料二】
+輸入：
+I wish to wish the wish you wish to wish but
+if you wish the wish the witchwishes.
+wish
+MV
+
+輸出：
+I wish to wish the wish you wish to wish but if you wish the wish the witchwishes.
+I MV to MV the MV you MV to MV but if you MV the MV the witchwishes.
+65 51
+I VM to VM the VM you VM to VM but if you VM the VM the witchwishes.
+Iws ows h ihyuws ows u fyuws h ihtewthihs
+
+【隱藏測試資料三】
+輸入：
+Fuzzy Wuzzy was a bear
+and Fuzzy Wuzzy had no hair
+fUzzy
+FA
+
+輸出：
+Fuzzy Wuzzy was a bear and Fuzzy Wuzzy had no hair
+FA Wuzzy was a bear and FA Wuzzy had no hair
+40 34
+AF Wuzzy was a bear and AF Wuzzy had no hair
+FzWzw brnFzWzh  i
+
+【隱藏測試資料四】
+輸入：
+In the flood of darkness, hope is the light.
+It brings comfort, faith, and confidence.
+is
+OPOPOP
+
+輸出：
+In the flood of darkness, hope is the light. It brings comfort, faith, and confidence.
+In the flood of darkness, hope OPOPOP the light. It brings comfort, faith, and confidence.
+72 76
+In the flood of darkness, hope POPOPO the light. It brings comfort, faith, and confidence.
+Ihl dn,pseg bgorfhnode
+
+        
+      </pre>
+    </div>
+  </div>
+  <!-- ------------------------------------------------>
+
+  
+</div>
+<!-- ------------------------------------------------------------------------------------------------>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+
+
+
+</body>
+</html>

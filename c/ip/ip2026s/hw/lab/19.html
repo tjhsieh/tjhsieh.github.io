@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<title>作業</title>
+<style type="text/css">
+
+@font-face {
+  font-family:'CircleFont';
+  /* src: url(https://circle472.github.io/ct2022s/hw04/CircleFont.ttf); */
+  /* https://github.com/Circle472/ct2022s/tree/main/hw04 */
+  src: url(../CircleFont_v2.woff2);
+  /* https://cloudconvert.com/ttf-to-woff2 */
+}
+
+
+body {
+  background-color: rgb(159, 53, 58);
+  color: rgb(159, 53, 58);
+}
+
+.container-fluid {
+  width:  90%;
+}
+
+.hw12 {
+  border: 1px solid rgb(159, 53, 58);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.twenty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+  padding: 8px;
+  font-family:'CircleFont';
+  font-size: 18pt;
+}
+
+.twentykikyo {
+  color: #f9eced;
+  font-size: 16pt;
+  background-color: #6a4c9c;
+}
+
+.twentykonparuiro {
+  color: #f9eced;
+  font-size: 16pt;
+  background-color: #5ac2d9;
+}
+
+.twenty a {
+  color:  yellow;
+  font-size:  12pt;
+}
+
+.twenty a:hover {
+  color: #f9eced;
+  font-size:  16pt;
+}
+
+.thirty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+}
+
+.ninety {
+  border: 1px solid rgb(159, 53, 58);
+  background-color: #f9eced;
+  padding: 8px;
+}
+
+svg {
+  border: 2px solid rgb(159, 53, 58);
+}
+
+path {
+  pointer-events: all;
+  fill: #f9eced;
+  stroke: rgb(159, 53, 58);
+  stroke-opacity: 0.95;
+  stroke-width: 1px;
+}
+
+.active circle {
+  stroke: #f9eced;
+  stroke-width: 2px;
+}
+
+svg g text {
+  fill: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 0, 0.1);
+  text-shadow: 0 0 16px #FF0000, 0 0 16px #000000;
+  font-size: 18pt;
+  text-anchor: middle;
+}
+
+.twenty:hover {
+  /*
+    background-color: rgba(255, 255, 0, 0.1);
+  */
+    box-shadow: 0 0 5px 3px #f9eced;
+    color: cyan; 
+    text-shadow: 0 0 6px #FFFFFF, 0 0 6px #000000;
+}
+
+img:hover {
+    box-shadow: 0 0 1px 1px #f9eced;
+    animation-name: happy;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes happy {
+    0% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(-15px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    75% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.toprow {
+  margin-top: 36px;
+}
+
+.bottomrow {
+  margin-bottom: 36px;
+}
+
+.GFG {
+  margin: -10px auto; 
+  font-family: 'CircleFont', serif;
+  color: yellow; 
+  font-size: 16pt;
+  -webkit-text-stroke-width: 0.1px; 
+  -webkit-text-stroke-color:  yellow;
+  animation: 24s pulsate infinite;
+}
+
+@keyframes pulsate {
+  50% {font-size: 10pt;} /* text-shadow: 0 0 16px #FFF, 0 0 20px #FFF;  */
+  100% {font-size: 16pt;} /* text-shadow: 0 0 16px #FFF, 0 0 20px #FFF;  */
+}
+
+</style>
+</head>
+<body>
+
+<!-- ------------------------------------------------------------------------------------------------>
+<div class="container-fluid">
+
+  <!-- ------------------------------------------------>
+  <div class="row toprow">
+    <div class="col-md-2 twenty"><img src="../img_kitty/133533.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/hero-kitty.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic03.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic04.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic05.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic06.svg" width="100%"></div>
+  </div>
+
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykikyo bottomrow">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-12 twenty">
+
+19. 繪製三種不同的圖形<br><br>
+
+N代表圖形的行數，而N (3 <= N <= 50) <br><br>
+
+第一種圖形為直角三角形<br>
+共有 N 行<br>
+第一行輸出1<br>
+第二行輸出121<br>
+第三行輸出12321<br>
+以此類推，第 i 行輸出 1… i-1 + i + i-1…1 (i 為 1~N中的任一行)<br>
+每一行共有2 * i - 1個數字<br><br>
+
+例如，當N = 5時，輸出圖形為:<br>
+1<br>
+121<br>
+12321<br>
+1234321<br>
+123454321<br><br>
+
+第二種圖形為正三角形<br>
+共有N行<br>
+第一行輸出 (N-1)個 _ +  1 + (N-1)個 _<br>
+第二行輸出 (N-2)個 _ + 121 + (N-2)個 _<br>
+第三行輸出 (N-3)個 _ + 12321 + (N-3)個 _<br>
+以此類推，第 i 行輸出 (N-i)個 _ + (1...i-1 + i + i-1…1) + (N-i)個 _   (i 為 1~N中的任一行)<br>
+每一行共有2 * N - 1個字元，包含(N-i)*2個_ 與 2 * i - 1個數字<br><br>
+
+例如，當N = 4時，輸出圖形為:<br>
+___1___<br>
+__121__<br>
+_12321_<br>
+1234321<br><br>
+
+第三種圖形為倒三角形<br>
+共有N行<br>
+第一行輸出 0個 _ + 1...N-1 + N + N-1…1 + 0個 _<br>
+第二行輸出 1個 _ + 1...N-2 + N-1 + N-2…1 + 1個_  <br>
+第三行輸出 2個 _ + 1...N-3 + N-2 + N-3…1 + 2個 _  <br>
+以此類推，第 i 行輸出 (i-1)個 _ + (1...N-i+1) + (N-i…1) + (i-1)個 _   (i 為 1~N中的任一行)<br>
+每一行共有2 * N - 1個字元，包含(i-1)*2個_ 與 (2*(N-i)+1) 個數字<br><br>
+
+例如，當N = 4，輸出圖形為:<br>
+1234321<br>
+_12321_<br>
+__121__<br>
+___1___<br><br>
+
+---------------------------------------------------------------------------------------<br><br>
+
+輸入說明 :<br>
+第一行，輸入整數M，1<=M<=3，代表接下來要畫的圖形種類<br>
+M=1，為第一種圖形 直角三角形 (參考 範例輸出說明 1)<br>
+M=2，為第二種圖形 正三角形 (參考 範例輸出說明 2)<br>
+M=3，為第三種圖形 倒三角形 (參考 範例輸出說明 3)<br><br>
+
+第二行，輸入整數 N ，代表這個圖形有N行，N (3 <= N <= 50) <br><br>
+
+輸出說明 :<br>
+根據輸入，畫出對應的圖形<br><br>
+
+範例輸入說明 1: <br>
+1 (輸出第1種圖形)<br>
+5 (圖形行數為5)<br><br>
+
+範例輸出說明 1:<br>
+第 i 行輸出 1… i-1 + i + i-1…1 (i 為 1~N中的任一行)<br>
+每一行共有2 * i - 1個數字<br>
+1   i = 1, 第 1 行輸出 1，共有1個數字<br>
+121   i = 2, 第 2 行輸出 121，共有3個數字<br>
+12321   i = 3, 第 3 行輸出 12321，共有5個數字<br>
+1234321 i = 4, 第 4 行輸出 1234321，共有7個數字<br>
+123454321 i = 5, 第 5 行輸出 123454321，共有9個數字<br><br>
+
+---------------------------------------------------------------------------------------<br><br>
+
+範例輸入說明 2: <br>
+2 (輸出第2種圖形)<br>
+4 (圖形行數為4)<br><br>
+
+範例輸出說明 2:<br>
+第 i 行輸出 (N-i)個 _ + (1...i-1 + i + i-1…1) + (N-i)個 _   (i 為 1~N中的任一行)<br>
+每一行共有2 * N - 1個字元，包含(N-i)*2個_ 與 2 * i - 1個數字<br>
+___1___ i = 1, 第 1 行輸出 3個_+1+3個_，包含6個_ 與 1個數字<br>
+__121__ i = 2, 第 2 行輸出 2個_+121+2個_，包含4個_ 與 3個數字<br>
+_12321_ i = 3, 第 3 行輸出 1個_+12321+1個_，包含2個_ 與 5個數字<br>
+1234321 i = 4, 第 4 行輸出 0個_+1234321+0個_，包含0個_ 與 7個數字<br><br>
+
+---------------------------------------------------------------------------------------<br><br>
+
+範例輸入說明 3:<br>
+3 (輸出第3種圖形)<br>
+3 (圖形行數為3)<br><br>
+
+範例輸出說明 3:<br>
+第 i 行輸出 (i-1)個 _ + (1...N-i+1) + (N-i…1) + (i-1)個 _   (i 為 1~N中的任一行)<br>
+每一行共有2 * N - 1個字元，包含(i-1)*2個_ 與 (2*(N-i)+1) 個數字<br><br>
+
+12321 i = 1, 第 1 行輸出 0個_+12321+0個_，包含0個_ 與 5個數字<br>
+_121_ i = 2, 第 2 行輸出 1個_+121+1個_，包含2個_ 與 3個數字<br>
+__1__ i = 3, 第 3 行輸出 2個_+1+2個_，包含4個_ 與 1個數字<br><br>
+
+---------------------------------------------------------------------------------------<br><br>
+
+範例輸入 1:<br>
+1<br>
+8<br><br>
+
+範例輸出 1:<br>
+1<br>
+121<br>
+12321<br>
+1234321<br>
+123454321<br>
+12345654321<br>
+1234567654321<br>
+123456787654321<br><br>
+
+---------------------------------------------------------------------------------------<br><br>
+
+範例輸入 2:<br>
+2<br>
+5<br><br>
+
+範例輸出 2:<br>
+____1____<br>
+___121___<br>
+__12321__<br>
+_1234321_<br>
+123454321<br><br>
+
+---------------------------------------------------------------------------------------<br><br>
+
+範例輸入 3:<br>
+3<br>
+4<br><br>
+
+範例輸出 3:<br>
+1234321<br>
+_12321_<br>
+__121__<br>
+___1___<br><br>
+
+
+
+    </div>
+  </div>
+  <!-- ------------------------------------------------>
+
+  
+</div>
+<!-- ------------------------------------------------------------------------------------------------>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+
+
+
+</body>
+</html>
