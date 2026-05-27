@@ -156,9 +156,42 @@ img:hover {
 
   <!-- ------------------------------------------------>
   <div class="row toprow">
-    <div class="col-md-12 twenty">
-      <h1>高科大 iPAS AI 應用規劃師(初級)證照班。iPAS 經濟部產業人才能力鑑定、(初級)AI應用規劃師</h1>
+    <div class="col-md-10 twenty">
+      <h1>高科大 iPAS AI 應用規劃師(初級)證照班</h1>
+      <hr>
+      <h2>iPAS 經濟部產業人才能力鑑定</h2>
+      <h2>(初級)AI應用規劃師</h2>
+      <hr>
       <a href="https://tjhsieh.github.io/c/ai/ai2026s/hw/nkust.html">https://tjhsieh.github.io/c/ai/ai2026s/hw/nkust.html</a>
+    </div>
+    <div class="col-md-2 twenty">
+      <!-- 1 -->
+      <span id="containersvg"></span>
+
+      <!-- 2 -->
+      <!-- https://github.com/papnkukn/qrcode-svg -->
+      <script src="./qrcode.min.js"></script>
+
+      <!-- 3 -->
+      <script type="text/javascript">
+        // ecl - error correction level: L, M, H, Q
+        var qrcode = new QRCode({ 
+          content: "https://tjhsieh.github.io/c/ai/ai2026s/hw/nkust.html", 
+          join: true, 
+          typeNumber: 8,
+          background: "none", // "#fff"
+          ecl: "L", 
+          padding: 1, 
+          width: 240, 
+          height: 240, 
+          color: "#FFF", // "#6A4C9C" #9F353A #6A4C9C #9F353A https://nipponcolors.com/#enji #6A4C9C https://nipponcolors.com/#kikyo
+          background: "none" }); // "#FFF" #F1EEF7
+        var svg = qrcode.svg();
+        document.getElementById("containersvg").innerHTML = svg;
+      </script>
+
+      <!-- 4 -->
+
     </div>
   </div>
 
