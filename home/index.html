@@ -20,6 +20,9 @@
 
 
 <!-- x3d -->
+<!-- https://www.x3dom.org/ -->
+<!-- https://www.web3d.org/display-x3d -->
+<!-- https://www.htmlcsscolor.com/hex/8DC48D -->
 <link rel="stylesheet" href="https://www.x3dom.org/release/x3dom.css">
 <script src="https://www.x3dom.org/release/x3dom.js"></script>
 <!-- x3d -->
@@ -268,8 +271,34 @@ img:hover {
         <li><img src="./img/logo.jpg" width="5%">2010 <a target="_blank" href="https://dl.acm.org/doi/10.1145/1722991.1722998">Understanding earthquakes with advanced visualization</a></li>
       </ul>
       <hr>
-      <a target="_blank" href="https://tjhsieh.github.io/yingzaofashi/">WebGL</a>, <a href="https://github.com/tjhsieh/yingzaofashi/">營造法式</a><br>
-      <a target="_blank" href="https://tjhsieh.github.io/yingzaofashi/"><img src="https://tjhsieh.github.io/yingzaofashi/27-4.jpg" alt="營造法式" width="70%"></a>
+
+
+      <!-- 會動的 SVG<br> -->
+      會動的 SVG<br>
+      <textarea id="content" cols="36" rows="8" style="overflow: hidden; resize: none; font-size: 9pt;"></textarea>
+      <!-- 會動的 SVG<br> -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="36%" viewbox="0,0,512,512" id="svgimage"></svg>
+      <style>
+        #svgimage {
+          vertical-align: top;
+        }
+      </style>
+      <script type="text/javascript">
+        num = 382;
+        document.getElementById('svgimage').innerHTML = document.getElementById('content').value;
+        setInterval(my_random, 500);
+
+        function my_random() {
+          num += Math.floor(Math.random() * 7) - 3;
+          str = '<path d="M' + num.toString() + ' ' + num.toString() + ' C 440 281 80 162 82 314 84 467 324 462 ' + num.toString() + ' ' + num.toString() + ' z" fill="none" stroke="#000" stroke-width="2px" stroke-opacity=".8"/><circle fill="Lavender" stroke="#f0f" cx="' + num.toString() + '" cy="' + num.toString() + '" r="8" opacity="0.5"></circle><circle fill="Lavender" stroke="#f0f" cx="440" cy="281" r="8" opacity="0.5"></circle><circle fill="Lavender" stroke="#f0f" cx="80" cy="162" r="8" opacity="0.5"></circle><circle fill="Lavender" stroke="#f0f" cx="82" cy="314" r="8" opacity="0.5"></circle><circle fill="Lavender" stroke="#f0f" cx="84" cy="467" r="8" opacity="0.5"></circle><circle fill="Lavender" stroke="#f0f" cx="324" cy="462" r="8" opacity="0.5"></circle>'
+          document.getElementById('svgimage').innerHTML = str;
+          document.getElementById('content').value = str;
+        }
+      </script>
+      <!-- 會動的 SVG<br> -->
+
+
+
     </div>
   </div>
 
@@ -328,18 +357,9 @@ img:hover {
     </div>
     <div class="col-md-4 twenty">
 
-      <!-- x3d -->
-      <a href="https://www.web3d.org/display-x3d"> Display X3D </a>
-      <x3d width='99%' height='150px'>
-          <scene>
-                  <viewpoint position="-1.94639 1.79771 -2.89271" orientation="0.03886 0.99185 0.12133 3.75685"></viewpoint>
-                  <Inline nameSpaceName="Deer" 
-                  mapDEFToID="true"
-                            onclick='redNose();' 
-                  url="01-2.x3d" />
-          </scene>
-      </x3d>
-      <!-- x3d -->
+      <a target="_blank" href="https://tjhsieh.github.io/yingzaofashi/">Yingzao Fashi WebGL</a>(網頁), <a href="https://github.com/tjhsieh/yingzaofashi/">營造法式</a>(倉庫)<br>
+      <a target="_blank" href="https://tjhsieh.github.io/yingzaofashi/"><img src="https://tjhsieh.github.io/yingzaofashi/27-4.jpg" alt="營造法式" width="70%"></a>
+
 
     </div>
   </div>
@@ -359,29 +379,18 @@ img:hover {
     </div>
     <div class="col-md-4 twenty">
 
-      <!-- 會動的 SVG<br> -->
-      會動的 SVG<br>
-      <textarea id="content" cols="36" rows="8" style="overflow: hidden; resize: none; font-size: 9pt;"></textarea>
-      <!-- 會動的 SVG<br> -->
-      <svg xmlns="http://www.w3.org/2000/svg" width="36%" viewbox="0,0,512,512" id="svgimage"></svg>
-      <style>
-        #svgimage {
-          vertical-align: top;
-        }
-      </style>
-      <script type="text/javascript">
-        num = 382;
-        document.getElementById('svgimage').innerHTML = document.getElementById('content').value;
-        setInterval(my_random, 500);
-
-        function my_random() {
-          num += Math.floor(Math.random() * 7) - 3;
-          str = '<path d="M' + num.toString() + ' ' + num.toString() + ' C 440 281 80 162 82 314 84 467 324 462 ' + num.toString() + ' ' + num.toString() + ' z" fill="none" stroke="#000" stroke-width="2px" stroke-opacity=".8"/><circle fill="Lavender" stroke="#f0f" cx="' + num.toString() + '" cy="' + num.toString() + '" r="8" opacity="0.5"></circle><circle fill="Lavender" stroke="#f0f" cx="440" cy="281" r="8" opacity="0.5"></circle><circle fill="Lavender" stroke="#f0f" cx="80" cy="162" r="8" opacity="0.5"></circle><circle fill="Lavender" stroke="#f0f" cx="82" cy="314" r="8" opacity="0.5"></circle><circle fill="Lavender" stroke="#f0f" cx="84" cy="467" r="8" opacity="0.5"></circle><circle fill="Lavender" stroke="#f0f" cx="324" cy="462" r="8" opacity="0.5"></circle>'
-          document.getElementById('svgimage').innerHTML = str;
-          document.getElementById('content').value = str;
-        }
-      </script>
-      <!-- 會動的 SVG<br> -->
+      <!-- x3d -->
+      <a href="https://www.web3d.org/display-x3d"> Display X3D </a>
+      <x3d width='99%' height='150px'>
+          <scene>
+                  <viewpoint position="-1.94639 1.79771 -2.89271" orientation="0.03886 0.99185 0.12133 3.75685"></viewpoint>
+                  <Inline nameSpaceName="Deer" 
+                  mapDEFToID="true"
+                            onclick='redNose();' 
+                  url="01-2.x3d" />
+          </scene>
+      </x3d>
+      <!-- x3d -->
 
     </div>
   </div>
