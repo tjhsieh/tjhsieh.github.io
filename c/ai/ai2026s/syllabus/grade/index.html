@@ -245,6 +245,7 @@
 
             .selectAll("td")
             .data(function (d) { return d; }).enter()
+
             .append("td")
             .html(function (d, i) {
                 if ( i == 2 && d != 'github' ) {
@@ -252,11 +253,11 @@
 
                     //return '<a href="https://ntut-cg-lab.github.io/ca2022f-hw-' + d + '/" target="_blank"><img src="https://ntut-cg-lab.github.io/ca2022f-hw-' + d + '/hw00/' + d + '.svg"></a>' + '<hr><a href="https://github.com/NTUT-CG-Lab/ca2022f-hw-' + d + '/" target="_blank">' + d + '</a>';
                 }
-                else if ( i == 0 ||  i == 9 ||  i == 10 ||  i == 12 ||  i == 13 ||  i == 15 ||  i == 16 || isNaN(d)) {
+                else if ( i == 0 ||  i == 9 ||  i == 10 ||  i == 12 ||  i == 13 ||  i == 15 ||  i == 16 ||  i == 18 ||  i == 19  ||  i == 21 || i == 22 || isNaN(d)) {
                     return d;
                 }
             })
-            .filter(function (d, i) { return (i ==17 && !isNaN(d) ) || (i ==14 && !isNaN(d) ) || (i ==11 && !isNaN(d) ) || (i >= 3 && i <= 8 && !isNaN(d) && d != ""); })
+            .filter(function (d, i) { return  (i ==20 && !isNaN(d) ) || (i ==17 && !isNaN(d) ) || (i ==14 && !isNaN(d) ) || (i ==11 && !isNaN(d) ) || (i >= 3 && i <= 8 && !isNaN(d) && d != ""); })
             .append("img")
             .attr("src", function (d, i) {
                 if (d == 200){
