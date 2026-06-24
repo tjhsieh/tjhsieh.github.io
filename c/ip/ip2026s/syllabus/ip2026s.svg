@@ -11,7 +11,63 @@
    height="163"
    viewBox="0 0 129 163">
 
+
+
+<!--
   <style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Iansui');
+
+    text {
+      fill: #993333;
+      font-family: "Iansui", cursive;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 28px; 
+      writing-mode: tb;
+      letter-spacing: 12px;
+      text-shadow: 0.1em 0.1em 0.1em #AAA;
+      opacity: 0.1;
+    }
+  </style>
+-->
+
+
+  <style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Yuji+Syuku');
+
+    text {
+      fill: #993333;
+      font-family: "Yuji Syuku", serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 28px; 
+      writing-mode: tb;
+      letter-spacing: 12px;
+      text-shadow: 0.1em 0.1em 0.1em #AAA;
+      opacity: 0.1;
+    }
+  </style>
+
+<!--
+  <style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Bpmf+Zihi+Kai+Std');
+
+    text {
+      fill: #993333;
+      font-family: "Bpmf Zihi Kai Std", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 28px; 
+      writing-mode: tb;
+      letter-spacing: 12px;
+      text-shadow: 0.1em 0.1em 0.1em #AAA;
+      opacity: 0.1;
+    }
+  </style>
+-->
+
+<!--
+   <style type="text/css">
     /* @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900'); */
     @import url('https://fonts.googleapis.com/earlyaccess/cwtexkai.css?');
 
@@ -25,8 +81,8 @@
       font-weight: 900;
       opacity: 0.1;
     }
-  </style>
-
+  </style> 
+-->
 
   <rect width="127" height="161" x="1" y="1" style="fill:#993333;fill-opacity:0.05;opacity:0.50;" />
   <rect width="127" height="161" x="1" y="1" style="stroke:#993333;stroke-width:2.0;stroke-opacity:1;fill:none;" />
