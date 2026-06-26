@@ -264,7 +264,7 @@
                     <tr><td><p align="center"><span id="container1"></span></td></tr>
                     <!-- https://github.com/datalog/qrcode-svg -->
                     <!-- https://datalog.github.io/demo/qrcode-svg/ -->
-                    <script src="./qrcode.min.js"></script>
+                    <script src="./qr/qrcode.min.js"></script>
                     <script type="text/javascript">
                       var qrcodes = new QRCode({
                            msg   :  'https://tjhsieh.github.io/c/ml/ml2026f/',
@@ -303,15 +303,16 @@
                     <!-- figure -->
                     <tr><td><p align="center"><span id="container2"></span></td></tr>
                     <!-- https://github.com/kozakdenys/qr-code-styling -->
+                    <!-- https://www.npmjs.com/package/qr-border-plugin -->
                     <!-- <script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script> -->
-                    <script src="./qr-code-styling.js"></script>
+                    <script src="./qr/qr-code-styling.js"></script>
                     <script type="text/javascript">
                       const qrCode = new QRCodeStyling({
                           width: 150,
                           height: 150,
                           type: "svg",
                           data: "https://www.facebook.com/",
-                          image: "./img/line.svg",
+                          image: "./qr/line.svg",
                           dotsOptions: {
                               color: "#6A4C9C",
                               type: "square"
@@ -326,7 +327,7 @@
                       });
 
                       qrCode.append(document.getElementById("container2"));
-                      qrCode.download({ name: "qr", extension: "svg" });
+                      // qrCode.download({ name: "qr", extension: "svg" });
                     </script>
                     <tr><td>&nbsp;</td></tr>
                     <tr><td><a target="_blank" href="">加入課程 Line 群組</a></td></tr>
