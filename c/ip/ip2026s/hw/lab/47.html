@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<title>作業</title>
+<style type="text/css">
+
+@font-face {
+  font-family:'CircleFont';
+  /* src: url(https://circle472.github.io/ct2022s/hw04/CircleFont.ttf); */
+  /* https://github.com/Circle472/ct2022s/tree/main/hw04 */
+  src: url(../CircleFont_v2.woff2);
+  /* https://cloudconvert.com/ttf-to-woff2 */
+}
+
+
+body {
+  background-color: rgb(159, 53, 58);
+  color: rgb(159, 53, 58);
+}
+
+pre {
+  font-family:'CircleFont';
+  font-size: 16pt;
+}
+
+.container-fluid {
+  width:  90%;
+}
+
+.hw12 {
+  border: 1px solid rgb(159, 53, 58);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.twenty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+  padding: 8px;
+  font-family:'CircleFont';
+  font-size: 18pt;
+}
+
+.twentykikyo {
+  color: #f9eced;
+  font-size: 16pt;
+  background-color: #6a4c9c;
+}
+
+.twentykonparuiro {
+  color: #f9eced;
+  font-size: 16pt;
+  background-color: #5ac2d9;
+}
+
+.twenty a {
+  color:  yellow;
+  font-size:  12pt;
+}
+
+.twenty a:hover {
+  color: #f9eced;
+  font-size:  16pt;
+}
+
+.thirty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+}
+
+.ninety {
+  border: 1px solid rgb(159, 53, 58);
+  background-color: #f9eced;
+  padding: 8px;
+}
+
+svg {
+  border: 2px solid rgb(159, 53, 58);
+}
+
+path {
+  pointer-events: all;
+  fill: #f9eced;
+  stroke: rgb(159, 53, 58);
+  stroke-opacity: 0.95;
+  stroke-width: 1px;
+}
+
+.active circle {
+  stroke: #f9eced;
+  stroke-width: 2px;
+}
+
+svg g text {
+  fill: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 0, 0.1);
+  text-shadow: 0 0 16px #FF0000, 0 0 16px #000000;
+  font-size: 18pt;
+  text-anchor: middle;
+}
+
+.twenty:hover {
+  /*
+    background-color: rgba(255, 255, 0, 0.1);
+  */
+    box-shadow: 0 0 5px 3px #f9eced;
+    color: cyan; 
+    text-shadow: 0 0 6px #FFFFFF, 0 0 6px #000000;
+}
+
+img:hover {
+    box-shadow: 0 0 1px 1px #f9eced;
+    animation-name: happy;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes happy {
+    0% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(-15px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    75% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.toprow {
+  margin-top: 36px;
+}
+
+.bottomrow {
+  margin-bottom: 36px;
+}
+
+.GFG {
+  margin: -10px auto; 
+  font-family: 'CircleFont', serif;
+  color: yellow; 
+  font-size: 16pt;
+  -webkit-text-stroke-width: 0.1px; 
+  -webkit-text-stroke-color:  yellow;
+  animation: 24s pulsate infinite;
+}
+
+@keyframes pulsate {
+  50% {font-size: 10pt;} /* text-shadow: 0 0 16px #FFF, 0 0 20px #FFF;  */
+  100% {font-size: 16pt;} /* text-shadow: 0 0 16px #FFF, 0 0 20px #FFF;  */
+}
+
+</style>
+</head>
+<body>
+
+<!-- ------------------------------------------------------------------------------------------------>
+<div class="container-fluid">
+
+  <!-- ------------------------------------------------>
+  <div class="row toprow">
+    <div class="col-md-2 twenty"><img src="../img_kitty/133533.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/hero-kitty.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic03.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic04.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic05.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic06.svg" width="100%"></div>
+  </div>
+
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykikyo bottomrow">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-12 twenty">
+      <a target="_blank" href="https://cpe.mcu.edu.tw/cpe/problemPdf/382.pdf">2024/12/10 CPE 考古題 第2題</a>
+      <hr>
+      <pre>
+
+47. 完美
+
+
+382 Perfection
+
+From the article Number Theory in the 1994 Microsoft Encarta: “If a, b, c are integers such that a = bc,
+a is called a multiple of b or of c, and b or c is called a divisor or factor of a. If c is not ±1, b is called a
+proper divisor of a. Even integers, which include 0, are multiples of 2, for example, -4, 0, 2, 10; an odd
+integer is an integer that is not even, for example, -5, 1, 3, 9. A perfect number is a positive integer
+that is equal to the sum of all its positive, proper divisors; for example, 6, which equals 1 + 2 + 3, and
+28, which equals 1 + 2 + 4 + 7 + 14, are perfect numbers. A positive number that is not perfect is
+imperfect and is deficient or abundant according to whether the sum of its positive, proper divisors is
+smaller or larger than the number itself. Thus, 9, with proper divisors 1, 3, is deficient; 12, with proper
+divisors 1, 2, 3, 4, 6, is abundant.”
+
+Your task is: Given a number, determine if it is perfect, abundant, or deficient.
+
+Input
+A list of N positive integers (none greater than 60,000), with 1 < N < 100. A ‘0’ will mark the end of
+the list.
+
+Output
+The first line of output should read ‘PERFECTION OUTPUT’. The next N lines of output should list for
+each input integer whether it is perfect, deficient, or abundant, as shown in the example below. Format
+counts: the echoed integers should be right justified within the first 5 spaces of the output line, followed
+by two blank spaces, followed by the description of the integer. The final line of output should read
+‘END OF OUTPUT’.
+
+Sample Input
+
+15 28 6 56 60000 22 496 0
+
+Sample Output
+
+PERFECTION OUTPUT
+15 DEFICIENT
+28 PERFECT
+6 PERFECT
+56 ABUNDANT
+60000 ABUNDANT
+22 DEFICIENT
+496 PERFECT
+END OF OUTPUT
+
+**382 Perfection（完全數）**
+
+根據 1994 年 Microsoft Encarta《數論（Number Theory）》的說明：
+
+若整數 `a、b、c` 滿足 `a = b × c`，則：
+
+- `a` 稱為 `b` 或 `c` 的**倍數（multiple）**。
+- `b` 或 `c` 稱為 `a` 的**因數（divisor 或 factor）**。
+- 若因數不是 `±1`，則稱為 **proper divisor（真因數）**。
+
+例如：
+
+- 偶數（包括 0）都是 2 的倍數，例如：`-4、0、2、10`。
+- 奇數則是不能被 2 整除的整數，例如：`-5、1、3、9`。
+
+### 完全數（Perfect Number）
+
+**完全數**是指：
+
+> 一個正整數，其所有**正真因數（不包含自己）**的總和，剛好等於它本身。
+
+例如：
+
+- `6 = 1 + 2 + 3`
+- `28 = 1 + 2 + 4 + 7 + 14`
+
+因此 **6** 和 **28** 都是完全數。
+
+### 不完全數（Imperfect Number）
+
+若一個正整數不是完全數，則稱為 **Imperfect Number**，並可再分為兩類：
+
+- **Deficient（不足數）**：
+  真因數總和 **小於** 該數本身。
+
+- **Abundant（過剩數）**：
+  真因數總和 **大於** 該數本身。
+
+例如：
+
+- `9` 的真因數為 `1、3`，總和為 `4`。
+
+```
+4 < 9
+```
+
+因此 `9` 是 **Deficient**。
+
+- `12` 的真因數為 `1、2、3、4、6`，總和為 `16`。
+
+```
+16 > 12
+```
+
+因此 `12` 是 **Abundant**。
+
+你的任務是：
+
+**給定一個整數，判斷它是 Perfect、Abundant 或 Deficient。**
+
+---
+
+### 輸入（Input）
+
+輸入包含多個正整數：
+
+- 每個整數皆不超過 **60000**。
+- 整數個數 `N` 滿足：
+
+```
+1 < N < 100
+```
+
+輸入以
+
+```
+0
+```
+
+作為結束標記。
+
+---
+
+### 輸出（Output）
+
+第一行固定輸出：
+
+```
+PERFECTION OUTPUT
+```
+
+接著對每個輸入的整數輸出一行：
+
+- 整數需在前 **5 個字元寬度內靠右對齊（right justified）**。
+- 接著輸出 **兩個空格**。
+- 再輸出其分類：
+  - `PERFECT`
+  - `DEFICIENT`
+  - `ABUNDANT`
+
+最後一行固定輸出：
+
+```
+END OF OUTPUT
+```
+
+---
+
+### 範例輸入（Sample Input）
+
+```
+15 28 6 56 60000 22 496 0
+```
+
+### 範例輸出（Sample Output）
+
+```
+PERFECTION OUTPUT
+   15  DEFICIENT
+   28  PERFECT
+    6  PERFECT
+   56  ABUNDANT
+60000  ABUNDANT
+   22  DEFICIENT
+  496  PERFECT
+END OF OUTPUT
+```
+
+**提示：**
+
+對於每個數 `n`，只需計算其所有 **正真因數（不包含 n 本身）** 的總和 `sum`：
+
+- `sum == n` → `PERFECT`
+- `sum < n` → `DEFICIENT`
+- `sum > n` → `ABUNDANT`
+
+
+      </pre>
+    </div>
+  </div>
+  <!-- ------------------------------------------------>
+
+  
+</div>
+<!-- ------------------------------------------------------------------------------------------------>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+
+
+
+</body>
+</html>

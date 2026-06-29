@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<title>作業</title>
+<style type="text/css">
+
+@font-face {
+  font-family:'CircleFont';
+  /* src: url(https://circle472.github.io/ct2022s/hw04/CircleFont.ttf); */
+  /* https://github.com/Circle472/ct2022s/tree/main/hw04 */
+  src: url(../CircleFont_v2.woff2);
+  /* https://cloudconvert.com/ttf-to-woff2 */
+}
+
+
+body {
+  background-color: rgb(159, 53, 58);
+  color: rgb(159, 53, 58);
+}
+
+pre {
+  font-family:'CircleFont';
+  font-size: 16pt;
+}
+
+.container-fluid {
+  width:  90%;
+}
+
+.hw12 {
+  border: 1px solid rgb(159, 53, 58);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.twenty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+  padding: 8px;
+  font-family:'CircleFont';
+  font-size: 18pt;
+}
+
+.twentykikyo {
+  color: #f9eced;
+  font-size: 16pt;
+  background-color: #6a4c9c;
+}
+
+.twentykonparuiro {
+  color: #f9eced;
+  font-size: 16pt;
+  background-color: #5ac2d9;
+}
+
+.twenty a {
+  color:  yellow;
+  font-size:  12pt;
+}
+
+.twenty a:hover {
+  color: #f9eced;
+  font-size:  16pt;
+}
+
+.thirty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+}
+
+.ninety {
+  border: 1px solid rgb(159, 53, 58);
+  background-color: #f9eced;
+  padding: 8px;
+}
+
+svg {
+  border: 2px solid rgb(159, 53, 58);
+}
+
+path {
+  pointer-events: all;
+  fill: #f9eced;
+  stroke: rgb(159, 53, 58);
+  stroke-opacity: 0.95;
+  stroke-width: 1px;
+}
+
+.active circle {
+  stroke: #f9eced;
+  stroke-width: 2px;
+}
+
+svg g text {
+  fill: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 0, 0.1);
+  text-shadow: 0 0 16px #FF0000, 0 0 16px #000000;
+  font-size: 18pt;
+  text-anchor: middle;
+}
+
+.twenty:hover {
+  /*
+    background-color: rgba(255, 255, 0, 0.1);
+  */
+    box-shadow: 0 0 5px 3px #f9eced;
+    color: cyan; 
+    text-shadow: 0 0 6px #FFFFFF, 0 0 6px #000000;
+}
+
+img:hover {
+    box-shadow: 0 0 1px 1px #f9eced;
+    animation-name: happy;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes happy {
+    0% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(-15px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    75% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.toprow {
+  margin-top: 36px;
+}
+
+.bottomrow {
+  margin-bottom: 36px;
+}
+
+.GFG {
+  margin: -10px auto; 
+  font-family: 'CircleFont', serif;
+  color: yellow; 
+  font-size: 16pt;
+  -webkit-text-stroke-width: 0.1px; 
+  -webkit-text-stroke-color:  yellow;
+  animation: 24s pulsate infinite;
+}
+
+@keyframes pulsate {
+  50% {font-size: 10pt;} /* text-shadow: 0 0 16px #FFF, 0 0 20px #FFF;  */
+  100% {font-size: 16pt;} /* text-shadow: 0 0 16px #FFF, 0 0 20px #FFF;  */
+}
+
+</style>
+</head>
+<body>
+
+<!-- ------------------------------------------------------------------------------------------------>
+<div class="container-fluid">
+
+  <!-- ------------------------------------------------>
+  <div class="row toprow">
+    <div class="col-md-2 twenty"><img src="../img_kitty/133533.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/hero-kitty.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic03.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic04.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic05.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic06.svg" width="100%"></div>
+  </div>
+
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykikyo bottomrow">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-12 twenty">
+      <a target="_blank" href="https://onlinejudge.org/external/101/10107.pdf">2024/10/15 CPE 考古題 第2題</a>
+      <hr>
+      <pre>
+
+48. 中位數
+
+10107 What is the Median?
+Median plays an important role in the world of statistics. By definition, it is a value which divides
+an array into two equal parts. In this problem you are to determine the current median of some long
+integers. Suppose, we have five numbers {1,3,6,2,7}. In this case, 3 is the median as it has exactly two
+numbers on its each side. {1,2} and {6,7}. If there are even number of values like {1,3,6,2,7,8}, only
+one value cannot split this array into equal two parts, so we consider the average of the middle values
+{3,6}. Thus, the median will be (3+6)/2 = 4.5. In this problem, you have to print only the integer
+part, not the fractional. As a result, according to this problem, the median will be 4 !
+
+Input
+The input file consists of series of integers X (0 ≤ X < 2
+31) and total number of integers N is less than
+10000. The numbers may have leading or trailing spaces.
+
+Output
+For each input print the current value of the median.
+
+Sample Input
+1
+3
+4
+60
+70
+50
+2
+
+Sample Output
+1
+2
+3
+3
+4
+27
+4
+
+
+
+
+**10107 What is the Median?（中位數是什麼？）**
+
+**中位數（Median）** 在統計學中扮演著重要的角色。
+
+根據定義，中位數是能夠將一組資料分成兩個大小相等部分的數值。
+
+例如，有五個數：
+
+```
+{1, 3, 6, 2, 7}
+```
+
+排序後為：
+
+```
+{1, 2, 3, 6, 7}
+```
+
+其中 **3** 就是中位數，因為它左右兩邊各有兩個數：
+
+```
+左邊：{1, 2}
+右邊：{6, 7}
+```
+
+若資料個數為偶數，例如：
+
+```
+{1, 3, 6, 2, 7, 8}
+```
+
+排序後為：
+
+```
+{1, 2, 3, 6, 7, 8}
+```
+
+由於沒有單一一個數能將資料平分，因此中位數定義為中間兩個數的平均值：
+
+```
+(3 + 6) / 2 = 4.5
+```
+
+**但本題只需要輸出整數部分，不保留小數。**
+
+因此，本題中的中位數為：
+
+```
+4
+```
+
+---
+
+### 輸入（Input）
+
+輸入包含一連串整數 `X`：
+
+```
+0 ≤ X < 2³¹
+```
+
+總共輸入的整數數量 `N` 小於 **10000**。
+
+每個數字前後可能包含空白字元。
+
+---
+
+### 輸出（Output）
+
+**每讀入一個整數，就立即輸出目前所有已讀入數字的中位數。**
+
+也就是說：
+
+- 讀入第 1 個數後輸出一次。
+- 讀入第 2 個數後再輸出一次。
+- ……
+- 每新增一個數，都要重新計算並輸出目前的中位數。
+
+若目前數量為偶數，取中間兩個數的平均值，並只輸出**整數部分（無條件捨去小數）**。
+
+---
+
+### 範例輸入（Sample Input）
+
+```
+1
+3
+4
+60
+70
+50
+2
+```
+
+### 範例輸出（Sample Output）
+
+```
+1
+2
+3
+3
+4
+27
+4
+```
+
+### 範例說明
+
+依序加入資料：
+
+| 已讀入的數字 | 排序後 | 中位數 |
+|--------------|--------|--------|
+| 1 | 1 | 1 |
+| 1, 3 | 1 3 | (1+3)/2 = 2 |
+| 1, 3, 4 | 1 3 4 | 3 |
+| 1, 3, 4, 60 | 1 3 4 60 | (3+4)/2 = 3 |
+| 1, 3, 4, 60, 70 | 1 3 4 60 70 | 4 |
+| 1, 3, 4, 50, 60, 70 | 1 3 4 50 60 70 | (4+50)/2 = 27 |
+| 1, 2, 3, 4, 50, 60, 70 | 1 2 3 4 50 60 70 | 4 |
+
+
+      </pre>
+    </div>
+  </div>
+  <!-- ------------------------------------------------>
+
+  
+</div>
+<!-- ------------------------------------------------------------------------------------------------>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+
+
+
+</body>
+</html>

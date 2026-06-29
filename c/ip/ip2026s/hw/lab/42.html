@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<title>作業</title>
+<style type="text/css">
+
+@font-face {
+  font-family:'CircleFont';
+  /* src: url(https://circle472.github.io/ct2022s/hw04/CircleFont.ttf); */
+  /* https://github.com/Circle472/ct2022s/tree/main/hw04 */
+  src: url(../CircleFont_v2.woff2);
+  /* https://cloudconvert.com/ttf-to-woff2 */
+}
+
+
+body {
+  background-color: rgb(159, 53, 58);
+  color: rgb(159, 53, 58);
+}
+
+pre {
+  font-family:'CircleFont';
+  font-size: 16pt;
+}
+
+.container-fluid {
+  width:  90%;
+}
+
+.hw12 {
+  border: 1px solid rgb(159, 53, 58);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.twenty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+  padding: 8px;
+  font-family:'CircleFont';
+  font-size: 18pt;
+}
+
+.twentykikyo {
+  color: #f9eced;
+  font-size: 16pt;
+  background-color: #6a4c9c;
+}
+
+.twentykonparuiro {
+  color: #f9eced;
+  font-size: 16pt;
+  background-color: #5ac2d9;
+}
+
+.twenty a {
+  color:  yellow;
+  font-size:  12pt;
+}
+
+.twenty a:hover {
+  color: #f9eced;
+  font-size:  16pt;
+}
+
+.thirty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+}
+
+.ninety {
+  border: 1px solid rgb(159, 53, 58);
+  background-color: #f9eced;
+  padding: 8px;
+}
+
+svg {
+  border: 2px solid rgb(159, 53, 58);
+}
+
+path {
+  pointer-events: all;
+  fill: #f9eced;
+  stroke: rgb(159, 53, 58);
+  stroke-opacity: 0.95;
+  stroke-width: 1px;
+}
+
+.active circle {
+  stroke: #f9eced;
+  stroke-width: 2px;
+}
+
+svg g text {
+  fill: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 0, 0.1);
+  text-shadow: 0 0 16px #FF0000, 0 0 16px #000000;
+  font-size: 18pt;
+  text-anchor: middle;
+}
+
+.twenty:hover {
+  /*
+    background-color: rgba(255, 255, 0, 0.1);
+  */
+    box-shadow: 0 0 5px 3px #f9eced;
+    color: cyan; 
+    text-shadow: 0 0 6px #FFFFFF, 0 0 6px #000000;
+}
+
+img:hover {
+    box-shadow: 0 0 1px 1px #f9eced;
+    animation-name: happy;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes happy {
+    0% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(-15px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    75% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.toprow {
+  margin-top: 36px;
+}
+
+.bottomrow {
+  margin-bottom: 36px;
+}
+
+.GFG {
+  margin: -10px auto; 
+  font-family: 'CircleFont', serif;
+  color: yellow; 
+  font-size: 16pt;
+  -webkit-text-stroke-width: 0.1px; 
+  -webkit-text-stroke-color:  yellow;
+  animation: 24s pulsate infinite;
+}
+
+@keyframes pulsate {
+  50% {font-size: 10pt;} /* text-shadow: 0 0 16px #FFF, 0 0 20px #FFF;  */
+  100% {font-size: 16pt;} /* text-shadow: 0 0 16px #FFF, 0 0 20px #FFF;  */
+}
+
+</style>
+</head>
+<body>
+
+<!-- ------------------------------------------------------------------------------------------------>
+<div class="container-fluid">
+
+  <!-- ------------------------------------------------>
+  <div class="row toprow">
+    <div class="col-md-2 twenty"><img src="../img_kitty/133533.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/hero-kitty.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic03.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic04.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic05.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic06.svg" width="100%"></div>
+  </div>
+
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykikyo bottomrow">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-12 twenty">
+      <a target="_blank" href="https://cpe.mcu.edu.tw/cpe/problems/CPE260324/CPE260324-P1.uva10591.pdf">2026/03/24 CPE 考古題 第1題</a>
+      <hr>
+      <pre>
+
+42. 快樂數字
+
+10591 Happy Number
+Let the sum of the square of the digits of a positive integer S0 be represented by S1. In a similar way, let
+the sum of the squares of the digits of S1 be represented by S2 and so on. If Si = 1 for some i ≥ 1, then
+the original integer S0 is said to be Happy number. A number, which is not happy, is called Unhappy
+number. For example 7 is a Happy number since 7 → 49 → 97 → 130 → 10 → 1 and 4 is an Unhappy
+number since 4 → 16 → 37 → 58 → 89 → 145 → 42 → 20 → 4.
+
+Input
+The input consists of several test cases, the number of which you are given in the first line of the input.
+Each test case consists of one line containing a single positive integer N smaller than 109.
+
+Output
+For each test case, you must print one of the following messages:
+Case #p: N is a Happy number.
+Case #p: N is an Unhappy number.
+Here p stands for the case number (starting from 1). You should print the first message if the
+number N is a happy number. Otherwise, print the second line.
+
+Sample Input
+3
+7
+4
+13
+
+Sample Output
+Case #1: 7 is a Happy number.
+Case #2: 4 is an Unhappy number.
+Case #3: 13 is a Happy number.
+
+
+
+**10591 快樂數（Happy Number）**
+
+對於一個正整數 S₀，令 S₁ 表示 S₀ 每個數字平方後的總和。
+同樣地，令 S₂ 表示 S₁ 每個數字平方後的總和，如此反覆進行。
+
+如果對某個 i ≥ 1，有 Sᵢ = 1，則稱原本的整數 S₀ 為**快樂數（Happy Number）**；
+否則稱為**不快樂數（Unhappy Number）**。
+
+例如：
+- 7 是快樂數，因為：
+  7 → 49 → 97 → 130 → 10 → 1
+- 4 是不快樂數，因為：
+  4 → 16 → 37 → 58 → 89 → 145 → 42 → 20 → 4（開始重複循環）
+
+
+輸入（Input）
+
+輸入包含多組測試資料。
+
+第一行是一個整數 T，表示測試資料的組數。
+
+接下來每組測試資料各占一行，包含一個正整數 N，其中 N < 10⁹。
+
+
+輸出（Output）
+
+對於每組測試資料，輸出以下兩種格式之一：
+
+- `Case #p: N is a Happy number.`
+- `Case #p: N is an Unhappy number.`
+
+其中 p 為測試資料編號（從 1 開始）。
+
+如果 N 是快樂數，輸出第一種格式；否則輸出第二種格式。
+
+範例輸入（Sample Input）
+3
+7
+4
+13
+
+
+範例輸出（Sample Output）
+Case #1: 7 is a Happy number.
+Case #2: 4 is an Unhappy number.
+Case #3: 13 is a Happy number.
+
+
+
+
+      </pre>
+    </div>
+  </div>
+  <!-- ------------------------------------------------>
+
+  
+</div>
+<!-- ------------------------------------------------------------------------------------------------>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+
+
+
+</body>
+</html>

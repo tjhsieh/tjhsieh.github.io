@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<title>作業</title>
+<style type="text/css">
+
+@font-face {
+  font-family:'CircleFont';
+  /* src: url(https://circle472.github.io/ct2022s/hw04/CircleFont.ttf); */
+  /* https://github.com/Circle472/ct2022s/tree/main/hw04 */
+  src: url(../CircleFont_v2.woff2);
+  /* https://cloudconvert.com/ttf-to-woff2 */
+}
+
+
+body {
+  background-color: rgb(159, 53, 58);
+  color: rgb(159, 53, 58);
+}
+
+pre {
+  font-family:'CircleFont';
+  font-size: 16pt;
+}
+
+.container-fluid {
+  width:  90%;
+}
+
+.hw12 {
+  border: 1px solid rgb(159, 53, 58);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.twenty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+  padding: 8px;
+  font-family:'CircleFont';
+  font-size: 18pt;
+}
+
+.twentykikyo {
+  color: #f9eced;
+  font-size: 16pt;
+  background-color: #6a4c9c;
+}
+
+.twentykonparuiro {
+  color: #f9eced;
+  font-size: 16pt;
+  background-color: #5ac2d9;
+}
+
+.twenty a {
+  color:  yellow;
+  font-size:  12pt;
+}
+
+.twenty a:hover {
+  color: #f9eced;
+  font-size:  16pt;
+}
+
+.thirty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+}
+
+.ninety {
+  border: 1px solid rgb(159, 53, 58);
+  background-color: #f9eced;
+  padding: 8px;
+}
+
+svg {
+  border: 2px solid rgb(159, 53, 58);
+}
+
+path {
+  pointer-events: all;
+  fill: #f9eced;
+  stroke: rgb(159, 53, 58);
+  stroke-opacity: 0.95;
+  stroke-width: 1px;
+}
+
+.active circle {
+  stroke: #f9eced;
+  stroke-width: 2px;
+}
+
+svg g text {
+  fill: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 0, 0.1);
+  text-shadow: 0 0 16px #FF0000, 0 0 16px #000000;
+  font-size: 18pt;
+  text-anchor: middle;
+}
+
+.twenty:hover {
+  /*
+    background-color: rgba(255, 255, 0, 0.1);
+  */
+    box-shadow: 0 0 5px 3px #f9eced;
+    color: cyan; 
+    text-shadow: 0 0 6px #FFFFFF, 0 0 6px #000000;
+}
+
+img:hover {
+    box-shadow: 0 0 1px 1px #f9eced;
+    animation-name: happy;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes happy {
+    0% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(-15px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    75% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.toprow {
+  margin-top: 36px;
+}
+
+.bottomrow {
+  margin-bottom: 36px;
+}
+
+.GFG {
+  margin: -10px auto; 
+  font-family: 'CircleFont', serif;
+  color: yellow; 
+  font-size: 16pt;
+  -webkit-text-stroke-width: 0.1px; 
+  -webkit-text-stroke-color:  yellow;
+  animation: 24s pulsate infinite;
+}
+
+@keyframes pulsate {
+  50% {font-size: 10pt;} /* text-shadow: 0 0 16px #FFF, 0 0 20px #FFF;  */
+  100% {font-size: 16pt;} /* text-shadow: 0 0 16px #FFF, 0 0 20px #FFF;  */
+}
+
+</style>
+</head>
+<body>
+
+<!-- ------------------------------------------------------------------------------------------------>
+<div class="container-fluid">
+
+  <!-- ------------------------------------------------>
+  <div class="row toprow">
+    <div class="col-md-2 twenty"><img src="../img_kitty/133533.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/hero-kitty.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic03.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic04.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic05.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic06.svg" width="100%"></div>
+  </div>
+
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykikyo bottomrow">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-12 twenty">
+      <a target="_blank" href="https://cpe.mcu.edu.tw/cpe/problems/CPE260526/CPE260526-P2.uva10189.pdf">2026/05/26 CPE 考古題 第2題</a>
+      <hr>
+      <pre>
+
+41. 踩地雷
+
+Have you ever played Minesweeper? It’s a cute little game which comes within a certain Operating
+System which name we can’t really remember. Well, the goal of the game is to find where are all the
+mines within a M × N field. To help you, the game shows a number in a square which tells you how
+many mines there are adjacent to that square. For instance, supose the following 4 × 4 field with 2
+mines (which are represented by an ‘*’ character):
+
+*...
+....
+.*..
+....
+
+If we would represent the same field placing the hint numbers described above, we would end up with:
+
+*100
+2210
+1*10
+1110
+
+As you may have already noticed, each square may have at most 8 adjacent squares.
+
+
+Input
+
+The input will consist of an arbitrary number of fields. The first line of each field contains two integers
+n and m (0 < n, m ≤ 100) which stands for the number of lines and columns of the field respectively.
+
+The next n lines contains exactly m characters and represent the field.
+Each safe square is represented by an ‘.’ character (without the quotes) and each mine square
+is represented by an ‘*’ character (also without the quotes). The first field line where n = m = 0
+represents the end of input and should not be processed.
+
+
+Output
+
+For each field, you must print the following message in a line alone:
+
+Field #x:
+
+Where x stands for the number of the field (starting from 1). The next n lines should contain the
+field with the ‘.’ characters replaced by the number of adjacent mines to that square. There must be
+an empty line between field outputs.
+
+Sample Input
+
+4 4
+*...
+....
+.*..
+....
+3 5
+**...
+.....
+.*...
+0 0
+
+Sample Output
+
+Field #1:
+*100
+2210
+1*10
+1110
+Field #2:
+**100
+33200
+1*100
+
+
+你玩過踩地雷（Minesweeper）嗎？這是一款相當可愛的小遊戲，
+內建於某個我們一時想不起名字的作業系統中。
+
+遊戲的目標是在一個 M × N 的棋盤中找出所有地雷的位置。
+為了幫助玩家，遊戲會在每個非地雷格子中顯示一個數字，
+表示與該格相鄰（包含八個方向）的地雷數量。
+
+例如，假設有下面這個 4 × 4 的棋盤，其中有 2 個地雷（以 '*' 表示）：
+
+*...
+....
+.*..
+....
+
+如果將每個安全格子填入上述提示數字，就會得到：
+
+*100
+2210
+1*10
+1110
+
+如你所見，每個格子最多有 8 個相鄰的格子。
+
+【輸入】
+
+輸入包含多組測試資料。
+
+每組資料的第一行包含兩個整數 n 和 m（0 < n, m ≤ 100），
+分別表示棋盤的列數（rows）與行數（columns）。
+
+接下來有 n 行，每行恰好包含 m 個字元，表示棋盤內容。
+
+- '.' 表示安全格。
+- '*' 表示地雷。
+
+當輸入為 n = m = 0 時，表示輸入結束，不需處理。
+
+【輸出】
+
+對於每組測試資料，先輸出一行：
+
+Field #x:
+
+其中 x 為測試資料編號（從 1 開始）。
+
+接著輸出 n 行結果，將所有 '.' 替換成該格周圍相鄰地雷的數量，而 '*' 保持不變。
+
+每兩組測試資料的輸出之間需空一行。
+
+【範例輸入】
+
+4 4
+*...
+....
+.*..
+....
+3 5
+**...
+.....
+.*...
+0 0
+
+【範例輸出】
+
+Field #1:
+*100
+2210
+1*10
+1110
+
+Field #2:
+**100
+33200
+1*100
+        
+      </pre>
+    </div>
+  </div>
+  <!-- ------------------------------------------------>
+
+  
+</div>
+<!-- ------------------------------------------------------------------------------------------------>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+
+
+
+</body>
+</html>

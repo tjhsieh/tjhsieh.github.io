@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<title>作業</title>
+<style type="text/css">
+
+@font-face {
+  font-family:'CircleFont';
+  /* src: url(https://circle472.github.io/ct2022s/hw04/CircleFont.ttf); */
+  /* https://github.com/Circle472/ct2022s/tree/main/hw04 */
+  src: url(../CircleFont_v2.woff2);
+  /* https://cloudconvert.com/ttf-to-woff2 */
+}
+
+
+body {
+  background-color: rgb(159, 53, 58);
+  color: rgb(159, 53, 58);
+}
+
+pre {
+  font-family:'CircleFont';
+  font-size: 16pt;
+}
+
+.container-fluid {
+  width:  90%;
+}
+
+.hw12 {
+  border: 1px solid rgb(159, 53, 58);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.twenty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+  padding: 8px;
+  font-family:'CircleFont';
+  font-size: 18pt;
+}
+
+.twentykikyo {
+  color: #f9eced;
+  font-size: 16pt;
+  background-color: #6a4c9c;
+}
+
+.twentykonparuiro {
+  color: #f9eced;
+  font-size: 16pt;
+  background-color: #5ac2d9;
+}
+
+.twenty a {
+  color:  yellow;
+  font-size:  12pt;
+}
+
+.twenty a:hover {
+  color: #f9eced;
+  font-size:  16pt;
+}
+
+.thirty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+}
+
+.ninety {
+  border: 1px solid rgb(159, 53, 58);
+  background-color: #f9eced;
+  padding: 8px;
+}
+
+svg {
+  border: 2px solid rgb(159, 53, 58);
+}
+
+path {
+  pointer-events: all;
+  fill: #f9eced;
+  stroke: rgb(159, 53, 58);
+  stroke-opacity: 0.95;
+  stroke-width: 1px;
+}
+
+.active circle {
+  stroke: #f9eced;
+  stroke-width: 2px;
+}
+
+svg g text {
+  fill: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 0, 0.1);
+  text-shadow: 0 0 16px #FF0000, 0 0 16px #000000;
+  font-size: 18pt;
+  text-anchor: middle;
+}
+
+.twenty:hover {
+  /*
+    background-color: rgba(255, 255, 0, 0.1);
+  */
+    box-shadow: 0 0 5px 3px #f9eced;
+    color: cyan; 
+    text-shadow: 0 0 6px #FFFFFF, 0 0 6px #000000;
+}
+
+img:hover {
+    box-shadow: 0 0 1px 1px #f9eced;
+    animation-name: happy;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes happy {
+    0% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(-15px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    75% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.toprow {
+  margin-top: 36px;
+}
+
+.bottomrow {
+  margin-bottom: 36px;
+}
+
+.GFG {
+  margin: -10px auto; 
+  font-family: 'CircleFont', serif;
+  color: yellow; 
+  font-size: 16pt;
+  -webkit-text-stroke-width: 0.1px; 
+  -webkit-text-stroke-color:  yellow;
+  animation: 24s pulsate infinite;
+}
+
+@keyframes pulsate {
+  50% {font-size: 10pt;} /* text-shadow: 0 0 16px #FFF, 0 0 20px #FFF;  */
+  100% {font-size: 16pt;} /* text-shadow: 0 0 16px #FFF, 0 0 20px #FFF;  */
+}
+
+</style>
+</head>
+<body>
+
+<!-- ------------------------------------------------------------------------------------------------>
+<div class="container-fluid">
+
+  <!-- ------------------------------------------------>
+  <div class="row toprow">
+    <div class="col-md-2 twenty"><img src="../img_kitty/133533.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/hero-kitty.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic03.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic04.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic05.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic06.svg" width="100%"></div>
+  </div>
+
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykikyo bottomrow">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-12 twenty">
+      <a target="_blank" href="https://cpe.mcu.edu.tw/cpe/problemPdf/541.pdf">2025/05/20 CPE 考古題 第2題</a>
+      <hr>
+      <pre>
+
+45. 錯誤修正
+
+541 Error Correction
+
+A boolean matrix has the parity property when each row and each column has an even sum, i.e. contains
+an even number of bits which are set. Here’s a 4 × 4 matrix which has the parity property:
+
+1 0 1 0
+0 0 0 0
+1 1 1 1
+0 1 0 1
+
+The sums of the rows are 2, 0, 4 and 2. The sums of the columns are 2, 2, 2 and 2.
+Your job is to write a program that reads in a matrix and checks if it has the parity property. If
+not, your program should check if the parity property can be established by changing only one bit. If
+this is not possible either, the matrix should be classified as corrupt.
+
+Input
+The input file will contain one or more test cases. The first line of each test case contains one integer
+n (n < 100), representing the size of the matrix. On the next n lines, there will be n integers per line.
+No other integers than ‘0’ and ‘1’ will occur in the matrix. Input will be terminated by a value of 0 for
+n.
+
+Output
+For each matrix in the input file, print one line. If the matrix already has the parity property, print
+‘OK’. If the parity property can be established by changing one bit, print ‘Change bit (i,j)’ where i is
+the row and j the column of the bit to be changed. Otherwise, print ‘Corrupt’.
+
+Sample Input
+4
+1 0 1 0
+0 0 0 0
+1 1 1 1
+0 1 0 1
+4
+1 0 1 0
+0 0 1 0
+1 1 1 1
+0 1 0 1
+4
+1 0 1 0
+0 1 1 0
+1 1 1 1
+0 1 0 1
+0
+
+
+Sample Output
+OK
+Change bit (2,3)
+Corrupt
+
+
+**541 Error Correction（錯誤更正）**
+
+一個布林矩陣（Boolean Matrix）若滿足 **奇偶校驗性質（parity property）**，表示：
+
+- 每一列（row）中 `1` 的個數都是偶數。
+- 每一行（column）中 `1` 的個數也都是偶數。
+
+例如下面這個 `4 × 4` 矩陣就滿足 parity property：
+
+```
+1 0 1 0
+0 0 0 0
+1 1 1 1
+0 1 0 1
+```
+
+各列中 `1` 的數量分別為：
+
+```
+2、0、4、2
+```
+
+各行中 `1` 的數量分別為：
+
+```
+2、2、2、2
+```
+
+全部都是偶數，因此符合 parity property。
+
+你的工作是撰寫一個程式，讀入一個矩陣並判斷它是否具有 parity property。
+
+如果沒有，則再判斷：
+**是否只需要修改一個 bit（把 0 改成 1，或 1 改成 0）即可使矩陣符合 parity property。**
+
+如果連修改一個 bit 都無法做到，則此矩陣應判定為 **Corrupt（損壞）**。
+
+---
+
+### 輸入（Input）
+
+輸入包含多組測試資料。
+
+每組測試資料第一行包含一個整數 `n` (`n < 100`)，表示矩陣大小為 `n × n`。
+
+接下來 `n` 行，每行有 `n` 個整數。
+
+矩陣中的元素只會是：
+
+```
+0 或 1
+```
+
+當輸入的 `n = 0` 時，表示輸入結束。
+
+---
+
+### 輸出（Output）
+
+對每個矩陣輸出一行結果：
+
+- 如果矩陣本來就符合 parity property，輸出：
+
+```
+OK
+```
+
+- 如果只需修改一個 bit 即可符合 parity property，輸出：
+
+```
+Change bit (i,j)
+```
+
+其中 `i` 為列（row）編號，`j` 為行（column）編號（皆從 **1** 開始）。
+
+- 如果無法只修改一個 bit 修正，輸出：
+
+```
+Corrupt
+```
+
+---
+
+### 範例輸入（Sample Input）
+
+```
+4
+1 0 1 0
+0 0 0 0
+1 1 1 1
+0 1 0 1
+4
+1 0 1 0
+0 0 1 0
+1 1 1 1
+0 1 0 1
+4
+1 0 1 0
+0 1 1 0
+1 1 1 1
+0 1 0 1
+0
+```
+
+### 範例輸出（Sample Output）
+
+```
+OK
+Change bit (2,3)
+Corrupt
+```
+
+
+      </pre>
+    </div>
+  </div>
+  <!-- ------------------------------------------------>
+
+  
+</div>
+<!-- ------------------------------------------------------------------------------------------------>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+
+
+
+</body>
+</html>

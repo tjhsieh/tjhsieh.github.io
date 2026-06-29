@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<title>作業</title>
+<style type="text/css">
+
+@font-face {
+  font-family:'CircleFont';
+  /* src: url(https://circle472.github.io/ct2022s/hw04/CircleFont.ttf); */
+  /* https://github.com/Circle472/ct2022s/tree/main/hw04 */
+  src: url(../CircleFont_v2.woff2);
+  /* https://cloudconvert.com/ttf-to-woff2 */
+}
+
+
+body {
+  background-color: rgb(159, 53, 58);
+  color: rgb(159, 53, 58);
+}
+
+pre {
+  font-family:'CircleFont';
+  font-size: 16pt;
+}
+
+.container-fluid {
+  width:  90%;
+}
+
+.hw12 {
+  border: 1px solid rgb(159, 53, 58);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.twenty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+  padding: 8px;
+  font-family:'CircleFont';
+  font-size: 18pt;
+}
+
+.twentykikyo {
+  color: #f9eced;
+  font-size: 16pt;
+  background-color: #6a4c9c;
+}
+
+.twentykonparuiro {
+  color: #f9eced;
+  font-size: 16pt;
+  background-color: #5ac2d9;
+}
+
+.twenty a {
+  color:  yellow;
+  font-size:  12pt;
+}
+
+.twenty a:hover {
+  color: #f9eced;
+  font-size:  16pt;
+}
+
+.thirty {
+  border: 1px solid #f9eced;
+  color: #f9eced;
+}
+
+.ninety {
+  border: 1px solid rgb(159, 53, 58);
+  background-color: #f9eced;
+  padding: 8px;
+}
+
+svg {
+  border: 2px solid rgb(159, 53, 58);
+}
+
+path {
+  pointer-events: all;
+  fill: #f9eced;
+  stroke: rgb(159, 53, 58);
+  stroke-opacity: 0.95;
+  stroke-width: 1px;
+}
+
+.active circle {
+  stroke: #f9eced;
+  stroke-width: 2px;
+}
+
+svg g text {
+  fill: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 0, 0.1);
+  text-shadow: 0 0 16px #FF0000, 0 0 16px #000000;
+  font-size: 18pt;
+  text-anchor: middle;
+}
+
+.twenty:hover {
+  /*
+    background-color: rgba(255, 255, 0, 0.1);
+  */
+    box-shadow: 0 0 5px 3px #f9eced;
+    color: cyan; 
+    text-shadow: 0 0 6px #FFFFFF, 0 0 6px #000000;
+}
+
+img:hover {
+    box-shadow: 0 0 1px 1px #f9eced;
+    animation-name: happy;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes happy {
+    0% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(-15px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    75% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.toprow {
+  margin-top: 36px;
+}
+
+.bottomrow {
+  margin-bottom: 36px;
+}
+
+.GFG {
+  margin: -10px auto; 
+  font-family: 'CircleFont', serif;
+  color: yellow; 
+  font-size: 16pt;
+  -webkit-text-stroke-width: 0.1px; 
+  -webkit-text-stroke-color:  yellow;
+  animation: 24s pulsate infinite;
+}
+
+@keyframes pulsate {
+  50% {font-size: 10pt;} /* text-shadow: 0 0 16px #FFF, 0 0 20px #FFF;  */
+  100% {font-size: 16pt;} /* text-shadow: 0 0 16px #FFF, 0 0 20px #FFF;  */
+}
+
+</style>
+</head>
+<body>
+
+<!-- ------------------------------------------------------------------------------------------------>
+<div class="container-fluid">
+
+  <!-- ------------------------------------------------>
+  <div class="row toprow">
+    <div class="col-md-2 twenty"><img src="../img_kitty/133533.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/hero-kitty.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic03.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic04.svg" width="90%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic05.svg" width="100%"></div>
+    <div class="col-md-2 twenty"><img src="../img_kitty/pic06.svg" width="100%"></div>
+  </div>
+
+
+  <!-- ------------------------------------------------>
+  <div class="row twentykikyo bottomrow">
+    <!-- http://dict.revised.moe.edu.tw/cgi-bin/cbdic/gsweb.cgi -->
+    <div class="col-md-12 twenty">
+      <a target="_blank" href="https://cpe.mcu.edu.tw/cpe/problems/CPE251209/CPE251209-P2.uva11321.pdf">2025/12/09 CPE 考古題 第2題</a>
+      <hr>
+      <pre>
+
+43. 排序
+
+
+11321 Sort! Sort!! And Sort!!!
+
+Hmm! Here you are asked to do a simple sorting. You will be given N numbers and a positive integer
+M. You will have to sort the N numbers in ascending order of their modulo M value. If there is a tie
+between an odd number and an even number (that is their modulo M value is the same) then the odd
+number will precede the even number. If there is a tie between two odd numbers (that is their modulo
+M value is the same) then the larger odd number will precede the smaller odd number and if there
+is a tie between two even numbers (that is their modulo M value is the same) then the smaller even
+number will precede the larger even number.
+
+For remainder value of negative numbers follow the rule of C programming language: A negative
+number can never have modulus greater than zero. E.g. -100 MOD 3 = -1, -100 MOD 4 = 0, etc.
+
+Input
+The input file contains 20 sets of inputs. Each set starts with two integers N (0 < N ≤ 10000) and
+M (0 < M ≤ 10000) which denotes how many numbers are within this set. Each of the next N lines
+contains one number each. These numbers should all fit in 32-bit signed integer. Input is terminated
+by a line containing two zeroes.
+
+Output
+For each set of input produce N + 1 lines of outputs. The first line of each set contains the value of N
+and M. The next N lines contain N numbers, sorted according to the rules mentioned above. Print
+the last two zeroes of the input file in the output file also.
+
+Sample Input
+15 3
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+0 0
+
+Sample Output
+15 3
+15
+9
+3
+6
+12
+13
+7
+1
+4
+10
+11
+5
+2
+8
+14
+0 0
+
+**11321 Sort! Sort!! And Sort!!!（排序！排序！！再排序！！！）**
+
+這是一道簡單的排序題。
+
+給你 N 個整數以及一個正整數 M，你必須依照以下規則對這 N 個整數進行排序：
+
+1. **先依照每個數對 M 取餘數（mod M）的結果，由小到大排序。**
+2. **如果兩個數的餘數相同：**
+   - 若一個是奇數、一個是偶數，**奇數排在前面**。
+   - 若兩個都是奇數，**較大的奇數排在前面**（由大到小）。
+   - 若兩個都是偶數，**較小的偶數排在前面**（由小到大）。
+
+### 負數取餘數規則
+
+負數的取餘數請遵循 **C 語言** 的規則：
+
+負數取餘後的結果不會大於 0。
+
+例如：
+- `-100 MOD 3 = -1`
+- `-100 MOD 4 = 0`
+
+---
+
+### 輸入（Input）
+
+輸入包含多組測試資料（最多 20 組）。
+
+每組測試資料第一行包含兩個整數 **N** 和 **M**：
+
+- `0 < N ≤ 10000`
+- `0 < M ≤ 10000`
+
+表示接下來共有 N 個整數。
+
+接下來 N 行，每行包含一個 32 位元有號整數。
+
+當輸入為
+```
+0 0
+```
+時表示輸入結束。
+
+---
+
+### 輸出（Output）
+
+對於每組測試資料：
+
+1. 第一行先輸出原本的 `N M`。
+2. 接著輸出排序完成後的 N 個整數，每個數字各占一行。
+3. 最後，也要將輸入結束標記
+```
+0 0
+```
+原樣輸出。
+
+---
+
+### 範例輸入（Sample Input）
+
+15 3
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+0 0
+
+
+### 範例輸出（Sample Output）
+15 3
+15
+9
+3
+6
+12
+13
+7
+1
+4
+10
+11
+5
+2
+8
+14
+0 0
+
+        
+      </pre>
+    </div>
+  </div>
+  <!-- ------------------------------------------------>
+
+  
+</div>
+<!-- ------------------------------------------------------------------------------------------------>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+
+
+
+</body>
+</html>
